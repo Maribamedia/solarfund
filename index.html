@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <title>SolarFund | Elite Energy Capital & Solutions for African Infrastructure</title>
+    <meta name="description" content="SolarFund provides exclusive institutional capital and complete energy solutions for 30MW+ African projects. Pre-approved funding, EPC services, IPP development, and regulatory compliance.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="SolarFund | Elite Energy Capital & Solutions for Africa">
+    <meta property="og:description" content="Exclusive pre-approved capital, EPC services, IPP development, and regulatory compliance for 30MW+ African energy infrastructure projects.">
+    <meta property="og:image" content="https://solarfund.co.za/images/social-preview.jpg">
+    <meta property="og:url" content="https://solarfund.co.za">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: '#000000',
+              white: '#FFFFFF',
+              gray: {
+                50: '#fafafa',
+                100: '#f5f5f5',
+                200: '#e5e5e5',
+                300: '#d4d4d4',
+                400: '#a3a3a3',
+                500: '#737373',
+                600: '#525252',
+                700: '#404040',
+                800: '#262626',
+                900: '#171717',
+              },
+              accent: {
+                100: '#fef3c7',
+                200: '#fde68a',
+                300: '#fcd34d',
+                400: '#fbbf24',
+                500: '#f59e0b',
+                600: '#d97706',
+                700: '#b45309',
+                800: '#92400e',
+                900: '#78350f',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.6s ease-out',
+              'slide-up': 'slideUp 0.7s ease-out',
+              'slide-down': 'slideDown 0.7s ease-out',
+              'slide-in-left': 'slideInLeft 0.8s ease-out',
+              'slide-in-right': 'slideInRight 0.8s ease-out',
+              'float': 'float 4s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s infinite',
+              'scale-in': 'scaleIn 0.5s ease-out',
+              'border-glow': 'borderGlow 2s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(40px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideDown: {
+                '0%': { transform: 'translateY(-40px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideInLeft: {
+                '0%': { transform: 'translateX(-40px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              slideInRight: {
+                '0%': { transform: 'translateX(40px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-200px 0' },
+                '100%': { backgroundPosition: '200px 0' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              borderGlow: {
+                '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+                '50%': { borderColor: 'rgba(255, 255, 255, 0.3)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: #000000;
+        color: #FFFFFF;
+        overflow-x: hidden;
+        position: relative;
+      }
+      
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+          radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 0;
+      }
+      
+      .section-bg {
+        position: relative;
+        background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
+        background-size: 200% 200%;
+        animation: gradient 10s ease infinite;
+      }
+      
+      @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      .glass-effect {
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .luxury-card {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .luxury-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+        transition: left 0.7s ease;
+      }
+      
+      .luxury-card:hover::before {
+        left: 100%;
+      }
+      
+      .luxury-card:hover {
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+      
+      .elite-button {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+        color: #000000;
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .elite-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.7s ease;
+      }
+      
+      .elite-button:hover::before {
+        left: 100%;
+      }
+      
+      .elite-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+      }
+      
+      .border-animate {
+        position: relative;
+      }
+      
+      .border-animate::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #FFFFFF, rgba(255, 255, 255, 0.5));
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .border-animate:hover::after {
+        width: 100%;
+      }
+      
+      .text-gradient {
+        background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .stat-number {
+        font-feature-settings: 'tnum' 1;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .stat-number::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40%;
+        height: 2px;
+        background: linear-gradient(90deg, #FFFFFF, transparent);
+      }
+      
+      .floating-element {
+        animation: float 4s ease-in-out infinite;
+      }
+      
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      
+      @media (max-width: 768px) {
+        .section-padding {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+      }
+      
+      .process-line {
+        position: relative;
+        padding-left: 2.5rem;
+      }
+      
+      .process-line::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent);
+      }
+      
+      .process-line::after {
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: 0;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        animation: pulse 2s infinite;
+      }
+      
+      .image-hover-zoom {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .image-hover-zoom img {
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .image-hover-zoom:hover img {
+        transform: scale(1.08);
+      }
+      
+      .image-overlay {
+        position: relative;
+      }
+      
+      .image-overlay::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      
+      .image-overlay:hover::after {
+        opacity: 1;
+      }
+      
+      .guarantee-badge {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        animation: border-glow 2s ease-in-out infinite;
+      }
+      
+      .touch-target {
+        min-height: 48px;
+        min-width: 48px;
+      }
+      
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #FFFFFF, rgba(255, 255, 255, 0.5));
+        z-index: 100;
+        transition: width 0.2s ease;
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-stack {
+          flex-direction: column;
+        }
+        
+        .mobile-center {
+          text-align: center;
+        }
+        
+        .mobile-full {
+          width: 100%;
+        }
+        
+        .process-line::before {
+          display: none;
+        }
+      }
+      
+      .text-shimmer {
+        background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 50%, #FFFFFF 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 3s infinite linear;
+      }
+    </style>
+</head>
+<body class="text-white">
+    <!-- Scroll Progress -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full glass-effect z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group animate-slide-in-left">
+                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+                        <span class="text-black font-black text-lg">SF</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black tracking-tight group-hover:text-gray-300 transition-colors">SolarFund</span>
+                        <span class="block text-xs text-gray-400 font-medium tracking-wider">ELITE ENERGY CAPITAL</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-10 animate-slide-in-right">
+                    <a href="#hero" class="border-animate text-sm font-medium text-gray-300 hover:text-white">HOME</a>
+                    <a href="#services" class="border-animate text-sm font-medium text-gray-300 hover:text-white">SERVICES</a>
+                    <a href="#capital" class="border-animate text-sm font-medium text-gray-300 hover:text-white">CAPITAL</a>
+                    <a href="#guarantee" class="border-animate text-sm font-medium text-gray-300 hover:text-white">GUARANTEE</a>
+                    <a href="#compliance" class="border-animate text-sm font-medium text-gray-300 hover:text-white">COMPLIANCE</a>
+                    <a href="https://solarcompliance.co.za" target="_blank" class="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                        <span>🌐</span>
+                        <span>PARTNER PORTAL</span>
+                    </a>
+                    <a href="https://wa.me/27766473499" target="_blank" class="elite-button px-6 py-3 rounded-lg text-sm font-semibold">
+                        <span class="flex items-center gap-2">
+                            <span>💬</span>
+                            <span>CONSULTATION</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden touch-target p-3 text-gray-300 hover:text-white rounded-lg transition-colors">
+                    <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-gray-800 hidden animate-slide-down">
+            <div class="px-4 py-6 flex flex-col gap-1">
+                <a href="#hero" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🏠 HOME</a>
+                <a href="#services" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🔧 SERVICES</a>
+                <a href="#capital" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">💰 CAPITAL</a>
+                <a href="#guarantee" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">✅ GUARANTEE</a>
+                <a href="#compliance" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">⚖️ COMPLIANCE</a>
+                <a href="https://solarcompliance.co.za" target="_blank" class="flex items-center gap-3 py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">
+                    <span>🌐</span>
+                    <span>PARTNER PORTAL</span>
+                </a>
+                <div class="pt-6 mt-4 border-t border-gray-800 space-y-4">
+                    <a href="https://wa.me/27766473499" target="_blank" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
+                        <span>💬</span>
+                        <span>WHATSAPP: +27766473499</span>
+                    </a>
+                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
+                        <span>📧</span>
+                        <span>victor@maribamedia.co.za</span>
+                    </a>
+                    <a href="tel:+27766473499" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
+                        <span>📞</span>
+                        <span>CALL: +27766473499</span>
+                    </a>
+                </div>
+                <a href="https://wa.me/27766473499" target="_blank" class="mt-6 elite-button py-4 rounded-lg text-center font-semibold">
+                    <span class="flex items-center justify-center gap-2">
+                        <span>💬</span>
+                        <span>CONSULTATION</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow animation-delay-2000"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <!-- Elite Badge -->
+                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full guarantee-badge mb-12 animate-scale-in">
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span class="text-sm font-semibold tracking-wider">EXCLUSIVE 90-DAY GUARANTEE</span>
+                    <span class="text-sm font-bold text-gray-300">• ELITE PERFORMANCE</span>
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping animation-delay-1000"></span>
+                </div>
+                
+                <!-- Main Headline -->
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-slide-up">
+                    <span class="block text-white">ELITE ENERGY</span>
+                    <span class="block text-gradient mt-4 font-serif italic">Capital & Solutions</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
+                    Exclusive institutional capital for 30MW+ African infrastructure. Pre-approved funding, comprehensive EPC services, IPP development, and regulatory compliance.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-400">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">30MW+</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">MINIMUM PROJECT</div>
+                    </div>
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-500">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">90</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">DAY GUARANTEE</div>
+                    </div>
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-600">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">6</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">ELITE SERVICES</div>
+                    </div>
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-700">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">0%</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">UPFRONT COST</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-5 justify-center animate-slide-up animation-delay-800">
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20have%20a%2030MW%2B%20energy%20project%20and%20would%20like%20to%20discuss%20your%20elite%20solutions" target="_blank" class="touch-target inline-flex items-center justify-center gap-3 elite-button text-black px-10 py-5 rounded-xl font-semibold transition-all group">
+                        <span class="text-xl">🚀</span>
+                        <span class="text-lg">INITIATE PROJECT</span>
+                        <span class="group-hover:translate-x-2 transition-transform">→</span>
+                    </a>
+                    <a href="#services" class="touch-target inline-flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-semibold hover:bg-white/10 transition-all border border-white/10">
+                        <span class="text-xl">🔍</span>
+                        <span class="text-lg">EXPLORE SERVICES</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-black border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl font-black text-white mb-2">287+</div>
+                    <div class="text-sm text-gray-400 tracking-wider">PROJECTS EXECUTED</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-white mb-2">15</div>
+                    <div class="text-sm text-gray-400 tracking-wider">AFRICAN NATIONS</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-white mb-2">100%</div>
+                    <div class="text-sm text-gray-400 tracking-wider">SUCCESS RATE</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-white mb-2">30+</div>
+                    <div class="text-sm text-gray-400 tracking-wider">YEARS EXPERIENCE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Services -->
+    <section id="services" class="section-padding bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">ELITE SERVICES</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">COMPREHENSIVE</span>
+                    <span class="block text-gradient font-serif italic mt-2">Energy Solutions</span>
+                </h2>
+                <p class="text-lg text-gray-400">
+                    Exclusive services tailored for African energy infrastructure excellence
+                </p>
+            </div>
+
+            <!-- Service 1 -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-20 items-center animate-on-scroll">
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-black font-black">01</div>
+                        <span class="text-sm font-semibold tracking-wider text-gray-300">STRATEGIC CONSULTING</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-8">Elite Energy Advisory</h3>
+                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                        Exclusive strategic guidance for energy project lifecycle management, from concept to financial close and operational excellence.
+                    </p>
+                    <div class="space-y-5 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Feasibility studies and financial modelling</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Energy audits and optimization strategies</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Regulatory framework guidance</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Project financing advisory</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20need%20strategic%20consulting%20for%20my%20energy%20project" target="_blank" class="elite-button px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-3">
+                        <span>DISCUSS ADVISORY</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+                <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
+                    <img 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                        alt="Strategic Energy Consulting" 
+                        class="w-full h-[500px] object-cover"
+                    >
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-20 items-center animate-on-scroll">
+                <div class="order-2 lg:order-1">
+                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                            alt="Engineering & Construction" 
+                            class="w-full h-[500px] object-cover"
+                        >
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-black font-black">02</div>
+                        <span class="text-sm font-semibold tracking-wider text-gray-300">EPC SERVICES</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-8">Turnkey Project Delivery</h3>
+                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                        Complete project execution from design to commissioning with uncompromising quality, safety, and environmental standards.
+                    </p>
+                    <div class="space-y-5 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Design and engineering excellence</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Global component procurement</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Construction and commissioning</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                →
+                            </div>
+                            <p class="text-gray-300">Turnkey project management</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20need%20EPC%20services%20for%20my%20energy%20project" target="_blank" class="elite-button px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-3">
+                        <span>DISCUSS EPC</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 animate-on-scroll">
+                <!-- Service 3 -->
+                <div class="luxury-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">03. Independent Power Production</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Development and operation of solar/hybrid projects</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Long-term energy solutions for reliability</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Government and business partnerships</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%27m%20interested%20in%20IPP%20development" target="_blank" class="text-white hover:text-gray-300 font-medium inline-flex items-center gap-2">
+                        <span>LEARN MORE</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="luxury-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                        <span class="text-2xl">📑</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">04. Power Purchase Agreements</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">PPA structuring and negotiation</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Tender preparation and submission</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Market analysis and contracting</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20need%20help%20with%20PPAs" target="_blank" class="text-white hover:text-gray-300 font-medium inline-flex items-center gap-2">
+                        <span>DISCUSS PPAS</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="luxury-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">05. Grid Infrastructure</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Infspection and preventive maintenance</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Grid modernization and integration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Emergency repair and training</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20need%20grid%20services" target="_blank" class="text-white hover:text-gray-300 font-medium inline-flex items-center gap-2">
+                        <span>DISCUSS GRID</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="luxury-card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                        <span class="text-2xl">⚖️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">06. Regulatory Compliance</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Renewable energy compliance checks</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">System audits and certification</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-sm mt-1">•</span>
+                            <span class="text-gray-300">Licensing and approvals</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20need%20compliance%20services" target="_blank" class="text-white hover:text-gray-300 font-medium inline-flex items-center gap-2">
+                        <span>DISCUSS COMPLIANCE</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Capital -->
+    <section id="capital" class="section-padding bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">ELITE CAPITAL</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">PRE-APPROVED</span>
+                    <span class="block text-gradient font-serif italic mt-2">Institutional Capital</span>
+                </h2>
+                <p class="text-lg text-gray-400">
+                    Exclusive access to institutional funding for 30MW+ African energy infrastructure
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="animate-on-scroll">
+                    <div class="space-y-10">
+                        <div class="process-line">
+                            <h3 class="text-2xl font-bold text-white mb-4">01. Project Qualification</h3>
+                            <p class="text-gray-400">Comprehensive assessment of project viability, compliance status, and funding requirements. Minimum 30MW capacity with proven site control.</p>
+                        </div>
+                        <div class="process-line">
+                            <h3 class="text-2xl font-bold text-white mb-4">02. Capital Structuring</h3>
+                            <p class="text-gray-400">Elite financial structuring to match institutional investor mandates, optimizing equity/debt ratios and security packages.</p>
+                        </div>
+                        <div class="process-line">
+                            <h3 class="text-2xl font-bold text-white mb-4">03. Investor Presentation</h3>
+                            <p class="text-gray-400">Presentation to exclusive network of accredited funding houses with pre-approved mandates for African renewable energy.</p>
+                        </div>
+                        <div class="process-line">
+                            <h3 class="text-2xl font-bold text-white mb-4">04. Transaction Execution</h3>
+                            <p class="text-gray-400">Complete due diligence management and legal coordination for smooth transaction closing within guaranteed timeframe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 luxury-card p-8 rounded-2xl">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white mb-3">PERFORMANCE-BASED ENGAGEMENT</div>
+                            <div class="text-gray-400">Exclusive results-driven partnership. No success, no fee.</div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20have%20a%2030MW%2B%20project%20and%20need%20pre-approved%20capital" target="_blank" class="elite-button px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-3 mt-10">
+                        <span>INITIATE FUNDING</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                            alt="Institutional Capital Deployment" 
+                            class="w-full h-[600px] object-cover"
+                        >
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
+                            <h3 class="text-3xl font-bold text-white mb-3">Institutional Capital Deployment</h3>
+                            <p class="text-white/90">Connecting elite African energy projects with institutional capital</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 90-Day Guarantee -->
+    <section id="guarantee" class="section-padding bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">ELITE GUARANTEE</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">90-DAY</span>
+                    <span class="block text-gradient font-serif italic mt-2">Performance Guarantee</span>
+                </h2>
+                <p class="text-lg text-gray-400">
+                    Exclusive commitment to secure pre-approved capital for your 30MW+ project within 90 days
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="luxury-card p-10 rounded-2xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-8 text-2xl font-black">30</div>
+                    <h4 class="text-2xl font-bold text-white mb-6">PROJECT PACKAGING</h4>
+                    <p class="text-gray-400">Comprehensive project assessment, financial modeling, and elite documentation preparation.</p>
+                </div>
+                <div class="luxury-card p-10 rounded-2xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-8 text-2xl font-black">60</div>
+                    <h4 class="text-2xl font-bold text-white mb-6">INVESTOR ENGAGEMENT</h4>
+                    <p class="text-gray-400">Exclusive presentation to funding houses, investor due diligence, and term sheet negotiation.</p>
+                </div>
+                <div class="luxury-card p-10 rounded-2xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-white mx-auto mb-8 text-2xl font-black">90</div>
+                    <h4 class="text-2xl font-bold text-white mb-6">TRANSACTION CLOSING</h4>
+                    <p class="text-gray-400">Legal documentation, compliance finalization, and capital disbursement completion.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-white/10 to-white/5 border border-white/10 rounded-3xl p-12 text-center backdrop-blur-sm">
+                <h3 class="text-3xl font-bold mb-8 font-serif">Our Elite Commitment</h3>
+                <p class="text-xl mb-10 max-w-3xl mx-auto text-gray-300">
+                    <span class="font-bold text-white">If we don't secure pre-approved capital for your 30MW+ project within 90 days,</span> we continue working at no cost until we do. Zero risk. Elite performance.
+                </p>
+                <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20want%20to%20utilize%20your%2090-day%20guarantee" target="_blank" class="elite-button px-10 py-5 rounded-xl font-semibold inline-flex items-center justify-center gap-3">
+                    <span>INITIATE RISK-FREE</span>
+                    <span class="group-hover:translate-x-2 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Excellence -->
+    <section id="compliance" class="section-padding bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="animate-on-scroll">
+                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                            alt="Regulatory Compliance" 
+                            class="w-full h-[600px] object-cover"
+                        >
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+                        <span class="text-sm font-semibold tracking-wider">REGULATORY EXCELLENCE</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8">
+                        <span class="text-white">FULL</span>
+                        <span class="block text-gradient font-serif italic mt-2">Regulatory Compliance</span>
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-10 leading-relaxed">
+                        Elite navigation of Africa's complex regulatory landscape. Comprehensive compliance management across multiple jurisdictions.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-12">
+                        <div class="luxury-card p-6 rounded-xl">
+                            <div class="text-2xl font-black text-white mb-2">287+</div>
+                            <div class="text-sm text-gray-400">SYSTEMS REGISTERED</div>
+                        </div>
+                        <div class="luxury-card p-6 rounded-xl">
+                            <div class="text-2xl font-black text-white mb-2">15</div>
+                            <div class="text-sm text-gray-400">COUNTRIES COVERED</div>
+                        </div>
+                        <div class="luxury-card p-6 rounded-xl">
+                            <div class="text-2xl font-black text-white mb-2">100%</div>
+                            <div class="text-sm text-gray-400">APPROVAL SUCCESS</div>
+                        </div>
+                        <div class="luxury-card p-6 rounded-xl">
+                            <div class="text-2xl font-black text-white mb-2">30+</div>
+                            <div class="text-sm text-gray-400">YEARS EXPERIENCE</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-5 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                ✓
+                            </div>
+                            <p class="text-gray-300">SSEG registration with municipalities and utilities</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                ✓
+                            </div>
+                            <p class="text-gray-300">Environmental Impact Assessments and licensing</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                ✓
+                            </div>
+                            <p class="text-gray-300">Grid connection approvals and technical studies</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0 mt-1">
+                                ✓
+                            </div>
+                            <p class="text-gray-300">Tax incentives and renewable certificates</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20need%20regulatory%20compliance%20assistance" target="_blank" class="elite-button px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-3">
+                        <span>DISCUSS COMPLIANCE</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Contact -->
+    <section class="section-padding bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">ELITE PARTNERSHIP</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">INITIATE YOUR</span>
+                    <span class="block text-gradient font-serif italic mt-2">Energy Project</span>
+                </h2>
+                <p class="text-lg text-gray-400">
+                    Schedule an exclusive consultation for your 30MW+ energy infrastructure project
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Details -->
+                <div class="luxury-card p-10 rounded-2xl animate-on-scroll">
+                    <h3 class="text-3xl font-bold text-white mb-10 font-serif">Contact Elite Team</h3>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-white flex-shrink-0">
+                                <span class="text-2xl">💬</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-3 text-xl">WhatsApp Consultation</h4>
+                                <a href="https://wa.me/27766473499" target="_blank" class="text-white hover:text-gray-300 transition-colors text-lg block mb-2">
+                                    +27766473499
+                                </a>
+                                <p class="text-gray-500">Direct access to elite energy solutions team</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-white flex-shrink-0">
+                                <span class="text-2xl">📧</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-3 text-xl">Email Communication</h4>
+                                <a href="mailto:victor@maribamedia.co.za" class="text-white hover:text-gray-300 transition-colors text-lg block mb-2">
+                                    victor@maribamedia.co.za
+                                </a>
+                                <p class="text-gray-500">For detailed project documentation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-white flex-shrink-0">
+                                <span class="text-2xl">📞</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-3 text-xl">Telephone</h4>
+                                <a href="tel:+27766473499" class="text-white hover:text-gray-300 transition-colors text-lg block mb-2">
+                                    +27766473499
+                                </a>
+                                <p class="text-gray-500">Confidential project discussions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-white flex-shrink-0">
+                                <span class="text-2xl">🌐</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-3 text-xl">Partner Portal</h4>
+                                <a href="https://solarcompliance.co.za" target="_blank" class="text-white hover:text-gray-300 transition-colors text-lg block mb-2">
+                                    solarcompliance.co.za
+                                </a>
+                                <p class="text-gray-500">Comprehensive regulatory portal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Assessment -->
+                <div class="animate-on-scroll">
+                    <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-10 rounded-2xl mb-10 backdrop-blur-sm">
+                        <h3 class="text-3xl font-bold text-white mb-8 font-serif">Elite Project Assessment</h3>
+                        <p class="text-gray-300 mb-8 text-lg">
+                            Exclusive confidential assessment of your project's viability. We review:
+                        </p>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-4">
+                                <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black text-sm">✓</span>
+                                <span class="text-white">Project viability and bankability</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black text-sm">✓</span>
+                                <span class="text-white">Capital requirement analysis</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black text-sm">✓</span>
+                                <span class="text-white">Compliance requirements and timeline</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black text-sm">✓</span>
+                                <span class="text-white">Optimal service package</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/27766473499?text=Hi%20SolarFund,%20I%20have%20a%2030MW%2B%20project%20and%20would%20like%20an%20elite%20assessment" target="_blank" class="elite-button w-full py-5 rounded-xl font-semibold flex items-center justify-center gap-3">
+                            <span>REQUEST ASSESSMENT</span>
+                            <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Testimonial -->
+                    <div class="luxury-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="text-white">★★★★★</div>
+                            <span class="text-sm font-semibold text-gray-400">ELITE TESTIMONIAL</span>
+                        </div>
+                        <p class="text-gray-300 italic mb-6 text-lg">
+                            "SolarFund delivered exceptional results for our 50MW Zambian solar project—from pre-approved capital to complete EPC and compliance. Their elite approach saved us significant time and complexity."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
+                                <span class="font-bold">MK</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-white">Michael K., Energy Director</div>
+                                <div class="text-sm text-gray-500">50MW Solar Farm, Zambia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <div class="text-3xl font-black mb-6">
+                        <span class="text-white">SolarFund</span>
+                    </div>
+                    <p class="mb-6 text-gray-400 text-lg">
+                        Elite energy capital and solutions for African infrastructure. Pre-approved funding, comprehensive services, and regulatory excellence.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="text-white">📞</span>
+                            <span>+27766473499</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-white">📧</span>
+                            <span>victor@maribamedia.co.za</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-xl">ELITE SERVICES</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="#services" class="text-gray-400 hover:text-white transition-colors py-2">Strategic Consulting</a>
+                        <a href="#services" class="text-gray-400 hover:text-white transition-colors py-2">EPC Services</a>
+                        <a href="#services" class="text-gray-400 hover:text-white transition-colors py-2">IPP Development</a>
+                        <a href="#services" class="text-gray-400 hover:text-white transition-colors py-2">PPA & Tenders</a>
+                        <a href="#services" class="text-gray-400 hover:text-white transition-colors py-2">Grid Infrastructure</a>
+                        <a href="#services" class="text-gray-400 hover:text-white transition-colors py-2">Compliance</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-xl">PARTNER PORTAL</h4>
+                    <a href="https://solarcompliance.co.za" target="_blank" class="inline-flex items-center gap-3 text-white hover:text-gray-300 transition-colors mb-6 group">
+                        <span>🌐</span>
+                        <span class="font-medium text-lg group-hover:underline">solarcompliance.co.za</span>
+                    </a>
+                    <p class="text-gray-400">
+                        Access comprehensive regulatory resources and elite compliance tools.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="pt-10 border-t border-gray-800 text-center">
+                <p class="text-gray-400 text-lg">
+                    © 2024 SolarFund | Elite Energy Capital & Solutions for Africa
+                </p>
+                <p class="text-gray-500 mt-3">
+                    Pre-approved capital • EPC services • IPP development • Regulatory compliance • 90-day guarantee • Performance-driven
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll progress bar
+        const scrollProgress = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = `${scrolled}%`;
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open');
+        const menuCloseIcon = document.getElementById('menu-close');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = mobileMenu.classList.contains('hidden');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    menuOpenIcon.classList.add('hidden');
+                    menuCloseIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuOpenIcon.classList.remove('hidden');
+                        menuCloseIcon.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                    
+                    // Calculate header height
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animation class
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Back to top button
+        const backToTop = document.createElement('button');
+        backToTop.innerHTML = '↑';
+        backToTop.className = 'fixed bottom-8 right-8 w-14 h-14 bg-white text-black rounded-full shadow-2xl hover:bg-gray-100 transition-all z-40 hidden items-center justify-center text-2xl font-bold hover:scale-110';
+        backToTop.style.transform = 'translateY(100px)';
+        backToTop.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+        document.body.appendChild(backToTop);
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('hidden');
+                backToTop.style.transform = 'translateY(0)';
+            } else {
+                backToTop.style.transform = 'translateY(100px)';
+                setTimeout(() => {
+                    if (window.scrollY <= 500) {
+                        backToTop.classList.add('hidden');
+                    }
+                }, 400);
+            }
+        });
+
+        // Animation delay utility
+        document.querySelectorAll('[class*="animation-delay"]').forEach(el => {
+            const classes = el.className.split(' ');
+            classes.forEach(cls => {
+                if (cls.startsWith('animation-delay-')) {
+                    const delay = cls.split('-')[2];
+                    el.style.animationDelay = `${delay}ms`;
+                }
+            });
+        });
+
+        // Add hover effects to luxury cards
+        document.querySelectorAll('.luxury-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Elite button hover effects
+        document.querySelectorAll('.elite-button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Image hover effects
+        const imageZoomElements = document.querySelectorAll('.image-hover-zoom');
+        imageZoomElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                const img = this.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1.08)';
+                }
+            });
+            element.addEventListener('mouseleave', function() {
+                const img = this.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
