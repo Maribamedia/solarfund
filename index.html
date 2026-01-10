@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <title>SolarFund | Guaranteed Funding for 30MW+ Brownfield & Greenfield Solar Farm Projects</title>
-    <meta name="description" content="SolarFund provides guaranteed funding solutions for 30MW+ brownfield and greenfield solar projects. No upfront fees. We only succeed when your project gets funded.">
+    <title>SolarFund Africa | Complete Solutions for 30MW+ Solar Projects: Funding, EPC & Compliance</title>
+    <meta name="description" content="Solar developers: Get complete solutions for 30MW+ solar projects in Africa. We secure funding, manage EPC, and handle compliance - all in one package.">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="SolarFund | Guaranteed Solar Farm Funding for 30MW+ Projects">
-    <meta property="og:description" content="Dedicated funding support, investor matching, and full project management for brownfield & greenfield solar farms. Zero upfront fees, performance-based success fee.">
+    <meta property="og:title" content="SolarFund Africa | Complete Solutions for 30MW+ Solar Projects">
+    <meta property="og:description" content="For solar developers: We secure funding, manage EPC contractors, and handle compliance for 30MW+ solar projects across Africa. WhatsApp +27766473499">
     <meta property="og:image" content="https://solarfund.co.za/images/social-preview.jpg">
     <meta property="og:url" content="https://solarfund.co.za">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,12 +21,6 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
-    
-    <!-- Generated Favicon Code (if you need to create new favicons) -->
-    <!--
-    To create new favicons, use a tool like https://realfavicongenerator.net/
-    Then replace the above favicon links with your generated code
-    -->
     
     <!-- Fallback Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
@@ -216,8 +210,8 @@
       }
       
       .elite-button {
-        background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
-        color: #000000;
+        background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+        color: #FFFFFF;
         font-weight: 600;
         position: relative;
         overflow: hidden;
@@ -241,7 +235,7 @@
       
       .elite-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
       }
       
       .border-animate {
@@ -421,6 +415,79 @@
         background-clip: text;
         animation: shimmer 3s infinite linear;
       }
+      
+      /* WhatsApp Widget */
+      .whatsapp-widget {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        transition: all 0.3s ease;
+      }
+      
+      .whatsapp-button {
+        background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+      }
+      
+      .whatsapp-button svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+      }
+      
+      .whatsapp-tooltip {
+        position: absolute;
+        right: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 12px 16px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .whatsapp-widget:hover .whatsapp-tooltip {
+        opacity: 1;
+        visibility: visible;
+        right: 80px;
+      }
+      
+      @media (max-width: 768px) {
+        .whatsapp-widget {
+          bottom: 20px;
+          right: 20px;
+        }
+        
+        .whatsapp-button {
+          width: 56px;
+          height: 56px;
+        }
+        
+        .whatsapp-tooltip {
+          display: none;
+        }
+      }
     </style>
 </head>
 <body class="text-white">
@@ -437,21 +504,21 @@
                         <span class="text-black font-black text-lg">SF</span>
                     </div>
                     <div>
-                        <span class="text-xl font-black tracking-tight group-hover:text-gray-300 transition-colors">SolarFund</span>
-                        <span class="block text-xs text-gray-400 font-medium tracking-wider">30MW+ SOLAR FARM FUNDING</span>
+                        <span class="text-xl font-black tracking-tight group-hover:text-gray-300 transition-colors">SolarFund Africa</span>
+                        <span class="block text-xs text-gray-400 font-medium tracking-wider">30MW+ SOLAR PROJECTS</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center gap-10 animate-slide-in-right">
                     <a href="#hero" class="border-animate text-sm font-medium text-gray-300 hover:text-white">HOME</a>
-                    <a href="#solution" class="border-animate text-sm font-medium text-gray-300 hover:text-white">THE SOLUTION</a>
-                    <a href="#process" class="border-animate text-sm font-medium text-gray-300 hover:text-white">OUR PROCESS</a>
+                    <a href="#solution" class="border-animate text-sm font-medium text-gray-300 hover:text-white">SOLUTIONS</a>
+                    <a href="#process" class="border-animate text-sm font-medium text-gray-300 hover:text-white">PROCESS</a>
                     <a href="#funding" class="border-animate text-sm font-medium text-gray-300 hover:text-white">NO UPFRONT FEE</a>
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="elite-button px-6 py-3 rounded-lg text-sm font-semibold">
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="elite-button px-6 py-3 rounded-lg text-sm font-semibold">
                         <span class="flex items-center gap-2">
-                            <span>📅</span>
-                            <span>BOOK STRATEGY CALL</span>
+                            <span>💬</span>
+                            <span>WHATSAPP CHAT</span>
                         </span>
                     </a>
                 </div>
@@ -472,19 +539,19 @@
         <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-gray-800 hidden animate-slide-down">
             <div class="px-4 py-6 flex flex-col gap-1">
                 <a href="#hero" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🏠 HOME</a>
-                <a href="#solution" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">✅ THE SOLUTION</a>
-                <a href="#process" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🔄 OUR PROCESS</a>
+                <a href="#solution" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">✅ SOLUTIONS</a>
+                <a href="#process" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🔄 PROCESS</a>
                 <a href="#funding" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">💰 NO UPFRONT FEE</a>
                 <div class="pt-6 mt-4 border-t border-gray-800 space-y-4">
-                    <a href="mailto:info@solarfund.co.za" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
+                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
                         <span>📧</span>
-                        <span>info@solarfund.co.za</span>
+                        <span>victor@maribamedia.co.za</span>
                     </a>
                 </div>
-                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="mt-6 elite-button py-4 rounded-lg text-center font-semibold">
+                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="mt-6 elite-button py-4 rounded-lg text-center font-semibold">
                     <span class="flex items-center justify-center gap-2">
-                        <span>📅</span>
-                        <span>BOOK STRATEGY CALL</span>
+                        <span>💬</span>
+                        <span>WHATSAPP CHAT</span>
                     </span>
                 </a>
             </div>
@@ -504,33 +571,36 @@
                 <!-- Elite Badge -->
                 <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full guarantee-badge mb-12 animate-scale-in">
                     <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-                    <span class="text-sm font-semibold tracking-wider">PERFORMANCE-BASED FUNDING</span>
+                    <span class="text-sm font-semibold tracking-wider">COMPLETE PROJECT SOLUTIONS</span>
                     <span class="text-sm font-bold text-gray-300">• ZERO UPFRONT FEES</span>
                     <span class="w-2 h-2 rounded-full bg-white animate-ping animation-delay-1000"></span>
                 </div>
                 
                 <!-- Main Headline -->
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-slide-up">
-                    <span class="block text-white">FUNDING FOR 30MW+</span>
-                    <span class="block text-gradient mt-4 font-serif italic">Brownfield & Greenfield Solar Farms</span>
+                    <span class="block text-white">FOR SOLAR DEVELOPERS:</span>
+                    <span class="block text-gradient mt-4 font-serif italic">Funding, EPC & Compliance for 30MW+ Projects in Africa</span>
                 </h1>
                 
                 <!-- Subheadline -->
                 <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
-                    Stop struggling with fragmented funding solutions. We provide dedicated funding support, investor matching, and full project management for professional funding houses.
+                    Stop juggling multiple vendors. We provide complete turnkey solutions: secure project funding, manage EPC contractors, and handle all compliance requirements for your 30MW+ solar projects.
                 </p>
 
                 <!-- YouTube VSL Embed -->
                 <div class="mb-14 max-w-4xl mx-auto animate-slide-up animation-delay-500">
                     <div class="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="SolarFarm Funding Process" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <img 
+                            src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                            alt="Solar Farm in Africa" 
+                            class="absolute top-0 left-0 w-full h-full object-cover"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-10">
+                            <div class="text-left">
+                                <h3 class="text-2xl font-bold text-white mb-2">Complete Solar Project Solutions</h3>
+                                <p class="text-white/90">From funding to construction to compliance</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -538,11 +608,11 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
                     <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-400">
                         <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">30MW+</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">MINIMUM PROJECT SIZE</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">PROJECTS IN AFRICA</div>
                     </div>
                     <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-500">
                         <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">3</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">GUARANTEED SOLUTIONS</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">COMPLETE SOLUTIONS</div>
                     </div>
                     <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-600">
                         <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">0%</div>
@@ -550,20 +620,20 @@
                     </div>
                     <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-700">
                         <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">100%</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">PERFORMANCE-BASED</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">TURNKEY SOLUTIONS</div>
                     </div>
                 </div>
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-5 justify-center animate-slide-up animation-delay-800">
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="touch-target inline-flex items-center justify-center gap-3 elite-button text-black px-10 py-5 rounded-xl font-semibold transition-all group">
-                        <span class="text-xl">📅</span>
-                        <span class="text-lg">BOOK STRATEGY CALL</span>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20in%20Africa%20and%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance." target="_blank" class="touch-target inline-flex items-center justify-center gap-3 elite-button text-white px-10 py-5 rounded-xl font-semibold transition-all group">
+                        <span class="text-xl">💬</span>
+                        <span class="text-lg">CHAT ON WHATSAPP</span>
                         <span class="group-hover:translate-x-2 transition-transform">→</span>
                     </a>
                     <a href="#solution" class="touch-target inline-flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-semibold hover:bg-white/10 transition-all border border-white/10">
                         <span class="text-xl">🔍</span>
-                        <span class="text-lg">SEE THE SOLUTION</span>
+                        <span class="text-lg">SEE OUR SOLUTIONS</span>
                     </a>
                 </div>
             </div>
@@ -574,24 +644,24 @@
     <section class="py-16 bg-black border-y border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">The Funding House's Dilemma</h2>
-                <p class="text-lg text-gray-400">Professional funding houses face these exact challenges with 30MW+ solar projects:</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Solar Developer Challenges in Africa</h2>
+                <p class="text-lg text-gray-400">These are the exact problems we solve for solar developers working on 30MW+ projects across Africa:</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="luxury-card p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">⚠️</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Fragmented Solutions</h3>
-                    <p class="text-gray-400">Dealing with multiple vendors for funding, compliance, and project management creates coordination nightmares and delays.</p>
-                </div>
-                <div class="luxury-card p-8 rounded-2xl text-center">
                     <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">💰</div>
-                    <h3 class="text-xl font-bold text-white mb-4">High Upfront Costs</h3>
-                    <p class="text-gray-400">Paying hefty fees before seeing results, with no guarantee of project approval or funding success.</p>
+                    <h3 class="text-xl font-bold text-white mb-4">Funding Gaps</h3>
+                    <p class="text-gray-400">Struggling to secure project financing for African solar projects despite having land rights and permits.</p>
                 </div>
                 <div class="luxury-card p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">🔗</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Limited Investor Access</h3>
-                    <p class="text-gray-400">Struggling to connect with the right institutional investors specifically interested in brownfield/greenfield solar.</p>
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">🏗️</div>
+                    <h3 class="text-xl font-bold text-white mb-4">EPC Management</h3>
+                    <p class="text-gray-400">Difficulty finding and managing reliable EPC contractors who understand African market specifics.</p>
+                </div>
+                <div class="luxury-card p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">📋</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Compliance Maze</h3>
+                    <p class="text-gray-400">Navigating complex regulatory requirements across different African countries delays projects for months.</p>
                 </div>
             </div>
         </div>
@@ -602,14 +672,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-                    <span class="text-sm font-semibold tracking-wider">OUR GUARANTEED SOLUTION</span>
+                    <span class="text-sm font-semibold tracking-wider">OUR COMPLETE SOLUTIONS</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    <span class="text-white">THREE PILLARS OF</span>
-                    <span class="block text-gradient font-serif italic mt-2">Solar Farm Success</span>
+                    <span class="text-white">THREE PILLARS FOR</span>
+                    <span class="block text-gradient font-serif italic mt-2">African Solar Success</span>
                 </h2>
                 <p class="text-lg text-gray-400">
-                    We handle everything from funding to compliance, so you can focus on what matters most
+                    We handle everything so you can focus on developing successful solar projects
                 </p>
             </div>
 
@@ -617,69 +687,81 @@
                 <!-- Solution 1 -->
                 <div class="luxury-card p-10 rounded-2xl text-center">
                     <div class="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mx-auto mb-8 text-3xl">💰</div>
-                    <h3 class="text-2xl font-bold text-white mb-6">1. Dedicated Funding Support</h3>
-                    <p class="text-gray-400 mb-6">Complete financial structuring, term sheet preparation, and capital stack optimization specifically for 30MW+ solar projects.</p>
+                    <h3 class="text-2xl font-bold text-white mb-6">1. Project Funding</h3>
+                    <p class="text-gray-400 mb-6">We secure debt and equity financing for your 30MW+ solar projects across Africa.</p>
                     <ul class="space-y-3 text-left">
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Financial modeling & feasibility</span>
+                            <span class="text-gray-300">Project finance structuring</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Term sheet preparation</span>
+                            <span class="text-gray-300">Investor presentations</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Capital stack optimization</span>
+                            <span class="text-gray-300">Term sheet negotiation</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span class="text-gray-300">Financial close management</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Solution 2 -->
                 <div class="luxury-card p-10 rounded-2xl text-center">
-                    <div class="w-20 h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-8 text-3xl">🤝</div>
-                    <h3 class="text-2xl font-bold text-white mb-6">2. Dedicated Investor Matching</h3>
-                    <p class="text-gray-400 mb-6">Direct access to our network of institutional investors actively seeking brownfield and greenfield solar opportunities.</p>
+                    <div class="w-20 h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-8 text-3xl">🏗️</div>
+                    <h3 class="text-2xl font-bold text-white mb-6">2. EPC Management</h3>
+                    <p class="text-gray-400 mb-6">We source and manage reliable EPC contractors with African experience.</p>
                     <ul class="space-y-3 text-left">
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">Institutional investor network</span>
+                            <span class="text-gray-300">EPC contractor vetting</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">Investor presentation preparation</span>
+                            <span class="text-gray-300">Contract negotiation</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">Due diligence coordination</span>
+                            <span class="text-gray-300">Construction oversight</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-blue-400">✓</span>
+                            <span class="text-gray-300">Quality control</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Solution 3 -->
                 <div class="luxury-card p-10 rounded-2xl text-center">
-                    <div class="w-20 h-20 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mx-auto mb-8 text-3xl">⚡</div>
-                    <h3 class="text-2xl font-bold text-white mb-6">3. Full Project Management & Compliance</h3>
-                    <p class="text-gray-400 mb-6">End-to-end project management including regulatory compliance, permitting, and stakeholder coordination.</p>
+                    <div class="w-20 h-20 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mx-auto mb-8 text-3xl">📋</div>
+                    <h3 class="text-2xl font-bold text-white mb-6">3. Compliance & Permits</h3>
+                    <p class="text-gray-400 mb-6">We handle all regulatory requirements across African jurisdictions.</p>
                     <ul class="space-y-3 text-left">
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Regulatory compliance</span>
+                            <span class="text-gray-300">Environmental permits</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Permitting & approvals</span>
+                            <span class="text-gray-300">Grid connection approvals</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Stakeholder management</span>
+                            <span class="text-gray-300">Local community requirements</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-purple-400">✓</span>
+                            <span class="text-gray-300">Government approvals</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="text-center mt-16">
-                <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="elite-button px-10 py-5 rounded-xl font-semibold inline-flex items-center justify-center gap-3">
+                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20all%20three%20solutions%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button px-10 py-5 rounded-xl font-semibold inline-flex items-center justify-center gap-3">
                     <span>GET ALL THREE SOLUTIONS</span>
                     <span class="group-hover:translate-x-2 transition-transform">→</span>
                 </a>
@@ -695,11 +777,11 @@
                     <span class="text-sm font-semibold tracking-wider">OUR PROCESS</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    <span class="text-white">FROM PROJECT TO</span>
-                    <span class="block text-gradient font-serif italic mt-2">Funded Success</span>
+                    <span class="text-white">FROM LAND TO</span>
+                    <span class="block text-gradient font-serif italic mt-2">Operating Solar Farm</span>
                 </h2>
                 <p class="text-lg text-gray-400">
-                    A streamlined approach to securing funding for your 30MW+ solar farm
+                    A streamlined process for African solar developers
                 </p>
             </div>
 
@@ -708,19 +790,19 @@
                     <div class="space-y-10">
                         <div class="process-line">
                             <h3 class="text-2xl font-bold text-white mb-4">01. Project Assessment</h3>
-                            <p class="text-gray-400">We evaluate your brownfield/greenfield solar project's viability, compliance status, and funding requirements. Minimum 30MW capacity required.</p>
+                            <p class="text-gray-400">We evaluate your project's viability: land rights, resource assessment, and preliminary permits across African jurisdictions.</p>
                         </div>
                         <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">02. Solution Design</h3>
-                            <p class="text-gray-400">We design a custom package combining our three pillars: funding support, investor matching, and project management.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">02. Funding Package</h3>
+                            <p class="text-gray-400">We structure the complete funding solution and present to our network of Africa-focused solar investors.</p>
                         </div>
                         <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">03. Investor Engagement</h3>
-                            <p class="text-gray-400">We present your project to our network of institutional investors with pre-approved mandates for solar farm projects.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">03. EPC & Compliance</h3>
+                            <p class="text-gray-400">We engage vetted EPC contractors and handle all regulatory compliance specific to your African country.</p>
                         </div>
                         <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">04. Funding & Execution</h3>
-                            <p class="text-gray-400">We manage due diligence, legal coordination, and ensure smooth transaction closing with full compliance.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">04. Project Execution</h3>
+                            <p class="text-gray-400">We manage construction, ensure quality control, and handle all stakeholder coordination until COD.</p>
                         </div>
                     </div>
                 </div>
@@ -728,13 +810,13 @@
                 <div class="animate-on-scroll">
                     <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                            alt="Solar Farm Funding Process" 
+                            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                            alt="Solar Farm in Africa" 
                             class="w-full h-[600px] object-cover"
                         >
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
-                            <h3 class="text-3xl font-bold text-white mb-3">Streamlined Funding Process</h3>
-                            <p class="text-white/90">From initial assessment to funded project completion</p>
+                            <h3 class="text-3xl font-bold text-white mb-3">Complete African Solar Solutions</h3>
+                            <p class="text-white/90">From funding to construction to operation</p>
                         </div>
                     </div>
                 </div>
@@ -751,16 +833,16 @@
                 </div>
                 <h2 class="text-4xl md:text-5xl font-black mb-6">
                     <span class="text-white">NO UPFRONT FEES</span>
-                    <span class="block text-gradient font-serif italic mt-2">Performance-Based Success</span>
+                    <span class="block text-gradient font-serif italic mt-2">Pay Only When Funded</span>
                 </h2>
                 <p class="text-lg text-gray-400">
-                    We only succeed when your project succeeds. Zero financial risk for you.
+                    We align our success with yours. Zero financial risk for solar developers.
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="luxury-card p-10 rounded-2xl">
-                    <h3 class="text-3xl font-bold text-white mb-8 font-serif">Our Funding Model</h3>
+                    <h3 class="text-3xl font-bold text-white mb-8 font-serif">Our Engagement Model</h3>
                     
                     <div class="space-y-8">
                         <div class="flex items-start gap-6">
@@ -769,7 +851,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-white mb-3 text-xl">Zero Upfront Costs</h4>
-                                <p class="text-gray-400">No retainer fees, no monthly charges, no hidden costs. We start working immediately at our expense.</p>
+                                <p class="text-gray-400">No retainers, no monthly fees, no hidden costs. We start working immediately at our expense.</p>
                             </div>
                         </div>
                         
@@ -778,8 +860,8 @@
                                 <span class="text-2xl">💰</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white mb-3 text-xl">Performance Fee Only</h4>
-                                <p class="text-gray-400">We receive a success fee ONLY when your project is approved for funding. Our incentives are perfectly aligned with yours.</p>
+                                <h4 class="font-bold text-white mb-3 text-xl">Success Fee Only</h4>
+                                <p class="text-gray-400">We receive a fee ONLY when your project secures funding and reaches financial close.</p>
                             </div>
                         </div>
                         
@@ -788,8 +870,8 @@
                                 <span class="text-2xl">✅</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white mb-3 text-xl">Clear Success Criteria</h4>
-                                <p class="text-gray-400">Fee structure is agreed upfront. We only get paid when funding is secured and the project moves forward.</p>
+                                <h4 class="font-bold text-white mb-3 text-xl">Full Transparency</h4>
+                                <p class="text-gray-400">Fee structure agreed upfront. We only get paid when your project succeeds.</p>
                             </div>
                         </div>
                     </div>
@@ -797,34 +879,34 @@
                 
                 <div class="animate-on-scroll">
                     <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-10 rounded-2xl mb-10 backdrop-blur-sm">
-                        <h3 class="text-3xl font-bold text-white mb-8 font-serif">Why This Works For You</h3>
+                        <h3 class="text-3xl font-bold text-white mb-8 font-serif">Benefits for Solar Developers</h3>
                         
                         <ul class="space-y-6 mb-10">
                             <li class="flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">1</span>
                                 <div>
-                                    <span class="text-white font-medium block">Zero Financial Risk</span>
-                                    <span class="text-gray-400 text-sm">You pay nothing until we deliver results</span>
+                                    <span class="text-white font-medium block">No Financial Risk</span>
+                                    <span class="text-gray-400 text-sm">You pay nothing until funding is secured</span>
                                 </div>
                             </li>
                             <li class="flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">2</span>
                                 <div>
-                                    <span class="text-white font-medium block">Aligned Incentives</span>
-                                    <span class="text-gray-400 text-sm">We only win when you win - guaranteed</span>
+                                    <span class="text-white font-medium block">Complete Solution</span>
+                                    <span class="text-gray-400 text-sm">Funding, EPC, and compliance in one package</span>
                                 </div>
                             </li>
                             <li class="flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">3</span>
                                 <div>
-                                    <span class="text-white font-medium block">Full Commitment</span>
-                                    <span class="text-gray-400 text-sm">We're invested in your project's success</span>
+                                    <span class="text-white font-medium block">Africa Expertise</span>
+                                    <span class="text-gray-400 text-sm">Deep understanding of African solar markets</span>
                                 </div>
                             </li>
                         </ul>
                         
-                        <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="elite-button w-full py-5 rounded-xl font-semibold flex items-center justify-center gap-3">
-                            <span>START RISK-FREE</span>
+                        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20want%20to%20discuss%20a%20risk-free%20engagement%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button w-full py-5 rounded-xl font-semibold flex items-center justify-center gap-3">
+                            <span>START RISK-FREE ON WHATSAPP</span>
                             <span class="group-hover:translate-x-2 transition-transform">→</span>
                         </a>
                     </div>
@@ -833,18 +915,18 @@
                     <div class="luxury-card p-8 rounded-2xl">
                         <div class="flex items-center gap-2 mb-6">
                             <div class="text-yellow-400">★★★★★</div>
-                            <span class="text-sm font-semibold text-gray-400">FUNDING HOUSE TESTIMONIAL</span>
+                            <span class="text-sm font-semibold text-gray-400">SOLAR DEVELOPER TESTIMONIAL</span>
                         </div>
                         <p class="text-gray-300 italic mb-6 text-lg">
-                            "SolarFund's performance-based model was exactly what we needed. No upfront costs, and they only got paid when our 45MW brownfield project secured funding. Their three-pillar approach delivered results in 90 days."
+                            "SolarFund Africa secured funding for our 50MW project in Zambia, managed the EPC contractor, and handled all compliance. Their risk-free model meant we paid nothing until financial close. Game changer for African solar development."
                         </p>
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
-                                <span class="font-bold">JD</span>
+                                <span class="font-bold">MK</span>
                             </div>
                             <div>
-                                <div class="font-bold text-white">James D., Funding Director</div>
-                                <div class="text-sm text-gray-500">Major European Funding House</div>
+                                <div class="font-bold text-white">Michael K., Solar Developer</div>
+                                <div class="text-sm text-gray-500">50MW Project in Zambia</div>
                             </div>
                         </div>
                     </div>
@@ -857,22 +939,22 @@
     <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-5xl font-black mb-8">
-                <span class="text-white">READY TO FUND YOUR</span>
-                <span class="block text-gradient font-serif italic mt-2">30MW+ Solar Farm?</span>
+                <span class="text-white">READY TO DEVELOP YOUR</span>
+                <span class="block text-gradient font-serif italic mt-2">30MW+ African Solar Project?</span>
             </h2>
             
             <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Get dedicated funding support, investor matching, and full project management with zero upfront fees.
+                Get complete solutions: funding secured, EPC managed, compliance handled - all with zero upfront fees.
             </p>
             
             <div class="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
                 <div class="luxury-card p-6 rounded-xl text-center">
                     <div class="text-2xl font-black text-white mb-2">30MW+</div>
-                    <div class="text-sm text-gray-400">MINIMUM PROJECT</div>
+                    <div class="text-sm text-gray-400">AFRICAN PROJECTS</div>
                 </div>
                 <div class="luxury-card p-6 rounded-xl text-center">
                     <div class="text-2xl font-black text-white mb-2">3</div>
-                    <div class="text-sm text-gray-400">GUARANTEED SOLUTIONS</div>
+                    <div class="text-sm text-gray-400">COMPLETE SOLUTIONS</div>
                 </div>
                 <div class="luxury-card p-6 rounded-xl text-center">
                     <div class="text-2xl font-black text-white mb-2">0%</div>
@@ -880,17 +962,17 @@
                 </div>
                 <div class="luxury-card p-6 rounded-xl text-center">
                     <div class="text-2xl font-black text-white mb-2">100%</div>
-                    <div class="text-sm text-gray-400">PERFORMANCE-BASED</div>
+                    <div class="text-sm text-gray-400">TURNKEY</div>
                 </div>
             </div>
             
-            <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="elite-button px-12 py-6 rounded-xl font-semibold inline-flex items-center justify-center gap-3 text-lg">
-                <span>📅 BOOK YOUR STRATEGY CALL NOW</span>
+            <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20ready%20for%20development%20in%20Africa.%20Let%27s%20chat%20on%20WhatsApp." target="_blank" class="elite-button px-12 py-6 rounded-xl font-semibold inline-flex items-center justify-center gap-3 text-lg">
+                <span>💬 CHAT ON WHATSAPP NOW</span>
                 <span class="group-hover:translate-x-2 transition-transform">→</span>
             </a>
             
             <p class="text-gray-500 mt-6 text-sm">
-                Limited slots available for 30MW+ projects. No commitment required for initial consultation.
+                Limited capacity for 30MW+ projects. WhatsApp +27766473499 for immediate response.
             </p>
         </div>
     </section>
@@ -901,15 +983,19 @@
             <div class="grid md:grid-cols-3 gap-10 mb-12">
                 <div>
                     <div class="text-3xl font-black mb-6">
-                        <span class="text-white">SolarFund</span>
+                        <span class="text-white">SolarFund Africa</span>
                     </div>
                     <p class="mb-6 text-gray-400">
-                        Guaranteed funding solutions for 30MW+ brownfield and greenfield solar farm projects. No upfront fees, performance-based success.
+                        Complete solutions for solar developers: funding, EPC management, and compliance for 30MW+ projects across Africa. No upfront fees.
                     </p>
                     <div class="space-y-3">
                         <div class="flex items-center gap-3">
                             <span class="text-white">📧</span>
-                            <span>info@solarfund.co.za</span>
+                            <span>victor@maribamedia.co.za</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-white">💬</span>
+                            <span>+27766473499 (WhatsApp)</span>
                         </div>
                     </div>
                 </div>
@@ -917,34 +1003,46 @@
                 <div>
                     <h4 class="font-bold mb-6 text-white text-xl">OUR SOLUTIONS</h4>
                     <div class="space-y-3">
-                        <div class="text-gray-400 py-2">Dedicated Funding Support</div>
-                        <div class="text-gray-400 py-2">Dedicated Investor Matching</div>
-                        <div class="text-gray-400 py-2">Full Project Management & Compliance</div>
+                        <div class="text-gray-400 py-2">Project Funding for Africa</div>
+                        <div class="text-gray-400 py-2">EPC Contractor Management</div>
+                        <div class="text-gray-400 py-2">Compliance & Permits</div>
                     </div>
                 </div>
                 
                 <div>
                     <h4 class="font-bold mb-6 text-white text-xl">GET STARTED</h4>
-                    <a href="https://cal.com/partner-discovery/south-africa" target="_blank" class="inline-flex items-center gap-3 text-white hover:text-gray-300 transition-colors mb-6 group">
-                        <span>📅</span>
-                        <span class="font-medium group-hover:underline">cal.com/partner-discovery/south-africa</span>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="inline-flex items-center gap-3 text-white hover:text-gray-300 transition-colors mb-6 group">
+                        <span>💬</span>
+                        <span class="font-medium group-hover:underline">WhatsApp +27766473499</span>
                     </a>
                     <p class="text-gray-400">
-                        Book a 30-minute strategy call to discuss your 30MW+ solar farm project.
+                        Chat directly with our team for immediate assistance with your African solar project.
                     </p>
                 </div>
             </div>
             
             <div class="pt-10 border-t border-gray-800 text-center">
                 <p class="text-gray-400">
-                    © 2024 SolarFund | Guaranteed Funding for 30MW+ Solar Farm Projects
+                    © 2024 SolarFund Africa | Complete Solutions for 30MW+ Solar Projects in Africa
                 </p>
                 <p class="text-gray-500 mt-3 text-sm">
-                    Brownfield & Greenfield Solar Projects • No Upfront Fees • Performance-Based • Three Pillar Solution
+                    Funding • EPC Management • Compliance • No Upfront Fees • WhatsApp +27766473499
                 </p>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <div class="whatsapp-tooltip">
+            Chat with us on WhatsApp
+        </div>
+        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20visited%20your%20website%20and%20need%20help%20with%20a%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="whatsapp-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/>
+            </svg>
+        </a>
+    </div>
 
     <!-- JavaScript -->
     <script>
@@ -1053,7 +1151,7 @@
         // Back to top button
         const backToTop = document.createElement('button');
         backToTop.innerHTML = '↑';
-        backToTop.className = 'fixed bottom-8 right-8 w-14 h-14 bg-white text-black rounded-full shadow-2xl hover:bg-gray-100 transition-all z-40 hidden items-center justify-center text-2xl font-bold hover:scale-110';
+        backToTop.className = 'fixed bottom-8 left-8 w-14 h-14 bg-white/10 backdrop-blur-sm text-white rounded-full shadow-2xl hover:bg-white/20 transition-all z-40 hidden items-center justify-center text-2xl font-bold hover:scale-110';
         backToTop.style.transform = 'translateY(100px)';
         backToTop.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
         document.body.appendChild(backToTop);
@@ -1120,6 +1218,18 @@
                 const img = this.querySelector('img');
                 if (img) {
                     img.style.transform = 'scale(1)';
+                }
+            });
+        });
+
+        // WhatsApp click tracking
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'whatsapp_click', {
+                        'event_category': 'engagement',
+                        'event_label': this.href
+                    });
                 }
             });
         });
