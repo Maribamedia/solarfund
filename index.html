@@ -114,14 +114,6 @@
                 '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' },
                 '50%': { borderColor: 'rgba(255, 255, 255, 0.3)' },
               }
-            },
-            screens: {
-              'xs': '375px',
-              'sm': '640px',
-              'md': '768px',
-              'lg': '1024px',
-              'xl': '1280px',
-              '2xl': '1536px',
             }
           }
         }
@@ -133,7 +125,6 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        -webkit-tap-highlight-color: transparent;
       }
       
       html {
@@ -149,7 +140,6 @@
         color: #FFFFFF;
         overflow-x: hidden;
         position: relative;
-        min-height: 100vh;
       }
       
       body::before {
@@ -183,32 +173,13 @@
         100% { background-position: 0% 50%; }
       }
       
-      /* Enhanced Mobile Responsive Classes */
-      .mobile-container {
-        @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full;
-      }
-      
-      .mobile-padding {
-        @apply px-4 sm:px-6 lg:px-8;
-      }
-      
-      .mobile-text-center {
-        @apply text-center md:text-left;
-      }
-      
-      .mobile-full-width {
-        @apply w-full sm:w-auto;
-      }
-      
-      /* Glass Effect */
       .glass-effect {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       }
       
-      /* Luxury Card */
       .luxury-card {
         background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
         border: 1px solid rgba(255, 255, 255, 0.08);
@@ -238,12 +209,6 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
       }
       
-      /* Mobile Optimized Card */
-      .mobile-card {
-        @apply p-6 md:p-8 rounded-xl;
-      }
-      
-      /* Elite Button */
       .elite-button {
         background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
         color: #FFFFFF;
@@ -251,10 +216,6 @@
         position: relative;
         overflow: hidden;
         transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
       }
       
       .elite-button::before {
@@ -277,13 +238,6 @@
         box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
       }
       
-      /* Mobile Optimized Button */
-      .mobile-button {
-        @apply w-full sm:w-auto px-6 py-4 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-semibold;
-        min-height: 56px;
-      }
-      
-      /* Navigation Styles */
       .border-animate {
         position: relative;
       }
@@ -303,7 +257,6 @@
         width: 100%;
       }
       
-      /* Text Gradient */
       .text-gradient {
         background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
         -webkit-background-clip: text;
@@ -311,28 +264,6 @@
         background-clip: text;
       }
       
-      /* Mobile Typography */
-      .mobile-heading-1 {
-        @apply text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-black leading-tight;
-      }
-      
-      .mobile-heading-2 {
-        @apply text-3xl xs:text-4xl sm:text-5xl font-black leading-tight;
-      }
-      
-      .mobile-heading-3 {
-        @apply text-2xl xs:text-3xl sm:text-4xl font-bold;
-      }
-      
-      .mobile-body {
-        @apply text-base xs:text-lg sm:text-xl leading-relaxed;
-      }
-      
-      .mobile-body-small {
-        @apply text-sm xs:text-base leading-normal;
-      }
-      
-      /* Stat Number */
       .stat-number {
         font-feature-settings: 'tnum' 1;
         position: relative;
@@ -349,12 +280,10 @@
         background: linear-gradient(90deg, #FFFFFF, transparent);
       }
       
-      /* Floating Element */
       .floating-element {
         animation: float 4s ease-in-out infinite;
       }
       
-      /* Scroll Animation */
       .animate-on-scroll {
         opacity: 0;
         transform: translateY(40px);
@@ -366,15 +295,21 @@
         transform: translateY(0);
       }
       
-      /* Section Padding */
       .section-padding {
-        @apply py-12 xs:py-16 sm:py-20 md:py-24 lg:py-32;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
       }
       
-      /* Process Line */
+      @media (max-width: 768px) {
+        .section-padding {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+      }
+      
       .process-line {
         position: relative;
-        padding-left: 2rem sm:padding-left-10;
+        padding-left: 2.5rem;
       }
       
       .process-line::before {
@@ -399,7 +334,6 @@
         animation: pulse 2s infinite;
       }
       
-      /* Image Hover Effects */
       .image-hover-zoom {
         overflow: hidden;
         position: relative;
@@ -433,7 +367,6 @@
         opacity: 1;
       }
       
-      /* Guarantee Badge */
       .guarantee-badge {
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -441,13 +374,11 @@
         animation: border-glow 2s ease-in-out infinite;
       }
       
-      /* Touch Target */
       .touch-target {
         min-height: 48px;
         min-width: 48px;
       }
       
-      /* Scroll Progress */
       .scroll-progress {
         position: fixed;
         top: 0;
@@ -458,39 +389,24 @@
         transition: width 0.2s ease;
       }
       
-      /* Mobile Grid */
-      .mobile-grid-1 {
-        @apply grid grid-cols-1 gap-6;
+      @media (max-width: 768px) {
+        .mobile-stack {
+          flex-direction: column;
+        }
+        
+        .mobile-center {
+          text-align: center;
+        }
+        
+        .mobile-full {
+          width: 100%;
+        }
+        
+        .process-line::before {
+          display: none;
+        }
       }
       
-      .mobile-grid-2 {
-        @apply grid grid-cols-1 xs:grid-cols-2 gap-6;
-      }
-      
-      .mobile-grid-3 {
-        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
-      }
-      
-      .mobile-grid-4 {
-        @apply grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-4 gap-4 xs:gap-6;
-      }
-      
-      /* Mobile Stack */
-      .mobile-stack {
-        @apply flex flex-col gap-4 xs:gap-6;
-      }
-      
-      /* Mobile Center */
-      .mobile-center {
-        @apply text-center sm:text-left;
-      }
-      
-      /* Mobile Full */
-      .mobile-full {
-        @apply w-full;
-      }
-      
-      /* Text Shimmer */
       .text-shimmer {
         background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 50%, #FFFFFF 100%);
         background-size: 200% auto;
@@ -503,16 +419,16 @@
       /* WhatsApp Widget */
       .whatsapp-widget {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 30px;
+        right: 30px;
         z-index: 9999;
         transition: all 0.3s ease;
       }
       
       .whatsapp-button {
         background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
-        width: 56px;
-        height: 56px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -528,8 +444,8 @@
       }
       
       .whatsapp-button svg {
-        width: 28px;
-        height: 28px;
+        width: 32px;
+        height: 32px;
         fill: white;
       }
       
@@ -557,10 +473,10 @@
         right: 80px;
       }
       
-      @media (max-width: 640px) {
+      @media (max-width: 768px) {
         .whatsapp-widget {
-          bottom: 16px;
-          right: 16px;
+          bottom: 20px;
+          right: 20px;
         }
         
         .whatsapp-button {
@@ -571,60 +487,6 @@
         .whatsapp-tooltip {
           display: none;
         }
-        
-        .process-line::before {
-          display: none;
-        }
-        
-        .process-line {
-          padding-left: 1.5rem;
-        }
-        
-        .process-line::after {
-          left: 0;
-        }
-      }
-      
-      @media (max-width: 768px) {
-        html {
-          scroll-padding-top: 70px;
-        }
-        
-        .mobile-hide {
-          display: none !important;
-        }
-        
-        .mobile-show {
-          display: block !important;
-        }
-        
-        /* Optimize animations for mobile */
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      }
-      
-      /* Safe Area Insets for Modern Mobile Devices */
-      @supports (padding: max(0px)) {
-        .safe-area-top {
-          padding-top: max(1rem, env(safe-area-inset-top));
-        }
-        
-        .safe-area-bottom {
-          padding-bottom: max(1rem, env(safe-area-inset-bottom));
-        }
-        
-        .safe-area-left {
-          padding-left: max(1rem, env(safe-area-inset-left));
-        }
-        
-        .safe-area-right {
-          padding-right: max(1rem, env(safe-area-inset-right));
-        }
       }
     </style>
 </head>
@@ -633,36 +495,36 @@
     <div id="scroll-progress" class="scroll-progress"></div>
     
     <!-- Navigation -->
-    <nav class="fixed w-full glass-effect z-50 safe-area-top">
-        <div class="mobile-container">
-            <div class="flex items-center justify-between h-16 sm:h-20">
+    <nav class="fixed w-full glass-effect z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="#" class="flex items-center gap-2 xs:gap-3 group animate-slide-in-left">
-                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white flex items-center justify-center">
-                        <span class="text-black font-black text-sm sm:text-lg">SF</span>
+                <a href="#" class="flex items-center gap-3 group animate-slide-in-left">
+                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+                        <span class="text-black font-black text-lg">SF</span>
                     </div>
-                    <div class="hidden xs:block">
-                        <span class="text-lg sm:text-xl font-black tracking-tight group-hover:text-gray-300 transition-colors">SolarFund Africa</span>
+                    <div>
+                        <span class="text-xl font-black tracking-tight group-hover:text-gray-300 transition-colors">SolarFund Africa</span>
                         <span class="block text-xs text-gray-400 font-medium tracking-wider">30MW+ SOLAR PROJECTS</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center gap-8 xl:gap-10 animate-slide-in-right">
+                <div class="hidden lg:flex items-center gap-10 animate-slide-in-right">
                     <a href="#hero" class="border-animate text-sm font-medium text-gray-300 hover:text-white">HOME</a>
                     <a href="#solution" class="border-animate text-sm font-medium text-gray-300 hover:text-white">SOLUTIONS</a>
                     <a href="#process" class="border-animate text-sm font-medium text-gray-300 hover:text-white">PROCESS</a>
                     <a href="#funding" class="border-animate text-sm font-medium text-gray-300 hover:text-white">NO UPFRONT FEE</a>
-                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="elite-button px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg text-sm font-semibold">
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="elite-button px-6 py-3 rounded-lg text-sm font-semibold">
                         <span class="flex items-center gap-2">
                             <span>💬</span>
-                            <span class="hidden sm:inline">WHATSAPP CHAT</span>
+                            <span>WHATSAPP CHAT</span>
                         </span>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden touch-target p-2 text-gray-300 hover:text-white rounded-lg transition-colors">
+                <button id="mobile-menu-btn" class="lg:hidden touch-target p-3 text-gray-300 hover:text-white rounded-lg transition-colors">
                     <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -674,19 +536,19 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-black/98 backdrop-blur-lg border-t border-gray-800 hidden animate-slide-down safe-area-bottom">
-            <div class="px-4 py-4 flex flex-col gap-1">
-                <a href="#hero" class="py-3 px-4 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all rounded-lg active:bg-gray-900/70">🏠 HOME</a>
-                <a href="#solution" class="py-3 px-4 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all rounded-lg active:bg-gray-900/70">✅ SOLUTIONS</a>
-                <a href="#process" class="py-3 px-4 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all rounded-lg active:bg-gray-900/70">🔄 PROCESS</a>
-                <a href="#funding" class="py-3 px-4 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all rounded-lg active:bg-gray-900/70">💰 NO UPFRONT FEE</a>
-                <div class="pt-4 mt-2 border-t border-gray-800 space-y-3">
-                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-4 text-white font-medium hover:bg-gray-900/50 transition-all rounded-lg active:bg-gray-900/70">
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-gray-800 hidden animate-slide-down">
+            <div class="px-4 py-6 flex flex-col gap-1">
+                <a href="#hero" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🏠 HOME</a>
+                <a href="#solution" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">✅ SOLUTIONS</a>
+                <a href="#process" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🔄 PROCESS</a>
+                <a href="#funding" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">💰 NO UPFRONT FEE</a>
+                <div class="pt-6 mt-4 border-t border-gray-800 space-y-4">
+                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
                         <span>📧</span>
-                        <span class="text-sm">victor@maribamedia.co.za</span>
+                        <span>victor@maribamedia.co.za</span>
                     </a>
                 </div>
-                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="mt-4 elite-button mobile-button py-4 rounded-lg text-center font-semibold active:scale-95 transition-transform">
+                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="mt-6 elite-button py-4 rounded-lg text-center font-semibold">
                     <span class="flex items-center justify-center gap-2">
                         <span>💬</span>
                         <span>WHATSAPP CHAT</span>
@@ -697,83 +559,81 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg safe-area-top">
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute -top-20 -right-20 w-48 h-48 sm:w-96 sm:h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow"></div>
-            <div class="absolute -bottom-20 -left-20 w-48 h-48 sm:w-96 sm:h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow animation-delay-2000"></div>
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow animation-delay-2000"></div>
         </div>
         
-        <div class="mobile-container relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-5xl mx-auto text-center">
                 <!-- Elite Badge -->
-                <div class="inline-flex items-center gap-2 xs:gap-3 px-4 py-2 xs:px-6 xs:py-3 rounded-full guarantee-badge mb-8 sm:mb-12 animate-scale-in flex-wrap justify-center">
-                    <span class="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-white animate-ping"></span>
-                    <span class="text-xs xs:text-sm font-semibold tracking-wider">COMPLETE PROJECT SOLUTIONS</span>
-                    <span class="text-xs xs:text-sm font-bold text-gray-300 hidden xs:inline">•</span>
-                    <span class="text-xs xs:text-sm font-bold text-gray-300">ZERO UPFRONT FEES</span>
-                    <span class="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-white animate-ping animation-delay-1000"></span>
+                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full guarantee-badge mb-12 animate-scale-in">
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span class="text-sm font-semibold tracking-wider">COMPLETE PROJECT SOLUTIONS</span>
+                    <span class="text-sm font-bold text-gray-300">• ZERO UPFRONT FEES</span>
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping animation-delay-1000"></span>
                 </div>
                 
                 <!-- Main Headline -->
-                <h1 class="mobile-heading-1 mb-6 sm:mb-8 animate-slide-up">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-slide-up">
                     <span class="block text-white">FOR SOLAR DEVELOPERS:</span>
-                    <span class="block text-gradient mt-2 sm:mt-4 font-serif italic">Funding, EPC & Compliance for 30MW+ Projects in Africa</span>
+                    <span class="block text-gradient mt-4 font-serif italic">Funding, EPC & Compliance for 30MW+ Projects in Africa</span>
                 </h1>
                 
                 <!-- Subheadline -->
-                <p class="mobile-body text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto animate-slide-up animation-delay-300">
+                <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
                     Stop juggling multiple vendors. We provide complete turnkey solutions: secure project funding, manage EPC contractors, and handle all compliance requirements for your 30MW+ solar projects.
                 </p>
 
                 <!-- YouTube VSL Embed -->
-                <div class="mb-8 sm:mb-14 max-w-4xl mx-auto animate-slide-up animation-delay-500">
-                    <div class="relative pb-[56.25%] h-0 rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 shadow-xl sm:shadow-2xl">
+                <div class="mb-14 max-w-4xl mx-auto animate-slide-up animation-delay-500">
+                    <div class="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                         <img 
                             src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
                             alt="Solar Farm in Africa" 
                             class="absolute top-0 left-0 w-full h-full object-cover"
-                            loading="lazy"
                         >
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 sm:p-6 md:p-10">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-10">
                             <div class="text-left">
-                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2">Complete Solar Project Solutions</h3>
-                                <p class="text-white/90 text-sm sm:text-base">From funding to construction to compliance</p>
+                                <h3 class="text-2xl font-bold text-white mb-2">Complete Solar Project Solutions</h3>
+                                <p class="text-white/90">From funding to construction to compliance</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Stats Grid -->
-                <div class="mobile-grid-4 mb-8 sm:mb-14">
-                    <div class="luxury-card mobile-card animate-scale-in animation-delay-400">
-                        <div class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-3 stat-number">30MW+</div>
-                        <div class="text-xs xs:text-sm font-medium text-gray-400 tracking-wider">PROJECTS IN AFRICA</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-400">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">30MW+</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">PROJECTS IN AFRICA</div>
                     </div>
-                    <div class="luxury-card mobile-card animate-scale-in animation-delay-500">
-                        <div class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-3 stat-number">3</div>
-                        <div class="text-xs xs:text-sm font-medium text-gray-400 tracking-wider">COMPLETE SOLUTIONS</div>
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-500">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">3</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">COMPLETE SOLUTIONS</div>
                     </div>
-                    <div class="luxury-card mobile-card animate-scale-in animation-delay-600">
-                        <div class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-3 stat-number">0%</div>
-                        <div class="text-xs xs:text-sm font-medium text-gray-400 tracking-wider">UPFRONT FEES</div>
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-600">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">0%</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">UPFRONT FEES</div>
                     </div>
-                    <div class="luxury-card mobile-card animate-scale-in animation-delay-700">
-                        <div class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-3 stat-number">100%</div>
-                        <div class="text-xs xs:text-sm font-medium text-gray-400 tracking-wider">TURNKEY SOLUTIONS</div>
+                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-700">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">100%</div>
+                        <div class="text-sm font-medium text-gray-400 tracking-wider">TURNKEY SOLUTIONS</div>
                     </div>
                 </div>
 
                 <!-- CTA Buttons -->
-                <div class="mobile-stack animate-slide-up animation-delay-800">
-                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20in%20Africa%20and%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance." target="_blank" class="touch-target inline-flex items-center justify-center gap-3 elite-button mobile-button text-white font-semibold transition-all group">
-                        <span class="text-lg sm:text-xl">💬</span>
-                        <span class="text-base sm:text-lg">CHAT ON WHATSAPP</span>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center animate-slide-up animation-delay-800">
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20in%20Africa%20and%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance." target="_blank" class="touch-target inline-flex items-center justify-center gap-3 elite-button text-white px-10 py-5 rounded-xl font-semibold transition-all group">
+                        <span class="text-xl">💬</span>
+                        <span class="text-lg">CHAT ON WHATSAPP</span>
                         <span class="group-hover:translate-x-2 transition-transform">→</span>
                     </a>
-                    <a href="#solution" class="touch-target inline-flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm text-white mobile-button font-semibold hover:bg-white/10 transition-all border border-white/10 active:scale-95 transition-transform">
-                        <span class="text-lg sm:text-xl">🔍</span>
-                        <span class="text-base sm:text-lg">SEE OUR SOLUTIONS</span>
+                    <a href="#solution" class="touch-target inline-flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-semibold hover:bg-white/10 transition-all border border-white/10">
+                        <span class="text-xl">🔍</span>
+                        <span class="text-lg">SEE OUR SOLUTIONS</span>
                     </a>
                 </div>
             </div>
@@ -781,27 +641,27 @@
     </section>
 
     <!-- Pain Points Section -->
-    <section class="py-12 sm:py-16 bg-black border-y border-gray-800">
-        <div class="mobile-container">
-            <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-                <h2 class="mobile-heading-2 mb-4 sm:mb-6">Solar Developer Challenges in Africa</h2>
-                <p class="mobile-body-small text-gray-400">These are the exact problems we solve for solar developers working on 30MW+ projects across Africa:</p>
+    <section class="py-16 bg-black border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Solar Developer Challenges in Africa</h2>
+                <p class="text-lg text-gray-400">These are the exact problems we solve for solar developers working on 30MW+ projects across Africa:</p>
             </div>
-            <div class="mobile-grid-3">
-                <div class="luxury-card mobile-card text-center">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-4 sm:mb-6 text-xl sm:text-2xl">💰</div>
-                    <h3 class="mobile-heading-3 mb-3 sm:mb-4">Funding Gaps</h3>
-                    <p class="mobile-body-small text-gray-400">Struggling to secure project financing for African solar projects despite having land rights and permits.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="luxury-card p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">💰</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Funding Gaps</h3>
+                    <p class="text-gray-400">Struggling to secure project financing for African solar projects despite having land rights and permits.</p>
                 </div>
-                <div class="luxury-card mobile-card text-center">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-4 sm:mb-6 text-xl sm:text-2xl">🏗️</div>
-                    <h3 class="mobile-heading-3 mb-3 sm:mb-4">EPC Management</h3>
-                    <p class="mobile-body-small text-gray-400">Difficulty finding and managing reliable EPC contractors who understand African market specifics.</p>
+                <div class="luxury-card p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">🏗️</div>
+                    <h3 class="text-xl font-bold text-white mb-4">EPC Management</h3>
+                    <p class="text-gray-400">Difficulty finding and managing reliable EPC contractors who understand African market specifics.</p>
                 </div>
-                <div class="luxury-card mobile-card text-center">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-4 sm:mb-6 text-xl sm:text-2xl">📋</div>
-                    <h3 class="mobile-heading-3 mb-3 sm:mb-4">Compliance Maze</h3>
-                    <p class="mobile-body-small text-gray-400">Navigating complex regulatory requirements across different African countries delays projects for months.</p>
+                <div class="luxury-card p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">📋</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Compliance Maze</h3>
+                    <p class="text-gray-400">Navigating complex regulatory requirements across different African countries delays projects for months.</p>
                 </div>
             </div>
         </div>
@@ -809,100 +669,100 @@
 
     <!-- The Solution -->
     <section id="solution" class="section-padding bg-black">
-        <div class="mobile-container">
-            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-                <div class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6">
-                    <span class="text-xs sm:text-sm font-semibold tracking-wider">OUR COMPLETE SOLUTIONS</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">OUR COMPLETE SOLUTIONS</span>
                 </div>
-                <h2 class="mobile-heading-2 mb-4 sm:mb-6">
-                    <span class="block text-white">THREE PILLARS FOR</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">THREE PILLARS FOR</span>
                     <span class="block text-gradient font-serif italic mt-2">African Solar Success</span>
                 </h2>
-                <p class="mobile-body text-gray-400">
+                <p class="text-lg text-gray-400">
                     We handle everything so you can focus on developing successful solar projects
                 </p>
             </div>
 
-            <div class="mobile-grid-3">
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Solution 1 -->
-                <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl text-center">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mx-auto mb-6 sm:mb-8 text-2xl sm:text-3xl">💰</div>
-                    <h3 class="mobile-heading-3 mb-4 sm:mb-6">1. Project Funding</h3>
-                    <p class="mobile-body-small text-gray-400 mb-6">We secure debt and equity financing for your 30MW+ solar projects across Africa.</p>
-                    <ul class="space-y-2 sm:space-y-3 text-left">
+                <div class="luxury-card p-10 rounded-2xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mx-auto mb-8 text-3xl">💰</div>
+                    <h3 class="text-2xl font-bold text-white mb-6">1. Project Funding</h3>
+                    <p class="text-gray-400 mb-6">We secure debt and equity financing for your 30MW+ solar projects across Africa.</p>
+                    <ul class="space-y-3 text-left">
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Project finance structuring</span>
+                            <span class="text-gray-300">Project finance structuring</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Investor presentations</span>
+                            <span class="text-gray-300">Investor presentations</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Term sheet negotiation</span>
+                            <span class="text-gray-300">Term sheet negotiation</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-green-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Financial close management</span>
+                            <span class="text-gray-300">Financial close management</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Solution 2 -->
-                <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl text-center">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-6 sm:mb-8 text-2xl sm:text-3xl">🏗️</div>
-                    <h3 class="mobile-heading-3 mb-4 sm:mb-6">2. EPC Management</h3>
-                    <p class="mobile-body-small text-gray-400 mb-6">We source and manage reliable EPC contractors with African experience.</p>
-                    <ul class="space-y-2 sm:space-y-3 text-left">
+                <div class="luxury-card p-10 rounded-2xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-8 text-3xl">🏗️</div>
+                    <h3 class="text-2xl font-bold text-white mb-6">2. EPC Management</h3>
+                    <p class="text-gray-400 mb-6">We source and manage reliable EPC contractors with African experience.</p>
+                    <ul class="space-y-3 text-left">
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">EPC contractor vetting</span>
+                            <span class="text-gray-300">EPC contractor vetting</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Contract negotiation</span>
+                            <span class="text-gray-300">Contract negotiation</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Construction oversight</span>
+                            <span class="text-gray-300">Construction oversight</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Quality control</span>
+                            <span class="text-gray-300">Quality control</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Solution 3 -->
-                <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl text-center">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mx-auto mb-6 sm:mb-8 text-2xl sm:text-3xl">📋</div>
-                    <h3 class="mobile-heading-3 mb-4 sm:mb-6">3. Compliance & Permits</h3>
-                    <p class="mobile-body-small text-gray-400 mb-6">We handle all regulatory requirements across African jurisdictions.</p>
-                    <ul class="space-y-2 sm:space-y-3 text-left">
+                <div class="luxury-card p-10 rounded-2xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mx-auto mb-8 text-3xl">📋</div>
+                    <h3 class="text-2xl font-bold text-white mb-6">3. Compliance & Permits</h3>
+                    <p class="text-gray-400 mb-6">We handle all regulatory requirements across African jurisdictions.</p>
+                    <ul class="space-y-3 text-left">
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Environmental permits</span>
+                            <span class="text-gray-300">Environmental permits</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Grid connection approvals</span>
+                            <span class="text-gray-300">Grid connection approvals</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Local community requirements</span>
+                            <span class="text-gray-300">Local community requirements</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300 text-sm sm:text-base">Government approvals</span>
+                            <span class="text-gray-300">Government approvals</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="text-center mt-12 sm:mt-16">
-                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20all%20three%20solutions%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button mobile-button inline-flex items-center justify-center gap-3">
-                    <span class="text-base sm:text-lg">GET ALL THREE SOLUTIONS</span>
+            <div class="text-center mt-16">
+                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20all%20three%20solutions%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button px-10 py-5 rounded-xl font-semibold inline-flex items-center justify-center gap-3">
+                    <span>GET ALL THREE SOLUTIONS</span>
                     <span class="group-hover:translate-x-2 transition-transform">→</span>
                 </a>
             </div>
@@ -911,53 +771,52 @@
 
     <!-- Our Process -->
     <section id="process" class="section-padding bg-gradient-to-b from-black to-gray-900">
-        <div class="mobile-container">
-            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-                <div class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6">
-                    <span class="text-xs sm:text-sm font-semibold tracking-wider">OUR PROCESS</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">OUR PROCESS</span>
                 </div>
-                <h2 class="mobile-heading-2 mb-4 sm:mb-6">
-                    <span class="block text-white">FROM LAND TO</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">FROM LAND TO</span>
                     <span class="block text-gradient font-serif italic mt-2">Operating Solar Farm</span>
                 </h2>
-                <p class="mobile-body text-gray-400">
+                <p class="text-lg text-gray-400">
                     A streamlined process for African solar developers
                 </p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 items-center">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
                 <div class="animate-on-scroll">
-                    <div class="space-y-6 sm:space-y-10">
+                    <div class="space-y-10">
                         <div class="process-line">
-                            <h3 class="mobile-heading-3 mb-2 sm:mb-4">01. Project Assessment</h3>
-                            <p class="mobile-body-small text-gray-400">We evaluate your project's viability: land rights, resource assessment, and preliminary permits across African jurisdictions.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">01. Project Assessment</h3>
+                            <p class="text-gray-400">We evaluate your project's viability: land rights, resource assessment, and preliminary permits across African jurisdictions.</p>
                         </div>
                         <div class="process-line">
-                            <h3 class="mobile-heading-3 mb-2 sm:mb-4">02. Funding Package</h3>
-                            <p class="mobile-body-small text-gray-400">We structure the complete funding solution and present to our network of Africa-focused solar investors.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">02. Funding Package</h3>
+                            <p class="text-gray-400">We structure the complete funding solution and present to our network of Africa-focused solar investors.</p>
                         </div>
                         <div class="process-line">
-                            <h3 class="mobile-heading-3 mb-2 sm:mb-4">03. EPC & Compliance</h3>
-                            <p class="mobile-body-small text-gray-400">We engage vetted EPC contractors and handle all regulatory compliance specific to your African country.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">03. EPC & Compliance</h3>
+                            <p class="text-gray-400">We engage vetted EPC contractors and handle all regulatory compliance specific to your African country.</p>
                         </div>
                         <div class="process-line">
-                            <h3 class="mobile-heading-3 mb-2 sm:mb-4">04. Project Execution</h3>
-                            <p class="mobile-body-small text-gray-400">We manage construction, ensure quality control, and handle all stakeholder coordination until COD.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">04. Project Execution</h3>
+                            <p class="text-gray-400">We manage construction, ensure quality control, and handle all stakeholder coordination until COD.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="animate-on-scroll order-first lg:order-last">
-                    <div class="image-hover-zoom image-overlay rounded-xl sm:rounded-2xl overflow-hidden">
+                <div class="animate-on-scroll">
+                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
                         <img 
                             src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
                             alt="Solar Farm in Africa" 
-                            class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
-                            loading="lazy"
+                            class="w-full h-[600px] object-cover"
                         >
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6 md:p-10">
-                            <h3 class="mobile-heading-3 mb-2 sm:mb-3">Complete African Solar Solutions</h3>
-                            <p class="text-white/90 text-sm sm:text-base">From funding to construction to operation</p>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
+                            <h3 class="text-3xl font-bold text-white mb-3">Complete African Solar Solutions</h3>
+                            <p class="text-white/90">From funding to construction to operation</p>
                         </div>
                     </div>
                 </div>
@@ -967,107 +826,107 @@
 
     <!-- No Upfront Fee Section -->
     <section id="funding" class="section-padding bg-black">
-        <div class="mobile-container">
-            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-                <div class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6">
-                    <span class="text-xs sm:text-sm font-semibold tracking-wider">RISK-FREE ENGAGEMENT</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="text-sm font-semibold tracking-wider">RISK-FREE ENGAGEMENT</span>
                 </div>
-                <h2 class="mobile-heading-2 mb-4 sm:mb-6">
-                    <span class="block text-white">NO UPFRONT FEES</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    <span class="text-white">NO UPFRONT FEES</span>
                     <span class="block text-gradient font-serif italic mt-2">Pay Only When Funded</span>
                 </h2>
-                <p class="mobile-body text-gray-400">
+                <p class="text-lg text-gray-400">
                     We align our success with yours. Zero financial risk for solar developers.
                 </p>
             </div>
 
-            <div class="mobile-stack lg:grid lg:grid-cols-2 gap-8 sm:gap-12">
-                <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl">
-                    <h3 class="mobile-heading-3 mb-6 sm:mb-8 font-serif">Our Engagement Model</h3>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="luxury-card p-10 rounded-2xl">
+                    <h3 class="text-3xl font-bold text-white mb-8 font-serif">Our Engagement Model</h3>
                     
-                    <div class="space-y-6 sm:space-y-8">
-                        <div class="flex items-start gap-4 sm:gap-6">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 flex-shrink-0">
-                                <span class="text-lg sm:text-xl md:text-2xl font-bold">0%</span>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 flex-shrink-0">
+                                <span class="text-2xl font-bold">0%</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white mb-2 sm:mb-3 text-lg sm:text-xl">Zero Upfront Costs</h4>
-                                <p class="mobile-body-small text-gray-400">No retainers, no monthly fees, no hidden costs. We start working immediately at our expense.</p>
+                                <h4 class="font-bold text-white mb-3 text-xl">Zero Upfront Costs</h4>
+                                <p class="text-gray-400">No retainers, no monthly fees, no hidden costs. We start working immediately at our expense.</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start gap-4 sm:gap-6">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 flex-shrink-0">
-                                <span class="text-lg sm:text-xl md:text-2xl">💰</span>
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 flex-shrink-0">
+                                <span class="text-2xl">💰</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white mb-2 sm:mb-3 text-lg sm:text-xl">Success Fee Only</h4>
-                                <p class="mobile-body-small text-gray-400">We receive a fee ONLY when your project secures funding and reaches financial close.</p>
+                                <h4 class="font-bold text-white mb-3 text-xl">Success Fee Only</h4>
+                                <p class="text-gray-400">We receive a fee ONLY when your project secures funding and reaches financial close.</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start gap-4 sm:gap-6">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
-                                <span class="text-lg sm:text-xl md:text-2xl">✅</span>
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                                <span class="text-2xl">✅</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white mb-2 sm:mb-3 text-lg sm:text-xl">Full Transparency</h4>
-                                <p class="mobile-body-small text-gray-400">Fee structure agreed upfront. We only get paid when your project succeeds.</p>
+                                <h4 class="font-bold text-white mb-3 text-xl">Full Transparency</h4>
+                                <p class="text-gray-400">Fee structure agreed upfront. We only get paid when your project succeeds.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="animate-on-scroll">
-                    <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl mb-6 sm:mb-10 backdrop-blur-sm">
-                        <h3 class="mobile-heading-3 mb-6 sm:mb-8 font-serif">Benefits for Solar Developers</h3>
+                    <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-10 rounded-2xl mb-10 backdrop-blur-sm">
+                        <h3 class="text-3xl font-bold text-white mb-8 font-serif">Benefits for Solar Developers</h3>
                         
-                        <ul class="space-y-4 sm:space-y-6 mb-6 sm:mb-10">
-                            <li class="flex items-center gap-3 sm:gap-4">
-                                <span class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white flex items-center justify-center text-black text-xs sm:text-sm">1</span>
+                        <ul class="space-y-6 mb-10">
+                            <li class="flex items-center gap-4">
+                                <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">1</span>
                                 <div>
-                                    <span class="text-white font-medium block text-sm sm:text-base">No Financial Risk</span>
-                                    <span class="text-gray-400 text-xs sm:text-sm">You pay nothing until funding is secured</span>
+                                    <span class="text-white font-medium block">No Financial Risk</span>
+                                    <span class="text-gray-400 text-sm">You pay nothing until funding is secured</span>
                                 </div>
                             </li>
-                            <li class="flex items-center gap-3 sm:gap-4">
-                                <span class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white flex items-center justify-center text-black text-xs sm:text-sm">2</span>
+                            <li class="flex items-center gap-4">
+                                <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">2</span>
                                 <div>
-                                    <span class="text-white font-medium block text-sm sm:text-base">Complete Solution</span>
-                                    <span class="text-gray-400 text-xs sm:text-sm">Funding, EPC, and compliance in one package</span>
+                                    <span class="text-white font-medium block">Complete Solution</span>
+                                    <span class="text-gray-400 text-sm">Funding, EPC, and compliance in one package</span>
                                 </div>
                             </li>
-                            <li class="flex items-center gap-3 sm:gap-4">
-                                <span class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white flex items-center justify-center text-black text-xs sm:text-sm">3</span>
+                            <li class="flex items-center gap-4">
+                                <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">3</span>
                                 <div>
-                                    <span class="text-white font-medium block text-sm sm:text-base">Africa Expertise</span>
-                                    <span class="text-gray-400 text-xs sm:text-sm">Deep understanding of African solar markets</span>
+                                    <span class="text-white font-medium block">Africa Expertise</span>
+                                    <span class="text-gray-400 text-sm">Deep understanding of African solar markets</span>
                                 </div>
                             </li>
                         </ul>
                         
-                        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20want%20to%20discuss%20a%20risk-free%20engagement%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button mobile-button font-semibold flex items-center justify-center gap-3">
+                        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20want%20to%20discuss%20a%20risk-free%20engagement%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button w-full py-5 rounded-xl font-semibold flex items-center justify-center gap-3">
                             <span>START RISK-FREE ON WHATSAPP</span>
                             <span class="group-hover:translate-x-2 transition-transform">→</span>
                         </a>
                     </div>
                     
                     <!-- Testimonial -->
-                    <div class="luxury-card p-6 sm:p-8 rounded-xl sm:rounded-2xl">
-                        <div class="flex items-center gap-2 mb-4 sm:mb-6">
+                    <div class="luxury-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-2 mb-6">
                             <div class="text-yellow-400">★★★★★</div>
-                            <span class="text-xs sm:text-sm font-semibold text-gray-400">SOLAR DEVELOPER TESTIMONIAL</span>
+                            <span class="text-sm font-semibold text-gray-400">SOLAR DEVELOPER TESTIMONIAL</span>
                         </div>
-                        <p class="text-gray-300 italic mb-4 sm:mb-6 text-base sm:text-lg">
+                        <p class="text-gray-300 italic mb-6 text-lg">
                             "SolarFund Africa secured funding for our 50MW project in Zambia, managed the EPC contractor, and handled all compliance. Their risk-free model meant we paid nothing until financial close. Game changer for African solar development."
                         </p>
-                        <div class="flex items-center gap-3 sm:gap-4">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
-                                <span class="font-bold text-sm sm:text-base">MK</span>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
+                                <span class="font-bold">MK</span>
                             </div>
                             <div>
-                                <div class="font-bold text-white text-sm sm:text-base">Michael K., Solar Developer</div>
-                                <div class="text-xs sm:text-sm text-gray-500">50MW Project in Zambia</div>
+                                <div class="font-bold text-white">Michael K., Solar Developer</div>
+                                <div class="text-sm text-gray-500">50MW Project in Zambia</div>
                             </div>
                         </div>
                     </div>
@@ -1077,96 +936,96 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div class="mobile-container text-center">
-            <h2 class="mobile-heading-2 mb-6 sm:mb-8">
-                <span class="block text-white">READY TO DEVELOP YOUR</span>
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">
+                <span class="text-white">READY TO DEVELOP YOUR</span>
                 <span class="block text-gradient font-serif italic mt-2">30MW+ African Solar Project?</span>
             </h2>
             
-            <p class="mobile-body text-gray-400 mb-8 sm:mb-10 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
                 Get complete solutions: funding secured, EPC managed, compliance handled - all with zero upfront fees.
             </p>
             
-            <div class="mobile-grid-4 mb-8 sm:mb-12 max-w-xl mx-auto">
-                <div class="luxury-card p-4 sm:p-6 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-black text-white mb-1 sm:mb-2">30MW+</div>
-                    <div class="text-xs sm:text-sm text-gray-400">AFRICAN PROJECTS</div>
+            <div class="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
+                <div class="luxury-card p-6 rounded-xl text-center">
+                    <div class="text-2xl font-black text-white mb-2">30MW+</div>
+                    <div class="text-sm text-gray-400">AFRICAN PROJECTS</div>
                 </div>
-                <div class="luxury-card p-4 sm:p-6 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-black text-white mb-1 sm:mb-2">3</div>
-                    <div class="text-xs sm:text-sm text-gray-400">COMPLETE SOLUTIONS</div>
+                <div class="luxury-card p-6 rounded-xl text-center">
+                    <div class="text-2xl font-black text-white mb-2">3</div>
+                    <div class="text-sm text-gray-400">COMPLETE SOLUTIONS</div>
                 </div>
-                <div class="luxury-card p-4 sm:p-6 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-black text-white mb-1 sm:mb-2">0%</div>
-                    <div class="text-xs sm:text-sm text-gray-400">UPFRONT FEES</div>
+                <div class="luxury-card p-6 rounded-xl text-center">
+                    <div class="text-2xl font-black text-white mb-2">0%</div>
+                    <div class="text-sm text-gray-400">UPFRONT FEES</div>
                 </div>
-                <div class="luxury-card p-4 sm:p-6 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-black text-white mb-1 sm:mb-2">100%</div>
-                    <div class="text-xs sm:text-sm text-gray-400">TURNKEY</div>
+                <div class="luxury-card p-6 rounded-xl text-center">
+                    <div class="text-2xl font-black text-white mb-2">100%</div>
+                    <div class="text-sm text-gray-400">TURNKEY</div>
                 </div>
             </div>
             
-            <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20ready%20for%20development%20in%20Africa.%20Let%27s%20chat%20on%20WhatsApp." target="_blank" class="elite-button mobile-button inline-flex items-center justify-center gap-3">
+            <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20ready%20for%20development%20in%20Africa.%20Let%27s%20chat%20on%20WhatsApp." target="_blank" class="elite-button px-12 py-6 rounded-xl font-semibold inline-flex items-center justify-center gap-3 text-lg">
                 <span>💬 CHAT ON WHATSAPP NOW</span>
                 <span class="group-hover:translate-x-2 transition-transform">→</span>
             </a>
             
-            <p class="text-gray-500 mt-4 sm:mt-6 text-xs sm:text-sm">
+            <p class="text-gray-500 mt-6 text-sm">
                 Limited capacity for 30MW+ projects. WhatsApp +27766473499 for immediate response.
             </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-gray-900 py-8 sm:py-14">
-        <div class="mobile-container">
-            <div class="mobile-grid-3 gap-6 sm:gap-10 mb-8 sm:mb-12">
+    <footer class="bg-black border-t border-gray-900 py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
                 <div>
-                    <div class="text-2xl sm:text-3xl font-black mb-4 sm:mb-6">
+                    <div class="text-3xl font-black mb-6">
                         <span class="text-white">SolarFund Africa</span>
                     </div>
-                    <p class="mb-4 sm:mb-6 mobile-body-small text-gray-400">
+                    <p class="mb-6 text-gray-400">
                         Complete solutions for solar developers: funding, EPC management, and compliance for 30MW+ projects across Africa. No upfront fees.
                     </p>
-                    <div class="space-y-2 sm:space-y-3">
-                        <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
                             <span class="text-white">📧</span>
-                            <span class="text-sm sm:text-base">victor@maribamedia.co.za</span>
+                            <span>victor@maribamedia.co.za</span>
                         </div>
-                        <div class="flex items-center gap-2 sm:gap-3">
+                        <div class="flex items-center gap-3">
                             <span class="text-white">💬</span>
-                            <span class="text-sm sm:text-base">+27766473499 (WhatsApp)</span>
+                            <span>+27766473499 (WhatsApp)</span>
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-4 sm:mb-6 text-white text-lg sm:text-xl">OUR SOLUTIONS</h4>
-                    <div class="space-y-2 sm:space-y-3">
-                        <div class="text-gray-400 py-1 sm:py-2 text-sm sm:text-base">Project Funding for Africa</div>
-                        <div class="text-gray-400 py-1 sm:py-2 text-sm sm:text-base">EPC Contractor Management</div>
-                        <div class="text-gray-400 py-1 sm:py-2 text-sm sm:text-base">Compliance & Permits</div>
+                    <h4 class="font-bold mb-6 text-white text-xl">OUR SOLUTIONS</h4>
+                    <div class="space-y-3">
+                        <div class="text-gray-400 py-2">Project Funding for Africa</div>
+                        <div class="text-gray-400 py-2">EPC Contractor Management</div>
+                        <div class="text-gray-400 py-2">Compliance & Permits</div>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-4 sm:mb-6 text-white text-lg sm:text-xl">GET STARTED</h4>
-                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="inline-flex items-center gap-2 sm:gap-3 text-white hover:text-gray-300 transition-colors mb-4 sm:mb-6 group">
+                    <h4 class="font-bold mb-6 text-white text-xl">GET STARTED</h4>
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="inline-flex items-center gap-3 text-white hover:text-gray-300 transition-colors mb-6 group">
                         <span>💬</span>
-                        <span class="font-medium text-sm sm:text-base group-hover:underline">WhatsApp +27766473499</span>
+                        <span class="font-medium group-hover:underline">WhatsApp +27766473499</span>
                     </a>
-                    <p class="mobile-body-small text-gray-400">
+                    <p class="text-gray-400">
                         Chat directly with our team for immediate assistance with your African solar project.
                     </p>
                 </div>
             </div>
             
-            <div class="pt-6 sm:pt-10 border-t border-gray-800 text-center">
-                <p class="text-gray-400 text-sm sm:text-base">
+            <div class="pt-10 border-t border-gray-800 text-center">
+                <p class="text-gray-400">
                     © 2024 SolarFund Africa | Complete Solutions for 30MW+ Solar Projects in Africa
                 </p>
-                <p class="text-gray-500 mt-2 sm:mt-3 text-xs sm:text-sm">
+                <p class="text-gray-500 mt-3 text-sm">
                     Funding • EPC Management • Compliance • No Upfront Fees • WhatsApp +27766473499
                 </p>
             </div>
@@ -1178,7 +1037,7 @@
         <div class="whatsapp-tooltip">
             Chat with us on WhatsApp
         </div>
-        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20visited%20your%20website%20and%20need%20help%20with%20a%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20visited%20your%20website%20and%20need%20help%20with%20a%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="whatsapp-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/>
             </svg>
@@ -1189,13 +1048,11 @@
     <script>
         // Scroll progress bar
         const scrollProgress = document.getElementById('scroll-progress');
-        if (scrollProgress) {
-            window.addEventListener('scroll', () => {
-                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (window.scrollY / windowHeight) * 100;
-                scrollProgress.style.width = `${scrolled}%`;
-            });
-        }
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = `${scrolled}%`;
+        });
 
         // Mobile menu functionality
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -1206,29 +1063,20 @@
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const isOpen = !mobileMenu.classList.contains('hidden');
+                const isOpen = mobileMenu.classList.contains('hidden');
                 
-                if (!isOpen) {
+                if (isOpen) {
                     mobileMenu.classList.remove('hidden');
                     menuOpenIcon.classList.add('hidden');
                     menuCloseIcon.classList.remove('hidden');
                     document.body.style.overflow = 'hidden';
-                    // Prevent background scrolling
-                    document.addEventListener('touchmove', preventScroll, { passive: false });
                 } else {
                     mobileMenu.classList.add('hidden');
                     menuOpenIcon.classList.remove('hidden');
                     menuCloseIcon.classList.add('hidden');
                     document.body.style.overflow = '';
-                    document.removeEventListener('touchmove', preventScroll);
                 }
             });
-
-            function preventScroll(e) {
-                if (e.target.closest('#mobile-menu')) {
-                    e.preventDefault();
-                }
-            }
 
             // Close menu when clicking links
             mobileMenu.querySelectorAll('a').forEach(link => {
@@ -1237,7 +1085,6 @@
                     menuOpenIcon.classList.remove('hidden');
                     menuCloseIcon.classList.add('hidden');
                     document.body.style.overflow = '';
-                    document.removeEventListener('touchmove', preventScroll);
                 });
             });
 
@@ -1248,18 +1095,6 @@
                     menuOpenIcon.classList.remove('hidden');
                     menuCloseIcon.classList.add('hidden');
                     document.body.style.overflow = '';
-                    document.removeEventListener('touchmove', preventScroll);
-                }
-            });
-
-            // Close on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    menuOpenIcon.classList.remove('hidden');
-                    menuCloseIcon.classList.add('hidden');
-                    document.body.style.overflow = '';
-                    document.removeEventListener('touchmove', preventScroll);
                 }
             });
         }
@@ -1274,6 +1109,14 @@
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuOpenIcon.classList.remove('hidden');
+                        menuCloseIcon.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                    
                     // Calculate header height
                     const headerHeight = document.querySelector('nav').offsetHeight;
                     
@@ -1308,8 +1151,7 @@
         // Back to top button
         const backToTop = document.createElement('button');
         backToTop.innerHTML = '↑';
-        backToTop.className = 'fixed bottom-16 sm:bottom-8 left-4 sm:left-8 w-12 h-12 sm:w-14 sm:h-14 bg-white/10 backdrop-blur-sm text-white rounded-full shadow-2xl hover:bg-white/20 transition-all z-40 hidden items-center justify-center text-xl sm:text-2xl font-bold hover:scale-110 active:scale-95';
-        backToTop.setAttribute('aria-label', 'Back to top');
+        backToTop.className = 'fixed bottom-8 left-8 w-14 h-14 bg-white/10 backdrop-blur-sm text-white rounded-full shadow-2xl hover:bg-white/20 transition-all z-40 hidden items-center justify-center text-2xl font-bold hover:scale-110';
         backToTop.style.transform = 'translateY(100px)';
         backToTop.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
         document.body.appendChild(backToTop);
@@ -1343,44 +1185,42 @@
             });
         });
 
-        // Add hover effects to luxury cards (only on non-touch devices)
-        if (window.matchMedia('(hover: hover)').matches) {
-            document.querySelectorAll('.luxury-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px)';
-                });
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
+        // Add hover effects to luxury cards
+        document.querySelectorAll('.luxury-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
             });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
 
-            // Elite button hover effects
-            document.querySelectorAll('.elite-button').forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-2px)';
-                });
-                button.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
+        // Elite button hover effects
+        document.querySelectorAll('.elite-button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
             });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
 
-            // Image hover effects
-            const imageZoomElements = document.querySelectorAll('.image-hover-zoom');
-            imageZoomElements.forEach(element => {
-                element.addEventListener('mouseenter', function() {
-                    const img = this.querySelector('img');
-                    if (img) {
-                        img.style.transform = 'scale(1.08)';
-                    }
-                });
-                element.addEventListener('mouseleave', function() {
-                    const img = this.querySelector('img');
-                    if (img) {
-                        img.style.transform = 'scale(1)';
-                    }
-                });
+        // Image hover effects
+        const imageZoomElements = document.querySelectorAll('.image-hover-zoom');
+        imageZoomElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                const img = this.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1.08)';
+                }
             });
-        }
+            element.addEventListener('mouseleave', function() {
+                const img = this.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1)';
+                }
+            });
+        });
 
         // WhatsApp click tracking
         document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
@@ -1393,31 +1233,6 @@
                 }
             });
         });
-
-        // Touch device detection for better UX
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-            document.body.classList.add('touch-device');
-        } else {
-            document.body.classList.add('non-touch-device');
-        }
-
-        // Load images lazily
-        if ('loading' in HTMLImageElement.prototype) {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.src = img.dataset.src;
-            });
-        }
-
-        // Prevent zoom on double tap (mobile)
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(event) {
-            const now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
     </script>
 </body>
 </html>
