@@ -3,30 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <title>SolarFund Africa | Complete Solutions for 30MW+ Solar Projects: Funding, EPC & Compliance</title>
-    <meta name="description" content="Solar developers: Get complete solutions for 30MW+ solar projects in Africa. We secure funding, manage EPC, and handle compliance - all in one package.">
+    <title>Mariba Funding Network | Global IPP, Business & SA PO Financing</title>
+    <meta name="description" content="Global funding for IPPs, business equity/debt worldwide, and purchase order financing in South Africa. Access institutional capital with zero upfront fees. WhatsApp +27766473499.">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="SolarFund Africa | Complete Solutions for 30MW+ Solar Projects">
-    <meta property="og:description" content="For solar developers: We secure funding, manage EPC contractors, and handle compliance for 30MW+ solar projects across Africa. WhatsApp +27766473499">
-    <meta property="og:image" content="https://solarfund.co.za/images/social-preview.jpg">
-    <meta property="og:url" content="https://solarfund.co.za">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mariba Funding Network | Global IPP, Business & SA PO Financing">
+    <meta property="og:description" content="IPP global funding, business equity/debt worldwide, and PO financing in South Africa. $12B network, zero upfront fees.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1508514177221-1881dc4b20c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://maribafunding.co.za">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#000000">
-    
-    <!-- Fallback Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+    <!-- Favicon (modern SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000000'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23FFFFFF' font-weight='bold'>MFN</text></svg>">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,35 +26,17 @@
         theme: {
           extend: {
             colors: {
-              black: '#000000',
-              white: '#FFFFFF',
-              gray: {
-                50: '#fafafa',
-                100: '#f5f5f5',
-                200: '#e5e5e5',
-                300: '#d4d4d4',
-                400: '#a3a3a3',
-                500: '#737373',
-                600: '#525252',
-                700: '#404040',
-                800: '#262626',
-                900: '#171717',
-              },
-              accent: {
-                100: '#fef3c7',
-                200: '#fde68a',
-                300: '#fcd34d',
-                400: '#fbbf24',
-                500: '#f59e0b',
-                600: '#d97706',
-                700: '#b45309',
-                800: '#92400e',
-                900: '#78350f',
-              }
+              // Apple-inspired minimalist palette
+              background: '#FFFFFF',
+              foreground: '#1C1C1E',
+              card: '#F5F5F7',
+              border: '#E5E5EA',
+              accent: '#007AFF',
+              secondary: '#8E8E93',
+              success: '#34C759',
             },
             fontFamily: {
-              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'sans-serif'],
             },
             animation: {
               'fade-in': 'fadeIn 0.6s ease-out',
@@ -71,49 +44,15 @@
               'slide-down': 'slideDown 0.7s ease-out',
               'slide-in-left': 'slideInLeft 0.8s ease-out',
               'slide-in-right': 'slideInRight 0.8s ease-out',
-              'float': 'float 4s ease-in-out infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'shimmer': 'shimmer 2s infinite',
               'scale-in': 'scaleIn 0.5s ease-out',
-              'border-glow': 'borderGlow 2s ease-in-out infinite',
             },
             keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-              slideUp: {
-                '0%': { transform: 'translateY(40px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              },
-              slideDown: {
-                '0%': { transform: 'translateY(-40px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              },
-              slideInLeft: {
-                '0%': { transform: 'translateX(-40px)', opacity: '0' },
-                '100%': { transform: 'translateX(0)', opacity: '1' },
-              },
-              slideInRight: {
-                '0%': { transform: 'translateX(40px)', opacity: '0' },
-                '100%': { transform: 'translateX(0)', opacity: '1' },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              },
-              shimmer: {
-                '0%': { backgroundPosition: '-200px 0' },
-                '100%': { backgroundPosition: '200px 0' },
-              },
-              scaleIn: {
-                '0%': { transform: 'scale(0.95)', opacity: '0' },
-                '100%': { transform: 'scale(1)', opacity: '1' },
-              },
-              borderGlow: {
-                '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' },
-                '50%': { borderColor: 'rgba(255, 255, 255, 0.3)' },
-              }
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+              slideDown: { '0%': { transform: 'translateY(-40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+              slideInLeft: { '0%': { transform: 'translateX(-40px)', opacity: '0' }, '100%': { transform: 'translateX(0)', opacity: '1' } },
+              slideInRight: { '0%': { transform: 'translateX(40px)', opacity: '0' }, '100%': { transform: 'translateX(0)', opacity: '1' } },
+              scaleIn: { '0%': { transform: 'scale(0.95)', opacity: '0' }, '100%': { transform: 'scale(1)', opacity: '1' } },
             }
           }
         }
@@ -136,138 +75,58 @@
       
       body {
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        background: #000000;
-        color: #FFFFFF;
+        background: #FFFFFF;
+        color: #1C1C1E;
         overflow-x: hidden;
-        position: relative;
       }
       
-      body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-          radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-          radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: 0;
-      }
-      
-      .section-bg {
-        position: relative;
-        background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
-      }
-      
-      .gradient-bg {
-        background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
-        background-size: 200% 200%;
-        animation: gradient 10s ease infinite;
-      }
-      
-      @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      
-      .glass-effect {
-        background: rgba(0, 0, 0, 0.8);
+      /* Glassmorphism nav with blur */
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
       
-      .luxury-card {
-        background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .luxury-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-        transition: left 0.7s ease;
-      }
-      
-      .luxury-card:hover::before {
-        left: 100%;
-      }
-      
-      .luxury-card:hover {
-        border-color: rgba(255, 255, 255, 0.2);
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      }
-      
-      .elite-button {
-        background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
-        color: #FFFFFF;
-        font-weight: 600;
-        position: relative;
-        overflow: hidden;
+      /* Card styles */
+      .card {
+        background: #F5F5F7;
+        border-radius: 1.5rem;
         transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.03);
       }
       
-      .elite-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-        transition: left 0.7s ease;
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.08);
       }
       
-      .elite-button:hover::before {
-        left: 100%;
+      /* Button styles */
+      .btn-primary {
+        background: #007AFF;
+        color: white;
+        font-weight: 600;
+        border-radius: 2rem;
+        transition: all 0.2s ease;
       }
       
-      .elite-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+      .btn-primary:hover {
+        background: #005FC7;
+        transform: scale(0.98);
       }
       
-      .border-animate {
-        position: relative;
+      .btn-outline {
+        background: transparent;
+        border: 1px solid #007AFF;
+        color: #007AFF;
+        font-weight: 600;
+        border-radius: 2rem;
+        transition: all 0.2s ease;
       }
       
-      .border-animate::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, #FFFFFF, rgba(255, 255, 255, 0.5));
-        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .border-animate:hover::after {
-        width: 100%;
-      }
-      
-      .text-gradient {
-        background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      
-      .stat-number {
-        font-feature-settings: 'tnum' 1;
-        position: relative;
-        display: inline-block;
+      .btn-outline:hover {
+        background: rgba(0, 122, 255, 0.05);
+        transform: scale(0.98);
       }
       
       .stat-number::after {
@@ -277,11 +136,7 @@
         left: 0;
         width: 40%;
         height: 2px;
-        background: linear-gradient(90deg, #FFFFFF, transparent);
-      }
-      
-      .floating-element {
-        animation: float 4s ease-in-out infinite;
+        background: #007AFF;
       }
       
       .animate-on-scroll {
@@ -295,88 +150,34 @@
         transform: translateY(0);
       }
       
-      .section-padding {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-      }
-      
-      @media (max-width: 768px) {
-        .section-padding {
-          padding-top: 4rem;
-          padding-bottom: 4rem;
-        }
-      }
-      
-      .process-line {
+      .process-step {
         position: relative;
-        padding-left: 2.5rem;
+        padding-left: 2rem;
       }
       
-      .process-line::before {
+      .process-step::before {
         content: '';
         position: absolute;
         left: 0;
-        top: 0;
-        bottom: 0;
-        width: 1px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent);
-      }
-      
-      .process-line::after {
-        content: '';
-        position: absolute;
-        left: -4px;
-        top: 0;
-        width: 9px;
-        height: 9px;
+        top: 0.5rem;
+        width: 8px;
+        height: 8px;
+        background: #007AFF;
         border-radius: 50%;
-        background: #FFFFFF;
-        animation: pulse 2s infinite;
       }
       
-      .image-hover-zoom {
-        overflow: hidden;
-        position: relative;
-      }
-      
-      .image-hover-zoom img {
-        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .image-hover-zoom:hover img {
-        transform: scale(1.08);
-      }
-      
-      .image-overlay {
-        position: relative;
-      }
-      
-      .image-overlay::after {
+      .process-step::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
-        opacity: 0;
-        transition: opacity 0.4s ease;
+        left: 3px;
+        top: 1rem;
+        bottom: -1rem;
+        width: 2px;
+        background: #E5E5EA;
       }
       
-      .image-overlay:hover::after {
-        opacity: 1;
-      }
-      
-      .guarantee-badge {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        animation: border-glow 2s ease-in-out infinite;
-      }
-      
-      .touch-target {
-        min-height: 48px;
-        min-width: 48px;
+      .process-step:last-child::after {
+        display: none;
       }
       
       .scroll-progress {
@@ -384,63 +185,32 @@
         top: 0;
         left: 0;
         height: 2px;
-        background: linear-gradient(90deg, #FFFFFF, rgba(255, 255, 255, 0.5));
+        background: #007AFF;
         z-index: 100;
         transition: width 0.2s ease;
       }
       
-      @media (max-width: 768px) {
-        .mobile-stack {
-          flex-direction: column;
-        }
-        
-        .mobile-center {
-          text-align: center;
-        }
-        
-        .mobile-full {
-          width: 100%;
-        }
-        
-        .process-line::before {
-          display: none;
-        }
-      }
-      
-      .text-shimmer {
-        background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 50%, #FFFFFF 100%);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 3s infinite linear;
-      }
-      
-      /* WhatsApp Widget */
       .whatsapp-widget {
         position: fixed;
         bottom: 30px;
         right: 30px;
         z-index: 9999;
-        transition: all 0.3s ease;
       }
       
       .whatsapp-button {
-        background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+        background: #25D366;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-        transition: all 0.3s ease;
-        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s ease;
       }
       
       .whatsapp-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+        transform: scale(1.05);
       }
       
       .whatsapp-button svg {
@@ -454,17 +224,17 @@
         right: 70px;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(10px);
-        padding: 12px 16px;
-        border-radius: 8px;
+        background: #1C1C1E;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
         white-space: nowrap;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+        font-family: 'Inter', sans-serif;
       }
       
       .whatsapp-widget:hover .whatsapp-tooltip {
@@ -478,761 +248,254 @@
           bottom: 20px;
           right: 20px;
         }
-        
         .whatsapp-button {
           width: 56px;
           height: 56px;
         }
-        
         .whatsapp-tooltip {
           display: none;
         }
       }
+      
+      .section-padding {
+        padding: 6rem 0;
+      }
+      
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 4rem 0;
+        }
+      }
+      
+      .hover-lift {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.1);
+      }
     </style>
 </head>
-<body class="text-white">
-    <!-- Scroll Progress -->
+<body>
     <div id="scroll-progress" class="scroll-progress"></div>
     
     <!-- Navigation -->
-    <nav class="fixed w-full glass-effect z-50">
+    <nav class="fixed w-full glass-nav z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 group animate-slide-in-left">
-                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
-                        <span class="text-black font-black text-lg">SF</span>
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
+                        <span class="text-white font-black text-lg">MFN</span>
                     </div>
                     <div>
-                        <span class="text-xl font-black tracking-tight group-hover:text-gray-300 transition-colors">SolarFund Africa</span>
-                        <span class="block text-xs text-gray-400 font-medium tracking-wider">30MW+ SOLAR PROJECTS</span>
+                        <span class="text-xl font-bold tracking-tight text-foreground group-hover:text-accent transition-colors">Mariba Funding Network</span>
+                        <span class="block text-xs text-secondary font-medium tracking-wider">GLOBAL CAPITAL • ZERO UPFRONT FEES</span>
                     </div>
                 </a>
-
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center gap-10 animate-slide-in-right">
-                    <a href="#hero" class="border-animate text-sm font-medium text-gray-300 hover:text-white">HOME</a>
-                    <a href="#solution" class="border-animate text-sm font-medium text-gray-300 hover:text-white">SOLUTIONS</a>
-                    <a href="#process" class="border-animate text-sm font-medium text-gray-300 hover:text-white">PROCESS</a>
-                    <a href="#funding" class="border-animate text-sm font-medium text-gray-300 hover:text-white">NO UPFRONT FEE</a>
-                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="elite-button px-6 py-3 rounded-lg text-sm font-semibold">
-                        <span class="flex items-center gap-2">
-                            <span>💬</span>
-                            <span>WHATSAPP CHAT</span>
-                        </span>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#hero" class="text-sm font-medium text-secondary hover:text-accent transition-colors">HOME</a>
+                    <a href="#solutions" class="text-sm font-medium text-secondary hover:text-accent transition-colors">SOLUTIONS</a>
+                    <a href="#process" class="text-sm font-medium text-secondary hover:text-accent transition-colors">PROCESS</a>
+                    <a href="#funding" class="text-sm font-medium text-secondary hover:text-accent transition-colors">NO UPFRONT FEE</a>
+                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20need%20funding%20for%20IPP%2C%20business%20or%20PO%20in%20SA." target="_blank" class="btn-primary px-5 py-2.5 text-sm font-semibold">
+                        <span class="flex items-center gap-2">💬 WHATSAPP CHAT</span>
                     </a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden touch-target p-3 text-gray-300 hover:text-white rounded-lg transition-colors">
-                    <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-secondary hover:text-accent rounded-lg transition-colors">
+                    <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-gray-800 hidden animate-slide-down">
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-border hidden animate-slide-down">
             <div class="px-4 py-6 flex flex-col gap-1">
-                <a href="#hero" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🏠 HOME</a>
-                <a href="#solution" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">✅ SOLUTIONS</a>
-                <a href="#process" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">🔄 PROCESS</a>
-                <a href="#funding" class="py-4 px-5 text-gray-300 font-medium hover:text-white hover:bg-gray-900/50 transition-all">💰 NO UPFRONT FEE</a>
-                <div class="pt-6 mt-4 border-t border-gray-800 space-y-4">
-                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-5 text-white font-medium hover:bg-gray-900/50 transition-all">
-                        <span>📧</span>
-                        <span>victor@maribamedia.co.za</span>
-                    </a>
-                </div>
-                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance%20for%20my%2030MW%2B%20solar%20project%20in%20Africa" target="_blank" class="mt-6 elite-button py-4 rounded-lg text-center font-semibold">
-                    <span class="flex items-center justify-center gap-2">
-                        <span>💬</span>
-                        <span>WHATSAPP CHAT</span>
-                    </span>
-                </a>
+                <a href="#hero" class="py-3 px-4 text-secondary hover:text-accent transition-colors">🏠 HOME</a>
+                <a href="#solutions" class="py-3 px-4 text-secondary hover:text-accent transition-colors">✅ SOLUTIONS</a>
+                <a href="#process" class="py-3 px-4 text-secondary hover:text-accent transition-colors">🔄 PROCESS</a>
+                <a href="#funding" class="py-3 px-4 text-secondary hover:text-accent transition-colors">💰 NO UPFRONT FEE</a>
+                <div class="pt-4 mt-2 border-t border-border"><a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-4 text-foreground"><span>📧</span><span>victor@maribamedia.co.za</span></a></div>
+                <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20need%20funding%20for%20IPP%2C%20business%20or%20PO%20in%20SA." target="_blank" class="mt-4 btn-primary py-3 rounded-full text-center font-semibold">💬 WHATSAPP CHAT</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay blur-3xl animate-pulse-slow animation-delay-2000"></div>
-        </div>
-        
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden bg-background">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-5xl mx-auto text-center">
-                <!-- Elite Badge -->
-                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full guarantee-badge mb-12 animate-scale-in">
-                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-                    <span class="text-sm font-semibold tracking-wider">COMPLETE PROJECT SOLUTIONS</span>
-                    <span class="text-sm font-bold text-gray-300">• ZERO UPFRONT FEES</span>
-                    <span class="w-2 h-2 rounded-full bg-white animate-ping animation-delay-1000"></span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8 animate-scale-in">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    <span class="text-sm font-medium text-secondary">ACCESS TO $12B+ GLOBAL FUNDING NETWORK</span>
                 </div>
-                
-                <!-- Main Headline -->
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-slide-up">
-                    <span class="block text-white">FOR SOLAR DEVELOPERS:</span>
-                    <span class="block text-gradient mt-4 font-serif italic">Funding, EPC & Compliance for 30MW+ Projects in Africa</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight animate-slide-up">
+                    <span class="block text-foreground">Global Capital for</span>
+                    <span class="block text-accent mt-2">IPPs, Businesses & SA PO Financing</span>
                 </h1>
-                
-                <!-- Subheadline -->
-                <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
-                    Stop juggling multiple vendors. We provide complete turnkey solutions: secure project funding, manage EPC contractors, and handle all compliance requirements for your 30MW+ solar projects.
+                <p class="text-xl text-secondary mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
+                    We provide institutional funding worldwide for Independent Power Producers, business equity/debt, and purchase order financing exclusively in South Africa. No upfront fees – success-based engagement.
                 </p>
-
-                <!-- YouTube VSL Embed -->
-                <div class="mb-14 max-w-4xl mx-auto animate-slide-up animation-delay-500">
-                    <div class="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <img 
-                            src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                            alt="Solar Farm in Africa" 
-                            class="absolute top-0 left-0 w-full h-full object-cover"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-10">
-                            <div class="text-left">
-                                <h3 class="text-2xl font-bold text-white mb-2">Complete Solar Project Solutions</h3>
-                                <p class="text-white/90">From funding to construction to compliance</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Stats Grid -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
-                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-400">
-                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">30MW+</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">PROJECTS IN AFRICA</div>
-                    </div>
-                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-500">
-                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">3</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">COMPLETE SOLUTIONS</div>
-                    </div>
-                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-600">
-                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">0%</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">UPFRONT FEES</div>
-                    </div>
-                    <div class="luxury-card p-8 rounded-xl animate-scale-in animation-delay-700">
-                        <div class="text-4xl md:text-5xl font-black text-white mb-3 stat-number">100%</div>
-                        <div class="text-sm font-medium text-gray-400 tracking-wider">TURNKEY SOLUTIONS</div>
-                    </div>
+                    <div class="card p-6 text-center"><div class="text-3xl md:text-4xl font-bold text-foreground mb-2 stat-number relative inline-block">$12B+</div><div class="text-sm text-secondary">AVAILABLE CAPITAL</div></div>
+                    <div class="card p-6 text-center"><div class="text-3xl md:text-4xl font-bold text-foreground mb-2 stat-number relative inline-block">1MW+</div><div class="text-sm text-secondary">IPP PROJECTS GLOBAL</div></div>
+                    <div class="card p-6 text-center"><div class="text-3xl md:text-4xl font-bold text-foreground mb-2 stat-number relative inline-block">0%</div><div class="text-sm text-secondary">UPFRONT FEES</div></div>
+                    <div class="card p-6 text-center"><div class="text-3xl md:text-4xl font-bold text-foreground mb-2 stat-number relative inline-block">3</div><div class="text-sm text-secondary">FUNDING SOLUTIONS</div></div>
                 </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-5 justify-center animate-slide-up animation-delay-800">
-                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20in%20Africa%20and%20need%20help%20with%20funding%2C%20EPC%2C%20and%20compliance." target="_blank" class="touch-target inline-flex items-center justify-center gap-3 elite-button text-white px-10 py-5 rounded-xl font-semibold transition-all group">
-                        <span class="text-xl">💬</span>
-                        <span class="text-lg">CHAT ON WHATSAPP</span>
-                        <span class="group-hover:translate-x-2 transition-transform">→</span>
-                    </a>
-                    <a href="#solution" class="touch-target inline-flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-semibold hover:bg-white/10 transition-all border border-white/10">
-                        <span class="text-xl">🔍</span>
-                        <span class="text-lg">SEE OUR SOLUTIONS</span>
-                    </a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20have%20a%20project%20%2F%20business%20needing%20global%20funding%20or%20SA%20PO%20financing." target="_blank" class="btn-primary px-8 py-4 text-base font-semibold inline-flex items-center justify-center gap-2 rounded-full">💬 CHAT ON WHATSAPP <span>→</span></a>
+                    <a href="#solutions" class="btn-outline px-8 py-4 text-base font-semibold inline-flex items-center justify-center gap-2 rounded-full">🔍 EXPLORE SOLUTIONS</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pain Points Section -->
-    <section class="py-16 bg-black border-y border-gray-800">
+    <!-- Unified Pain Points -->
+    <section class="py-16 bg-card border-y border-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Solar Developer Challenges in Africa</h2>
-                <p class="text-lg text-gray-400">These are the exact problems we solve for solar developers working on 30MW+ projects across Africa:</p>
-            </div>
+            <div class="text-center max-w-3xl mx-auto mb-12"><h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Funding Challenges We Solve</h2><p class="text-lg text-secondary">Tailored solutions for global IPPs, businesses, and South African enterprises.</p></div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="luxury-card p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">💰</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Funding Gaps</h3>
-                    <p class="text-gray-400">Struggling to secure project financing for African solar projects despite having land rights and permits.</p>
-                </div>
-                <div class="luxury-card p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">🏗️</div>
-                    <h3 class="text-xl font-bold text-white mb-4">EPC Management</h3>
-                    <p class="text-gray-400">Difficulty finding and managing reliable EPC contractors who understand African market specifics.</p>
-                </div>
-                <div class="luxury-card p-8 rounded-2xl text-center">
-                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mx-auto mb-6 text-2xl">📋</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Compliance Maze</h3>
-                    <p class="text-gray-400">Navigating complex regulatory requirements across different African countries delays projects for months.</p>
-                </div>
+                <div class="card p-8 text-center"><div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6 text-2xl">⚡</div><h3 class="text-xl font-bold text-foreground mb-3">IPP Global Hurdles</h3><p class="text-secondary">Funding gaps, EPC complexity, regulatory delays for 1MW+ projects worldwide.</p></div>
+                <div class="card p-8 text-center"><div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6 text-2xl">📊</div><h3 class="text-xl font-bold text-foreground mb-3">Business Growth Gaps</h3><p class="text-secondary">Limited access to growth capital, cash flow constraints, equity or debt unavailable globally.</p></div>
+                <div class="card p-8 text-center"><div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6 text-2xl">📦</div><h3 class="text-xl font-bold text-foreground mb-3">SA PO Financing Hurdles</h3><p class="text-secondary">Cash tied in purchase orders, supplier payment deadlines, no collateral options in South Africa.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- The Solution -->
-    <section id="solution" class="section-padding bg-black">
+    <!-- Solutions Grid -->
+    <section id="solutions" class="section-padding bg-background">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-                    <span class="text-sm font-semibold tracking-wider">OUR COMPLETE SOLUTIONS</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    <span class="text-white">THREE PILLARS FOR</span>
-                    <span class="block text-gradient font-serif italic mt-2">African Solar Success</span>
-                </h2>
-                <p class="text-lg text-gray-400">
-                    We handle everything so you can focus on developing successful solar projects
-                </p>
+                <div class="inline-block px-4 py-2 rounded-full bg-card border border-border mb-6"><span class="text-sm font-semibold text-accent">OUR FUNDING PILLARS</span></div>
+                <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Three Ways We Fuel <span class="text-accent">Global Success</span></h2>
+                <p class="text-lg text-secondary">IPP global funding • Business equity/debt worldwide • South Africa PO financing.</p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Solution 1 -->
-                <div class="luxury-card p-10 rounded-2xl text-center">
-                    <div class="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mx-auto mb-8 text-3xl">💰</div>
-                    <h3 class="text-2xl font-bold text-white mb-6">1. Project Funding</h3>
-                    <p class="text-gray-400 mb-6">We secure debt and equity financing for your 30MW+ solar projects across Africa.</p>
-                    <ul class="space-y-3 text-left">
-                        <li class="flex items-center gap-2">
-                            <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Project finance structuring</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Investor presentations</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Term sheet negotiation</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-green-400">✓</span>
-                            <span class="text-gray-300">Financial close management</span>
-                        </li>
+                <!-- IPP Global -->
+                <div class="card p-8 text-center hover-lift">
+                    <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6 text-3xl">🌍⚡</div>
+                    <h3 class="text-2xl font-bold text-foreground mb-4">IPP Global Funding</h3>
+                    <p class="text-secondary mb-6">Equity and debt for Independent Power Producers (1MW+) worldwide. Complete project support – EPC, permits, compliance.</p>
+                    <ul class="space-y-3 text-left mb-8 text-secondary">
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Equity / debt for IPPs globally</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> EPC contractor management</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Regulatory & grid compliance</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> 30MW+ solar / wind expertise</li>
                     </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I'm%20an%20IPP%20with%20a%20%5Bsize%5DMW%20project%20in%20%5Bcountry%5D.%20I%20need%20global%20project%20finance%2FEPC%20support." target="_blank" class="btn-outline w-full py-3 rounded-full font-semibold inline-block text-center">Get this funding →</a>
                 </div>
-
-                <!-- Solution 2 -->
-                <div class="luxury-card p-10 rounded-2xl text-center">
-                    <div class="w-20 h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-8 text-3xl">🏗️</div>
-                    <h3 class="text-2xl font-bold text-white mb-6">2. EPC Management</h3>
-                    <p class="text-gray-400 mb-6">We source and manage reliable EPC contractors with African experience.</p>
-                    <ul class="space-y-3 text-left">
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">EPC contractor vetting</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">Contract negotiation</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">Construction oversight</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-400">✓</span>
-                            <span class="text-gray-300">Quality control</span>
-                        </li>
+                <!-- Business Global -->
+                <div class="card p-8 text-center hover-lift">
+                    <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6 text-3xl">📈🌐</div>
+                    <h3 class="text-2xl font-bold text-foreground mb-4">Global Business Equity & Debt</h3>
+                    <p class="text-secondary mb-6">Growth capital for businesses worldwide. Equity investment or flexible debt facilities.</p>
+                    <ul class="space-y-3 text-left mb-8 text-secondary">
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Minority equity investments</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Working capital loans</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Expansion & acquisition funding</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Tailored repayment structures</li>
                     </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I'm%20a%20business%20owner%20seeking%20%5Bequity%2Fdebt%5D%20financing%20globally%20for%20%5Bamount%5D." target="_blank" class="btn-outline w-full py-3 rounded-full font-semibold inline-block text-center">Get this funding →</a>
                 </div>
-
-                <!-- Solution 3 -->
-                <div class="luxury-card p-10 rounded-2xl text-center">
-                    <div class="w-20 h-20 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mx-auto mb-8 text-3xl">📋</div>
-                    <h3 class="text-2xl font-bold text-white mb-6">3. Compliance & Permits</h3>
-                    <p class="text-gray-400 mb-6">We handle all regulatory requirements across African jurisdictions.</p>
-                    <ul class="space-y-3 text-left">
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Environmental permits</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Grid connection approvals</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Local community requirements</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-purple-400">✓</span>
-                            <span class="text-gray-300">Government approvals</span>
-                        </li>
+                <!-- PO SA Only -->
+                <div class="card p-8 text-center hover-lift">
+                    <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6 text-3xl">🇿🇦📦</div>
+                    <h3 class="text-2xl font-bold text-foreground mb-4">PO Financing – South Africa</h3>
+                    <p class="text-secondary mb-6">Unlock cash tied in confirmed purchase orders. We pay suppliers directly – exclusively for SA businesses.</p>
+                    <ul class="space-y-3 text-left mb-8 text-secondary">
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Fast approval (48‑72 hours)</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> No collateral required</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Direct supplier payment</li>
+                        <li class="flex items-center gap-2"><span class="text-success">✓</span> Focus on South African market</li>
                     </ul>
+                    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20have%20a%20confirmed%20purchase%20order%20in%20South%20Africa%20and%20need%20financing%20to%20pay%20my%20supplier." target="_blank" class="btn-outline w-full py-3 rounded-full font-semibold inline-block text-center">Get this funding →</a>
                 </div>
-            </div>
-
-            <div class="text-center mt-16">
-                <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20all%20three%20solutions%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button px-10 py-5 rounded-xl font-semibold inline-flex items-center justify-center gap-3">
-                    <span>GET ALL THREE SOLUTIONS</span>
-                    <span class="group-hover:translate-x-2 transition-transform">→</span>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Our Process -->
-    <section id="process" class="section-padding bg-gradient-to-b from-black to-gray-900">
+    <!-- Funding Advantage (clean, no logos) -->
+    <section class="py-20 bg-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block px-4 py-2 rounded-full bg-background border border-border mb-6"><span class="text-sm font-semibold text-accent">THE NETWORK EFFECT</span></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Backed by <span class="text-accent">$12 Billion</span> in Global Institutional Capital</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">Through exclusive partnerships with global funding managers, we bring you a combined pool of $12 billion dedicated to IPP projects worldwide, business growth capital, and South African purchase order financing. We match you with the right partner for your stage and needs.</p>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section-padding bg-background">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-                    <span class="text-sm font-semibold tracking-wider">OUR PROCESS</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    <span class="text-white">FROM LAND TO</span>
-                    <span class="block text-gradient font-serif italic mt-2">Operating Solar Farm</span>
-                </h2>
-                <p class="text-lg text-gray-400">
-                    A streamlined process for African solar developers
-                </p>
+                <div class="inline-block px-4 py-2 rounded-full bg-card border border-border mb-6"><span class="text-sm font-semibold text-accent">OUR PROCESS</span></div>
+                <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">From Application to <span class="text-accent">Capital Deployed</span></h2>
+                <p class="text-lg text-secondary">A seamless, transparent journey for IPPs, businesses, and SA PO deals.</p>
             </div>
-
             <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div class="animate-on-scroll">
-                    <div class="space-y-10">
-                        <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">01. Project Assessment</h3>
-                            <p class="text-gray-400">We evaluate your project's viability: land rights, resource assessment, and preliminary permits across African jurisdictions.</p>
-                        </div>
-                        <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">02. Funding Package</h3>
-                            <p class="text-gray-400">We structure the complete funding solution and present to our network of Africa-focused solar investors.</p>
-                        </div>
-                        <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">03. EPC & Compliance</h3>
-                            <p class="text-gray-400">We engage vetted EPC contractors and handle all regulatory compliance specific to your African country.</p>
-                        </div>
-                        <div class="process-line">
-                            <h3 class="text-2xl font-bold text-white mb-4">04. Project Execution</h3>
-                            <p class="text-gray-400">We manage construction, ensure quality control, and handle all stakeholder coordination until COD.</p>
-                        </div>
-                    </div>
+                <div class="animate-on-scroll space-y-8">
+                    <div class="process-step"><h3 class="text-xl font-bold text-foreground mb-2">01. Discovery & Assessment</h3><p class="text-secondary">We learn about your project, business, or PO. Initial evaluation of fit with our $12B global network.</p></div>
+                    <div class="process-step"><h3 class="text-xl font-bold text-foreground mb-2">02. Funding Match & Structuring</h3><p class="text-secondary">We present your opportunity to institutional partners globally and structure optimal terms.</p></div>
+                    <div class="process-step"><h3 class="text-xl font-bold text-foreground mb-2">03. Term Sheet & Approval</h3><p class="text-secondary">Negotiation of terms, success fee agreed upfront. No hidden charges.</p></div>
+                    <div class="process-step"><h3 class="text-xl font-bold text-foreground mb-2">04. Funding & Fulfilment</h3><p class="text-secondary">Capital deployed; for SA PO deals, suppliers are paid directly. Your project/business advances.</p></div>
                 </div>
-                
-                <div class="animate-on-scroll">
-                    <div class="image-hover-zoom image-overlay rounded-2xl overflow-hidden">
-                        <img 
-                            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                            alt="Solar Farm in Africa" 
-                            class="w-full h-[600px] object-cover"
-                        >
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
-                            <h3 class="text-3xl font-bold text-white mb-3">Complete African Solar Solutions</h3>
-                            <p class="text-white/90">From funding to construction to operation</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="animate-on-scroll"><div class="rounded-2xl overflow-hidden shadow-lg"><img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Global funding partnership" class="w-full h-[500px] object-cover"><div class="p-6 bg-card"><h3 class="text-2xl font-bold text-foreground">Seamless capital deployment</h3><p class="text-secondary">Global IPPs • Business growth • SA PO financing</p></div></div></div>
             </div>
         </div>
     </section>
 
     <!-- No Upfront Fee Section -->
-    <section id="funding" class="section-padding bg-black">
+    <section id="funding" class="section-padding bg-card">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-                    <span class="text-sm font-semibold tracking-wider">RISK-FREE ENGAGEMENT</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    <span class="text-white">NO UPFRONT FEES</span>
-                    <span class="block text-gradient font-serif italic mt-2">Pay Only When Funded</span>
-                </h2>
-                <p class="text-lg text-gray-400">
-                    We align our success with yours. Zero financial risk for solar developers.
-                </p>
+                <div class="inline-block px-4 py-2 rounded-full bg-background border border-border mb-6"><span class="text-sm font-semibold text-accent">RISK-FREE ENGAGEMENT</span></div>
+                <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">No Upfront Fees <span class="text-accent">Pay Only When Funded</span></h2>
+                <p class="text-lg text-secondary">You pay nothing to engage us. For IPP and business financing, we charge a success fee at funding. For SA PO financing, fees are transparent and only due when the transaction closes.</p>
             </div>
-
             <div class="grid lg:grid-cols-2 gap-12">
-                <div class="luxury-card p-10 rounded-2xl">
-                    <h3 class="text-3xl font-bold text-white mb-8 font-serif">Our Engagement Model</h3>
-                    
-                    <div class="space-y-8">
-                        <div class="flex items-start gap-6">
-                            <div class="w-14 h-14 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 flex-shrink-0">
-                                <span class="text-2xl font-bold">0%</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white mb-3 text-xl">Zero Upfront Costs</h4>
-                                <p class="text-gray-400">No retainers, no monthly fees, no hidden costs. We start working immediately at our expense.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-6">
-                            <div class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 flex-shrink-0">
-                                <span class="text-2xl">💰</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white mb-3 text-xl">Success Fee Only</h4>
-                                <p class="text-gray-400">We receive a fee ONLY when your project secures funding and reaches financial close.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-6">
-                            <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
-                                <span class="text-2xl">✅</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white mb-3 text-xl">Full Transparency</h4>
-                                <p class="text-gray-400">Fee structure agreed upfront. We only get paid when your project succeeds.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="animate-on-scroll">
-                    <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-10 rounded-2xl mb-10 backdrop-blur-sm">
-                        <h3 class="text-3xl font-bold text-white mb-8 font-serif">Benefits for Solar Developers</h3>
-                        
-                        <ul class="space-y-6 mb-10">
-                            <li class="flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">1</span>
-                                <div>
-                                    <span class="text-white font-medium block">No Financial Risk</span>
-                                    <span class="text-gray-400 text-sm">You pay nothing until funding is secured</span>
-                                </div>
-                            </li>
-                            <li class="flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">2</span>
-                                <div>
-                                    <span class="text-white font-medium block">Complete Solution</span>
-                                    <span class="text-gray-400 text-sm">Funding, EPC, and compliance in one package</span>
-                                </div>
-                            </li>
-                            <li class="flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm">3</span>
-                                <div>
-                                    <span class="text-white font-medium block">Africa Expertise</span>
-                                    <span class="text-gray-400 text-sm">Deep understanding of African solar markets</span>
-                                </div>
-                            </li>
-                        </ul>
-                        
-                        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20want%20to%20discuss%20a%20risk-free%20engagement%20for%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="elite-button w-full py-5 rounded-xl font-semibold flex items-center justify-center gap-3">
-                            <span>START RISK-FREE ON WHATSAPP</span>
-                            <span class="group-hover:translate-x-2 transition-transform">→</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Testimonial -->
-                    <div class="luxury-card p-8 rounded-2xl">
-                        <div class="flex items-center gap-2 mb-6">
-                            <div class="text-yellow-400">★★★★★</div>
-                            <span class="text-sm font-semibold text-gray-400">SOLAR DEVELOPER TESTIMONIAL</span>
-                        </div>
-                        <p class="text-gray-300 italic mb-6 text-lg">
-                            "SolarFund Africa secured funding for our 50MW project in Zambia, managed the EPC contractor, and handled all compliance. Their risk-free model meant we paid nothing until financial close. Game changer for African solar development."
-                        </p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
-                                <span class="font-bold">MK</span>
-                            </div>
-                            <div>
-                                <div class="font-bold text-white">Michael K., Solar Developer</div>
-                                <div class="text-sm text-gray-500">50MW Project in Zambia</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card p-8"><h3 class="text-2xl font-bold text-foreground mb-6">Our Engagement Model</h3><div class="space-y-6"><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent flex-shrink-0"><span class="text-xl font-bold">0%</span></div><div><h4 class="font-bold text-foreground mb-2">Zero Upfront Costs</h4><p class="text-secondary">No retainers, no monthly fees. We start working immediately at our expense.</p></div></div><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent flex-shrink-0"><span class="text-xl">💰</span></div><div><h4 class="font-bold text-foreground mb-2">Success Fee Only</h4><p class="text-secondary">We receive a fee ONLY when your project secures funding or PO deal closes.</p></div></div><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent flex-shrink-0"><span class="text-xl">✅</span></div><div><h4 class="font-bold text-foreground mb-2">Full Transparency</h4><p class="text-secondary">Fee structure agreed upfront. We only get paid when your business succeeds.</p></div></div></div></div>
+                <div><div class="card p-8 mb-8"><h3 class="text-2xl font-bold text-foreground mb-6">Benefits Across All Solutions</h3><ul class="space-y-4 mb-8"><li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">1</span><div><span class="font-medium text-foreground">No Financial Risk</span><p class="text-sm text-secondary">You pay nothing until funding is secured</p></div></li><li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">2</span><div><span class="font-medium text-foreground">Complete Global Solution Suite</span><p class="text-sm text-secondary">IPP global funding, business debt/equity worldwide, SA PO financing under one roof</p></div></li><li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">3</span><div><span class="font-medium text-foreground">Deep Global & SA Expertise</span><p class="text-sm text-secondary">Specialized in cross-border IPP financing and South African PO market</p></div></li></ul><a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20want%20to%20discuss%20a%20risk-free%20engagement%20for%20my%20global%20IPP%2C%20business%20or%20SA%20PO%20financing." target="_blank" class="btn-primary w-full py-3 rounded-full font-semibold flex items-center justify-center gap-2">START RISK-FREE ON WHATSAPP →</a></div>
+                    <div class="grid gap-6"><div class="card p-6"><div class="flex items-center gap-2 mb-4"><div class="text-accent">★★★★★</div><span class="text-xs text-secondary">IPP DEVELOPER</span></div><p class="text-secondary italic mb-4">"Mariba Funding Network secured global funding for our 50MW solar project in Zambia, managed EPC, and handled compliance. Zero upfront fees until financial close. Transformative."</p><div><div class="font-bold text-foreground">Michael K.</div><div class="text-sm text-secondary">IPP Developer, 50MW Zambia</div></div></div>
+                    <div class="card p-6"><div class="flex items-center gap-2 mb-4"><div class="text-accent">★★★★★</div><span class="text-xs text-secondary">BUSINESS OWNER</span></div><p class="text-secondary italic mb-4">"We secured growth equity through their $12B global network. The process was transparent and fast – no retainers, just results. Highly recommended for international expansion."</p><div><div class="font-bold text-foreground">Thabo N.</div><div class="text-sm text-secondary">Retail Chain, Johannesburg</div></div></div>
+                    <div class="card p-6"><div class="flex items-center gap-2 mb-4"><div class="text-accent">★★★★★</div><span class="text-xs text-secondary">PO FINANCING SA</span></div><p class="text-secondary italic mb-4">"Our biggest client order was stuck due to supplier payment. Mariba funded the SA-based PO in 48 hours. Saved our contract and margins. Game-changer for South African businesses."</p><div><div class="font-bold text-foreground">Nadia v.d.M.</div><div class="text-sm text-secondary">Manufacturing Exporter, Cape Town</div></div></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <!-- Final CTA -->
+    <section class="py-20 bg-background">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-black mb-8">
-                <span class="text-white">READY TO DEVELOP YOUR</span>
-                <span class="block text-gradient font-serif italic mt-2">30MW+ African Solar Project?</span>
-            </h2>
-            
-            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Get complete solutions: funding secured, EPC managed, compliance handled - all with zero upfront fees.
-            </p>
-            
-            <div class="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
-                <div class="luxury-card p-6 rounded-xl text-center">
-                    <div class="text-2xl font-black text-white mb-2">30MW+</div>
-                    <div class="text-sm text-gray-400">AFRICAN PROJECTS</div>
-                </div>
-                <div class="luxury-card p-6 rounded-xl text-center">
-                    <div class="text-2xl font-black text-white mb-2">3</div>
-                    <div class="text-sm text-gray-400">COMPLETE SOLUTIONS</div>
-                </div>
-                <div class="luxury-card p-6 rounded-xl text-center">
-                    <div class="text-2xl font-black text-white mb-2">0%</div>
-                    <div class="text-sm text-gray-400">UPFRONT FEES</div>
-                </div>
-                <div class="luxury-card p-6 rounded-xl text-center">
-                    <div class="text-2xl font-black text-white mb-2">100%</div>
-                    <div class="text-sm text-gray-400">TURNKEY</div>
-                </div>
-            </div>
-            
-            <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20have%20a%2030MW%2B%20solar%20project%20ready%20for%20development%20in%20Africa.%20Let%27s%20chat%20on%20WhatsApp." target="_blank" class="elite-button px-12 py-6 rounded-xl font-semibold inline-flex items-center justify-center gap-3 text-lg">
-                <span>💬 CHAT ON WHATSAPP NOW</span>
-                <span class="group-hover:translate-x-2 transition-transform">→</span>
-            </a>
-            
-            <p class="text-gray-500 mt-6 text-sm">
-                Limited capacity for 30MW+ projects. WhatsApp +27766473499 for immediate response.
-            </p>
+            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Ready to Unlock Your Next Round of Funding?</h2>
+            <p class="text-xl text-secondary mb-10">Whether you're a global IPP, business seeking expansion capital, or a South African company needing PO financing – we're ready to help. Zero upfront fees.</p>
+            <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12"><div class="card p-4"><div class="text-2xl font-bold text-accent">$12B+</div><div class="text-sm text-secondary">GLOBAL CAPITAL</div></div><div class="card p-4"><div class="text-2xl font-bold text-accent">0%</div><div class="text-sm text-secondary">UPFRONT FEES</div></div><div class="card p-4"><div class="text-2xl font-bold text-accent">3</div><div class="text-sm text-secondary">SOLUTIONS</div></div></div>
+            <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20have%20a%20project%20%2F%20business%20ready%20for%20global%20funding%20or%20SA%20PO%20financing." target="_blank" class="btn-primary px-12 py-4 rounded-full font-semibold inline-flex items-center gap-2 text-lg">💬 CHAT ON WHATSAPP NOW →</a>
+            <p class="text-secondary mt-6 text-sm">Immediate response on WhatsApp +27766473499. Limited capacity for high-value mandates.</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black border-t border-gray-900 py-14">
+    <!-- Footer 2026 -->
+    <footer class="bg-card border-t border-border py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-10 mb-12">
-                <div>
-                    <div class="text-3xl font-black mb-6">
-                        <span class="text-white">SolarFund Africa</span>
-                    </div>
-                    <p class="mb-6 text-gray-400">
-                        Complete solutions for solar developers: funding, EPC management, and compliance for 30MW+ projects across Africa. No upfront fees.
-                    </p>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3">
-                            <span class="text-white">📧</span>
-                            <span>victor@maribamedia.co.za</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-white">💬</span>
-                            <span>+27766473499 (WhatsApp)</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-6 text-white text-xl">OUR SOLUTIONS</h4>
-                    <div class="space-y-3">
-                        <div class="text-gray-400 py-2">Project Funding for Africa</div>
-                        <div class="text-gray-400 py-2">EPC Contractor Management</div>
-                        <div class="text-gray-400 py-2">Compliance & Permits</div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-6 text-white text-xl">GET STARTED</h4>
-                    <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20need%20help%20with%20my%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="inline-flex items-center gap-3 text-white hover:text-gray-300 transition-colors mb-6 group">
-                        <span>💬</span>
-                        <span class="font-medium group-hover:underline">WhatsApp +27766473499</span>
-                    </a>
-                    <p class="text-gray-400">
-                        Chat directly with our team for immediate assistance with your African solar project.
-                    </p>
-                </div>
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div><div class="text-2xl font-bold text-foreground mb-4">Mariba Funding Network</div><p class="text-secondary mb-4">$12B global funding network for IPPs, business equity/debt worldwide, and purchase order financing in South Africa. Zero upfront fees.</p><div class="space-y-2"><div class="flex items-center gap-3 text-secondary"><span>📧</span><span>victor@maribamedia.co.za</span></div><div class="flex items-center gap-3 text-secondary"><span>💬</span><span>+27766473499 (WhatsApp)</span></div></div></div>
+                <div><h4 class="font-bold text-foreground mb-4">OUR SOLUTIONS</h4><div class="space-y-2 text-secondary"><div>IPP Global Funding (1MW+)</div><div>Global Business Equity & Debt</div><div>Purchase Order Financing SA Only</div></div></div>
+                <div><h4 class="font-bold text-foreground mb-4">GET STARTED</h4><a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20need%20funding%20help." target="_blank" class="inline-flex items-center gap-2 text-accent hover:underline mb-4">💬 WhatsApp +27766473499</a><p class="text-secondary">Chat directly with our team for immediate assistance with global IPP, business, or South African PO funding needs.</p></div>
             </div>
-            
-            <div class="pt-10 border-t border-gray-800 text-center">
-                <p class="text-gray-400">
-                    © 2024 SolarFund Africa | Complete Solutions for 30MW+ Solar Projects in Africa
-                </p>
-                <p class="text-gray-500 mt-3 text-sm">
-                    Funding • EPC Management • Compliance • No Upfront Fees • WhatsApp +27766473499
-                </p>
-            </div>
+            <div class="pt-8 border-t border-border text-center"><p class="text-secondary">© 2026 Mariba Funding Network | All Rights Reserved</p><p class="text-secondary text-sm mt-2">Global IPP funding • Business equity/debt worldwide • South Africa PO financing • No Upfront Fees • WhatsApp +27766473499</p></div>
         </div>
     </footer>
 
     <!-- WhatsApp Widget -->
-    <div class="whatsapp-widget">
-        <div class="whatsapp-tooltip">
-            Chat with us on WhatsApp
-        </div>
-        <a href="https://wa.me/27766473499?text=Hi%20SolarFund%20Africa%2C%20I%20visited%20your%20website%20and%20need%20help%20with%20a%2030MW%2B%20solar%20project%20in%20Africa." target="_blank" class="whatsapp-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/>
-            </svg>
-        </a>
-    </div>
+    <div class="whatsapp-widget"><div class="whatsapp-tooltip">Chat with us on WhatsApp</div><a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20need%20funding%20for%20IPP%2C%20global%20business%20or%20SA%20PO%20financing." target="_blank" class="whatsapp-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg></a></div>
 
-    <!-- JavaScript -->
     <script>
-        // Scroll progress bar
         const scrollProgress = document.getElementById('scroll-progress');
-        window.addEventListener('scroll', () => {
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (window.scrollY / windowHeight) * 100;
-            scrollProgress.style.width = `${scrolled}%`;
-        });
-
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuOpenIcon = document.getElementById('menu-open');
-        const menuCloseIcon = document.getElementById('menu-close');
-
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const isOpen = mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    mobileMenu.classList.remove('hidden');
-                    menuOpenIcon.classList.add('hidden');
-                    menuCloseIcon.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    menuOpenIcon.classList.remove('hidden');
-                    menuCloseIcon.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            });
-
-            // Close menu when clicking links
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuOpenIcon.classList.remove('hidden');
-                    menuCloseIcon.classList.add('hidden');
-                    document.body.style.overflow = '';
-                });
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (event) => {
-                if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    menuOpenIcon.classList.remove('hidden');
-                    menuCloseIcon.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            });
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Close mobile menu if open
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        menuOpenIcon.classList.remove('hidden');
-                        menuCloseIcon.classList.add('hidden');
-                        document.body.style.overflow = '';
-                    }
-                    
-                    // Calculate header height
-                    const headerHeight = document.querySelector('nav').offsetHeight;
-                    
-                    // Scroll to element
-                    window.scrollTo({
-                        top: targetElement.offsetTop - headerHeight - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Scroll animation observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements with animation class
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
-            observer.observe(element);
-        });
-
-        // Back to top button
-        const backToTop = document.createElement('button');
-        backToTop.innerHTML = '↑';
-        backToTop.className = 'fixed bottom-8 left-8 w-14 h-14 bg-white/10 backdrop-blur-sm text-white rounded-full shadow-2xl hover:bg-white/20 transition-all z-40 hidden items-center justify-center text-2xl font-bold hover:scale-110';
-        backToTop.style.transform = 'translateY(100px)';
-        backToTop.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-        document.body.appendChild(backToTop);
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.remove('hidden');
-                backToTop.style.transform = 'translateY(0)';
-            } else {
-                backToTop.style.transform = 'translateY(100px)';
-                setTimeout(() => {
-                    if (window.scrollY <= 500) {
-                        backToTop.classList.add('hidden');
-                    }
-                }, 400);
-            }
-        });
-
-        // Animation delay utility
-        document.querySelectorAll('[class*="animation-delay"]').forEach(el => {
-            const classes = el.className.split(' ');
-            classes.forEach(cls => {
-                if (cls.startsWith('animation-delay-')) {
-                    const delay = cls.split('-')[2];
-                    el.style.animationDelay = `${delay}ms`;
-                }
-            });
-        });
-
-        // Add hover effects to luxury cards
-        document.querySelectorAll('.luxury-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Elite button hover effects
-        document.querySelectorAll('.elite-button').forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px)';
-            });
-            button.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Image hover effects
-        const imageZoomElements = document.querySelectorAll('.image-hover-zoom');
-        imageZoomElements.forEach(element => {
-            element.addEventListener('mouseenter', function() {
-                const img = this.querySelector('img');
-                if (img) {
-                    img.style.transform = 'scale(1.08)';
-                }
-            });
-            element.addEventListener('mouseleave', function() {
-                const img = this.querySelector('img');
-                if (img) {
-                    img.style.transform = 'scale(1)';
-                }
-            });
-        });
-
-        // WhatsApp click tracking
-        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-            link.addEventListener('click', function() {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'whatsapp_click', {
-                        'event_category': 'engagement',
-                        'event_label': this.href
-                    });
-                }
-            });
-        });
+        window.addEventListener('scroll', () => { const winScroll = document.documentElement.scrollHeight - window.innerHeight; const scrolled = (window.scrollY / winScroll) * 100; scrollProgress.style.width = `${scrolled}%`; });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn'), mobileMenu = document.getElementById('mobile-menu'), menuOpen = document.getElementById('menu-open'), menuClose = document.getElementById('menu-close');
+        if(mobileMenuBtn){ mobileMenuBtn.addEventListener('click',()=>{ const isHidden=mobileMenu.classList.contains('hidden'); if(isHidden){ mobileMenu.classList.remove('hidden'); menuOpen.classList.add('hidden'); menuClose.classList.remove('hidden'); document.body.style.overflow='hidden'; }else{ mobileMenu.classList.add('hidden'); menuOpen.classList.remove('hidden'); menuClose.classList.add('hidden'); document.body.style.overflow=''; } }); mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{ mobileMenu.classList.add('hidden'); menuOpen.classList.remove('hidden'); menuClose.classList.add('hidden'); document.body.style.overflow=''; })); document.addEventListener('click',(e)=>{ if(!mobileMenu.contains(e.target)&&!mobileMenuBtn.contains(e.target)&&!mobileMenu.classList.contains('hidden')){ mobileMenu.classList.add('hidden'); menuOpen.classList.remove('hidden'); menuClose.classList.add('hidden'); document.body.style.overflow=''; } }); }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{ anchor.addEventListener('click',function(e){ if(this.getAttribute('href')==='#') return; e.preventDefault(); const target=document.querySelector(this.getAttribute('href')); if(target){ if(mobileMenu&&!mobileMenu.classList.contains('hidden')){ mobileMenu.classList.add('hidden'); menuOpen.classList.remove('hidden'); menuClose.classList.add('hidden'); document.body.style.overflow=''; } const headerH=document.querySelector('nav').offsetHeight; window.scrollTo({top:target.offsetTop-headerH-20,behavior:'smooth'}); } }); });
+        const observer=new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }); },{threshold:0.1});
+        document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
+        const backBtn=document.createElement('button'); backBtn.innerHTML='↑'; backBtn.className='fixed bottom-8 left-8 w-12 h-12 bg-white rounded-full shadow-md border border-border text-foreground hover:bg-card transition-all z-40 hidden items-center justify-center text-xl font-medium'; backBtn.style.transform='translateY(100px)'; document.body.appendChild(backBtn); backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})); window.addEventListener('scroll',()=>{ if(window.scrollY>500){ backBtn.classList.remove('hidden'); backBtn.style.transform='translateY(0)'; }else{ backBtn.style.transform='translateY(100px)'; setTimeout(()=>{ if(window.scrollY<=500) backBtn.classList.add('hidden'); },400); } });
     </script>
 </body>
 </html>
