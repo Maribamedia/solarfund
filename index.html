@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Mariba Funding · Metro Capital Network</title>
-    <meta name="description" content="Global IPP, business equity/debt & SA purchase order financing. Metro-modern capital access. $12B network. Zero upfront fees.">
+    <title>Mariba Funding · Elite Global Capital</title>
+    <meta name="description" content="Premier global funding for IPPs, business equity/debt, and SA purchase order financing. $12B institutional network. Zero upfront fees. Discretion assured.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Mariba Funding Network | Metro Capital">
+    <meta property="og:title" content="Mariba Funding Network | Elite Capital Access">
     <meta property="og:description" content="IPP global funding, business equity/debt worldwide, and PO financing in South Africa. $12B network, zero upfront fees.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1508514177221-1881dc4b20c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://maribafunding.co.za">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Favicon – Metro style -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230078D4'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23FFFFFF' font-weight='800' font-family='Segoe UI, sans-serif'%3EM%3C/text%3E%3C/svg%3E">
+    <!-- Favicon – Elite monogram -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111827'/%3E%3Ctext x='50' y='74' font-size='68' text-anchor='middle' fill='%23D4AF37' font-weight='600' font-family='Georgia, serif'%3EM%3C/text%3E%3C/svg%3E">
     
-    <!-- Fonts – Metro prefers Segoe UI, fallback Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,40 +26,35 @@
         theme: {
           extend: {
             colors: {
-              // Metro modern palette – clean, bold, digital
-              'metro-bg': '#F3F5F8',
-              'metro-surface': '#FFFFFF',
-              'metro-charcoal': '#1E1E1E',
-              'metro-accent': '#0078D4',      // Windows blue
-              'metro-accent-light': '#E6F2FC',
-              'metro-border': '#E0E4E9',
-              'metro-success': '#107C10',
-              'metro-muted': '#5A5A5A',
+              'elite-bg': '#0B1120',
+              'elite-surface': '#111827',
+              'elite-card': '#1A2538',
+              'elite-border': '#2A3649',
+              'elite-gold': '#D4AF37',
+              'elite-gold-light': '#F5E7B2',
+              'elite-cream': '#F8F6F0',
+              'elite-muted': '#A0AEC0',
             },
             fontFamily: {
-              sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif'],
+              'serif': ['"Playfair Display"', 'Georgia', 'serif'],
+              'sans': ['Inter', 'system-ui', 'sans-serif'],
             },
             animation: {
-              'tile-enter': 'tilePop 0.4s cubic-bezier(0.2,0.9,0.4,1) forwards',
-              'slide-up': 'slideUpFade 0.7s ease-out',
-              'fade-in': 'fadeIn 0.6s ease-out',
-              'scale-in': 'scaleIn 0.3s ease-out',
-              'slide-in-left': 'slideInLeft 0.6s ease-out',
-              'float': 'float 6s ease-in-out infinite',
+              'fade-up': 'fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
+              'fade-in': 'fadeIn 1s ease-out',
+              'scale-in': 'scaleIn 0.5s cubic-bezier(0.2,0.9,0.4,1)',
+              'slide-in': 'slideIn 0.7s ease-out',
+              'shimmer': 'shimmer 8s infinite',
             },
             keyframes: {
-              tilePop: {
-                '0%': { opacity: '0', transform: 'scale(0.92) translateY(12px)' },
-                '100%': { opacity: '1', transform: 'scale(1) translateY(0)' }
-              },
-              slideUpFade: {
-                '0%': { opacity: '0', transform: 'translateY(30px)' },
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' }
               },
               fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-              scaleIn: { '0%': { opacity: '0', transform: 'scale(0.95)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
-              slideInLeft: { '0%': { opacity: '0', transform: 'translateX(-30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
-              float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } }
+              scaleIn: { '0%': { opacity: '0', transform: 'scale(0.92)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+              slideIn: { '0%': { opacity: '0', transform: 'translateX(-30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+              shimmer: { '0%': { backgroundPosition: '200% 0' }, '100%': { backgroundPosition: '-200% 0' } }
             }
           }
         }
@@ -68,401 +63,419 @@
     
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+      html { scroll-behavior: smooth; scroll-padding-top: 90px; }
       body {
-        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-        background: #F3F5F8;
-        color: #1E1E1E;
+        font-family: 'Inter', sans-serif;
+        background-color: #0B1120;
+        color: #F8F6F0;
         overflow-x: hidden;
       }
       
-      /* Metro glass nav */
-      .metro-nav {
-        background: rgba(255, 255, 255, 0.85);
+      /* Elite glass effect */
+      .glass-nav {
+        background: rgba(17, 24, 39, 0.75);
         backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(0,0,0,0.04);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
       }
       
-      /* Metro tile style */
-      .metro-tile {
-        background: #FFFFFF;
-        border-radius: 20px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.05);
-        transition: all 0.25s ease;
-        border: 1px solid #E9ECF0;
+      /* Elite card */
+      .elite-card {
+        background: #111827;
+        border: 1px solid #2A3649;
+        border-radius: 2rem;
+        transition: all 0.4s cubic-bezier(0.2,0.9,0.4,1);
+        box-shadow: 0 20px 40px -12px rgba(0,0,0,0.4);
       }
-      .metro-tile:hover {
+      .elite-card:hover {
+        border-color: rgba(212, 175, 55, 0.4);
+        box-shadow: 0 30px 50px -16px rgba(212, 175, 55, 0.12);
         transform: translateY(-6px);
-        box-shadow: 0 24px 36px -12px rgba(0,120,212,0.15);
-        border-color: rgba(0,120,212,0.2);
       }
       
-      /* Accent button */
-      .btn-metro {
-        background: #0078D4;
-        color: white;
+      /* Gold button */
+      .btn-gold {
+        background: #D4AF37;
+        color: #0B1120;
         font-weight: 600;
-        border-radius: 40px;
-        padding: 0.75rem 1.75rem;
-        transition: all 0.2s;
-        box-shadow: 0 8px 16px -6px rgba(0,120,212,0.25);
+        border-radius: 60px;
+        padding: 0.9rem 2.2rem;
+        transition: all 0.25s;
+        box-shadow: 0 12px 24px -8px rgba(212, 175, 55, 0.25);
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 10px;
+        letter-spacing: 0.01em;
       }
-      .btn-metro:hover {
-        background: #005A9E;
+      .btn-gold:hover {
+        background: #C5A028;
         transform: scale(0.98);
-        box-shadow: 0 4px 10px -2px rgba(0,120,212,0.3);
+        box-shadow: 0 8px 18px -4px rgba(212, 175, 55, 0.4);
       }
       
-      .btn-outline-metro {
+      .btn-outline-gold {
         background: transparent;
-        border: 1.5px solid #0078D4;
-        color: #0078D4;
+        border: 1.5px solid #D4AF37;
+        color: #D4AF37;
         font-weight: 600;
-        border-radius: 40px;
-        padding: 0.75rem 1.75rem;
-        transition: all 0.2s;
+        border-radius: 60px;
+        padding: 0.9rem 2.2rem;
+        transition: all 0.25s;
       }
-      .btn-outline-metro:hover {
-        background: rgba(0,120,212,0.04);
+      .btn-outline-gold:hover {
+        background: rgba(212, 175, 55, 0.08);
         transform: scale(0.98);
+        border-color: #F5E7B2;
+        color: #F5E7B2;
       }
       
-      /* Scroll progress */
-      .progress-bar {
+      /* Scroll progress gold */
+      .progress-gold {
         position: fixed;
         top: 0;
         left: 0;
         height: 3px;
-        background: #0078D4;
+        background: #D4AF37;
         z-index: 100;
         width: 0%;
         transition: width 0.1s;
-        box-shadow: 0 0 8px #0078D4;
+        box-shadow: 0 0 12px #D4AF37;
       }
       
-      /* Animate on scroll base */
-      .animate-tile {
+      .animate-on-scroll {
         opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.7s cubic-bezier(0.2,0.9,0.3,1), transform 0.7s cubic-bezier(0.2,0.9,0.3,1);
+        transform: translateY(40px);
+        transition: opacity 0.8s cubic-bezier(0.2,0.9,0.3,1), transform 0.8s cubic-bezier(0.2,0.9,0.3,1);
       }
-      .animate-tile.visible {
+      .animate-on-scroll.visible {
         opacity: 1;
         transform: translateY(0);
       }
       
-      /* WhatsApp widget */
-      .wa-widget {
+      .gold-text-gradient {
+        background: linear-gradient(135deg, #F5E7B2 0%, #D4AF37 40%, #C5A028 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      
+      /* WhatsApp elite widget */
+      .wa-widget-elite {
         position: fixed;
-        bottom: 30px;
-        right: 30px;
+        bottom: 35px;
+        right: 35px;
         z-index: 999;
       }
-      .wa-button {
-        background: #25D366;
-        width: 62px;
-        height: 62px;
+      .wa-button-elite {
+        background: #D4AF37;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 10px 20px -5px rgba(37,211,102,0.3);
-        transition: all 0.2s;
-        border: 2px solid white;
+        box-shadow: 0 12px 28px -6px rgba(212, 175, 55, 0.4);
+        transition: all 0.25s;
+        border: 2px solid rgba(255,255,255,0.1);
       }
-      .wa-button:hover { transform: scale(1.06); }
-      .wa-tooltip {
+      .wa-button-elite:hover { transform: scale(1.06); background: #C5A028; }
+      .wa-tooltip-elite {
         position: absolute;
         right: 80px;
         top: 50%;
         transform: translateY(-50%);
-        background: #1E1E1E;
-        color: white;
-        padding: 8px 18px;
-        border-radius: 30px;
+        background: #1A2538;
+        color: #F8F6F0;
+        padding: 10px 22px;
+        border-radius: 40px;
         white-space: nowrap;
         font-weight: 500;
+        border: 1px solid #D4AF37;
         opacity: 0;
         visibility: hidden;
         transition: 0.2s;
+        backdrop-filter: blur(8px);
       }
-      .wa-widget:hover .wa-tooltip { opacity: 1; visibility: visible; right: 90px; }
-      
-      /* Metro list check */
-      .metro-check {
-        color: #107C10;
-        font-weight: 700;
-        margin-right: 8px;
-      }
-      
-      /* Floating animation for hero */
-      .float-animation { animation: float 6s ease-in-out infinite; }
+      .wa-widget-elite:hover .wa-tooltip-elite { opacity: 1; visibility: visible; right: 95px; }
       
       @media (max-width: 768px) {
-        .wa-widget { bottom: 20px; right: 20px; }
-        .wa-tooltip { display: none; }
+        .wa-widget-elite { bottom: 20px; right: 20px; }
+        .wa-tooltip-elite { display: none; }
+      }
+      
+      .elite-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+      }
+      
+      .serif-heading {
+        font-family: 'Playfair Display', serif;
       }
     </style>
 </head>
-<body class="bg-metro-bg">
+<body class="bg-elite-bg font-sans antialiased">
 
-<div class="progress-bar" id="scrollProgress"></div>
+<div class="progress-gold" id="scrollProgress"></div>
 
-<!-- Navigation Metro -->
-<nav class="fixed w-full metro-nav z-50">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div class="flex items-center justify-between h-20">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-metro-accent flex items-center justify-center shadow-sm">
-                    <span class="text-white font-black text-xl">M</span>
+<!-- Navigation Elite -->
+<nav class="fixed w-full glass-nav z-50 py-1">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="flex items-center justify-between h-24">
+            <a href="#" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-elite-gold to-elite-gold-light flex items-center justify-center shadow-lg">
+                    <span class="text-elite-bg font-serif font-bold text-3xl">M</span>
                 </div>
                 <div>
-                    <span class="text-xl font-bold tracking-tight text-metro-charcoal">Mariba Funding</span>
-                    <span class="block text-xs font-semibold text-metro-muted tracking-wide">METRO CAPITAL · ZERO UPFRONT</span>
+                    <span class="text-2xl font-serif font-semibold tracking-tight text-elite-cream">Mariba Funding</span>
+                    <span class="block text-xs font-medium tracking-[0.2em] text-elite-gold/80 uppercase">Elite Capital Network</span>
                 </div>
             </a>
-            <div class="hidden lg:flex items-center gap-8">
-                <a href="#hero" class="text-sm font-semibold text-metro-muted hover:text-metro-accent transition">HOME</a>
-                <a href="#solutions" class="text-sm font-semibold text-metro-muted hover:text-metro-accent transition">SOLUTIONS</a>
-                <a href="#strategic" class="text-sm font-semibold text-metro-muted hover:text-metro-accent transition">STRATEGIC</a>
-                <a href="#process" class="text-sm font-semibold text-metro-muted hover:text-metro-accent transition">PROCESS</a>
-                <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20need%20funding%20for%20IPP%2C%20business%20or%20PO%20in%20SA." target="_blank" class="btn-metro text-sm px-5 py-2.5">
-                    💬 WHATSAPP
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#hero" class="text-sm font-medium text-elite-muted hover:text-elite-gold transition-colors tracking-wide">HOME</a>
+                <a href="#solutions" class="text-sm font-medium text-elite-muted hover:text-elite-gold transition-colors tracking-wide">SOLUTIONS</a>
+                <a href="#strategic" class="text-sm font-medium text-elite-muted hover:text-elite-gold transition-colors tracking-wide">STRATEGIC</a>
+                <a href="#process" class="text-sm font-medium text-elite-muted hover:text-elite-gold transition-colors tracking-wide">PROCESS</a>
+                <a href="https://wa.me/27766473499?text=Elite%20funding%20inquiry" target="_blank" class="btn-gold text-sm px-6 py-3">
+                    <span>💬 WHATSAPP</span>
                 </a>
             </div>
-            <button id="mobileMenuBtn" class="lg:hidden p-2 text-metro-charcoal rounded-lg">
+            <button id="mobileMenuBtn" class="lg:hidden p-2 text-elite-cream">
                 <svg id="menuOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg id="menuClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
     </div>
-    <div id="mobileMenu" class="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-metro-border hidden animate-slide-up">
-        <div class="px-5 py-6 flex flex-col gap-1">
-            <a href="#hero" class="py-3 px-4 font-medium">🏠 HOME</a>
-            <a href="#solutions" class="py-3 px-4 font-medium">📌 SOLUTIONS</a>
-            <a href="#strategic" class="py-3 px-4 font-medium">📊 STRATEGIC</a>
-            <a href="#process" class="py-3 px-4 font-medium">🔄 PROCESS</a>
-            <a href="https://wa.me/27766473499" class="mt-4 btn-metro py-3 rounded-full text-center">💬 WHATSAPP CHAT</a>
+    <div id="mobileMenu" class="lg:hidden absolute top-full left-0 right-0 bg-elite-surface/95 backdrop-blur-xl border-b border-elite-gold/20 hidden animate-fade-up">
+        <div class="px-6 py-8 flex flex-col gap-2">
+            <a href="#hero" class="py-4 px-5 text-elite-cream text-lg">🏛️ HOME</a>
+            <a href="#solutions" class="py-4 px-5 text-elite-cream text-lg">✨ SOLUTIONS</a>
+            <a href="#strategic" class="py-4 px-5 text-elite-cream text-lg">📊 STRATEGIC</a>
+            <a href="#process" class="py-4 px-5 text-elite-cream text-lg">⚜️ PROCESS</a>
+            <a href="https://wa.me/27766473499" class="mt-4 btn-gold py-4 text-center text-lg">💬 WHATSAPP CHAT</a>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section – Metro animated -->
-<section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+<!-- Hero Elite -->
+<section id="hero" class="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-elite-bg via-elite-bg/90 to-elite-bg pointer-events-none"></div>
+    <div class="absolute top-20 left-10 w-96 h-96 bg-elite-gold/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-elite-gold/5 rounded-full blur-[120px]"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-metro-border mb-8 animate-scale-in shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-metro-accent animate-pulse"></span>
-                <span class="text-sm font-bold text-metro-muted tracking-wide">$12B+ GLOBAL FUNDING NETWORK</span>
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-elite-surface/70 border border-elite-gold/30 backdrop-blur-sm mb-10 animate-scale-in">
+                <span class="w-2 h-2 rounded-full bg-elite-gold animate-pulse"></span>
+                <span class="text-sm font-semibold tracking-widest text-elite-gold-light uppercase">$12B+ Institutional Network</span>
             </div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.15] animate-slide-up">
-                <span class="block text-metro-charcoal">Metro Capital for</span>
-                <span class="block text-metro-accent mt-3">IPPs · Business · SA PO</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight mb-8 leading-[1.1] animate-fade-up">
+                <span class="block text-elite-cream">Elite Capital,</span>
+                <span class="block gold-text-gradient mt-3">Global Reach.</span>
             </h1>
-            <p class="text-xl text-metro-muted mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.1s;">
-                Institutional funding worldwide. Zero upfront fees. We power Independent Power Producers, global businesses, and South African purchase order financing.
+            <p class="text-xl md:text-2xl text-elite-muted mb-12 max-w-3xl mx-auto leading-relaxed font-light animate-fade-up" style="animation-delay: 0.1s;">
+                Institutional funding for IPPs, global businesses, and South African purchase order financing. Zero upfront fees. Discretion guaranteed.
             </p>
-            <!-- Metro stats tiles -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
-                <div class="metro-tile p-6 text-center animate-tile" style="animation-delay:0.05s"><div class="text-4xl font-black text-metro-accent">$12B+</div><div class="text-sm font-semibold text-metro-muted mt-2">AVAILABLE CAPITAL</div></div>
-                <div class="metro-tile p-6 text-center animate-tile" style="animation-delay:0.1s"><div class="text-4xl font-black text-metro-accent">1MW+</div><div class="text-sm font-semibold text-metro-muted mt-2">IPP PROJECTS</div></div>
-                <div class="metro-tile p-6 text-center animate-tile" style="animation-delay:0.15s"><div class="text-4xl font-black text-metro-accent">0%</div><div class="text-sm font-semibold text-metro-muted mt-2">UPFRONT FEES</div></div>
-                <div class="metro-tile p-6 text-center animate-tile" style="animation-delay:0.2s"><div class="text-4xl font-black text-metro-accent">4</div><div class="text-sm font-semibold text-metro-muted mt-2">FUNDING PILLARS</div></div>
+                <div class="elite-card p-7 text-center animate-on-scroll"><div class="text-5xl font-serif font-bold gold-text-gradient">$12B+</div><div class="text-sm font-medium text-elite-muted mt-3 tracking-wide">AVAILABLE CAPITAL</div></div>
+                <div class="elite-card p-7 text-center animate-on-scroll" style="transition-delay:0.05s"><div class="text-5xl font-serif font-bold gold-text-gradient">1MW+</div><div class="text-sm font-medium text-elite-muted mt-3 tracking-wide">IPP PROJECTS</div></div>
+                <div class="elite-card p-7 text-center animate-on-scroll" style="transition-delay:0.1s"><div class="text-5xl font-serif font-bold gold-text-gradient">0%</div><div class="text-sm font-medium text-elite-muted mt-3 tracking-wide">UPFRONT FEES</div></div>
+                <div class="elite-card p-7 text-center animate-on-scroll" style="transition-delay:0.15s"><div class="text-5xl font-serif font-bold gold-text-gradient">4</div><div class="text-sm font-medium text-elite-muted mt-3 tracking-wide">PILLARS</div></div>
             </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay:0.2s">
-                <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20have%20a%20project%20%2F%20business%20needing%20global%20funding." target="_blank" class="btn-metro px-8 py-4 text-base font-bold">💬 CHAT ON WHATSAPP →</a>
-                <a href="#solutions" class="btn-outline-metro px-8 py-4 text-base font-bold">🔍 EXPLORE SOLUTIONS</a>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center animate-fade-up" style="animation-delay:0.2s">
+                <a href="https://wa.me/27766473499?text=Elite%20Capital%20Inquiry" target="_blank" class="btn-gold px-10 py-5 text-base font-semibold">💬 CHAT ON WHATSAPP →</a>
+                <a href="#solutions" class="btn-outline-gold px-10 py-5 text-base font-semibold">DISCOVER SOLUTIONS</a>
             </div>
-        </div>
-    </div>
-    <div class="absolute top-40 right-0 w-72 h-72 bg-metro-accent/5 rounded-full blur-3xl -z-5"></div>
-</section>
-
-<!-- Unified Pain Points (Metro) -->
-<section class="py-16 bg-white border-y border-metro-border">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10">
-        <div class="text-center max-w-3xl mx-auto mb-14"><h2 class="text-4xl font-extrabold text-metro-charcoal mb-4">Funding challenges, <span class="text-metro-accent">solved.</span></h2><p class="text-lg text-metro-muted">Tailored for global IPPs, businesses, and South African enterprises.</p></div>
-        <div class="grid md:grid-cols-3 gap-7">
-            <div class="metro-tile p-8 text-center"><div class="w-16 h-16 rounded-2xl bg-metro-accent-light flex items-center justify-center text-metro-accent mx-auto mb-6 text-2xl">⚡</div><h3 class="text-xl font-bold mb-2">IPP Global Hurdles</h3><p class="text-metro-muted">Funding gaps, EPC complexity, regulatory delays for 1MW+ projects.</p></div>
-            <div class="metro-tile p-8 text-center"><div class="w-16 h-16 rounded-2xl bg-metro-accent-light flex items-center justify-center text-metro-accent mx-auto mb-6 text-2xl">📊</div><h3 class="text-xl font-bold mb-2">Business Growth Gaps</h3><p class="text-metro-muted">Limited growth capital, cash flow constraints globally.</p></div>
-            <div class="metro-tile p-8 text-center"><div class="w-16 h-16 rounded-2xl bg-metro-accent-light flex items-center justify-center text-metro-accent mx-auto mb-6 text-2xl">📦</div><h3 class="text-xl font-bold mb-2">SA PO Financing Hurdles</h3><p class="text-metro-muted">Cash tied in purchase orders, supplier deadlines, no collateral.</p></div>
         </div>
     </div>
 </section>
 
-<!-- Solutions Grid – METRO TILES (4 main offerings) -->
-<section id="solutions" class="py-24 bg-metro-bg">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+<!-- Pain Points Elite -->
+<section class="py-20 bg-elite-surface/30 border-y border-elite-border/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="inline-block px-5 py-1.5 rounded-full bg-white border border-metro-border text-sm font-bold text-metro-accent mb-5">OUR FUNDING PILLARS</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-metro-charcoal mb-5">Four ways we <span class="text-metro-accent">fuel global success</span></h2>
-            <p class="text-lg text-metro-muted">IPP · Global Business · SA PO · Strategic Equity & Debt</p>
+            <span class="text-elite-gold text-sm font-bold tracking-[0.3em] uppercase">Challenges We Solve</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-elite-cream mt-4 mb-6">Funding complexities, <span class="gold-text-gradient">simplified.</span></h2>
+            <p class="text-lg text-elite-muted">Tailored for global IPPs, enterprises, and South African businesses.</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="elite-card p-9 text-center"><div class="text-4xl mb-5">⚡</div><h3 class="text-2xl font-serif font-semibold mb-3">IPP Global Hurdles</h3><p class="text-elite-muted">Funding gaps, EPC complexity, regulatory delays for 1MW+ projects.</p></div>
+            <div class="elite-card p-9 text-center"><div class="text-4xl mb-5">📊</div><h3 class="text-2xl font-serif font-semibold mb-3">Business Growth Gaps</h3><p class="text-elite-muted">Limited access to growth capital, cash flow constraints globally.</p></div>
+            <div class="elite-card p-9 text-center"><div class="text-4xl mb-5">📦</div><h3 class="text-2xl font-serif font-semibold mb-3">SA PO Financing Hurdles</h3><p class="text-elite-muted">Cash tied in purchase orders, supplier deadlines, no collateral.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Solutions Grid Elite (4 Pillars) -->
+<section id="solutions" class="py-28 bg-elite-bg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-4xl mx-auto mb-20">
+            <span class="text-elite-gold text-sm font-bold tracking-[0.3em] uppercase">Our Funding Pillars</span>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-elite-cream mt-5 mb-6">Four ways we <span class="gold-text-gradient">fuel global success</span></h2>
+            <p class="text-lg text-elite-muted max-w-2xl mx-auto">IPP · Global Business · SA PO · Strategic Equity & Debt</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
             <!-- 1. Business Financing (IPP) -->
-            <div class="metro-tile p-7 flex flex-col h-full animate-tile">
-                <div class="text-4xl mb-4">🌍⚡</div>
-                <h3 class="text-2xl font-bold mb-2">Business Financing (IPP)</h3>
-                <p class="text-metro-muted text-sm mb-4 flex-1">Equity & debt for IPPs worldwide. Scalable institutional capital, project finance, EPC support.</p>
-                <ul class="text-sm space-y-2 mb-6">
-                    <li class="flex"><span class="metro-check">✓</span> 1MW+ projects</li>
-                    <li class="flex"><span class="metro-check">✓</span> EPC & compliance</li>
+            <div class="elite-card p-8 flex flex-col h-full animate-on-scroll">
+                <div class="text-5xl mb-5">🌍⚡</div>
+                <h3 class="text-2xl font-serif font-bold mb-3">Business Financing (IPP)</h3>
+                <p class="text-elite-muted text-sm mb-5 flex-1">Equity & debt for IPPs worldwide. Institutional capital, project finance, EPC support.</p>
+                <ul class="text-sm space-y-3 mb-7">
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> 1MW+ projects</li>
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> EPC & compliance</li>
                 </ul>
-                <a href="https://wa.me/27766473499?text=IPP%20funding%20inquiry" class="btn-outline-metro w-full py-3 text-sm font-bold justify-center">Institutional inquiry →</a>
+                <a href="https://wa.me/27766473499?text=IPP%20Institutional%20Capital" class="btn-outline-gold w-full py-3 text-sm justify-center">Institutional inquiry →</a>
             </div>
             <!-- 2. Global Business Equity/Debt -->
-            <div class="metro-tile p-7 flex flex-col h-full animate-tile">
-                <div class="text-4xl mb-4">📈🌐</div>
-                <h3 class="text-2xl font-bold mb-2">Global Business Equity & Debt</h3>
-                <p class="text-metro-muted text-sm mb-4 flex-1">Growth capital worldwide. Minority equity, working capital, acquisitions.</p>
-                <ul class="text-sm space-y-2 mb-6">
-                    <li class="flex"><span class="metro-check">✓</span> Flexible structures</li>
-                    <li class="flex"><span class="metro-check">✓</span> $5M+ tickets</li>
+            <div class="elite-card p-8 flex flex-col h-full animate-on-scroll">
+                <div class="text-5xl mb-5">📈🌐</div>
+                <h3 class="text-2xl font-serif font-bold mb-3">Global Business Equity & Debt</h3>
+                <p class="text-elite-muted text-sm mb-5 flex-1">Growth capital worldwide. Minority equity, working capital, acquisitions.</p>
+                <ul class="text-sm space-y-3 mb-7">
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> Flexible structures</li>
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> $5M+ tickets</li>
                 </ul>
-                <a href="https://wa.me/27766473499?text=Business%20equity%2Fdebt" class="btn-outline-metro w-full py-3 text-sm font-bold justify-center">Get this funding →</a>
+                <a href="https://wa.me/27766473499?text=Global%20Business%20Equity%2FDebt" class="btn-outline-gold w-full py-3 text-sm justify-center">Get this funding →</a>
             </div>
             <!-- 3. Purchase Order Funding SA -->
-            <div class="metro-tile p-7 flex flex-col h-full animate-tile">
-                <div class="text-4xl mb-4">🇿🇦📦</div>
-                <h3 class="text-2xl font-bold mb-2">Purchase Order Funding</h3>
-                <p class="text-metro-muted text-sm mb-4 flex-1">SA enterprises: unlock cash tied in POs. Fast approval, direct supplier payment.</p>
-                <ul class="text-sm space-y-2 mb-6">
-                    <li class="flex"><span class="metro-check">✓</span> 48‑72h approval</li>
-                    <li class="flex"><span class="metro-check">✓</span> No collateral</li>
+            <div class="elite-card p-8 flex flex-col h-full animate-on-scroll">
+                <div class="text-5xl mb-5">🇿🇦📦</div>
+                <h3 class="text-2xl font-serif font-bold mb-3">Purchase Order Funding</h3>
+                <p class="text-elite-muted text-sm mb-5 flex-1">SA enterprises: unlock cash tied in POs. Fast approval, direct supplier payment.</p>
+                <ul class="text-sm space-y-3 mb-7">
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> 48‑72h approval</li>
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> No collateral</li>
                 </ul>
-                <a href="https://wa.me/27766473499?text=SA%20PO%20financing" class="btn-outline-metro w-full py-3 text-sm font-bold justify-center">Request PO funding →</a>
+                <a href="https://wa.me/27766473499?text=SA%20PO%20Financing" class="btn-outline-gold w-full py-3 text-sm justify-center">Request PO funding →</a>
             </div>
-            <!-- 4. Strategic Equity & Debt (NEW) -->
-            <div class="metro-tile p-7 flex flex-col h-full animate-tile bg-white border-metro-accent/30">
-                <div class="text-4xl mb-4">💼📋</div>
-                <h3 class="text-2xl font-bold mb-2">Strategic Equity & Debt</h3>
-                <p class="text-metro-muted text-sm mb-4 flex-1">Book-of-business acquisitions, licensing rights, mineral rights financing.</p>
-                <ul class="text-sm space-y-2 mb-6">
-                    <li class="flex"><span class="metro-check">✓</span> Investor matching</li>
-                    <li class="flex"><span class="metro-check">✓</span> Mineral & licensing</li>
+            <!-- 4. Strategic Equity & Debt -->
+            <div class="elite-card p-8 flex flex-col h-full animate-on-scroll border-elite-gold/30">
+                <div class="text-5xl mb-5">💼📋</div>
+                <h3 class="text-2xl font-serif font-bold mb-3">Strategic Equity & Debt</h3>
+                <p class="text-elite-muted text-sm mb-5 flex-1">Book-of-business acquisitions, licensing, mineral rights financing.</p>
+                <ul class="text-sm space-y-3 mb-7">
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> Investor matching</li>
+                    <li class="flex items-center"><span class="text-elite-gold mr-3 text-lg">✓</span> Mineral & licensing</li>
                 </ul>
-                <a href="#strategic" class="btn-outline-metro w-full py-3 text-sm font-bold justify-center">Explore options →</a>
+                <a href="#strategic" class="btn-outline-gold w-full py-3 text-sm justify-center">Explore options →</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- DETAILED SECTIONS (Business Financing, PO Funding, Strategic) Metro style -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10 space-y-20">
-        <!-- Business Financing (IPP) detail -->
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="animate-slide-in-left"><span class="text-metro-accent font-bold text-sm tracking-wider">BUSINESS FINANCING</span>
-                <h3 class="text-3xl md:text-4xl font-extrabold mt-2 mb-4">We partner with billion‑dollar fund managers</h3>
-                <p class="text-metro-muted text-lg mb-6">Equity and debt financing for Independent Power Producers (IPP) worldwide. Scalable institutional capital for infrastructure growth.</p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-metro-accent text-white flex items-center justify-center text-xs">✓</span> Project finance & expansion capital</li>
-                    <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-metro-accent text-white flex items-center justify-center text-xs">✓</span> IPP equity/debt structuring</li>
+<!-- Detailed Business Financing & PO Funding -->
+<section class="py-24 bg-elite-surface/20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 space-y-28">
+        <!-- Business Financing detail -->
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-slide-in">
+                <span class="text-elite-gold text-sm font-bold tracking-widest">BUSINESS FINANCING</span>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 text-elite-cream">We partner with billion‑dollar fund managers</h3>
+                <p class="text-elite-muted text-lg mb-6">Equity and debt financing for Independent Power Producers (IPP) worldwide. Scalable institutional capital for infrastructure growth.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-4"><span class="w-7 h-7 rounded-full bg-elite-gold/20 text-elite-gold flex items-center justify-center text-sm">✓</span> Project finance & expansion capital</li>
+                    <li class="flex items-center gap-4"><span class="w-7 h-7 rounded-full bg-elite-gold/20 text-elite-gold flex items-center justify-center text-sm">✓</span> IPP equity/debt structuring</li>
                 </ul>
-                <a href="https://wa.me/27766473499?text=IPP%20institutional%20capital" class="btn-metro">Institutional capital inquiry →</a>
+                <a href="https://wa.me/27766473499?text=IPP%20Institutional%20Capital" class="btn-gold">Institutional capital inquiry →</a>
             </div>
-            <div class="metro-tile overflow-hidden rounded-2xl"><img src="https://images.unsplash.com/photo-1508514177221-1881dc4b20c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="IPP projects" class="w-full h-80 object-cover"></div>
+            <div class="elite-card overflow-hidden rounded-3xl"><img src="https://images.unsplash.com/photo-1508514177221-1881dc4b20c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="IPP projects" class="w-full h-96 object-cover"></div>
         </div>
         <!-- Purchase Order Funding detail -->
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1 metro-tile overflow-hidden rounded-2xl"><img src="https://images.unsplash.com/photo-1566576912321-d58ddd7d24b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="SA PO funding" class="w-full h-80 object-cover"></div>
-            <div class="order-1 lg:order-2 animate-slide-in-right">
-                <span class="text-metro-accent font-bold text-sm tracking-wider">PURCHASE ORDER FUNDING</span>
-                <h3 class="text-3xl md:text-4xl font-extrabold mt-2 mb-4">Unlock working capital for South African enterprises</h3>
-                <p class="text-metro-muted text-lg mb-6">Through our P.O. funding network, accelerate inventory, fulfill large contracts, and scale without cashflow bottlenecks.</p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-metro-accent text-white flex items-center justify-center text-xs">✓</span> Fast approval, supply chain liquidity</li>
-                    <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-metro-accent text-white flex items-center justify-center text-xs">✓</span> SA enterprise focused</li>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1 elite-card overflow-hidden rounded-3xl"><img src="https://images.unsplash.com/photo-1566576912321-d58ddd7d24b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="SA PO funding" class="w-full h-96 object-cover"></div>
+            <div class="order-1 lg:order-2 animate-slide-in">
+                <span class="text-elite-gold text-sm font-bold tracking-widest">PURCHASE ORDER FUNDING</span>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 text-elite-cream">Unlock working capital for South African enterprises</h3>
+                <p class="text-elite-muted text-lg mb-6">Through our P.O. funding network, accelerate inventory, fulfill large contracts, and scale without cashflow bottlenecks.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-4"><span class="w-7 h-7 rounded-full bg-elite-gold/20 text-elite-gold flex items-center justify-center text-sm">✓</span> Fast approval, supply chain liquidity</li>
+                    <li class="flex items-center gap-4"><span class="w-7 h-7 rounded-full bg-elite-gold/20 text-elite-gold flex items-center justify-center text-sm">✓</span> SA enterprise focused</li>
                 </ul>
-                <a href="https://wa.me/27766473499?text=SA%20PO%20funding%20request" class="btn-metro">Request PO funding →</a>
+                <a href="https://wa.me/27766473499?text=SA%20PO%20Funding%20Request" class="btn-gold">Request PO funding →</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Strategic Equity & Debt Financing (NEW comprehensive) -->
-<section id="strategic" class="py-24 bg-metro-bg">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-            <span class="bg-metro-accent-light text-metro-accent px-5 py-1.5 rounded-full text-sm font-bold">STRATEGIC CAPITAL</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mt-5 mb-5">Strategic Equity & Debt Financing</h2>
-            <p class="text-xl text-metro-muted">Across all major industries, we provide capital for acquiring books of business, licensing rights, and mineral rights.</p>
+<!-- Strategic Equity & Debt (New comprehensive) -->
+<section id="strategic" class="py-28 bg-elite-bg relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-4xl mx-auto mb-18">
+            <span class="text-elite-gold text-sm font-bold tracking-[0.3em] uppercase">Strategic Capital</span>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-elite-cream mt-5 mb-6">Strategic Equity & Debt Financing</h2>
+            <p class="text-xl text-elite-muted max-w-3xl mx-auto">Across all major industries, we provide capital for acquiring books of business, licensing rights, and mineral rights. Connect investors with vetted, high‑potential opportunities.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-7">
-            <div class="metro-tile p-8"><div class="text-3xl mb-4">📚</div><h4 class="text-2xl font-bold mb-3">Book-of-business acquisitions</h4><p class="text-metro-muted">Finance the purchase of client portfolios, recurring revenue streams.</p></div>
-            <div class="metro-tile p-8"><div class="text-3xl mb-4">⚖️</div><h4 class="text-2xl font-bold mb-3">Licensing & mineral rights</h4><p class="text-metro-muted">Secure rights with tailored equity/debt packages.</p></div>
-            <div class="metro-tile p-8"><div class="text-3xl mb-4">🤝</div><h4 class="text-2xl font-bold mb-3">Investor & prospect matching</h4><p class="text-metro-muted">Connect vetted opportunities with institutional capital.</p></div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="elite-card p-9"><div class="text-4xl mb-5">📚</div><h4 class="text-2xl font-serif font-bold mb-3">Book-of-business acquisitions</h4><p class="text-elite-muted">Finance the purchase of client portfolios, recurring revenue streams.</p></div>
+            <div class="elite-card p-9"><div class="text-4xl mb-5">⚖️</div><h4 class="text-2xl font-serif font-bold mb-3">Licensing & mineral rights</h4><p class="text-elite-muted">Secure rights with tailored equity/debt packages.</p></div>
+            <div class="elite-card p-9"><div class="text-4xl mb-5">🤝</div><h4 class="text-2xl font-serif font-bold mb-3">Investor & prospect matching</h4><p class="text-elite-muted">Connect vetted opportunities with institutional capital.</p></div>
         </div>
-        <div class="mt-12 text-center"><a href="https://wa.me/27766473499?text=Strategic%20Equity%20%26%20Debt%20inquiry" class="btn-metro px-10 py-4 text-base">Explore Financing Options →</a></div>
+        <div class="mt-14 text-center"><a href="https://wa.me/27766473499?text=Strategic%20Equity%20%26%20Debt%20Inquiry" class="btn-gold px-12 py-5 text-base font-semibold">Explore Financing Options →</a></div>
     </div>
 </section>
 
-<!-- Process & No Upfront Fee merged Metro -->
-<section id="process" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+<!-- Process & No Upfront Fee Elite -->
+<section id="process" class="py-28 bg-elite-surface/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="grid lg:grid-cols-2 gap-16">
-            <div><span class="text-metro-accent font-bold">OUR PROCESS</span><h3 class="text-4xl font-extrabold mt-3 mb-8">From application to capital deployed</h3>
-                <div class="space-y-8">
-                    <div class="flex gap-5"><div class="text-3xl font-black text-metro-accent/30">01</div><div><h4 class="font-bold text-xl">Discovery & Assessment</h4><p class="text-metro-muted">We evaluate fit with our $12B network.</p></div></div>
-                    <div class="flex gap-5"><div class="text-3xl font-black text-metro-accent/30">02</div><div><h4 class="font-bold text-xl">Funding Match & Structuring</h4><p class="text-metro-muted">Optimal terms from institutional partners.</p></div></div>
-                    <div class="flex gap-5"><div class="text-3xl font-black text-metro-accent/30">03</div><div><h4 class="font-bold text-xl">Term Sheet & Approval</h4><p class="text-metro-muted">Success fee agreed upfront.</p></div></div>
-                    <div class="flex gap-5"><div class="text-3xl font-black text-metro-accent/30">04</div><div><h4 class="font-bold text-xl">Funding & Fulfilment</h4><p class="text-metro-muted">Capital deployed, suppliers paid.</p></div></div>
+            <div>
+                <span class="text-elite-gold text-sm font-bold tracking-widest">OUR PROCESS</span>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-10 text-elite-cream">From application to capital deployed</h3>
+                <div class="space-y-10">
+                    <div class="flex gap-6"><div class="text-4xl font-serif text-elite-gold/30">01</div><div><h4 class="font-serif text-2xl font-semibold mb-2">Discovery & Assessment</h4><p class="text-elite-muted">We evaluate fit with our $12B network.</p></div></div>
+                    <div class="flex gap-6"><div class="text-4xl font-serif text-elite-gold/30">02</div><div><h4 class="font-serif text-2xl font-semibold mb-2">Funding Match & Structuring</h4><p class="text-elite-muted">Optimal terms from institutional partners.</p></div></div>
+                    <div class="flex gap-6"><div class="text-4xl font-serif text-elite-gold/30">03</div><div><h4 class="font-serif text-2xl font-semibold mb-2">Term Sheet & Approval</h4><p class="text-elite-muted">Success fee agreed upfront.</p></div></div>
+                    <div class="flex gap-6"><div class="text-4xl font-serif text-elite-gold/30">04</div><div><h4 class="font-serif text-2xl font-semibold mb-2">Funding & Fulfilment</h4><p class="text-elite-muted">Capital deployed, suppliers paid.</p></div></div>
                 </div>
             </div>
-            <div class="metro-tile p-8 h-fit">
-                <span class="text-metro-accent font-bold">RISK-FREE ENGAGEMENT</span>
-                <h4 class="text-3xl font-extrabold mt-3 mb-4">No Upfront Fees. Pay only when funded.</h4>
-                <p class="text-metro-muted mb-6">Zero retainers. Success fee upon closing. Full transparency.</p>
-                <div class="space-y-4"><div class="flex gap-3"><span>💰</span><span>Success fee only</span></div><div class="flex gap-3"><span>✅</span><span>Agreed upfront</span></div></div>
-                <a href="https://wa.me/27766473499?text=Risk-free%20engagement" class="btn-metro w-full mt-8 py-4 justify-center">Start risk-free on WhatsApp →</a>
-                <!-- testimonials mini -->
-                <div class="mt-8 border-t pt-6 text-sm italic">“Secured 50MW funding in Zambia. Zero upfront fees.” — Michael K.</div>
+            <div class="elite-card p-10 h-fit border-elite-gold/20">
+                <span class="text-elite-gold text-sm font-bold tracking-widest">RISK-FREE ENGAGEMENT</span>
+                <h4 class="text-4xl font-serif font-bold mt-5 mb-5 text-elite-cream">No Upfront Fees. Pay only when funded.</h4>
+                <p class="text-elite-muted text-lg mb-8">Zero retainers. Success fee upon closing. Full transparency.</p>
+                <div class="space-y-5"><div class="flex items-center gap-4"><span class="text-2xl">💰</span><span class="text-lg">Success fee only</span></div><div class="flex items-center gap-4"><span class="text-2xl">✅</span><span class="text-lg">Agreed upfront</span></div></div>
+                <a href="https://wa.me/27766473499?text=Risk-free%20engagement" class="btn-gold w-full mt-10 py-5 justify-center text-lg">Start risk-free on WhatsApp →</a>
+                <div class="mt-10 border-t border-elite-border/50 pt-8 italic text-elite-muted">“Secured 50MW funding in Zambia. Zero upfront fees. Elite service.” — Michael K.</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Final CTA Metro -->
-<section class="py-24 bg-metro-bg">
-    <div class="max-w-4xl mx-auto text-center px-5">
-        <h2 class="text-5xl font-extrabold mb-6">Ready to unlock your next round?</h2>
-        <p class="text-xl text-metro-muted mb-10">Global IPP, business, SA PO, or strategic financing — zero upfront fees.</p>
-        <div class="flex flex-wrap justify-center gap-4 mb-10">
-            <div class="bg-white px-6 py-3 rounded-full font-bold">$12B+ CAPITAL</div>
-            <div class="bg-white px-6 py-3 rounded-full font-bold">0% UPFRONT</div>
+<!-- Final CTA Elite -->
+<section class="py-28 bg-elite-bg relative">
+    <div class="absolute inset-0 bg-gradient-to-t from-elite-gold/5 to-transparent"></div>
+    <div class="max-w-5xl mx-auto text-center px-6 relative z-10">
+        <h2 class="text-5xl md:text-7xl font-serif font-bold text-elite-cream mb-8">Ready to unlock your next round?</h2>
+        <p class="text-xl md:text-2xl text-elite-muted mb-12 max-w-3xl mx-auto">Global IPP, business, SA PO, or strategic financing — zero upfront fees. Discretion assured.</p>
+        <div class="flex flex-wrap justify-center gap-5 mb-12">
+            <div class="bg-elite-surface/70 border border-elite-gold/30 px-8 py-4 rounded-full font-semibold text-elite-cream backdrop-blur-sm">$12B+ CAPITAL</div>
+            <div class="bg-elite-surface/70 border border-elite-gold/30 px-8 py-4 rounded-full font-semibold text-elite-cream backdrop-blur-sm">0% UPFRONT</div>
         </div>
-        <a href="https://wa.me/27766473499?text=Let's%20discuss%20funding" class="btn-metro px-12 py-5 text-lg font-bold shadow-xl">💬 CHAT ON WHATSAPP NOW →</a>
-        <p class="mt-6 text-metro-muted">+27 76 647 3499 · Immediate response</p>
+        <a href="https://wa.me/27766473499?text=Elite%20Capital%20Discussion" class="btn-gold px-14 py-6 text-xl font-bold shadow-2xl">💬 CHAT ON WHATSAPP NOW →</a>
+        <p class="mt-8 text-elite-muted">+27 76 647 3499 · Immediate response</p>
     </div>
 </section>
 
-<!-- Footer Metro -->
-<footer class="bg-white border-t border-metro-border py-12">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10">
-        <div class="grid md:grid-cols-3 gap-10">
-            <div><div class="text-3xl font-black text-metro-accent">MFN</div><p class="text-metro-muted mt-4">$12B global network · Zero upfront fees</p></div>
-            <div><h4 class="font-bold mb-4">SOLUTIONS</h4><ul class="space-y-2 text-metro-muted"><li>IPP Global Funding</li><li>Business Equity/Debt</li><li>SA PO Financing</li><li>Strategic Equity & Debt</li></ul></div>
-            <div><h4 class="font-bold mb-4">CONNECT</h4><p class="text-metro-muted">victor@maribamedia.co.za</p><p class="font-bold mt-3">WhatsApp +27766473499</p></div>
+<!-- Footer Elite -->
+<footer class="bg-elite-surface border-t border-elite-gold/20 py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div><div class="text-4xl font-serif font-bold gold-text-gradient">MFN</div><p class="text-elite-muted mt-5 text-sm leading-relaxed">$12B global network · Zero upfront fees · Elite capital access</p></div>
+            <div><h4 class="font-serif text-xl font-semibold mb-5 text-elite-cream">SOLUTIONS</h4><ul class="space-y-3 text-elite-muted"><li>IPP Global Funding</li><li>Business Equity/Debt</li><li>SA PO Financing</li><li>Strategic Equity & Debt</li></ul></div>
+            <div><h4 class="font-serif text-xl font-semibold mb-5 text-elite-cream">CONNECT</h4><p class="text-elite-muted">victor@maribamedia.co.za</p><p class="font-semibold mt-4 text-elite-gold">WhatsApp +27766473499</p></div>
         </div>
-        <div class="border-t pt-8 mt-8 text-center text-metro-muted text-sm">© 2026 Mariba Funding Network · Metro Modern Capital</div>
+        <div class="elite-divider my-10"></div>
+        <div class="text-center text-elite-muted text-sm tracking-wide">© 2026 Mariba Funding Network · Elite Global Capital · All rights reserved.</div>
     </div>
 </footer>
 
-<!-- WhatsApp Widget -->
-<div class="wa-widget">
-    <div class="wa-tooltip">Chat on WhatsApp</div>
-    <a href="https://wa.me/27766473499?text=Hi%20Mariba%20Funding%20Network%2C%20I%20need%20funding." target="_blank" class="wa-button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
+<!-- WhatsApp Elite Widget -->
+<div class="wa-widget-elite">
+    <div class="wa-tooltip-elite">Elite concierge · WhatsApp</div>
+    <a href="https://wa.me/27766473499?text=Elite%20Funding%20Inquiry" target="_blank" class="wa-button-elite">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="#0B1120"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
     </a>
 </div>
 
 <script>
     (function(){
-        // Scroll progress
         const progressBar = document.getElementById('scrollProgress');
         window.addEventListener('scroll', () => {
             const winScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -500,8 +513,8 @@
             });
         }
 
-        // Animate on scroll (Intersection Observer)
-        const animatedElements = document.querySelectorAll('.animate-tile');
+        // Scroll animations
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
@@ -511,7 +524,7 @@
         }, { threshold: 0.15 });
         animatedElements.forEach(el => observer.observe(el));
 
-        // Smooth scroll for anchor links
+        // Smooth anchor scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -520,7 +533,7 @@
                 if(target) {
                     e.preventDefault();
                     const navHeight = document.querySelector('nav').offsetHeight;
-                    window.scrollTo({ top: target.offsetTop - navHeight - 16, behavior: 'smooth' });
+                    window.scrollTo({ top: target.offsetTop - navHeight - 20, behavior: 'smooth' });
                     if(!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                         openIcon.classList.remove('hidden');
