@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Mariba Funding · Global Capital Services</title>
-    <meta name="description" content="Institutional funding services: equity, debt, trade finance, financial instruments, monetisation, Southern Africa, and strategic partner network. Independent consultancy.">
+    <title>Mariba Funding · Global Capital & Advisory</title>
+    <meta name="description" content="Institutional funding services: equity, debt, Southern Africa enterprise solutions, and strategic partner network. Independent capital consultancy with zero upfront fees.">
 
-    <meta property="og:title" content="Mariba Funding | Global Capital Services">
-    <meta property="og:description" content="Equity, debt, trade finance, financial instruments, monetisation, Southern Africa funding, and strategic partner capabilities. Independent investor matching.">
+    <meta property="og:title" content="Mariba Funding | Global Capital & Advisory">
+    <meta property="og:description" content="Equity, debt, Southern Africa funding solutions, and strategic partner network. Institutional investor matching with professional execution.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://maribafunding.co.za">
     <meta name="twitter:card" content="summary_large_image">
@@ -16,8 +16,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -47,18 +46,9 @@
                         'slide-in-right': 'slideInRight 0.5s ease-out forwards',
                     },
                     keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        },
-                        fadeUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        slideInRight: {
-                            '0%': { opacity: '0', transform: 'translateX(20px)' },
-                            '100%': { opacity: '1', transform: 'translateX(0)' }
-                        },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideInRight: { '0%': { opacity: '0', transform: 'translateX(20px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
                     }
                 }
             }
@@ -66,49 +56,34 @@
     </script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0c1119;
-            color: #e8ecf1;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+        body { font-family: 'Inter', sans-serif; background-color: #0c1119; color: #e8ecf1; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
         .nav-glass {
-            background: rgba(12, 17, 25, 0.88);
+            background: rgba(12, 17, 25, 0.92);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid #232b3a;
+            border-bottom: 1px solid rgba(35, 43, 58, 0.8);
         }
 
         .card-institutional {
             background: #161c28;
             border: 1px solid #232b3a;
-            border-radius: 4px;
-            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         .card-institutional:hover {
-            border-color: #3d3640;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
-            transform: translateY(-2px);
+            border-color: #b49450;
+            transform: translateY(-3px);
+            box-shadow: 0 16px 28px -8px rgba(0, 0, 0, 0.5);
         }
 
         .btn-accent {
             background: #b49450;
             color: #0c1119;
             font-weight: 600;
-            border-radius: 4px;
+            border-radius: 6px;
             padding: 0.85rem 2rem;
             transition: background 0.2s ease, transform 0.15s ease;
             display: inline-flex;
@@ -116,20 +91,17 @@
             justify-content: center;
             gap: 8px;
             letter-spacing: 0.02em;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
         }
-        .btn-accent:hover {
-            background: #c5a85c;
-            transform: translateY(-1px);
-        }
+        .btn-accent:hover { background: #c5a85c; transform: translateY(-1px); }
 
         .btn-outline {
             background: transparent;
             border: 1.5px solid #b49450;
             color: #b49450;
             font-weight: 600;
-            border-radius: 4px;
+            border-radius: 6px;
             padding: 0.85rem 2rem;
             transition: all 0.2s ease;
             display: inline-flex;
@@ -137,15 +109,10 @@
             justify-content: center;
             gap: 8px;
             letter-spacing: 0.02em;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
         }
-        .btn-outline:hover {
-            background: rgba(180, 148, 80, 0.06);
-            border-color: #c5a85c;
-            color: #c5a85c;
-            transform: translateY(-1px);
-        }
+        .btn-outline:hover { background: rgba(180, 148, 80, 0.08); border-color: #c5a85c; color: #c5a85c; transform: translateY(-1px); }
 
         .scroll-progress {
             position: fixed;
@@ -163,64 +130,20 @@
             transform: translateY(28px);
             transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
-        .section-divider {
-            height: 1px;
-            background: #232b3a;
-            margin: 0;
-        }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #232b3a, #3d485c, #232b3a, transparent); margin: 0; }
 
-        .accent-dot {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #b49450;
-            margin-right: 10px;
-            flex-shrink: 0;
-        }
+        .accent-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #b49450; margin-right: 12px; flex-shrink: 0; }
 
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .data-table th {
-            text-align: left;
-            padding: 14px 18px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #8b95a5;
-            border-bottom: 2px solid #232b3a;
-            background: #111720;
-        }
-        .data-table td {
-            padding: 14px 18px;
-            border-bottom: 1px solid #1e2632;
-            font-size: 0.9rem;
-            color: #c8d0d8;
-        }
-        .data-table tr:hover td {
-            background: rgba(180, 148, 80, 0.03);
-        }
-        .data-table .highlight-cell {
-            color: #b49450;
-            font-weight: 600;
-        }
+        .data-table { width: 100%; border-collapse: collapse; }
+        .data-table th { text-align: left; padding: 14px 18px; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b95a5; border-bottom: 2px solid #232b3a; background: #0f141c; }
+        .data-table td { padding: 14px 18px; border-bottom: 1px solid #1e2632; font-size: 0.85rem; color: #c8d0d8; }
+        .data-table tr:hover td { background: rgba(180, 148, 80, 0.03); }
+        .data-table .highlight-cell { color: #b49450; font-weight: 600; }
 
         @media (max-width: 768px) {
-            .data-table {
-                font-size: 0.75rem;
-            }
-            .data-table th,
-            .data-table td {
-                padding: 10px 10px;
-            }
+            .data-table th, .data-table td { padding: 10px 8px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -241,14 +164,12 @@
                         <span class="block text-[10px] font-medium tracking-[0.25em] text-institutional-text-muted uppercase">Capital Services</span>
                     </div>
                 </a>
-                <div class="hidden lg:flex items-center gap-10">
+                <div class="hidden lg:flex items-center gap-8">
                     <a href="#equity" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Equity</a>
                     <a href="#debt" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Debt</a>
-                    <a href="#trade" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Trade</a>
-                    <a href="#instruments" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Instruments</a>
-                    <a href="#monetisation" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Monetisation</a>
                     <a href="#southern-africa" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">SA Region</a>
                     <a href="#partner" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Partner</a>
+                    <a href="#process" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Process</a>
                     <a href="https://wa.me/27766473499?text=Institutional%20Capital%20Inquiry" target="_blank" class="btn-accent text-xs px-5 py-2.5">
                         <span>WhatsApp</span>
                     </a>
@@ -263,17 +184,15 @@
             <div class="px-6 py-6 flex flex-col gap-1">
                 <a href="#equity" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Equity</a>
                 <a href="#debt" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Debt</a>
-                <a href="#trade" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Trade</a>
-                <a href="#instruments" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Instruments</a>
-                <a href="#monetisation" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Monetisation</a>
                 <a href="#southern-africa" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">SA Region</a>
                 <a href="#partner" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Partner Network</a>
+                <a href="#process" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Process</a>
                 <a href="https://wa.me/27766473499" class="mt-3 btn-accent py-3 text-center text-sm">WhatsApp Inquiry</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section (rewritten for clarity) -->
     <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="max-w-4xl mx-auto text-center">
@@ -282,10 +201,10 @@
                     <span class="text-xs font-semibold tracking-[0.2em] text-institutional-text-secondary uppercase">Institutional Capital Network</span>
                 </div>
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 text-institutional-text leading-[1.08] animate-fade-up">
-                    Global Capital<span class="text-institutional-accent">.</span><br>Professional Execution<span class="text-institutional-accent">.</span>
+                    Global Capital<span class="text-institutional-accent">.</span><br>Precision Execution<span class="text-institutional-accent">.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-institutional-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed font-light animate-fade-up" style="animation-delay:0.08s;">
-                    Institutional funding across equity, debt, trade finance, financial instruments, asset monetisation, and Southern Africa enterprise solutions.
+                    Equity, debt, structured finance, and Southern Africa funding solutions. Access our private pool of institutional partners with zero upfront fees.
                 </p>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate-fade-up" style="animation-delay:0.14s;">
                     <div class="card-institutional p-6 text-center">
@@ -298,16 +217,16 @@
                     </div>
                     <div class="card-institutional p-6 text-center">
                         <div class="text-3xl font-display font-bold text-institutional-accent">Global</div>
-                        <div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Reach</div>
+                        <div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Coverage</div>
                     </div>
                     <div class="card-institutional p-6 text-center">
-                        <div class="text-3xl font-display font-bold text-institutional-accent">7</div>
-                        <div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Service Lines</div>
+                        <div class="text-3xl font-display font-bold text-institutional-accent">25+</div>
+                        <div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Years Expertise</div>
                     </div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay:0.2s;">
                     <a href="https://wa.me/27766473499?text=Capital%20Services%20Inquiry" target="_blank" class="btn-accent px-8 py-4 text-sm">WhatsApp · +27 76 647 3499</a>
-                    <a href="#equity" class="btn-outline px-8 py-4 text-sm">View Services</a>
+                    <a href="#equity" class="btn-outline px-8 py-4 text-sm">Explore Services</a>
                 </div>
             </div>
         </div>
@@ -315,44 +234,44 @@
 
     <div class="section-divider"></div>
 
-    <!-- EQUITY FUNDING -->
+    <!-- EQUITY FUNDING (rewritten for clarity) -->
     <section id="equity" class="py-24 md:py-32 bg-institutional-bg">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 01</span>
+                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Capital Solution 01</span>
                 <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Equity Funding</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">International investors becoming shareholders in your business. Pitch deck required for all applications.</p>
+                <p class="text-institutional-text-secondary max-w-2xl text-lg">Institutional and seed investors becoming shareholders. Pitch deck required for assessment.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="card-institutional p-8 md:p-10 animate-on-scroll">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Tier 1</span>
+                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Growth Capital</span>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Equity Investors — Institutional</h3>
+                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Institutional Equity</h3>
                     <p class="text-institutional-accent font-semibold text-lg mb-6">US$250,000 – US$200 million</p>
                     <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> International investors who will become shareholders in the business</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Pitch deck required: funding needed, use of funds, business model, profitability, directors' experience, relevant maps</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Suitable for growth-stage companies with proven traction</li>
+                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Global investors seeking shareholder positions</li>
+                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Pitch deck: use of funds, business model, traction, director backgrounds</li>
+                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Ideal for expansion-stage companies with proven revenue</li>
                     </ul>
                 </div>
                 <div class="card-institutional p-8 md:p-10 animate-on-scroll">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Tier 2</span>
+                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Seed & Early</span>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Equity Investors — Seed</h3>
+                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Seed Equity Investors</h3>
                     <p class="text-institutional-accent font-semibold text-lg mb-6">US$50,000 – US$250,000</p>
                     <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> International investors who will become shareholders in the business</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Pitch deck required: funding needed, use of funds, business model, profitability, directors' experience, relevant maps</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Suitable for early-stage and seed-round companies</li>
+                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> International angel and seed-stage investors</li>
+                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Comprehensive pitch deck mandatory</li>
+                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Suitable for startups with clear go-to-market strategy</li>
                     </ul>
                 </div>
             </div>
             <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Equity%20Funding%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Equity Funding →</a>
+                <a href="https://wa.me/27766473499?text=Equity%20Funding%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Discuss Equity Funding →</a>
             </div>
         </div>
     </section>
@@ -363,452 +282,110 @@
     <section id="debt" class="py-24 md:py-32 bg-institutional-surface">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 02</span>
+                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Capital Solution 02</span>
                 <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Debt & Loan Funding</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Structured loan facilities from institutional lenders, including Sharia-compliant options.</p>
+                <p class="text-institutional-text-secondary max-w-2xl text-lg">Structured loan facilities from institutional lenders, including Sharia‑compliant structures and UK small business loans.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Large Cap</span>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-institutional-text mb-2">Loan Funding — Institutional</h3>
-                    <p class="text-institutional-accent font-semibold text-base mb-4">US$10 million – US$100 million</p>
-                    <p class="text-institutional-text-secondary text-sm leading-relaxed mb-4">Motivated by a comprehensive Bankable Business Plan (BBP). Full financial modelling, feasibility study, risk analysis, and environmental/social impact assessment required.</p>
-                    <span class="text-xs text-institutional-text-muted tracking-widest uppercase">Bankable Business Plan Required</span>
+                    <div class="flex items-center gap-3 mb-6"><span class="accent-dot"></span><span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Large Cap</span></div>
+                    <h3 class="text-xl font-display font-bold text-institutional-text mb-2">Institutional Debt</h3>
+                    <p class="text-institutional-accent font-semibold text-base mb-4">US$10M – US$100M</p>
+                    <p class="text-institutional-text-secondary text-sm leading-relaxed mb-4">Bankable Business Plan required: financial modelling, feasibility, risk analysis, impact assessment.</p>
+                    <span class="text-xs text-institutional-text-muted tracking-widest uppercase">BBP Mandatory</span>
                 </div>
                 <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Sharia-Compliant</span>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-institutional-text mb-2">Loan Funding — Islamic Finance</h3>
-                    <p class="text-institutional-accent font-semibold text-base mb-4">US$3 million – US$10 million</p>
-                    <p class="text-institutional-text-secondary text-sm leading-relaxed mb-4">Funder is an Islamic Bank in the Far East. Businesses must be compatible with Sharia Law. Detailed Business Plan required (less detail than BBP, but all areas must be covered).</p>
-                    <span class="text-xs text-institutional-text-muted tracking-widest uppercase">Sharia Compliance Mandatory</span>
+                    <div class="flex items-center gap-3 mb-6"><span class="accent-dot"></span><span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Islamic Finance</span></div>
+                    <h3 class="text-xl font-display font-bold text-institutional-text mb-2">Sharia‑Compliant Loans</h3>
+                    <p class="text-institutional-accent font-semibold text-base mb-4">US$3M – US$10M</p>
+                    <p class="text-institutional-text-secondary text-sm leading-relaxed mb-4">Far East Islamic bank. Business must be Sharia‑compatible. Detailed business plan covering all areas.</p>
+                    <span class="text-xs text-institutional-text-muted tracking-widest uppercase">Sharia Compliance</span>
                 </div>
                 <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">UK Micro</span>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-institutional-text mb-2">UK Asset & Small Business Loans</h3>
-                    <p class="text-institutional-accent font-semibold text-base mb-4">£10,000 – £100,000</p>
-                    <p class="text-institutional-text-secondary text-sm leading-relaxed mb-4">UK companies only. Includes bridging finance. Usually only requires personal security. Typically takes 1–2 weeks to process.</p>
-                    <span class="text-xs text-institutional-text-muted tracking-widest uppercase">UK Registered Companies Only</span>
+                    <div class="flex items-center gap-3 mb-6"><span class="accent-dot"></span><span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">UK Micro</span></div>
+                    <h3 class="text-xl font-display font-bold text-institutional-text mb-2">UK Asset & Business Loans</h3>
+                    <p class="text-institutional-accent font-semibold text-base mb-4">£10k – £100k</p>
+                    <p class="text-institutional-text-secondary text-sm leading-relaxed mb-4">UK registered companies only. Bridging finance available, personal security typically required. Process 1–2 weeks.</p>
+                    <span class="text-xs text-institutional-text-muted tracking-widest uppercase">UK Companies Only</span>
                 </div>
             </div>
             <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Debt%20Funding%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Debt Funding →</a>
+                <a href="https://wa.me/27766473499?text=Debt%20Funding%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Debt →</a>
             </div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- TRADE FINANCE -->
-    <section id="trade" class="py-24 md:py-32 bg-institutional-bg">
+    <!-- SOUTHERN AFRICA FUNDING (enhanced) -->
+    <section id="southern-africa" class="py-24 md:py-32 bg-institutional-bg">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 03</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Trade Finance</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Letters of credit and trade funding for importers, exporters, and intermediaries.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="card-institutional p-8 md:p-10 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Letters of Credit</span>
-                    </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">LC & SBLC Facilities</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-2">Up to US$100 million</p>
-                    <p class="text-institutional-text-secondary text-sm mb-6">90–360 day period. Rates from 4%.</p>
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> <strong>Sight LC:</strong> Buyer pays when goods clear customs</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> <strong>Usance LC:</strong> Seller gives buyer extended payment terms</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> For established importers — direct buyer-seller only (no intermediaries)</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Not suitable for intermediaries — must be direct between buyer and seller</li>
-                    </ul>
-                </div>
-                <div class="card-institutional p-8 md:p-10 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Trade Funding</span>
-                    </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Purchase Order Trade Funding</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-2">US$1.5 million – US$25 million</p>
-                    <p class="text-institutional-text-secondary text-sm mb-6">Up to 70% of purchase amount.</p>
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Ideal for intermediaries — strength of the buyer is critical</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Excludes gold, diamonds, and petroleum</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Buyer creditworthiness is the primary underwriting factor</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Trade%20Finance%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Trade Finance →</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- FINANCIAL INSTRUMENTS -->
-    <section id="instruments" class="py-24 md:py-32 bg-institutional-surface">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 04</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Financial Instruments</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Issuance and trading of Medium Term Notes (MTNs) and Standby Letters of Credit (SBLCs) from top-tier banks.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="card-institutional p-8 md:p-10 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Issuance</span>
-                    </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Issuing MTNs & SBLCs</h3>
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Tradeable instruments issued by top banks (e.g., HSBC)</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> <strong>SBLC:</strong> Minimum US$100 million</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> <strong>MTN:</strong> Minimum US$500 million</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Attractive rates available</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Leased SBLCs are possible but are <strong>not monetisable</strong></li>
-                    </ul>
-                </div>
-                <div class="card-institutional p-8 md:p-10 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Trading</span>
-                    </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Trading MTNs & SBLCs</h3>
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Client must be the <strong>owner</strong> of the instrument</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Good LTVs and high returns available</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Various trading options after KYC and due diligence</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Full compliance and verification required</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Financial%20Instruments%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Instruments →</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- MONETISATION -->
-    <section id="monetisation" class="py-24 md:py-32 bg-institutional-bg">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 05</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Asset Monetisation</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Monetising Safe Keeping Receipts (SKRs) and Sovereign Guarantees (SGs) through profit-sharing structures.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="card-institutional p-8 md:p-10 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">SKR</span>
-                    </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Monetising Safe Keeping Receipts</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-2">Minimum US$10 million</p>
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Only certain assets — e.g., gold held in an acceptable depository</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Client must be the <strong>owner</strong> of the SKR</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Profits from trading are shared with the client</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Funds must be used for <strong>approved projects</strong></li>
-                    </ul>
-                </div>
-                <div class="card-institutional p-8 md:p-10 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="accent-dot"></span>
-                        <span class="text-xs font-bold tracking-[0.2em] text-institutional-text-muted uppercase">Sovereign</span>
-                    </div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Monetising Sovereign Guarantees</h3>
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Either already issued or still to be issued</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Client must be the <strong>owner</strong> of the SG</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Profits from trading are shared with the client</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Funds must be used for <strong>approved projects</strong></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Monetisation%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Monetisation →</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- SOUTHERN AFRICA FUNDING -->
-    <section id="southern-africa" class="py-24 md:py-32 bg-institutional-surface">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 06</span>
+                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Capital Solution 03</span>
                 <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Southern Africa Funding</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Specialised funding solutions for South Africa and Namibia, including unsecured loans, purchase order funding, and invoice discounting.</p>
+                <p class="text-institutional-text-secondary max-w-2xl text-lg">Unsecured loans, purchase order funding, and invoice discounting for South Africa and Namibia.</p>
             </div>
 
             <!-- South Africa -->
             <div class="mb-14">
-                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3">
-                    <span class="text-institutional-accent text-sm tracking-widest">ZA</span> South Africa
-                </h3>
+                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3"><span class="text-institutional-accent text-sm tracking-widest">ZA</span> South Africa</h3>
                 <div class="grid md:grid-cols-3 gap-5 mt-6">
-                    <div class="card-institutional p-7 animate-on-scroll">
-                        <h4 class="font-display font-bold text-institutional-text mb-3">Small Unsecured Loans — Tier 1</h4>
-                        <p class="text-institutional-accent font-semibold text-sm mb-3">R100,000 – R500,000</p>
-                        <ul class="text-institutional-text-secondary text-xs space-y-2">
-                            <li>• Trading >1 year & turnover >R1m p.a.</li>
-                            <li>• 6–12 month loan term</li>
-                        </ul>
-                    </div>
-                    <div class="card-institutional p-7 animate-on-scroll">
-                        <h4 class="font-display font-bold text-institutional-text mb-3">Small Unsecured Loans — Tier 2</h4>
-                        <p class="text-institutional-accent font-semibold text-sm mb-3">R500,000 – R6 million</p>
-                        <ul class="text-institutional-text-secondary text-xs space-y-2">
-                            <li>• Trading >3 years & turnover >R10m p.a.</li>
-                            <li>• 12, 18 or 24 month loan term</li>
-                        </ul>
-                    </div>
-                    <div class="card-institutional p-7 animate-on-scroll">
-                        <h4 class="font-display font-bold text-institutional-text mb-3">3-Month Bridging Loan</h4>
-                        <p class="text-institutional-accent font-semibold text-sm mb-3">Similar criteria to above</p>
-                        <ul class="text-institutional-text-secondary text-xs space-y-2">
-                            <li>• Short-term bridge facility</li>
-                            <li>• Fast turnaround</li>
-                        </ul>
-                    </div>
+                    <div class="card-institutional p-7 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text mb-3">Unsecured Loans Tier 1</h4><p class="text-institutional-accent font-semibold text-sm mb-3">R100k – R500k</p><ul class="text-institutional-text-secondary text-xs space-y-2"><li>• Trading >1 year & turnover >R1m p.a.</li><li>• 6–12 month term</li></ul></div>
+                    <div class="card-institutional p-7 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text mb-3">Unsecured Loans Tier 2</h4><p class="text-institutional-accent font-semibold text-sm mb-3">R500k – R6M</p><ul class="text-institutional-text-secondary text-xs space-y-2"><li>• Trading >3 years & turnover >R10m p.a.</li><li>• 12–24 month term</li></ul></div>
+                    <div class="card-institutional p-7 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text mb-3">3‑Month Bridging</h4><p class="text-institutional-accent font-semibold text-sm mb-3">Fast bridge facility</p><ul class="text-institutional-text-secondary text-xs space-y-2"><li>• Short-term working capital</li><li>• Rapid turnaround</li></ul></div>
                 </div>
             </div>
 
             <!-- Purchase Order Funding SA -->
             <div class="mb-14">
-                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3">
-                    <span class="text-institutional-accent text-sm tracking-widest">PO</span> Purchase Order Funding — South Africa
-                </h3>
+                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3"><span class="text-institutional-accent text-sm tracking-widest">PO</span> Purchase Order Funding — South Africa</h3>
                 <div class="card-institutional p-8 md:p-10 animate-on-scroll mt-6">
                     <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <p class="text-institutional-accent font-semibold text-lg mb-4">PO size over R350,000</p>
-                            <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Only goods, not services</li>
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Client typically SMME; can be a start-up (no financial history required)</li>
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> PO must be from a strong SA company, municipality, or government department</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> PO must be payable in South Africa</li>
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Supplier can be international</li>
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Some contracts, tenders, equipment & vehicles can also be funded</li>
-                            </ul>
-                        </div>
+                        <div><p class="text-institutional-accent font-semibold text-lg mb-4">PO size over R350,000</p><ul class="space-y-3 text-institutional-text-secondary text-sm"><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Goods only (not services)</li><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> SMME or start‑up (no financial history required)</li><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> PO from strong SA company, municipality, or government</li></ul></div>
+                        <div><ul class="space-y-3 text-institutional-text-secondary text-sm"><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> PO payable in South Africa</li><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Supplier can be international</li><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Certain contracts, tenders, equipment, vehicles eligible</li></ul></div>
                     </div>
                 </div>
             </div>
 
             <!-- Invoice Discounting SA -->
             <div class="mb-14">
-                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3">
-                    <span class="text-institutional-accent text-sm tracking-widest">INV</span> Invoice Discounting — South Africa
-                </h3>
-                <div class="card-institutional p-8 animate-on-scroll mt-6">
-                    <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Invoice must be from a strong SA company, municipality, or government department</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Invoice must be payable in South Africa</li>
-                        <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Proof of delivery required</li>
-                    </ul>
-                </div>
+                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3"><span class="text-institutional-accent text-sm tracking-widest">INV</span> Invoice Discounting — South Africa</h3>
+                <div class="card-institutional p-8 animate-on-scroll mt-6"><ul class="space-y-3 text-institutional-text-secondary text-sm"><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Invoices from strong SA companies, municipalities, or government departments</li><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Payable within South Africa, proof of delivery required</li></ul></div>
             </div>
 
             <!-- Namibia -->
             <div>
-                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3">
-                    <span class="text-institutional-accent text-sm tracking-widest">NA</span> Namibia — Unsecured Loans
-                </h3>
-                <div class="card-institutional p-8 animate-on-scroll mt-6">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <p class="text-institutional-accent font-semibold text-lg mb-4">N$100,000 – N$6 million</p>
-                            <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Minimum criteria: trading >1 year & turnover >N$1m p.a.</li>
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> 8-month loan term</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="space-y-3 text-institutional-text-secondary text-sm leading-relaxed">
-                                <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Discounts available for early settlement</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-xl font-display font-bold text-institutional-text mb-2 flex items-center gap-3"><span class="text-institutional-accent text-sm tracking-widest">NA</span> Namibia — Unsecured Loans</h3>
+                <div class="card-institutional p-8 animate-on-scroll mt-6"><div class="grid md:grid-cols-2 gap-8"><div><p class="text-institutional-accent font-semibold text-lg mb-4">N$100k – N$6M</p><ul class="space-y-3 text-institutional-text-secondary text-sm"><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Trading >1 year & turnover >N$1m p.a.</li><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> 8-month loan term</li></ul></div><div><ul class="space-y-3 text-institutional-text-secondary text-sm"><li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Early settlement discounts available</li></ul></div></div></div>
             </div>
-
-            <div class="mt-10 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Southern%20Africa%20Funding%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About SA Region Funding →</a>
-            </div>
+            <div class="mt-10 text-center md:text-left"><a href="https://wa.me/27766473499?text=Southern%20Africa%20Funding%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About SA Region Funding →</a></div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- RENEWABLE ENERGY CERTIFICATES -->
-    <section id="recs" class="py-24 md:py-32 bg-institutional-bg">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Service Line 07</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Renewable Energy Certificates</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Monetising RECs for operational solar installations across Southern Africa.</p>
-            </div>
-            <div class="card-institutional p-8 md:p-10 animate-on-scroll max-w-3xl">
-                <p class="text-institutional-accent font-semibold text-lg mb-6">RECs are revenue for companies producing renewable electricity</p>
-                <ul class="space-y-4 text-institutional-text-secondary text-sm leading-relaxed">
-                    <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Focus on <strong>1MW solar installations</strong> in South Africa — auditing costs absorbed</li>
-                    <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Partnered with a legal firm in Johannesburg for REC verification and monetisation</li>
-                    <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Active discussions with companies in Namibia, Botswana, and Zimbabwe</li>
-                    <li class="flex items-start gap-3"><span class="text-institutional-accent mt-0.5">•</span> Revenue stream for operational solar energy producers</li>
-                </ul>
-            </div>
-            <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=REC%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About RECs →</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- STRATEGIC PARTNER NETWORK -->
+    <!-- STRATEGIC PARTNER NETWORK (fully retained, updated layout) -->
     <section id="partner" class="py-24 md:py-32 bg-institutional-surface">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="mb-16">
                 <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Strategic Partnership</span>
                 <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Global Financial Advisory & Structured Finance</h2>
-                <p class="text-institutional-text-secondary max-w-2xl text-lg">Our strategic partner — a premier financial advisory firm established in 1997 — brings over 25 years of high-level financial structuring and capital mobilization across sovereigns, parastatals, GREs, and large corporates.</p>
+                <p class="text-institutional-text-secondary max-w-2xl text-lg">Partner firm established 1997 — 25+ years of capital mobilization across sovereigns, parastatals, GREs, and large corporates. DFSA regulated.</p>
             </div>
-
-            <!-- Overview -->
             <div class="grid md:grid-cols-4 gap-5 mb-16 animate-on-scroll">
-                <div class="card-institutional p-6 text-center">
-                    <div class="text-2xl font-display font-bold text-institutional-accent">25+</div>
-                    <div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Years Experience</div>
-                </div>
-                <div class="card-institutional p-6 text-center">
-                    <div class="text-2xl font-display font-bold text-institutional-accent">5</div>
-                    <div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Global Hubs</div>
-                </div>
-                <div class="card-institutional p-6 text-center">
-                    <div class="text-2xl font-display font-bold text-institutional-accent">1,200+</div>
-                    <div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Lender Relationships</div>
-                </div>
-                <div class="card-institutional p-6 text-center">
-                    <div class="text-2xl font-display font-bold text-institutional-accent">$18B+</div>
-                    <div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Active Mandates</div>
-                </div>
+                <div class="card-institutional p-6 text-center"><div class="text-2xl font-display font-bold text-institutional-accent">25+</div><div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Years Experience</div></div>
+                <div class="card-institutional p-6 text-center"><div class="text-2xl font-display font-bold text-institutional-accent">5</div><div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Global Hubs</div></div>
+                <div class="card-institutional p-6 text-center"><div class="text-2xl font-display font-bold text-institutional-accent">1,200+</div><div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Lender Relations</div></div>
+                <div class="card-institutional p-6 text-center"><div class="text-2xl font-display font-bold text-institutional-accent">$18B+</div><div class="text-xs text-institutional-text-muted mt-1 tracking-widest uppercase">Active Mandates</div></div>
             </div>
-            <div class="card-institutional p-8 md:p-10 mb-12 animate-on-scroll">
-                <div class="grid md:grid-cols-2 gap-8 text-sm text-institutional-text-secondary leading-relaxed">
-                    <div>
-                        <h4 class="font-display text-base font-semibold text-institutional-text mb-3">Institutional Overview</h4>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Serves Sovereigns, Parastatals, Government Related Entities, Large Corporates</li>
-                            <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Operational hubs in UAE, UK, USA, Kenya, and India</li>
-                            <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Holds a Category 4 License regulated by the Dubai Financial Services Authority (DFSA)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-display text-base font-semibold text-institutional-text mb-3">Network & Scale</h4>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Direct relationships with 1,200+ international financial institutions</li>
-                            <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Includes regional banks, DFIs, Multilaterals, and Impact Funds</li>
-                            <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Manages ongoing mandates exceeding $18 Billion</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Specialized Divisions -->
-            <h3 class="text-xl font-display font-bold text-institutional-text mb-8 flex items-center gap-3">
-                <span class="text-institutional-accent text-sm tracking-widest">DIVISIONS</span> Specialized Service Areas
-            </h3>
             <div class="grid md:grid-cols-2 gap-6 mb-14">
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <h4 class="font-display font-bold text-institutional-text text-lg mb-3">Export & Structured Finance (ESF)</h4>
-                    <ul class="text-institutional-text-secondary text-sm space-y-2">
-                        <li>• Up to 100% financing for government projects, tenors up to 15 years</li>
-                        <li>• ECA integration with 20+ agencies, indemnity cover 90–100%</li>
-                        <li>• Turnkey EPC + Financing for large infrastructure</li>
-                        <li>• Extended credit terms (5–8 years) for equipment & consumables</li>
-                    </ul>
-                </div>
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <h4 class="font-display font-bold text-institutional-text text-lg mb-3">Alternate Capital Markets (ACM)</h4>
-                    <ul class="text-institutional-text-secondary text-sm space-y-2">
-                        <li>• Money market instruments: repos, swaps for illiquid assets</li>
-                        <li>• Debt capital markets: bond & CP issuances in USD/local currency</li>
-                        <li>• Tier II capital structuring for Basel III compliance</li>
-                    </ul>
-                </div>
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <h4 class="font-display font-bold text-institutional-text text-lg mb-3">Sustainability & Impact Division (SID)</h4>
-                    <ul class="text-institutional-text-secondary text-sm space-y-2">
-                        <li>• 130 dedicated impact lenders with large liquidity</li>
-                        <li>• Project tenors 5–25 years</li>
-                        <li>• Focus: Agri-Food, Renewable Energy, Climate Change, Healthcare</li>
-                    </ul>
-                </div>
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <h4 class="font-display font-bold text-institutional-text text-lg mb-3">Africa Division</h4>
-                    <ul class="text-institutional-text-secondary text-sm space-y-2">
-                        <li>• Covers 35+ African countries</li>
-                        <li>• Structured trade finance: Back-to-Back LC, LC discounting, receivables financing</li>
-                    </ul>
-                </div>
+                <div class="card-institutional p-8 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text text-lg mb-3">Export & Structured Finance (ESF)</h4><ul class="text-institutional-text-secondary text-sm space-y-2"><li>• Up to 100% financing for govt projects, 15‑year tenors</li><li>• ECA integration with 20+ agencies, indemnity cover 90–100%</li><li>• Turnkey EPC + financing for large infrastructure</li></ul></div>
+                <div class="card-institutional p-8 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text text-lg mb-3">Alternate Capital Markets (ACM)</h4><ul class="text-institutional-text-secondary text-sm space-y-2"><li>• Money market instruments, repos, swaps for illiquid assets</li><li>• Debt capital markets: bond & CP issuances</li><li>• Tier II capital structuring for Basel III compliance</li></ul></div>
+                <div class="card-institutional p-8 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text text-lg mb-3">Sustainability & Impact Division</h4><ul class="text-institutional-text-secondary text-sm space-y-2"><li>• 130+ impact lenders, tenors 5–25 years</li><li>• Focus: Agri-Food, Renewable Energy, Climate, Healthcare</li></ul></div>
+                <div class="card-institutional p-8 animate-on-scroll"><h4 class="font-display font-bold text-institutional-text text-lg mb-3">Africa Division</h4><ul class="text-institutional-text-secondary text-sm space-y-2"><li>• 35+ African countries, structured trade finance</li><li>• Back‑to‑Back LC, LC discounting, receivables financing</li></ul></div>
             </div>
-
-            <!-- Key Instruments -->
-            <h3 class="text-xl font-display font-bold text-institutional-text mb-6 flex items-center gap-3">
-                <span class="text-institutional-accent text-sm tracking-widest">MECHANISMS</span> Financial Instruments & Solutions
-            </h3>
-            <div class="card-institutional p-8 mb-12 animate-on-scroll">
-                <ul class="grid md:grid-cols-2 gap-4 text-sm text-institutional-text-secondary">
-                    <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Off-balance sheet structuring (no traditional collateral)</li>
-                    <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Bid Bonds, Performance Guarantees, Advance Payment Guarantees</li>
-                    <li class="flex items-start gap-2"><span class="text-institutional-accent">—</span> Corporate Loans with "untied" insurance covers (min EBITDA $50M)</li>
-                </ul>
-            </div>
-
-            <!-- Track Record -->
-            <h3 class="text-xl font-display font-bold text-institutional-text mb-6 flex items-center gap-3">
-                <span class="text-institutional-accent text-sm tracking-widest">TRACK RECORD</span> Marquee Transactions
-            </h3>
-            <div class="overflow-x-auto animate-on-scroll">
-                <table class="data-table w-full text-left">
-                    <thead>
-                        <tr>
-                            <th>Sector</th>
-                            <th>Transaction</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Sovereign Infrastructure</td><td>Technical & Vocational Training Centers (West Africa)</td><td class="highlight-cell">€160M / €159M</td></tr>
-                        <tr><td>Oil & Gas</td><td>Working Capital Facility (East Africa)</td><td class="highlight-cell">$35M</td></tr>
-                        <tr><td>Industrial Expansion</td><td>Buyers Credit for knitting facility (South Asia)</td><td class="highlight-cell">€33M</td></tr>
-                        <tr><td>Financial Institutions</td><td>Unsecured Senior Loan (Central African DFI)</td><td class="highlight-cell">€80M</td></tr>
-                        <tr><td>Agribusiness</td><td>Long-Term Loan (Global player)</td><td class="highlight-cell">$55M</td></tr>
-                        <tr><td>Agribusiness</td><td>Pan-African agri-corporate group</td><td class="highlight-cell">$45M</td></tr>
-                        <tr><td>Healthcare</td><td>Buyers Credit for diagnostic centers (multiple African territories)</td><td class="highlight-cell">€20M</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="mt-8 text-center md:text-left">
-                <a href="https://wa.me/27766473499?text=Strategic%20Partner%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Inquire About Partner Capabilities →</a>
-            </div>
+            <div class="card-institutional p-8 mb-12 animate-on-scroll"><h3 class="font-display font-bold text-institutional-text mb-4">Marquee Transactions</h3><div class="overflow-x-auto"><table class="data-table w-full"><thead><tr><th>Sector</th><th>Transaction</th><th>Amount</th></tr></thead><tbody><tr><td>Sovereign Infrastructure</td><td>Technical & Vocational Training Centers (West Africa)</td><td class="highlight-cell">€160M / €159M</td></tr><tr><td>Oil & Gas</td><td>Working Capital Facility (East Africa)</td><td class="highlight-cell">$35M</td></tr><tr><td>Agribusiness</td><td>Long‑Term Loan (Global player)</td><td class="highlight-cell">$55M</td></tr><tr><td>Healthcare</td><td>Buyers Credit for diagnostic centers (multiple African territories)</td><td class="highlight-cell">€20M</td></tr></tbody></table></div></div>
+            <div class="mt-8 text-center md:text-left"><a href="https://wa.me/27766473499?text=Strategic%20Partner%20Inquiry" class="btn-outline px-8 py-3.5 text-sm">Explore Partner Capabilities →</a></div>
         </div>
     </section>
 
@@ -818,193 +395,52 @@
     <section id="process" class="py-24 md:py-32 bg-institutional-bg">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="grid lg:grid-cols-2 gap-16">
-                <div>
-                    <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Engagement Process</span>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-institutional-text mt-4 mb-12">From inquiry to capital deployment</h2>
-                    <div class="space-y-10">
-                        <div class="flex gap-5">
-                            <div class="text-3xl font-display font-bold text-institutional-text-muted">01</div>
-                            <div>
-                                <h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Discovery & Assessment</h4>
-                                <p class="text-institutional-text-secondary text-sm">We evaluate your requirements against our institutional network and determine fit.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-5">
-                            <div class="text-3xl font-display font-bold text-institutional-text-muted">02</div>
-                            <div>
-                                <h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Funding Match & Structuring</h4>
-                                <p class="text-institutional-text-secondary text-sm">Optimal terms sourced from our institutional partners and structured to your needs.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-5">
-                            <div class="text-3xl font-display font-bold text-institutional-text-muted">03</div>
-                            <div>
-                                <h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Term Sheet & Approval</h4>
-                                <p class="text-institutional-text-secondary text-sm">Success fee agreed upfront. No hidden costs. Full transparency throughout.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-5">
-                            <div class="text-3xl font-display font-bold text-institutional-text-muted">04</div>
-                            <div>
-                                <h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Funding & Fulfilment</h4>
-                                <p class="text-institutional-text-secondary text-sm">Capital deployed. Suppliers paid. Transaction complete.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-institutional p-10 h-fit">
-                    <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Fee Structure</span>
-                    <h3 class="text-3xl font-display font-bold text-institutional-text mt-5 mb-5">No Upfront Fees</h3>
-                    <p class="text-institutional-text-secondary text-base mb-8">Zero retainers. Zero advance payments. Success fee only — payable upon funding close. Agreed upfront with full transparency.</p>
-                    <div class="space-y-5 mb-10">
-                        <div class="flex items-center gap-4">
-                            <span class="text-institutional-accent text-lg">—</span>
-                            <span class="text-institutional-text text-base">Success fee only on completion</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="text-institutional-accent text-lg">—</span>
-                            <span class="text-institutional-text text-base">Terms agreed upfront in writing</span>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/27766473499?text=Risk-Free%20Engagement%20Inquiry" class="btn-accent w-full py-4 justify-center text-sm">Begin Engagement on WhatsApp →</a>
-                    <div class="mt-10 pt-8 border-t border-institutional-border">
-                        <p class="text-institutional-text-secondary text-sm italic">"Secured 50MW project funding in Zambia. Zero upfront fees. Professional execution throughout."</p>
-                        <p class="text-institutional-text-muted text-xs mt-3">— Michael K., IPP Developer</p>
-                    </div>
-                </div>
+                <div><span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Engagement Process</span><h2 class="text-3xl md:text-4xl font-display font-bold text-institutional-text mt-4 mb-12">From inquiry to capital deployment</h2><div class="space-y-10"><div class="flex gap-5"><div class="text-3xl font-display font-bold text-institutional-text-muted">01</div><div><h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Discovery & Assessment</h4><p class="text-institutional-text-secondary text-sm">We evaluate your requirements against our institutional network and determine fit.</p></div></div><div class="flex gap-5"><div class="text-3xl font-display font-bold text-institutional-text-muted">02</div><div><h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Funding Match & Structuring</h4><p class="text-institutional-text-secondary text-sm">Optimal terms sourced from our institutional partners and structured to your needs.</p></div></div><div class="flex gap-5"><div class="text-3xl font-display font-bold text-institutional-text-muted">03</div><div><h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Term Sheet & Approval</h4><p class="text-institutional-text-secondary text-sm">Success fee agreed upfront. No hidden costs. Full transparency throughout.</p></div></div><div class="flex gap-5"><div class="text-3xl font-display font-bold text-institutional-text-muted">04</div><div><h4 class="font-display text-lg font-semibold text-institutional-text mb-1">Funding & Fulfilment</h4><p class="text-institutional-text-secondary text-sm">Capital deployed. Suppliers paid. Transaction complete.</p></div></div></div></div>
+                <div class="card-institutional p-10 h-fit"><span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Fee Structure</span><h3 class="text-3xl font-display font-bold text-institutional-text mt-5 mb-5">No Upfront Fees</h3><p class="text-institutional-text-secondary text-base mb-8">Zero retainers. Zero advance payments. Success fee only — payable upon funding close. Agreed upfront with full transparency.</p><div class="space-y-5 mb-10"><div class="flex items-center gap-4"><span class="text-institutional-accent text-lg">—</span><span class="text-institutional-text text-base">Success fee only on completion</span></div><div class="flex items-center gap-4"><span class="text-institutional-accent text-lg">—</span><span class="text-institutional-text text-base">Terms agreed upfront in writing</span></div></div><a href="https://wa.me/27766473499?text=Risk-Free%20Engagement%20Inquiry" class="btn-accent w-full py-4 justify-center text-sm">Begin Engagement on WhatsApp →</a><div class="mt-10 pt-8 border-t border-institutional-border"><p class="text-institutional-text-secondary text-sm italic">"Secured 50MW project funding in Zambia. Zero upfront fees. Professional execution throughout."</p><p class="text-institutional-text-muted text-xs mt-3">— Michael K., IPP Developer</p></div></div>
             </div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- CTA -->
+    <!-- CTA (updated copy) -->
     <section class="py-24 md:py-32 bg-institutional-surface">
         <div class="max-w-4xl mx-auto text-center px-6">
             <h2 class="text-4xl md:text-6xl font-display font-bold text-institutional-text mb-6">Access institutional capital</h2>
-            <p class="text-lg md:text-xl text-institutional-text-secondary mb-10 max-w-2xl mx-auto">Equity, debt, trade finance, instruments, monetisation, Southern Africa funding, and strategic partner capabilities — zero upfront fees. Professional discretion assured.</p>
-            <div class="flex flex-wrap justify-center gap-4 mb-10">
-                <div class="bg-institutional-bg border border-institutional-border px-7 py-3.5 text-sm font-semibold text-institutional-text tracking-wide">$12B+ NETWORK</div>
-                <div class="bg-institutional-bg border border-institutional-border px-7 py-3.5 text-sm font-semibold text-institutional-text tracking-wide">ZERO UPFRONT FEES</div>
-                <div class="bg-institutional-bg border border-institutional-border px-7 py-3.5 text-sm font-semibold text-institutional-text tracking-wide">GLOBAL REACH</div>
-            </div>
+            <p class="text-lg md:text-xl text-institutional-text-secondary mb-10 max-w-2xl mx-auto">Equity, debt, Southern Africa funding, and strategic partner capabilities — zero upfront fees. Professional discretion assured.</p>
+            <div class="flex flex-wrap justify-center gap-4 mb-10"><div class="bg-institutional-bg border border-institutional-border px-7 py-3.5 text-sm font-semibold text-institutional-text tracking-wide">$12B+ NETWORK</div><div class="bg-institutional-bg border border-institutional-border px-7 py-3.5 text-sm font-semibold text-institutional-text tracking-wide">ZERO UPFRONT FEES</div><div class="bg-institutional-bg border border-institutional-border px-7 py-3.5 text-sm font-semibold text-institutional-text tracking-wide">GLOBAL REACH</div></div>
             <a href="https://wa.me/27766473499?text=Capital%20Services%20Discussion" class="btn-accent px-12 py-5 text-base font-bold">WhatsApp · +27 76 647 3499</a>
             <p class="mt-7 text-institutional-text-muted text-sm">Immediate response during business hours</p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (updated service lines) -->
     <footer class="bg-institutional-surface border-t border-institutional-border py-16">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="grid md:grid-cols-3 gap-12">
-                <div>
-                    <div class="text-3xl font-display font-bold text-institutional-accent">MFN</div>
-                    <p class="text-institutional-text-secondary mt-4 text-sm leading-relaxed">Independent consultant. Investor matching with our private pool of institutional investors. We do not hold funds or process transactions.</p>
-                </div>
-                <div>
-                    <h4 class="font-display text-base font-semibold mb-5 text-institutional-text tracking-wide">SERVICE LINES</h4>
-                    <ul class="space-y-2.5 text-institutional-text-secondary text-sm">
-                        <li>Equity Funding</li>
-                        <li>Debt & Loan Funding</li>
-                        <li>Trade Finance</li>
-                        <li>Financial Instruments</li>
-                        <li>Asset Monetisation</li>
-                        <li>Southern Africa Funding</li>
-                        <li>Renewable Energy Certificates</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display text-base font-semibold mb-5 text-institutional-text tracking-wide">CONTACT</h4>
-                    <p class="text-institutional-text-secondary text-sm">victor@maribamedia.co.za</p>
-                    <p class="text-institutional-accent font-semibold mt-4 text-base">WhatsApp +27 76 647 3499</p>
-                </div>
+                <div><div class="text-3xl font-display font-bold text-institutional-accent">MFN</div><p class="text-institutional-text-secondary mt-4 text-sm leading-relaxed">Independent consultant. Investor matching with our private pool of institutional investors. We do not hold funds or process transactions.</p></div>
+                <div><h4 class="font-display text-base font-semibold mb-5 text-institutional-text tracking-wide">SERVICE LINES</h4><ul class="space-y-2.5 text-institutional-text-secondary text-sm"><li>Equity Funding</li><li>Debt & Loan Funding</li><li>Southern Africa Funding</li><li>Strategic Partner Network</li></ul></div>
+                <div><h4 class="font-display text-base font-semibold mb-5 text-institutional-text tracking-wide">CONTACT</h4><p class="text-institutional-text-secondary text-sm">victor@maribamedia.co.za</p><p class="text-institutional-accent font-semibold mt-4 text-base">WhatsApp +27 76 647 3499</p></div>
             </div>
             <div class="section-divider my-10"></div>
-            <div class="text-center text-institutional-text-muted text-xs tracking-widest uppercase">
-                © 2026 Mariba Funding · Global Capital Services · All rights reserved.<br>
-                <span class="text-institutional-text-muted/70 text-[10px]">Mariba Funding is an independent consultancy. We connect clients with a private pool of institutional investors. We do not hold funds, process transactions, or provide financial advice. All funding is provided by third-party institutions.</span>
-            </div>
+            <div class="text-center text-institutional-text-muted text-xs tracking-widest uppercase">© 2026 Mariba Funding · Global Capital Services · All rights reserved.<br><span class="text-institutional-text-muted/70 text-[10px]">Mariba Funding is an independent consultancy. We connect clients with a private pool of institutional investors. We do not hold funds, process transactions, or provide financial advice. All funding is provided by third-party institutions.</span></div>
         </div>
     </footer>
 
     <!-- WhatsApp Widget -->
     <div class="fixed bottom-8 right-8 z-[999] group">
-        <div class="absolute right-[72px] top-1/2 -translate-y-1/2 bg-institutional-card border border-institutional-border px-5 py-3 whitespace-nowrap text-sm text-institutional-text opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-lg">
-            WhatsApp Inquiry
-        </div>
-        <a href="https://wa.me/27766473499?text=Capital%20Services%20Inquiry" target="_blank" class="w-[58px] h-[58px] bg-institutional-accent flex items-center justify-center shadow-lg hover:bg-institutional-accent-hover transition-colors duration-200" aria-label="WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#0c1119"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
-        </a>
+        <div class="absolute right-[72px] top-1/2 -translate-y-1/2 bg-institutional-card border border-institutional-border px-5 py-3 whitespace-nowrap text-sm text-institutional-text opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-lg">WhatsApp Inquiry</div>
+        <a href="https://wa.me/27766473499?text=Capital%20Services%20Inquiry" target="_blank" class="w-[58px] h-[58px] bg-institutional-accent flex items-center justify-center shadow-lg hover:bg-institutional-accent-hover transition-colors duration-200" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#0c1119"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg></a>
     </div>
 
     <script>
         (function() {
             const progressBar = document.getElementById('scrollProgress');
-            window.addEventListener('scroll', () => {
-                const winScroll = document.documentElement.scrollHeight - window.innerHeight;
-                const scrolled = (window.scrollY / winScroll) * 100;
-                if (progressBar) progressBar.style.width = scrolled + '%';
-            });
-
-            const menuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const openIcon = document.getElementById('menuOpen');
-            const closeIcon = document.getElementById('menuClose');
-
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    const isHidden = mobileMenu.classList.contains('hidden');
-                    if (isHidden) {
-                        mobileMenu.classList.remove('hidden');
-                        if (openIcon) openIcon.classList.add('hidden');
-                        if (closeIcon) closeIcon.classList.remove('hidden');
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        mobileMenu.classList.add('hidden');
-                        if (openIcon) openIcon.classList.remove('hidden');
-                        if (closeIcon) closeIcon.classList.add('hidden');
-                        document.body.style.overflow = '';
-                    }
-                });
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        if (openIcon) openIcon.classList.remove('hidden');
-                        if (closeIcon) closeIcon.classList.add('hidden');
-                        document.body.style.overflow = '';
-                    });
-                });
-            }
-
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.12 });
-            animatedElements.forEach(el => observer.observe(el));
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href === "#" || href === "") return;
-                    const target = document.querySelector(href);
-                    if (target) {
-                        e.preventDefault();
-                        const navHeight = document.querySelector('nav').offsetHeight;
-                        window.scrollTo({ top: target.offsetTop - navHeight - 16,
-                            behavior: 'smooth' });
-                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                            if (openIcon) openIcon.classList.remove('hidden');
-                            if (closeIcon) closeIcon.classList.add('hidden');
-                            document.body.style.overflow = '';
-                        }
-                    }
-                });
-            });
+            window.addEventListener('scroll', () => { const winScroll = document.documentElement.scrollHeight - window.innerHeight; const scrolled = (window.scrollY / winScroll) * 100; if (progressBar) progressBar.style.width = scrolled + '%'; });
+            const menuBtn = document.getElementById('mobileMenuBtn'), mobileMenu = document.getElementById('mobileMenu'), openIcon = document.getElementById('menuOpen'), closeIcon = document.getElementById('menuClose');
+            if (menuBtn && mobileMenu) { menuBtn.addEventListener('click', () => { const isHidden = mobileMenu.classList.contains('hidden'); if (isHidden) { mobileMenu.classList.remove('hidden'); if (openIcon) openIcon.classList.add('hidden'); if (closeIcon) closeIcon.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } else { mobileMenu.classList.add('hidden'); if (openIcon) openIcon.classList.remove('hidden'); if (closeIcon) closeIcon.classList.add('hidden'); document.body.style.overflow = ''; } }); mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); if (openIcon) openIcon.classList.remove('hidden'); if (closeIcon) closeIcon.classList.add('hidden'); document.body.style.overflow = ''; }); }); }
+            const animatedElements = document.querySelectorAll('.animate-on-scroll'); const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.12 }); animatedElements.forEach(el => observer.observe(el));
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { const href = this.getAttribute('href'); if (href === "#" || href === "") return; const target = document.querySelector(href); if (target) { e.preventDefault(); const navHeight = document.querySelector('nav').offsetHeight; window.scrollTo({ top: target.offsetTop - navHeight - 16, behavior: 'smooth' }); if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); if (openIcon) openIcon.classList.remove('hidden'); if (closeIcon) closeIcon.classList.add('hidden'); document.body.style.overflow = ''; } } }); });
         })();
     </script>
 </body>
