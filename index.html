@@ -133,7 +133,7 @@
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay:0.2s;">
                     <a href="https://wa.me/27766473499?text=I%27d%20like%20to%20start%20a%20funding%20conversation" target="_blank" class="btn-accent px-8 py-4 text-sm">WhatsApp: Start Now</a>
-                    <button onclick="Cal.ns['south-africa'].show()" class="btn-outline px-8 py-4 text-sm">Book a 15‑Min Discovery</button>
+                    <button onclick="Cal.ns['discovery-session'].show()" class="btn-outline px-8 py-4 text-sm">Book a 15‑Min Discovery</button>
                 </div>
             </div>
         </div>
@@ -261,7 +261,7 @@
                 <div class="card-institutional p-8 border-2 border-institutional-accent/30 text-center">
                     <h3 class="text-2xl font-display font-bold text-institutional-text mb-4">Not Sure Which Fits?</h3>
                     <p class="text-institutional-text-secondary text-sm mb-6">We’ll map your needs to the right structure – at no cost.</p>
-                    <button onclick="Cal.ns['south-africa'].show()" class="btn-accent w-full justify-center py-3 text-sm">Book a Free Consultation</button>
+                    <button onclick="Cal.ns['discovery-session'].show()" class="btn-accent w-full justify-center py-3 text-sm">Book a Free Consultation</button>
                 </div>
             </div>
         </div>
@@ -292,7 +292,7 @@
                     <p class="text-institutional-text-secondary text-sm mb-4">From initial assessment to financial close, every service we provide is covered by the ultimate funder. No retainer, no upfront, no hidden deduction from your capital.</p>
                     <div class="flex flex-col gap-4 mt-6">
                         <a href="https://wa.me/27766473499?text=I%27m%20ready%20to%20share%20my%20project%20details" class="btn-accent w-full justify-center py-4">Message Us (Free Assessment)</a>
-                        <button onclick="Cal.ns['south-africa'].show()" class="btn-outline w-full justify-center py-4">Pick a Time That Works</button>
+                        <button onclick="Cal.ns['discovery-session'].show()" class="btn-outline w-full justify-center py-4">Pick a Time That Works</button>
                     </div>
                 </div>
             </div>
@@ -457,13 +457,15 @@
         </div>
     </footer>
 
-    <!-- Cal.com embed -->
+    <!-- Cal floating-popup embed code begins -->
     <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "south-africa", {origin:"https://app.cal.com"});
-        Cal.ns["south-africa"]("floatingButton", {"calLink":"partner-discovery/south-africa","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}});
-        Cal.ns["south-africa"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "discovery-session", {origin:"https://app.cal.com"});
+
+      Cal.ns["discovery-session"]("floatingButton", {"calLink":"partner-discovery/discovery-session","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}); 
+      Cal.ns["discovery-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
     </script>
+    <!-- Cal floating-popup embed code ends -->
 
     <script>
         (function() {
