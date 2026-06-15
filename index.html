@@ -180,7 +180,7 @@
                         </div>
                     </div>
 
-                    <!-- Steps 2-6 (identical for all non-PO funding types) -->
+                    <!-- Steps 2-6 -->
                     <div class="fade-step hidden" id="step2">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 2: Required Documents</h2>
                         <p class="text-inst-text-secondary text-sm mb-2">Based on <strong class="text-inst-accent" id="selectedTypeLabel">your selection</strong>, lenders typically request these documents.</p>
@@ -208,7 +208,7 @@
                     </div>
                     <div class="fade-step hidden" id="step5">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 5: Upload Documents</h2>
-                        <p class="text-inst-text-secondary text-sm mb-2">Attach the documents listed in Step 2. Max 10MB per file, total 25MB.</p>
+                        <p class="text-inst-text-secondary text-sm mb-2">Attach the documents listed in Step 2. Max 10MB per file, total 25MB. <strong class="text-inst-accent">At least one document is required.</strong></p>
                         <div class="p-4 card-institutional mb-5" style="border-left: 3px solid #b49450; background: #111720;">
                             <p class="text-xs font-semibold text-inst-accent uppercase mb-2">Required for <span id="uploadDocTypeLabel">your selection</span>:</p>
                             <ul class="text-xs text-inst-text-secondary space-y-1" id="uploadDocReminder"></ul>
@@ -246,7 +246,7 @@
                 </form>
             </div>
 
-            <!-- PO FUNDING QUICK FORM (covers both Gov & Private) -->
+            <!-- PO FUNDING QUICK FORM -->
             <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step" id="poFundingForm">
                 <form id="poLeadForm" enctype="multipart/form-data" novalidate>
                     <div class="mb-6">
@@ -281,7 +281,7 @@
                             <li>📄 Purchase Order (from the selected sector)</li>
                             <li>📄 Supplier Quote (above R250,000.00)</li>
                         </ul>
-                        <p class="text-xs text-inst-text-muted">No personal or FICA documents. Max 10MB per file, total 25MB.</p>
+                        <p class="text-xs text-inst-text-muted">No personal or FICA documents. Max 10MB per file, total 25MB. <strong>Files are strongly recommended but not mandatory.</strong></p>
                     </div>
 
                     <div class="mb-4">
@@ -343,6 +343,21 @@
             // ======================== FORMSUBMIT ENDPOINT ========================
             const FORM_ENDPOINT = 'https://formsubmit.co/ajax/maribamedia@gmail.com';
             // ====================================================================
+
+            // Custom autoresponse message for the client
+            const AUTORESPONSE_MESSAGE = `Dear Applicant,
+
+Thank you for submitting your funding request through Mariba Media.
+
+Your application has been received and will be forwarded to our network of regulated lenders. One of our partner lenders will contact you directly within 2–4 business days regarding next steps.
+
+Please note: Mariba Media acts solely as an introducing broker. All credit decisions, due diligence, and funding terms are the responsibility of the lender.
+
+If you have any urgent questions, feel free to reply to this email.
+
+Kind regards,
+Mariba Media Team
+maribamedia@gmail.com`;
 
             // Document requirements (no personal/FICA docs)
             const docRequirements = {
@@ -495,7 +510,15 @@
             nextToStep3.addEventListener('click', ()=> showStep(3));
             nextToStep4.addEventListener('click', ()=>{ if(validateOldStep3()) showStep(4); });
             nextToStep5.addEventListener('click', ()=>{ if(validateOldStep4()) showStep(5); });
-            nextToStep6.addEventListener('click', ()=>{ populateOldSummary(); showStep(6); });
+            nextToStep6.addEventListener('click', ()=>{ 
+                // NEW: Require at least one file before proceeding to Step 6
+                if (uploadedFiles.length === 0) {
+                    alert('Please upload at least one document (the required documents from Step 2) before continuing.');
+                    return;
+                }
+                populateOldSummary(); 
+                showStep(6); 
+            });
             backToStep1.addEventListener('click', ()=> showStep(1));
             backToStep2.addEventListener('click', ()=> showStep(2));
             backToStep3.addEventListener('click', ()=> showStep(3));
@@ -569,22 +592,24 @@
             poFileInput.addEventListener('change', ()=>{ if(poFileInput.files.length){ addPoFiles(poFileInput.files); poFileInput.value=''; } });
             function addPoFiles(files){ Array.from(files).forEach(f=>{ if(f.size>MAX_FILE_SIZE) return alert(`"${f.name}" exceeds 10MB.`); if(getPoTotal()+f.size>MAX_TOTAL_SIZE) return alert('Total exceeds 25MB.'); if(!poUploadedFiles.some(x=>x.name===f.name&&x.size===f.size)) poUploadedFiles.push(f); }); updatePoFiles(); }
 
-            // Submit via FormSubmit
+            // Submit via FormSubmit with autoresponse
             async function submitOld() {
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Submitting...';
                 try {
                     const fd = new FormData();
-                    fd.append('_replyto', document.getElementById('email').value);
+                    const clientEmail = document.getElementById('email').value;
+                    fd.append('_replyto', clientEmail);
                     fd.append('_subject', `New Funding Submission: ${selectedFundingLabel}`);
                     fd.append('_captcha', 'false');
+                    fd.append('_autoresponse', AUTORESPONSE_MESSAGE);  // NEW: custom thank-you email to client
                     if (sendCopyCheckbox.checked) {
-                        fd.append('_cc', document.getElementById('email').value);
+                        fd.append('_cc', clientEmail);
                     }
                     fd.append('fundingType', selectedFundingLabel);
                     fd.append('fullName', document.getElementById('fullName').value);
                     fd.append('companyName', document.getElementById('companyName').value);
-                    fd.append('email', document.getElementById('email').value);
+                    fd.append('email', clientEmail);
                     fd.append('phone', document.getElementById('phone').value);
                     fd.append('fundingAmount', document.getElementById('fundingAmount').value);
                     fd.append('timeline', document.getElementById('timeline').value);
@@ -619,6 +644,7 @@
                     fd.append('_replyto', clientEmail);
                     fd.append('_subject', `New PO Funding Lead - ${document.getElementById('poSector').value}`);
                     fd.append('_captcha', 'false');
+                    fd.append('_autoresponse', AUTORESPONSE_MESSAGE);  // NEW: same autoresponse for PO leads
                     if (poSendCopy.checked) {
                         fd.append('_cc', clientEmail);
                     }
