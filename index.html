@@ -128,7 +128,7 @@
                     <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-brand-slate uppercase">Submit Your Project · POPIA Compliant</span>
                 </div>
                 <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-white leading-tight">One Submission. Network‑Wide Reach.</h1>
-                <p class="text-brand-slate mt-3 max-w-xl mx-auto text-sm">Select a funding type. For Purchase Order Funding (government or private), use the quick lead form. Other solutions use the guided application.</p>
+                <p class="text-brand-slate mt-3 max-w-xl mx-auto text-sm">Select a funding type. For Purchase Order Funding (government or private), use the quick lead form. Other solutions use the guided application. No personal or FICA documents are required.</p>
             </div>
 
             <div class="flex items-center justify-center gap-1 sm:gap-2 mb-10 sm:mb-14 px-2" id="stepProgress">
@@ -146,8 +146,8 @@
                     <!-- Step 1: Funding Type -->
                     <div class="fade-step" id="step1">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 1: Select Your Funding Type</h2>
-                        <p class="text-brand-slate text-sm mb-6">Choose the facility that best matches your needs.</p>
-                        
+                        <p class="text-brand-slate text-sm mb-6">Choose the facility that best matches your needs. All funders are duly licensed credit providers and/or authorised financial services providers.</p>
+
                         <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-electric mb-3 mt-4">Core Solutions</h3>
                         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                             <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
@@ -208,35 +208,36 @@
                             </button>
                         </div>
 
-                        <!-- Catch-all Other -->
-                        <div class="mt-4">
-                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option border-dashed" data-value="Other / Not Sure" data-doc-group="general" style="border-style: dashed;">
-                                <span class="text-xs font-bold tracking-widest text-brand-slate uppercase">Other</span><h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Something Else? / Not Sure</h3><p class="text-brand-slate text-xs mt-1">We'll help find the right fit</p>
-                            </button>
-                        </div>
+                        <!-- "Other / Not Sure" removed as requested -->
                         <input type="hidden" id="selectedFundingType" name="fundingType" value="">
                         <div class="mt-6 flex justify-end">
                             <button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep2" disabled>Continue →</button>
                         </div>
                     </div>
 
-                    <!-- Steps 2-6 remain unchanged in structure -->
+                    <!-- Step 2: Required Documents -->
                     <div class="fade-step hidden" id="step2">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 2: Required Documents</h2>
-                        <p class="text-brand-slate text-sm mb-2">Based on <strong class="text-brand-electric" id="selectedTypeLabel">your selection</strong>, lenders typically request these documents.</p>
+                        <p class="text-brand-slate text-sm mb-2">Based on <strong class="text-brand-electric" id="selectedTypeLabel">your selection</strong>, lenders typically request these documents. <strong>No personal FICA documents (ID, proof of address) are required.</strong></p>
                         <div class="space-y-2 mb-6" id="docChecklist"></div>
                         <div class="flex gap-3 justify-between"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep1">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep3">Continue →</button></div>
                     </div>
+                    <!-- Step 3: Your Details -->
                     <div class="fade-step hidden" id="step3">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 3: Your Details</h2>
                         <div class="grid sm:grid-cols-2 gap-5">
                             <div class="sm:col-span-2"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Full Name *</label><input type="text" id="fullName" name="fullName" required class="form-input" placeholder="Your full name"></div>
                             <div class="sm:col-span-2"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Company / Trust Name</label><input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company or trust"></div>
+                            <div class="sm:col-span-2 flex items-start gap-3 mt-4">
+                                <input type="checkbox" id="authorizedRep" required class="mt-1 w-5 h-5 accent-brand-electric flex-shrink-0">
+                                <label for="authorizedRep" class="text-sm text-white">I confirm that I am an authorized representative of the applicant entity/trust/individual and have full authority to submit these documents and information on its behalf. *</label>
+                            </div>
                             <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Email Address *</label><input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com"></div>
                             <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Phone (WhatsApp preferred) *</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="+27 76 647 3499"></div>
                         </div>
                         <div class="flex gap-3 justify-between mt-6"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep2">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep4">Continue →</button></div>
                     </div>
+                    <!-- Step 4: Project Information -->
                     <div class="fade-step hidden" id="step4">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 4: Project Information</h2>
                         <div class="space-y-5">
@@ -246,6 +247,7 @@
                         </div>
                         <div class="flex gap-3 justify-between mt-6"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep3">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep5">Continue →</button></div>
                     </div>
+                    <!-- Step 5: Upload Documents -->
                     <div class="fade-step hidden" id="step5">
                         <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 5: Upload Documents</h2>
                         <p class="text-brand-slate text-sm mb-2">Attach the documents listed in Step 2. Max 10MB per file, total 25MB. <strong class="text-brand-electric">At least one document is required.</strong></p>
@@ -256,25 +258,32 @@
                         <div class="upload-zone" id="uploadZone">
                             <div class="text-4xl mb-3">📁</div>
                             <p class="text-white font-semibold text-sm">Drag & drop files here, or click to browse</p>
-                            <p class="text-brand-slate text-xs mt-1">PDF, Word, Excel, images · 10MB max each</p>
+                            <p class="text-brand-slate text-xs mt-1">PDF, Word, Excel, images · 10MB max each · No FICA docs</p>
                             <input type="file" id="fileInput" name="documents" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" class="hidden">
                         </div>
                         <div class="mt-4 flex flex-wrap gap-2" id="fileList"></div>
                         <p class="text-brand-slate text-xs mt-2" id="fileCountLabel">No files selected</p>
                         <div class="flex gap-3 justify-between mt-6"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep4">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep6">Continue →</button></div>
                     </div>
+                    <!-- Step 6: Consent, Indemnity & Review -->
                     <div class="fade-step hidden" id="step6">
-                        <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 6: Consent & Review</h2>
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Step 6: Consent, Indemnity & Review</h2>
                         <div class="card-institutional p-5 mb-6" style="background: #0a0f1e;">
                             <h3 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-3">📋 Submission Summary</h3>
                             <div class="space-y-1" id="summaryContent"></div>
                         </div>
                         <div class="mb-6">
-                            <h3 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-2">🔒 POPIA Consent</h3>
-                            <div class="consent-box mb-3 text-xs"><p><strong>Mariba Media</strong> (Reg: 2024/132788/07) is registered with the Information Regulator in terms of POPIA. Your information is forwarded unchanged to a network of regulated lenders. No curation, advice, or guarantee of funding.</p></div>
+                            <h3 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-2">🔒 Legal Consent & Indemnification</h3>
+                            <div class="consent-box mb-3 text-xs" id="consentText">
+                                <p><strong>Consent to Process and Forward Information:</strong> I hereby give my express, informed, and voluntary consent for Mariba Media (Pty) Ltd (Reg: 2024/132788/07) to collect, process, store, and forward all information, documents, and attachments submitted in this application to its network of regulated lenders and/or authorised financial services providers (the “Lenders”). I understand that Mariba Media acts solely as an introducing broker and does not perform any curation, filtering, feasibility review, recommendation, or credit analysis. The Lenders are solely responsible for all credit decisions, due diligence, and FICA compliance.</p>
+                                <p class="mt-2"><strong>Authority to Submit:</strong> I confirm that I am the duly authorized representative of the applicant, with full legal capacity and authority to provide these documents and information and to bind the applicant to these terms. I confirm that all information provided is true, accurate, and complete, and that I have not included any personal FICA documents (identity documents, proof of address, etc.) unless expressly requested by a Lender after direct contact.</p>
+                                <p class="mt-2"><strong>No Liability & Indemnity:</strong> To the fullest extent permitted by law, Mariba Media (Pty) Ltd, its directors, employees, agents, and affiliates shall not be liable for any direct, indirect, consequential, special, or punitive damages, losses, claims, or expenses (including legal fees) arising out of or in connection with (i) the forwarding of this submission, (ii) any act or omission of any Lender, (iii) any reliance on the information by any party, (iv) any failure to obtain funding, or (v) any inaccuracy, omission, or false information contained in this submission. I hereby irrevocably indemnify and hold harmless Mariba Media (Pty) Ltd from and against any and all claims, demands, actions, proceedings, damages, losses, costs, and expenses (including attorneys’ fees) whatsoever brought by any person or entity arising directly or indirectly from my submission, the provision of false or misleading information, or any breach of this consent.</p>
+                                <p class="mt-2"><strong>POPIA & Privacy:</strong> I acknowledge that Mariba Media is registered with the Information Regulator in terms of the Protection of Personal Information Act. My personal information will be processed solely for the purpose of forwarding this submission and will be shared only with Lenders. I have the right to lodge a complaint with the Information Regulator at <a href="https://www.justice.gov.za/inforeg/" class="text-brand-electric underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>.</p>
+                                <p class="mt-2"><strong>No Guarantee:</strong> I understand that Mariba Media does not guarantee any funding outcome, and all terms, rates, and criteria are set by the Lender that contacts me directly.</p>
+                            </div>
                             <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-brand-navy/60 transition-colors">
-                                <input type="checkbox" id="popiaConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
-                                <span class="text-sm text-white">I consent to the processing of my personal information as described. I acknowledge Mariba Media acts as a conduit only.</span>
+                                <input type="checkbox" id="finalConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
+                                <span class="text-sm text-white">I have read, understood, and unconditionally agree to all the above terms, including the indemnity, consent to forward information, and limitation of liability. *</span>
                             </label>
                         </div>
                         <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-brand-navy/60 transition-colors mb-6">
@@ -338,10 +347,13 @@
 
                     <div class="mb-5"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Message <span class="text-brand-slate font-normal">(optional)</span></label><textarea id="poMessage" name="poMessage" rows="3" class="form-input" placeholder="Any additional context..."></textarea></div>
 
+                    <!-- PO Consent with Indemnity -->
                     <div class="mb-6 p-4 rounded-lg" style="background: #0a0f1e; border: 1px solid rgba(14,165,233,0.15);">
                         <label class="flex items-start gap-3 cursor-pointer">
                             <input type="checkbox" id="poConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
-                            <span class="text-sm text-white">I confirm that I have obtained the lead's consent for <strong>Mariba Media (Pty) Ltd</strong> to process their personal information in line with POPIA. I also confirm consent to a credit check under the NCA if required. By continuing, you agree to Mariba Media's terms.</span>
+                            <span class="text-sm text-white">
+                                <strong>Authority, Consent & Indemnity:</strong> I confirm that I am an authorized representative of the lead, have obtained their explicit consent for Mariba Media (Pty) Ltd to process and forward their personal information to its network of Lenders under POPIA, and I consent to a credit check under the NCA if required. I indemnify Mariba Media against any claims arising from false information, any Lender’s actions, or the lead’s failure to secure funding. Mariba Media is not liable for any direct or indirect damages. No FICA documents are required. I agree to Mariba Media’s terms.
+                            </span>
                         </label>
                     </div>
 
@@ -433,7 +445,8 @@ victor@maribamedia.co.za`;
             const nextToStep2 = document.getElementById('nextToStep2'), nextToStep3 = document.getElementById('nextToStep3'), nextToStep4 = document.getElementById('nextToStep4'), nextToStep5 = document.getElementById('nextToStep5'), nextToStep6 = document.getElementById('nextToStep6');
             const backToStep1 = document.getElementById('backToStep1'), backToStep2 = document.getElementById('backToStep2'), backToStep3 = document.getElementById('backToStep3'), backToStep4 = document.getElementById('backToStep4'), backToStep5 = document.getElementById('backToStep5');
             const submitBtn = document.getElementById('submitBtn');
-            const popiaConsent = document.getElementById('popiaConsent');
+            const finalConsentCheckbox = document.getElementById('finalConsent');
+            const authorizedRepCheckbox = document.getElementById('authorizedRep');
             const sendCopyCheckbox = document.getElementById('sendCopy');
 
             const poSubmitBtn = document.getElementById('poSubmitBtn');
@@ -540,6 +553,7 @@ victor@maribamedia.co.za`;
                 document.getElementById('uploadDocReminder').innerHTML = req.docs.map(d => `<li>📄 ${d}</li>`).join('');
             }
             function validateStep3() {
+                if (!authorizedRepCheckbox.checked) { alert('You must confirm you are an authorized representative.'); return false; }
                 const n = document.getElementById('fullName').value.trim(), e = document.getElementById('email').value.trim(), p = document.getElementById('phone').value.trim();
                 if(!n||!e||!p){ alert('Please fill all required fields.'); return false; }
                 if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){ alert('Invalid email.'); return false; }
@@ -564,7 +578,7 @@ victor@maribamedia.co.za`;
                 document.getElementById('summaryContent').innerHTML = rows.map(r => `<div class="summary-row"><span class="label">${r.label}</span><span class="value">${r.value}</span></div>`).join('');
             }
 
-            popiaConsent.addEventListener('change', ()=> submitBtn.disabled = !popiaConsent.checked);
+            finalConsentCheckbox.addEventListener('change', ()=> submitBtn.disabled = !finalConsentCheckbox.checked);
             poConsent.addEventListener('change', ()=> poSubmitBtn.disabled = !poConsent.checked);
 
             function formatSize(b){ return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'; }
@@ -699,7 +713,7 @@ victor@maribamedia.co.za`;
                 errorScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
 
-            mainForm.addEventListener('submit', e => { e.preventDefault(); if (popiaConsent.checked) submitOld(); });
+            mainForm.addEventListener('submit', e => { e.preventDefault(); if (finalConsentCheckbox.checked) submitOld(); });
             poLeadForm.addEventListener('submit', e => { e.preventDefault(); if (poConsent.checked) submitPo(); });
 
             showStep(1);
