@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>Mariba Funding · Introducing Broker – Direct Path to Regulated Lenders</title>
-    <meta name="description" content="We forward your project submission to a network of regulated finance specialists and private lenders. No curation, no advice, no upfront fees. Commission paid by the funder only on success.">
-
+    <meta name="description" content="We forward your project submission to a network of regulated finance specialists. No curation, no advice, no upfront fees.">
     <meta property="og:title" content="Mariba Funding · Introducing Broker to Regulated Lenders">
-    <meta property="og:description" content="One submission reaches a broad network of duly licensed credit providers and authorised FSPs. No advice, no interference – full control remains with you.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:description" content="One submission reaches a broad network of duly licensed credit providers. No advice – full control remains with you.">
     <meta property="og:url" content="https://maribafunding.co.za">
     <meta name="twitter:card" content="summary_large_image">
-
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230c1119'/%3E%3Ctext x='50' y='74' font-size='68' text-anchor='middle' fill='%23b49450' font-weight='600' font-family='Georgia,serif'%3EM%3C/text%3E%3C/svg%3E">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,7 +17,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'institutional': {
+                        'inst': {
                             'bg': '#0c1119',
                             'surface': '#111720',
                             'card': '#161c28',
@@ -32,7 +28,7 @@
                             'text-muted': '#5f6978',
                             'accent': '#b49450',
                             'accent-hover': '#c5a85c',
-                            'accent-muted': '#8a6e3a',
+                            'success': '#2ecc71',
                         }
                     },
                     fontFamily: {
@@ -40,12 +36,12 @@
                         'display': ['DM Sans', 'Inter', 'system-ui', 'sans-serif'],
                     },
                     animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
                         'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
                     },
                     keyframes: {
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
                     }
                 }
             }
@@ -55,591 +51,631 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body { font-family: 'Inter', sans-serif; background-color: #0c1119; color: #e8ecf1; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-        .nav-glass { background: rgba(12, 17, 25, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(35, 43, 58, 0.8); }
-        .card-institutional { background: #161c28; border: 1px solid #232b3a; border-radius: 8px; transition: all 0.3s cubic-bezier(0.2, 0, 0, 1); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
-        .card-institutional:hover { border-color: #b49450; transform: translateY(-3px); box-shadow: 0 16px 28px -8px rgba(0, 0, 0, 0.5); }
-        .btn-accent { background: #b49450; color: #0c1119; font-weight: 600; border-radius: 6px; padding: 0.85rem 2rem; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; font-size: 0.85rem; text-transform: uppercase; }
+        .card-institutional { background: #161c28; border: 1px solid #232b3a; border-radius: 12px; transition: all 0.3s cubic-bezier(0.2, 0, 0, 1); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .card-institutional:hover { border-color: #b49450; transform: translateY(-3px); box-shadow: 0 16px 28px -8px rgba(0,0,0,0.5); }
+        .btn-accent { background: #b49450; color: #0c1119; font-weight: 600; border-radius: 6px; padding: 0.85rem 2rem; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; font-size: 0.85rem; text-transform: uppercase; border: none; cursor: pointer; }
         .btn-accent:hover { background: #c5a85c; transform: translateY(-1px); }
-        .btn-outline { background: transparent; border: 1.5px solid #b49450; color: #b49450; font-weight: 600; border-radius: 6px; padding: 0.85rem 2rem; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; font-size: 0.85rem; text-transform: uppercase; }
-        .btn-outline:hover { background: rgba(180, 148, 80, 0.08); border-color: #c5a85c; color: #c5a85c; transform: translateY(-1px); }
-        .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: #b49450; z-index: 100; width: 0%; transition: width 0.08s linear; }
-        .animate-on-scroll { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
-        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
-        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #232b3a, #3d485c, #232b3a, transparent); margin: 0; }
-        .accent-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #b49450; margin-right: 12px; flex-shrink: 0; }
-        .trust-badge { background: rgba(180,148,80,0.08); border-left: 3px solid #b49450; }
-        .form-input { background: #161c28; border: 1px solid #232b3a; color: #e8ecf1; border-radius: 6px; padding: 0.75rem 1rem; width: 100%; transition: border-color 0.2s; }
+        .btn-accent:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+        .btn-outline { background: transparent; border: 1.5px solid #b49450; color: #b49450; font-weight: 600; border-radius: 6px; padding: 0.85rem 2rem; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; font-size: 0.85rem; text-transform: uppercase; cursor: pointer; }
+        .btn-outline:hover { background: rgba(180,148,80,0.08); border-color: #c5a85c; color: #c5a85c; transform: translateY(-1px); }
+        .form-input { background: #161c28; border: 1px solid #232b3a; color: #e8ecf1; border-radius: 8px; padding: 0.8rem 1rem; width: 100%; transition: all 0.2s; font-size: 0.9rem; }
         .form-input:focus { outline: none; border-color: #b49450; box-shadow: 0 0 0 2px rgba(180,148,80,0.2); }
+        .form-input::placeholder { color: #5f6978; }
+        textarea.form-input { resize: vertical; min-height: 100px; }
+        .upload-zone { border: 2px dashed #2d3647; border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s; cursor: pointer; background: #111720; }
+        .upload-zone:hover, .upload-zone.dragover { border-color: #b49450; background: rgba(180,148,80,0.04); }
+        .upload-zone.has-files { border-color: #2ecc71; border-style: solid; background: rgba(46,204,113,0.04); }
+        .file-chip { display: inline-flex; align-items: center; gap: 6px; background: #1a2032; border: 1px solid #2d3647; border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; color: #e8ecf1; margin: 4px; }
+        .file-chip .remove-file { cursor: pointer; color: #e74c3c; font-weight: bold; margin-left: 4px; }
+        .file-chip .remove-file:hover { color: #ff6b6b; }
+        .consent-box { background: #111720; border: 1px solid #232b3a; border-radius: 10px; padding: 1.25rem; font-size: 0.85rem; line-height: 1.6; color: #8b95a5; max-height: 200px; overflow-y: auto; }
+        .consent-box strong { color: #e8ecf1; }
+        .step-indicator { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; border: 2px solid #232b3a; background: #161c28; color: #5f6978; flex-shrink: 0; }
+        .step-indicator.active { border-color: #b49450; background: #b49450; color: #0c1119; }
+        .step-indicator.done { border-color: #2ecc71; background: #2ecc71; color: #0c1119; }
+        .step-connector { height: 2px; background: #232b3a; flex: 1; min-width: 20px; }
+        .step-connector.done { background: #2ecc71; }
+        .doc-checklist-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; border-radius: 8px; background: #111720; border: 1px solid #1e2636; }
+        .doc-checklist-item.checked { border-color: #2ecc71; background: rgba(46,204,113,0.05); }
+        .custom-checkbox { width: 20px; height: 20px; border: 2px solid #3d485c; border-radius: 4px; flex-shrink: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+        .custom-checkbox.checked { background: #2ecc71; border-color: #2ecc71; }
+        .custom-checkbox.checked::after { content: '✓'; color: #0c1119; font-weight: 700; font-size: 13px; }
+        .fade-step { animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeUp { 0% { opacity: 0; transform: translateY(24px); } 100% { opacity: 1; transform: translateY(0); } }
+        .funding-option.selected { border-color: #b49450 !important; background: #1a2032 !important; box-shadow: 0 0 0 3px rgba(180,148,80,0.15); }
+        .summary-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #1e2636; font-size: 0.9rem; }
+        .summary-row .label { color: #8b95a5; font-weight: 500; }
+        .summary-row .value { color: #e8ecf1; font-weight: 600; text-align: right; max-width: 60%; }
+        @media (max-width: 640px) {
+            .step-indicator { width: 32px; height: 32px; font-size: 0.75rem; }
+            .step-connector { min-width: 10px; }
+            .summary-row { flex-direction: column; gap: 4px; }
+            .summary-row .value { text-align: left; max-width: 100%; }
+        }
     </style>
 </head>
-<body class="bg-institutional-bg font-sans antialiased">
+<body class="bg-inst-bg font-sans antialiased">
 
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed w-full nav-glass z-50">
+    <nav class="fixed w-full z-50" style="background: rgba(12,17,25,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(35,43,58,0.8);">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="flex items-center justify-between h-20">
-                <a href="#" class="flex items-center gap-4 group">
-                    <div class="w-10 h-10 flex items-center justify-center border-2 border-institutional-accent">
-                        <span class="text-institutional-accent font-bold text-xl font-display">M</span>
-                    </div>
-                    <div>
-                        <span class="text-lg font-display font-semibold tracking-tight text-institutional-text">Mariba Funding</span>
-                        <span class="block text-[10px] font-medium tracking-[0.25em] text-institutional-text-muted uppercase">Introducing Broker</span>
-                    </div>
+                <a href="#" class="flex items-center gap-4">
+                    <div class="w-10 h-10 flex items-center justify-center border-2 border-inst-accent"><span class="text-inst-accent font-bold text-xl">M</span></div>
+                    <div><span class="text-lg font-display font-semibold tracking-tight text-inst-text">Mariba Funding</span><span class="block text-[10px] font-medium tracking-[0.25em] text-inst-text-muted uppercase">Introducing Broker</span></div>
                 </a>
                 <div class="hidden lg:flex items-center gap-6">
-                    <a href="#process" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">How It Works</a>
-                    <a href="#solutions" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Solutions</a>
-                    <a href="#commitment" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">Our Commitment</a>
-                    <a href="#faq" class="text-xs font-medium text-institutional-text-secondary hover:text-institutional-accent transition-colors tracking-widest uppercase">FAQ</a>
-                    <a href="#start" class="btn-accent text-xs px-5 py-2.5">Start Now</a>
+                    <span class="text-xs font-medium text-inst-text-secondary tracking-widest uppercase">Regulated Lenders · Zero Cost</span>
+                    <a href="mailto:maribamedia@gmail.com" class="text-xs text-inst-text-secondary hover:text-inst-accent transition-colors">maribamedia@gmail.com</a>
                 </div>
-                <button id="mobileMenuBtn" class="lg:hidden p-2 text-institutional-text" aria-label="Menu">
-                    <svg id="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    <svg id="menuClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobileMenu" class="lg:hidden absolute top-full left-0 right-0 bg-institutional-surface border-b border-institutional-border hidden">
-            <div class="px-6 py-6 flex flex-col gap-1">
-                <a href="#process" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">How It Works</a>
-                <a href="#solutions" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Solutions</a>
-                <a href="#commitment" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">Our Commitment</a>
-                <a href="#faq" class="py-3 px-4 text-institutional-text text-sm tracking-widest uppercase">FAQ</a>
-                <a href="#start" class="mt-3 btn-accent py-3 text-center text-sm">Start Journey</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center gap-3 px-5 py-2.5 border border-institutional-border bg-institutional-surface mb-10 animate-fade-in">
-                    <span class="w-1.5 h-1.5 rounded-full bg-institutional-accent"></span>
-                    <span class="text-xs font-semibold tracking-[0.2em] text-institutional-text-secondary uppercase">Introducing Broker · Regulated Lenders · Zero Cost to You</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 text-institutional-text leading-[1.08] animate-fade-up">
-                    One Submission.<br><span class="text-institutional-accent">Network‑Wide Reach.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-institutional-text-secondary mb-6 max-w-2xl mx-auto leading-relaxed font-light animate-fade-up" style="animation-delay:0.08s;">
-                    Full control remains with you.
-                </p>
-                <p class="text-base md:text-lg text-institutional-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-up" style="animation-delay:0.10s;">
-                    We forward your project submission — unchanged — to a broad network of regulated finance specialists and private lenders. No curation. No filtering. No advice. The terms, the decisions, the relationship — that stays entirely between you and the funder.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate-fade-up" style="animation-delay:0.14s;">
-                    <div class="card-institutional p-6 text-center"><div class="text-3xl font-display font-bold text-institutional-accent">0%</div><div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Your Fee, Ever</div></div>
-                    <div class="card-institutional p-6 text-center"><div class="text-3xl font-display font-bold text-institutional-accent">One</div><div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Submission</div></div>
-                    <div class="card-institutional p-6 text-center"><div class="text-3xl font-display font-bold text-institutional-accent">Network</div><div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Wide Reach</div></div>
-                    <div class="card-institutional p-6 text-center"><div class="text-3xl font-display font-bold text-institutional-accent">All</div><div class="text-[11px] font-medium text-institutional-text-muted mt-2 tracking-widest uppercase">Sectors</div></div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay:0.2s;">
-                    <a href="https://wa.me/27766473499?text=I%27d%20like%20to%20submit%20a%20project%20for%20funding%20introduction" target="_blank" class="btn-accent px-8 py-4 text-sm">WhatsApp: Start Now</a>
-                    <button onclick="Cal.ns['discovery-session'].show()" class="btn-outline px-8 py-4 text-sm">Book a 15‑Min Discovery</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main class="pt-24 pb-16 sm:pt-28 sm:pb-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="section-divider"></div>
-
-    <!-- Access to Funding, Made Simple -->
-    <section class="py-24 md:py-32 bg-institutional-surface">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Access to Funding, Made Simple</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-6">Built for South African SMEs</h2>
-                <p class="text-institutional-text-secondary text-lg mb-4 leading-relaxed">Mariba Funding was built for businesses with real contracts, real invoices, real assets — and a real need for working capital, without the confusion. We open a direct channel to a wide network of regulated funders and private lenders, so you can get back to growing your business.</p>
-                <p class="text-institutional-text-secondary text-lg mb-8 leading-relaxed">We don't filter your deal. We don't pick winners. We just pass your submission to the people who can say "yes." The terms, the decisions, the relationship — that stays entirely between you and the funder. Our role is straightforward: <strong class="text-institutional-text">open the door and step back.</strong></p>
-                <p class="text-institutional-accent font-semibold text-lg">Because when SMEs move faster, our economy moves forward.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- You Focus on Delivery. We Open the Path. -->
-    <section class="py-20 md:py-28 bg-institutional-bg">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-                <div class="card-institutional p-6 animate-on-scroll">
-                    <div class="text-3xl mb-3">🚫</div>
-                    <h3 class="font-display font-bold text-institutional-text mb-2">No Upfront Costs</h3>
-                    <p class="text-institutional-text-secondary text-sm">Ever. We earn only if a funder deploys capital — and the funder pays us, not you.</p>
+            <div class="text-center mb-8 sm:mb-12 animate-fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 border border-inst-border bg-inst-surface rounded-full mb-5">
+                    <span class="w-2 h-2 rounded-full bg-inst-accent animate-pulse"></span>
+                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-inst-text-secondary uppercase">Submit Your Project · POPIA Compliant</span>
                 </div>
-                <div class="card-institutional p-6 animate-on-scroll">
-                    <div class="text-3xl mb-3">🔒</div>
-                    <h3 class="font-display font-bold text-institutional-text mb-2">No Advice or Interference</h3>
-                    <p class="text-institutional-text-secondary text-sm">Your submission, your terms. We forward as-is and step back.</p>
-                </div>
-                <div class="card-institutional p-6 animate-on-scroll">
-                    <div class="text-3xl mb-3">🛡️</div>
-                    <h3 class="font-display font-bold text-institutional-text mb-2">Confidential</h3>
-                    <p class="text-institutional-text-secondary text-sm">Your data is only sent to lenders. Never publicly listed, never shopped.</p>
-                </div>
-                <div class="card-institutional p-6 animate-on-scroll">
-                    <div class="text-3xl mb-3">💎</div>
-                    <h3 class="font-display font-bold text-institutional-text mb-2">Transparent</h3>
-                    <p class="text-institutional-text-secondary text-sm">If a lender pays us, it's because they funded you. No hidden incentives.</p>
-                </div>
-                <div class="card-institutional p-6 animate-on-scroll">
-                    <div class="text-3xl mb-3">🏭</div>
-                    <h3 class="font-display font-bold text-institutional-text mb-2">Every Sector</h3>
-                    <p class="text-institutional-text-secondary text-sm">Construction, logistics, solar, manufacturing — we forward projects to lenders who understand your industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- PROCESS (De‑risked – Pure Introduction) -->
-    <section id="process" class="py-24 md:py-32 bg-institutional-bg">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="mb-16 text-center">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">How It Works</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Simple. Direct. Transparent.</h2>
-                <p class="text-institutional-text-secondary max-w-2xl mx-auto text-lg">We forward your project to a broad network of regulated lenders — unchanged. No curation, no matching, no interference.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="text-4xl font-display font-bold text-institutional-accent mb-6">01</div>
-                    <h3 class="text-xl font-display font-bold text-institutional-text mb-4">Submit Your Project</h3>
-                    <p class="text-institutional-text-secondary text-sm">Complete the secure form and attach standard documents lenders typically need — feasibility studies, POs, invoices, or valuations. We do not assess or advise on content.</p>
-                </div>
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="text-4xl font-display font-bold text-institutional-accent mb-6">02</div>
-                    <h3 class="text-xl font-display font-bold text-institutional-text mb-4">We Forward to the Network</h3>
-                    <p class="text-institutional-text-secondary text-sm">Your submission is transmitted unchanged to our broad network of regulated finance specialists and private lenders. No filtering. No selection. Every lender receives the same package.</p>
-                </div>
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="text-4xl font-display font-bold text-institutional-accent mb-6">03</div>
-                    <h3 class="text-xl font-display font-bold text-institutional-text mb-4">A Lender Contacts You Directly</h3>
-                    <p class="text-institutional-text-secondary text-sm">If a lender is interested, they reach out to you independently. All discussions, due diligence, credit decisions, and legal agreements happen directly between you and that lender.</p>
-                </div>
-            </div>
-            <div class="mt-10 text-center animate-on-scroll">
-                <div class="card-institutional p-6 inline-block max-w-lg mx-auto">
-                    <p class="text-institutional-text text-sm"><span class="text-institutional-accent font-semibold">We earn only when you succeed.</span> Our introducing commission is paid by the lender, not by you, and only when a facility is deployed. You never pay us a cent.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- SOLUTIONS (All descriptions de-risked) -->
-    <section id="solutions" class="py-24 md:py-32 bg-institutional-surface">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="mb-16 text-center">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Funding Solutions Accessible Through Our Network</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">What Lenders in Our Network May Offer</h2>
-                <p class="text-institutional-text-secondary max-w-2xl mx-auto text-lg">Every option below represents a facility a lender in our network may provide. We forward your enquiry — the lender sets all terms, rates, and criteria.</p>
-                <div class="mt-6 trust-badge p-4 rounded-lg max-w-2xl mx-auto text-left">
-                    <p class="text-xs font-semibold text-institutional-accent">All funders in our network are duly licensed credit providers and/or authorised financial services providers. All lending is provided by registered credit providers where required by the National Credit Act. Mariba Funding does not participate in any credit decision.</p>
-                </div>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-inst-text leading-tight">One Submission. Network‑Wide Reach.</h1>
+                <p class="text-inst-text-secondary mt-3 max-w-xl mx-auto text-sm">Select a funding type. For Purchase Order Funding (government or private), use the quick lead form. Other solutions use the guided application.</p>
             </div>
 
-            <!-- Main grid of 9 funding types -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Equity -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Equity</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Institutional & Seed Equity</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Various ticket sizes</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders in our network may consider equity positions in growth and early‑stage ventures. Standard documentation may include a pitch deck, financial model, and business plan. All terms are negotiated directly with the funder.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit Equity Enquiry →</a>
-                </div>
-                <!-- Debt -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Debt</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Structured Loans</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Institutional scale</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders may offer debt facilities for bankable projects. Standard documentation may include a business plan, financial model, and feasibility study. Sharia‑compliant structures may be available through specific network participants.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit Debt Enquiry →</a>
-                </div>
-                <!-- PO Funding -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">PO Funding</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Purchase Order Funding</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">For confirmed POs</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders may cover supplier costs so you can fulfil confirmed purchase orders. Repayment is typically from the buyer's invoice. Terms and advance rates are set entirely by the lender.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit PO Funding →</a>
-                </div>
-                <!-- Invoice Discounting -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Invoice Discounting</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Invoice Discounting</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Government & Private</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders may advance against verified government or corporate invoices. Advance rates, timelines, and revolving facility availability are all determined by the lender after independent assessment.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit Invoice Discounting →</a>
-                </div>
-                <!-- Asset‑Backed Finance -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Asset‑Backed</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Asset‑Backed Finance</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">LTV set by lender</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders may accept paid‑up property, equipment, or inventory as collateral. Loan-to-value ratios, interest rates, and terms are determined solely by the lender after valuation.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit Asset‑Backed →</a>
-                </div>
-                <!-- Property Bridging Finance -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Bridging</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Property Bridging Finance</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Terms set by lender</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders may advance against sale proceeds while a property transfer completes. Advance rates and timelines are determined by the lender. Attorney exit guarantees are standard.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit Bridging Finance →</a>
-                </div>
-                <!-- Sectional Title Solar -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Solar</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Sectional Title Solar</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Residential estates & HOAs</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders and installers in our network may offer turnkey solar with embedded finance. Installation and funding terms are handled directly between you and the network participant.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit Sectional Solar →</a>
-                </div>
-                <!-- Commercial & Industrial Solar -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">Solar</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">Commercial & Industrial Solar</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Businesses & factories</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders and EPCs in our network may provide turnkey solar solutions with finance included. All feasibility, terms, and installation agreements are negotiated directly with the relevant network participant.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit C&I Solar →</a>
-                </div>
-                <!-- IPP Project Finance -->
-                <div class="card-institutional p-8 animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-4"><span class="accent-dot"></span><span class="text-xs font-bold tracking-widest text-institutional-text-muted">IPP</span></div>
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-2">IPP Project Finance</h3>
-                    <p class="text-institutional-accent font-semibold text-lg mb-4">Debt, Equity & Blended</p>
-                    <p class="text-institutional-text-secondary text-sm mb-4">Lenders may consider fully developed energy projects. Standard documentation typically includes PPA, EIA, grid feasibility, and financial model. All due diligence and terms are between you and the funder.</p>
-                    <a href="#start" class="text-institutional-accent font-semibold text-sm hover:underline inline-flex items-center gap-2">Submit IPP Project →</a>
-                </div>
+            <div class="flex items-center justify-center gap-1 sm:gap-2 mb-10 sm:mb-14 px-2" id="stepProgress">
+                <div class="step-indicator active" data-step="1">1</div><div class="step-connector" data-connector="1"></div>
+                <div class="step-indicator" data-step="2">2</div><div class="step-connector" data-connector="2"></div>
+                <div class="step-indicator" data-step="3">3</div><div class="step-connector" data-connector="3"></div>
+                <div class="step-indicator" data-step="4">4</div><div class="step-connector" data-connector="4"></div>
+                <div class="step-indicator" data-step="5">5</div><div class="step-connector" data-connector="5"></div>
+                <div class="step-indicator" data-step="6">6</div>
             </div>
 
-            <!-- Not sure card -->
-            <div class="mt-10 max-w-md mx-auto animate-on-scroll">
-                <div class="card-institutional p-8 border-2 border-institutional-accent/30 text-center">
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-4">Not Sure Which Fits?</h3>
-                    <p class="text-institutional-text-secondary text-sm mb-6">Submit your enquiry and we'll forward it to the full network. A lender will contact you if interested — at no cost to you.</p>
-                    <button onclick="Cal.ns['discovery-session'].show()" class="btn-accent w-full justify-center py-3 text-sm">Book a Free Consultation</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- OUR COMMITMENT TO SOUTH AFRICAN BUSINESS -->
-    <section id="commitment" class="py-24 md:py-32 bg-institutional-bg">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="animate-on-scroll">
-                    <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Our Commitment to South African Business</span>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold text-institutional-text mt-4 mb-6">Every Capable Business Deserves a Clear Shot at Funding</h2>
-                    <p class="text-institutional-text-secondary mb-6 leading-relaxed">Too many SMEs in South Africa miss revenue opportunities because they don't know who to approach, or they waste months on applications that go nowhere. Mariba Funding solves the first mile: we connect you to multiple regulated lenders in one action, without cost, without obligation, and without anyone reshaping your story before it's heard.</p>
-                    <div class="trust-badge p-6 rounded-lg mb-6">
-                        <p class="text-sm font-semibold text-institutional-accent mb-3">What this means for you:</p>
-                        <ul class="text-institutional-text-secondary text-sm space-y-2">
-                            <li>✓ One submission reaches a broad network, not a single door</li>
-                            <li>✓ No interpretation or filtering — your documents are forwarded as-is</li>
-                            <li>✓ You deal directly with the lender that shows interest, retaining full control</li>
-                            <li>✓ We only earn if a funder deploys capital — your hearing is fair and our incentive is aligned</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-institutional p-10 animate-on-scroll">
-                    <h3 class="text-2xl font-display font-bold text-institutional-text mb-4">What This Means for South Africa</h3>
-                    <p class="text-institutional-text-secondary text-sm mb-4 leading-relaxed">Smarter capital flows to the businesses that can create jobs and build infrastructure. Transactions happen in a compliant, transparent environment. The funding landscape becomes more accessible, less opaque.</p>
-                    <p class="text-institutional-text-secondary text-sm mb-6 leading-relaxed">We are an introducing broker with referral arrangements to a network of regulated finance specialists and private lenders. Our entire role is to accept your project information and forward it directly to that network. We maintain no discretion over which lender responds. Our single, plain function is to pass your information to the network — and then step away.</p>
-                    <div class="flex flex-col gap-4 mt-6">
-                        <a href="https://wa.me/27766473499?text=I%27m%20ready%20to%20submit%20my%20project%20for%20introduction" class="btn-accent w-full justify-center py-4">Message Us (Free Submission)</a>
-                        <button onclick="Cal.ns['discovery-session'].show()" class="btn-outline w-full justify-center py-4">Pick a Time That Works</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 md:py-32 bg-institutional-surface">
-        <div class="max-w-4xl mx-auto px-6 lg:px-10">
-            <div class="text-center mb-16">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Your Questions Answered</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">Complete Transparency</h2>
-            </div>
-            <div class="space-y-6 animate-on-scroll">
-                <details class="card-institutional p-6 group">
-                    <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <span class="font-semibold text-institutional-text pr-4">Will I ever be charged a fee?</span>
-                        <span class="text-institutional-accent text-xl transition-transform group-open:rotate-180">+</span>
-                    </summary>
-                    <p class="mt-4 text-institutional-text-secondary text-sm">No. Our introducing commission is paid entirely by the lender who closes your transaction — and only upon successful deployment. You never receive an invoice from Mariba Funding.</p>
-                </details>
-                <details class="card-institutional p-6 group">
-                    <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <span class="font-semibold text-institutional-text pr-4">Does Mariba Funding curate or match my deal?</span>
-                        <span class="text-institutional-accent text-xl transition-transform group-open:rotate-180">+</span>
-                    </summary>
-                    <p class="mt-4 text-institutional-text-secondary text-sm">No. We do not curate, match, filter, or recommend. We forward your submission unchanged to the entire network. If a lender is interested, they will contact you directly.</p>
-                </details>
-                <details class="card-institutional p-6 group">
-                    <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <span class="font-semibold text-institutional-text pr-4">Is funding guaranteed?</span>
-                        <span class="text-institutional-accent text-xl transition-transform group-open:rotate-180">+</span>
-                    </summary>
-                    <p class="mt-4 text-institutional-text-secondary text-sm">No. All credit decisions, due diligence, and funding approvals are made exclusively by the lender. Mariba Funding does not participate in any credit decision and provides no guarantee of any outcome.</p>
-                </details>
-                <details class="card-institutional p-6 group">
-                    <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <span class="font-semibold text-institutional-text pr-4">Who handles FICA and regulatory compliance?</span>
-                        <span class="text-institutional-accent text-xl transition-transform group-open:rotate-180">+</span>
-                    </summary>
-                    <p class="mt-4 text-institutional-text-secondary text-sm">All FICA client due diligence, credit assessments, and regulatory compliance obligations are the exclusive responsibility of the lender that engages with you. All funders in our network are duly licensed credit providers and/or authorised financial services providers.</p>
-                </details>
-                <details class="card-institutional p-6 group">
-                    <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <span class="font-semibold text-institutional-text pr-4">How quickly might I hear from a lender?</span>
-                        <span class="text-institutional-accent text-xl transition-transform group-open:rotate-180">+</span>
-                    </summary>
-                    <p class="mt-4 text-institutional-text-secondary text-sm">Timelines vary by lender and facility type. Some lenders respond within days for invoice discounting or PO funding; larger institutional deals may take longer. We forward your submission promptly — after that, the timeline is between you and the lender.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- START SECTION (Form -> WhatsApp) -->
-    <section id="start" class="py-24 md:py-32 bg-institutional-bg">
-        <div class="max-w-4xl mx-auto px-6 lg:px-10">
-            <div class="text-center mb-12">
-                <span class="text-institutional-accent text-xs font-bold tracking-[0.3em] uppercase">Ready to Move Forward?</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-institutional-text mt-4 mb-4">No Cost. No Obligation. No Advice.</h2>
-                <p class="text-institutional-text-secondary max-w-xl mx-auto">Just a clean, direct path to the capital your business needs. Fill in the details and send them directly via WhatsApp. Or email victor@maribamedia.co.za. Your information goes straight to us — no forms stored online.</p>
-            </div>
-
-            <div class="card-institutional p-8 md:p-10 mb-8 animate-on-scroll">
-                <form id="whatsappForm" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-semibold text-institutional-text mb-2 uppercase tracking-wider">Full Name *</label>
-                            <input type="text" id="name" required class="form-input" placeholder="Your full name">
+            <!-- MULTI-STEP FORM -->
+            <div class="card-institutional p-6 sm:p-8 md:p-10" id="formContainer">
+                <form id="mainForm" enctype="multipart/form-data" novalidate>
+                    <!-- Step 1: Funding Type -->
+                    <div class="fade-step" id="step1">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 1: Select Your Funding Type</h2>
+                        <p class="text-inst-text-secondary text-sm mb-6">Choose the facility that best matches your needs.</p>
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4" id="fundingTypeGrid">
+                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
+                                <span class="text-xs font-bold tracking-widest text-inst-accent uppercase">Asset‑Backed</span><h3 class="text-base sm:text-lg font-display font-bold text-inst-text mt-1">Asset‑Backed Finance</h3><p class="text-inst-text-muted text-xs mt-1">LTV set by lender</p>
+                            </button>
+                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Purchase Order Funding" data-doc-group="po-funding">
+                                <span class="text-xs font-bold tracking-widest text-inst-accent uppercase">PO Funding</span><h3 class="text-base sm:text-lg font-display font-bold text-inst-text mt-1">Purchase Order Funding (Gov & Private)</h3><p class="text-inst-text-muted text-xs mt-1">Quick lead form</p>
+                            </button>
+                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Government Invoice Discounting" data-doc-group="gov-invoice">
+                                <span class="text-xs font-bold tracking-widest text-inst-accent uppercase">Invoice Discounting</span><h3 class="text-base sm:text-lg font-display font-bold text-inst-text mt-1">Government Invoice Discounting</h3><p class="text-inst-text-muted text-xs mt-1">Against verified gov invoices</p>
+                            </button>
+                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Private Invoice Discounting" data-doc-group="private-invoice">
+                                <span class="text-xs font-bold tracking-widest text-inst-accent uppercase">Invoice Discounting</span><h3 class="text-base sm:text-lg font-display font-bold text-inst-text mt-1">Private Invoice Discounting</h3><p class="text-inst-text-muted text-xs mt-1">Corporate invoices</p>
+                            </button>
+                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Property Bridging Finance" data-doc-group="bridging">
+                                <span class="text-xs font-bold tracking-widest text-inst-accent uppercase">Bridging</span><h3 class="text-base sm:text-lg font-display font-bold text-inst-text mt-1">Property Bridging Finance</h3><p class="text-inst-text-muted text-xs mt-1">Terms set by lender</p>
+                            </button>
+                            <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option border-dashed" data-value="Other / Not Sure" data-doc-group="other" style="border-style: dashed;">
+                                <span class="text-xs font-bold tracking-widest text-inst-text-muted uppercase">Other</span><h3 class="text-base sm:text-lg font-display font-bold text-inst-text mt-1">Other / Not Sure</h3><p class="text-inst-text-muted text-xs mt-1">Additional options</p>
+                            </button>
                         </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-institutional-text mb-2 uppercase tracking-wider">Email</label>
-                            <input type="email" id="email" class="form-input" placeholder="you@company.com">
+
+                        <!-- Sub-selection for "Other" -->
+                        <div id="otherSubPanel" class="mt-6 hidden">
+                            <p class="text-sm text-inst-text-secondary mb-4">Select the specific facility you're interested in:</p>
+                            <div class="grid sm:grid-cols-2 gap-3" id="otherSubOptions">
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="startup">Start‑up Funding</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="termloan">Term Loan</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="revolving">Revolving Credit Facility</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="tradefinance">Trade Finance</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="merchantcash">Merchant Cash Advance</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="bridging-sub">Bridging Finance</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="assetfinance">Asset Finance</button>
+                                <button type="button" class="card-institutional p-3 text-left other-sub-option" data-sub-group="general">Still Not Sure / Multiple</button>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedFundingType" name="fundingType" value="">
+                        <div class="mt-6 flex justify-end">
+                            <button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep2" disabled>Continue →</button>
                         </div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-institutional-text mb-2 uppercase tracking-wider">Phone (WhatsApp preferred)</label>
-                        <input type="tel" id="phone" class="form-input" placeholder="+27 76 647 3499">
+
+                    <!-- Steps 2-6 (identical for all non-PO funding types) -->
+                    <div class="fade-step hidden" id="step2">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 2: Required Documents</h2>
+                        <p class="text-inst-text-secondary text-sm mb-2">Based on <strong class="text-inst-accent" id="selectedTypeLabel">your selection</strong>, lenders typically request these documents.</p>
+                        <div class="space-y-2 mb-6" id="docChecklist"></div>
+                        <div class="flex gap-3 justify-between"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep1">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep3">Continue →</button></div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-institutional-text mb-2 uppercase tracking-wider">I'm interested in...</label>
-                        <select id="solution" class="form-input">
-                            <option value="">Select solution...</option>
-                            <option value="Equity">Equity Funding</option>
-                            <option value="Debt">Debt / Loan</option>
-                            <option value="PO Funding">Purchase Order Funding</option>
-                            <option value="Invoice Discounting">Invoice Discounting</option>
-                            <option value="Asset-Backed">Asset‑Backed Finance</option>
-                            <option value="Bridging">Property Bridging</option>
-                            <option value="Sectional Solar">Sectional Title Solar</option>
-                            <option value="C&I Solar">Commercial & Industrial Solar</option>
-                            <option value="IPP">IPP Project Finance</option>
-                            <option value="Not sure / Multiple">Not sure / Multiple</option>
-                        </select>
+                    <div class="fade-step hidden" id="step3">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 3: Your Details</h2>
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div class="sm:col-span-2"><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Full Name *</label><input type="text" id="fullName" name="fullName" required class="form-input" placeholder="Your full name"></div>
+                            <div class="sm:col-span-2"><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Company / Trust Name</label><input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company or trust"></div>
+                            <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Email Address *</label><input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com"></div>
+                            <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Phone (WhatsApp preferred) *</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="+27 76 647 3499"></div>
+                        </div>
+                        <div class="flex gap-3 justify-between mt-6"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep2">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep4">Continue →</button></div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-institutional-text mb-2 uppercase tracking-wider">Brief Project Description</label>
-                        <textarea id="message" rows="4" class="form-input" placeholder="Tell us about your project, stage, and funding needs..."></textarea>
+                    <div class="fade-step hidden" id="step4">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 4: Project Information</h2>
+                        <div class="space-y-5">
+                            <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Funding Amount Needed (ZAR) *</label><input type="text" id="fundingAmount" name="fundingAmount" required class="form-input" placeholder="e.g. R2,500,000.00"></div>
+                            <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Timeline / Urgency</label><select id="timeline" name="timeline" class="form-input"><option value="">Select timeline...</option><option>Immediate – Within 1 week</option><option>Within 2–4 weeks</option><option>Within 1–3 months</option><option>Flexible – Planning stage</option></select></div>
+                            <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Brief Project Description *</label><textarea id="projectDescription" name="projectDescription" rows="4" required class="form-input" placeholder="Describe your project, stage, and funding needs..."></textarea></div>
+                        </div>
+                        <div class="flex gap-3 justify-between mt-6"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep3">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep5">Continue →</button></div>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button type="submit" class="btn-accent px-8 py-4 text-sm flex-1">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"/></svg>
-                            Send via WhatsApp
-                        </button>
-                        <a href="mailto:victor@maribamedia.co.za" class="btn-outline px-8 py-4 text-sm flex-1 text-center">Email victor@maribamedia.co.za</a>
+                    <div class="fade-step hidden" id="step5">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 5: Upload Documents</h2>
+                        <p class="text-inst-text-secondary text-sm mb-2">Attach the documents listed in Step 2. Max 10MB per file, total 25MB.</p>
+                        <div class="p-4 card-institutional mb-5" style="border-left: 3px solid #b49450; background: #111720;">
+                            <p class="text-xs font-semibold text-inst-accent uppercase mb-2">Required for <span id="uploadDocTypeLabel">your selection</span>:</p>
+                            <ul class="text-xs text-inst-text-secondary space-y-1" id="uploadDocReminder"></ul>
+                        </div>
+                        <div class="upload-zone" id="uploadZone">
+                            <div class="text-4xl mb-3">📁</div>
+                            <p class="text-inst-text font-semibold text-sm">Drag & drop files here, or click to browse</p>
+                            <p class="text-inst-text-muted text-xs mt-1">PDF, Word, Excel, images · 10MB max each</p>
+                            <input type="file" id="fileInput" name="documents" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" class="hidden">
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2" id="fileList"></div>
+                        <p class="text-inst-text-muted text-xs mt-2" id="fileCountLabel">No files selected</p>
+                        <div class="flex gap-3 justify-between mt-6"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep4">← Back</button><button type="button" class="btn-accent px-6 py-3 text-sm" id="nextToStep6">Continue →</button></div>
+                    </div>
+                    <div class="fade-step hidden" id="step6">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-2">Step 6: Consent & Review</h2>
+                        <div class="card-institutional p-5 mb-6" style="background: #111720;">
+                            <h3 class="font-display font-bold text-inst-text text-sm uppercase tracking-wider mb-3">📋 Submission Summary</h3>
+                            <div class="space-y-1" id="summaryContent"></div>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="font-display font-bold text-inst-text text-sm uppercase tracking-wider mb-2">🔒 POPIA Consent</h3>
+                            <div class="consent-box mb-3 text-xs"><p><strong>Mariba Media</strong> (Reg: 2024/132788/07) is registered with the Information Regulator in terms of POPIA. Your information is forwarded unchanged to a network of regulated lenders. No curation, advice, or guarantee of funding.</p></div>
+                            <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-inst-card transition-colors">
+                                <input type="checkbox" id="popiaConsent" required class="mt-0.5 w-5 h-5 accent-inst-accent flex-shrink-0">
+                                <span class="text-sm text-inst-text">I consent to the processing of my personal information as described. I acknowledge Mariba Media acts as a conduit only.</span>
+                            </label>
+                        </div>
+                        <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-inst-card transition-colors mb-6">
+                            <input type="checkbox" id="sendCopy" checked class="mt-0.5 w-5 h-5 accent-inst-accent">
+                            <span class="text-sm text-inst-text">Send me a copy of this submission.</span>
+                        </label>
+                        <div class="flex gap-3 justify-between"><button type="button" class="btn-outline px-5 py-3 text-sm" id="backToStep5">← Back</button><button type="submit" class="btn-accent px-8 py-3 text-sm" id="submitBtn" disabled>Submit to Lender Network</button></div>
                     </div>
                 </form>
-                <div id="formNote" class="hidden mt-4 p-3 bg-institutional-card border border-institutional-border rounded text-sm text-institutional-text-secondary">
-                    <p>✅ WhatsApp message composed. If your browser didn't open WhatsApp, <a href="#" id="fallbackLink" class="text-institutional-accent underline">click here</a> or copy the message manually. You can also email victor@maribamedia.co.za.</p>
-                </div>
             </div>
-            <p class="text-center text-institutional-text-muted text-xs">We reply within one business day. No spam, no follow‑up pressure.</p>
+
+            <!-- PO FUNDING QUICK FORM (covers both Gov & Private) -->
+            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step" id="poFundingForm">
+                <form id="poLeadForm" enctype="multipart/form-data" novalidate>
+                    <div class="mb-6">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-inst-text mb-1">Purchase Order Funding (Government & Private)</h2>
+                        <p class="text-inst-text-secondary text-sm">Submit a lead for purchase order finance from either government or private buyers. No personal or FICA documents needed.</p>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Sector *</label>
+                        <select id="poSector" name="poSector" class="form-input" required>
+                            <option value="">Select Government or Private</option>
+                            <option value="Government">Government</option>
+                            <option value="Private">Private</option>
+                        </select>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-4">
+                        <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Client's first name *</label><input type="text" id="poFirstName" name="poFirstName" required class="form-input" placeholder="Client's first name"></div>
+                        <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Client's last name <span class="text-inst-text-muted font-normal">(optional)</span></label><input type="text" id="poLastName" name="poLastName" class="form-input" placeholder="Client's last name"></div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-4">
+                        <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Client's phone number *</label><input type="tel" id="poPhone" name="poPhone" required class="form-input" placeholder="Phone number"></div>
+                        <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Client's email *</label><input type="email" id="poEmail" name="poEmail" required class="form-input" placeholder="Email address"></div>
+                    </div>
+                    <div class="mb-4"><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Company name <span class="text-inst-text-muted font-normal">(optional)</span></label><input type="text" id="poCompany" name="poCompany" class="form-input" placeholder="Client's company name"></div>
+                    <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-4">
+                        <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">How much do they need? *</label><input type="text" id="poAmount" name="poAmount" required class="form-input" placeholder="e.g. R500,000"></div>
+                        <div><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">What do they need it for? *</label><input type="text" id="poPurpose" name="poPurpose" required class="form-input" placeholder="e.g. Fulfilling purchase order"></div>
+                    </div>
+
+                    <div class="mb-5 p-4 card-institutional" style="border-left: 3px solid #b49450; background: #111720;">
+                        <p class="text-xs font-semibold text-inst-accent uppercase mb-2">Required Documents</p>
+                        <ul class="text-xs text-inst-text-secondary space-y-1 mb-3">
+                            <li>📄 Purchase Order (from the selected sector)</li>
+                            <li>📄 Supplier Quote (above R250,000.00)</li>
+                        </ul>
+                        <p class="text-xs text-inst-text-muted">No personal or FICA documents. Max 10MB per file, total 25MB.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Upload Documents</label>
+                        <div class="upload-zone" id="poUploadZone">
+                            <div class="text-3xl mb-2">📁</div>
+                            <p class="text-inst-text font-semibold text-sm">Drag & drop files here, or click to browse</p>
+                            <p class="text-inst-text-muted text-xs mt-1">PDF, Word, Excel, images, ZIP · 10MB each</p>
+                            <input type="file" id="poFileInput" name="poDocuments" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.zip" class="hidden">
+                        </div>
+                        <div class="mt-3 flex flex-wrap gap-2" id="poFileList"></div>
+                        <p class="text-inst-text-muted text-xs mt-1" id="poFileCountLabel">No files selected</p>
+                    </div>
+
+                    <div class="mb-5"><label class="block text-xs font-semibold text-inst-text mb-1.5 uppercase tracking-wider">Message <span class="text-inst-text-muted font-normal">(optional)</span></label><textarea id="poMessage" name="poMessage" rows="3" class="form-input" placeholder="Any additional context..."></textarea></div>
+
+                    <div class="mb-6 p-4 rounded-lg" style="background: #111720; border: 1px solid #232b3a;">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="poConsent" required class="mt-0.5 w-5 h-5 accent-inst-accent flex-shrink-0">
+                            <span class="text-sm text-inst-text">I confirm that I have obtained the lead's consent for <strong>Mariba Media (Pty) Ltd</strong> to process their personal information in line with POPIA. I also confirm consent to a credit check under the NCA if required. By continuing, you agree to Mariba Media's terms.</span>
+                        </label>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <button type="submit" class="btn-accent px-8 py-3 text-sm w-full sm:w-auto" id="poSubmitBtn" disabled>Submit Lead</button>
+                        <label class="flex items-center gap-2 text-sm text-inst-text-secondary cursor-pointer">
+                            <input type="checkbox" id="poSendCopy" checked class="w-4 h-4 accent-inst-accent"> Send me a copy
+                        </label>
+                    </div>
+                    <div class="mt-4"><button type="button" class="btn-outline px-5 py-3 text-sm" id="changeFundingType">← Choose a different funding type</button></div>
+                </form>
+            </div>
+
+            <!-- Success / Error -->
+            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="successScreen">
+                <div class="text-5xl mb-4">✅</div><h2 class="text-2xl sm:text-3xl font-display font-bold text-inst-text mb-3">Submission Received!</h2><p class="text-inst-text-secondary mb-2">Your submission has been forwarded to our network.</p><p class="text-inst-text-muted text-sm mb-6">For follow‑up: <strong>maribamedia@gmail.com</strong></p><button class="btn-outline px-6 py-3 text-sm" onclick="location.reload()">Submit Another Project</button>
+            </div>
+            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="errorScreen">
+                <div class="text-5xl mb-4">⚠️</div><h2 class="text-2xl sm:text-3xl font-display font-bold text-inst-text mb-3">Submission Issue</h2><p class="text-inst-text-secondary mb-4" id="errorMessage">We couldn't send your submission. Please try again or email us directly.</p><a href="mailto:maribamedia@gmail.com" class="btn-accent px-6 py-3 text-sm">Email maribamedia@gmail.com</a>
+            </div>
         </div>
-    </section>
+    </main>
 
-    <div class="section-divider"></div>
-
-    <!-- FOOTER with De‑risked Mariba Media Disclaimer -->
-    <footer class="bg-institutional-surface border-t border-institutional-border py-16">
+    <footer class="bg-inst-surface border-t border-inst-border py-16">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="grid md:grid-cols-3 gap-12">
-                <div>
-                    <div class="text-3xl font-display font-bold text-institutional-accent">MF</div>
-                    <p class="text-institutional-text-secondary mt-4 text-sm leading-relaxed">Mariba Funding is an introducing broker with referral arrangements to a network of regulated finance specialists and private lenders. The introducing commission is paid by the lender — you never pay.</p>
-                </div>
-                <div>
-                    <h4 class="font-display text-base font-semibold mb-5 text-institutional-text tracking-wide">SOLUTIONS</h4>
-                    <ul class="space-y-2.5 text-institutional-text-secondary text-sm">
-                        <li>Equity Funding</li><li>Debt & Loan Funding</li>
-                        <li>Purchase Order Funding</li>
-                        <li>Invoice Discounting</li>
-                        <li>Asset‑Backed Finance</li><li>Property Bridging</li>
-                        <li>Sectional Title Solar</li><li>C&I Solar</li>
-                        <li>IPP Project Finance</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display text-base font-semibold mb-5 text-institutional-text tracking-wide">CONTACT</h4>
-                    <p class="text-institutional-text-secondary text-sm">victor@maribamedia.co.za</p>
-                    <p class="text-institutional-accent font-semibold mt-4 text-base">+27 76 647 3499</p>
-                </div>
-            </div>
-            <div class="section-divider my-10"></div>
-
-            <!-- Updated, De‑risked Legal Disclaimer -->
-            <div class="text-[10px] text-institutional-text-muted leading-relaxed space-y-3 max-w-4xl mx-auto">
-                <p class="font-bold text-institutional-text-secondary uppercase tracking-wider flex items-center gap-2">
-                    <svg width="12" height="12" viewBox="0 0 100 100" fill="none" class="opacity-50">
-                        <path d="M28 74 L50 26 L72 74" stroke="#b49450" stroke-width="8" fill="none" stroke-linejoin="round"/>
-                    </svg>
-                    Mariba Media Disclaimer &amp; Compliance
-                </p>
-                <p>
-                    <strong>Mariba Media</strong> (Reg: 2024/132788/07) is an introducing broker with referral arrangements to a network of regulated finance specialists and private lenders. Mariba Media does not hold, process, or transact any funds. It does not provide financial advice, intermediary services, or any other regulated financial service as defined in the Financial Advisory and Intermediary Services Act (FAIS Act, 37 of 2002). All financial services are rendered solely by the regulated lenders within the network.
-                </p>
-                <p>
-                    Mariba Media's only function is to accept client project information and forward that information unchanged to the network of lenders. <strong>No curation, matching, feasibility review, recommendation, or filtering of any kind is performed by Mariba Media.</strong> All funders are duly licensed credit providers and/or authorised financial services providers. All lending is provided by registered credit providers where required by the National Credit Act (34 of 2005). Mariba Media does not participate in any credit decision.
-                </p>
-                <p>
-                    Funding terms, credit decisions, due diligence, and FICA compliance are the exclusive responsibility of the lender that chooses to engage with the client. <strong>No funding outcome is guaranteed.</strong>
-                </p>
-                <p>
-                    Any engagement with Mariba Media is subject to the client's acknowledgment that Mariba Media acts purely as a communication conduit. Clients agree that Mariba Media, its directors, employees, and associates shall not be liable for any loss, claim, or damage arising from the use of the introduction service, the conduct of any lender, or any funding transaction or lack thereof. Where mandatory consumer protections apply under the Consumer Protection Act (68 of 2008), this limitation will apply only to the extent permitted by law.
-                </p>
-                <p>
-                    We are registered with the <strong>Information Regulator</strong> in terms of the Protection of Personal Information Act (POPIA). Personal information is processed solely for the purpose of forwarding submissions to the lender network and is handled in accordance with our POPIA policy. Any data subject may lodge a complaint with the Information Regulator via <a href="https://www.justice.gov.za/inforeg/" class="text-institutional-accent hover:underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>. All FICA client due diligence obligations are met by the relevant lender, not by Mariba Media.
-                </p>
-                <p class="text-institutional-text-muted/60">
-                    <em>Last updated: 2026. All rights reserved.</em>
-                </p>
+            <div class="text-[10px] text-inst-text-muted leading-relaxed space-y-3 max-w-4xl mx-auto">
+                <p class="font-bold text-inst-text-secondary uppercase tracking-wider flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 100 100" fill="none" class="opacity-50"><path d="M28 74 L50 26 L72 74" stroke="#b49450" stroke-width="8" fill="none" stroke-linejoin="round"/></svg> Mariba Media Disclaimer & Compliance</p>
+                <p><strong>Mariba Media (Pty) Ltd</strong> (Reg: 2024/132788/07) is an introducing broker with referral arrangements to a network of regulated finance specialists and private lenders. Mariba Media does not hold, process, or transact any funds. It does not provide financial advice, intermediary services, or any other regulated financial service as defined in the Financial Advisory and Intermediary Services Act (FAIS Act, 37 of 2002).</p>
+                <p>Mariba Media's only function is to accept client project information and forward that information unchanged to the network of lenders. <strong>No curation, matching, feasibility review, recommendation, or filtering of any kind is performed by Mariba Media.</strong> All funders are duly licensed credit providers and/or authorised financial services providers. All lending is provided by registered credit providers where required by the National Credit Act (34 of 2005). Mariba Media does not participate in any credit decision.</p>
+                <p>Funding terms, credit decisions, due diligence, and FICA compliance are the exclusive responsibility of the lender. <strong>No funding outcome is guaranteed.</strong></p>
+                <p>We are registered with the <strong>Information Regulator</strong> in terms of POPIA. Personal information is processed solely for the purpose of forwarding submissions to the lender network. Any data subject may lodge a complaint with the Information Regulator via <a href="https://www.justice.gov.za/inforeg/" class="text-inst-accent hover:underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>. All FICA client due diligence obligations are met by the relevant lender, not by Mariba Media.</p>
+                <p class="text-inst-text-muted/60"><em>Last updated: 2026. All rights reserved.</em></p>
             </div>
         </div>
     </footer>
 
-    <!-- Cal floating-popup embed code begins -->
-    <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "discovery-session", {origin:"https://app.cal.com"});
-
-      Cal.ns["discovery-session"]("floatingButton", {"calLink":"partner-discovery/discovery-session","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}); 
-      Cal.ns["discovery-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
-    <!-- Cal floating-popup embed code ends -->
-
     <script>
         (function() {
-            // Scroll progress bar
-            const progressBar = document.getElementById('scrollProgress');
-            window.addEventListener('scroll', () => {
-                const winScroll = document.documentElement.scrollHeight - window.innerHeight;
-                const scrolled = (window.scrollY / winScroll) * 100;
-                if (progressBar) progressBar.style.width = scrolled + '%';
+            // ======================== FORMSUBMIT ENDPOINT ========================
+            const FORM_ENDPOINT = 'https://formsubmit.co/ajax/maribamedia@gmail.com';
+            // ====================================================================
+
+            // Document requirements (no personal/FICA docs)
+            const docRequirements = {
+                'asset-backed': { label: 'Asset-Backed Financing', docs: ['Financial Statements','6-month Bank Statements','Copy of Title Deed','Municipal Account','Tax Clearance Certificate'] },
+                'gov-invoice': { label: 'Government Invoice Discounting', docs: ['Submitted Invoice','Original Purchase Order or Contract from the Government','Signed Delivery Note / Payment Certificate for the Contract'] },
+                'private-invoice': { label: 'Private Invoice Discounting', docs: ['Financial Statements','6-month Bank Statements','Debtors & Creditors Ageing Reports','Tax Clearance Certificate','3 Examples of Invoices Rendered to Clients'] },
+                'bridging': { label: 'Property Bridging Finance', docs: ['Completed AFG Application Form','Additional info from conveyancing attorney (may be required)'] },
+                'startup': { label: 'Start‑up Funding', docs: ['Business Plan','Financial Projections','Pitch Deck'] },
+                'termloan': { label: 'Term Loan', docs: ['Financial Statements','6-month Bank Statements','Business Plan'] },
+                'revolving': { label: 'Revolving Credit Facility', docs: ['Financial Statements','6-month Bank Statements','Debtors & Creditors Ageing'] },
+                'tradefinance': { label: 'Trade Finance', docs: ['Purchase Order','Supplier Invoice','Contract/Agreement'] },
+                'merchantcash': { label: 'Merchant Cash Advance', docs: ['6-month Bank Statements','Credit Card Processing Statements'] },
+                'bridging-sub': { label: 'Bridging Finance', docs: ['Property Sale Agreement','Attorney Letter','Proof of Ownership'] },
+                'assetfinance': { label: 'Asset Finance', docs: ['Asset Quotation','Proof of Asset Ownership','Financial Statements'] },
+                'general': { label: 'General / Multiple', docs: ['Business Plan or Project Summary','Financial Statements (if available)','Any relevant POs, Invoices, or Contracts','Any supporting documentation'] }
+            };
+
+            // DOM references
+            const formContainer = document.getElementById('formContainer');
+            const mainForm = document.getElementById('mainForm');
+            const successScreen = document.getElementById('successScreen');
+            const errorScreen = document.getElementById('errorScreen');
+            const stepProgress = document.getElementById('stepProgress');
+            const poFundingForm = document.getElementById('poFundingForm');
+            const poLeadForm = document.getElementById('poLeadForm');
+
+            const step1 = document.getElementById('step1'), step2 = document.getElementById('step2'), step3 = document.getElementById('step3'), step4 = document.getElementById('step4'), step5 = document.getElementById('step5'), step6 = document.getElementById('step6');
+            const allSteps = [step1,step2,step3,step4,step5,step6];
+
+            const nextToStep2 = document.getElementById('nextToStep2'), nextToStep3 = document.getElementById('nextToStep3'), nextToStep4 = document.getElementById('nextToStep4'), nextToStep5 = document.getElementById('nextToStep5'), nextToStep6 = document.getElementById('nextToStep6');
+            const backToStep1 = document.getElementById('backToStep1'), backToStep2 = document.getElementById('backToStep2'), backToStep3 = document.getElementById('backToStep3'), backToStep4 = document.getElementById('backToStep4'), backToStep5 = document.getElementById('backToStep5');
+            const submitBtn = document.getElementById('submitBtn');
+            const popiaConsent = document.getElementById('popiaConsent');
+            const sendCopyCheckbox = document.getElementById('sendCopy');
+
+            const poSubmitBtn = document.getElementById('poSubmitBtn');
+            const poConsent = document.getElementById('poConsent');
+            const poSendCopy = document.getElementById('poSendCopy');
+            const changeFundingBtn = document.getElementById('changeFundingType');
+
+            // Uploads
+            const uploadZone = document.getElementById('uploadZone'), fileInput = document.getElementById('fileInput'), fileList = document.getElementById('fileList'), fileCountLabel = document.getElementById('fileCountLabel');
+            const poUploadZone = document.getElementById('poUploadZone'), poFileInput = document.getElementById('poFileInput'), poFileList = document.getElementById('poFileList'), poFileCountLabel = document.getElementById('poFileCountLabel');
+
+            let currentStep = 1, selectedDocGroup = null, selectedFundingLabel = '';
+            let uploadedFiles = [], poUploadedFiles = [];
+            const MAX_FILE_SIZE = 10*1024*1024, MAX_TOTAL_SIZE = 25*1024*1024;
+
+            // Funding selection
+            const fundingOptions = document.querySelectorAll('.funding-option');
+            const otherSubPanel = document.getElementById('otherSubPanel');
+            const otherSubOptions = document.querySelectorAll('.other-sub-option');
+            const selectedFundingTypeInput = document.getElementById('selectedFundingType');
+
+            fundingOptions.forEach(opt => {
+                opt.addEventListener('click', function() {
+                    const docGroup = this.dataset.docGroup;
+                    fundingOptions.forEach(o => o.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    if (docGroup === 'po-funding') {
+                        selectedDocGroup = null;
+                        selectedFundingLabel = 'Purchase Order Funding (Gov & Private)';
+                        selectedFundingTypeInput.value = selectedFundingLabel;
+                        formContainer.classList.add('hidden');
+                        poFundingForm.classList.remove('hidden');
+                        stepProgress.classList.add('hidden');
+                        otherSubPanel.classList.add('hidden');
+                        poFundingForm.scrollIntoView({behavior:'smooth',block:'start'});
+                        return;
+                    }
+
+                    if (docGroup === 'other') {
+                        otherSubPanel.classList.remove('hidden');
+                        selectedDocGroup = null;
+                        selectedFundingLabel = '';
+                        selectedFundingTypeInput.value = '';
+                        nextToStep2.disabled = true;
+                        allSteps.forEach(s => s.classList.add('hidden'));
+                        step1.classList.remove('hidden');
+                        currentStep = 1;
+                        updateStepIndicators(1);
+                        return;
+                    }
+
+                    otherSubPanel.classList.add('hidden');
+                    selectedDocGroup = docGroup;
+                    selectedFundingLabel = this.dataset.value;
+                    selectedFundingTypeInput.value = selectedFundingLabel;
+                    nextToStep2.disabled = false;
+                    allSteps.forEach(s => s.classList.add('hidden'));
+                    step1.classList.remove('hidden');
+                    currentStep = 1;
+                    updateStepIndicators(1);
+                });
             });
 
-            // Mobile menu
-            const menuBtn = document.getElementById('mobileMenuBtn'),
-                  mobileMenu = document.getElementById('mobileMenu'),
-                  openIcon = document.getElementById('menuOpen'),
-                  closeIcon = document.getElementById('menuClose');
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    const hidden = mobileMenu.classList.contains('hidden');
-                    if (hidden) {
-                        mobileMenu.classList.remove('hidden');
-                        openIcon.classList.add('hidden');
-                        closeIcon.classList.remove('hidden');
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        mobileMenu.classList.add('hidden');
-                        openIcon.classList.remove('hidden');
-                        closeIcon.classList.add('hidden');
-                        document.body.style.overflow = '';
-                    }
+            otherSubOptions.forEach(opt => {
+                opt.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const subGroup = this.dataset.subGroup;
+                    selectedDocGroup = subGroup;
+                    const labelMap = {
+                        startup: 'Start‑up Funding', termloan: 'Term Loan', revolving: 'Revolving Credit Facility',
+                        tradefinance: 'Trade Finance', merchantcash: 'Merchant Cash Advance',
+                        'bridging-sub': 'Bridging Finance', assetfinance: 'Asset Finance', general: 'General / Multiple'
+                    };
+                    selectedFundingLabel = labelMap[subGroup] || 'Other';
+                    selectedFundingTypeInput.value = selectedFundingLabel;
+                    otherSubPanel.classList.add('hidden');
+                    nextToStep2.disabled = false;
                 });
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        openIcon.classList.remove('hidden');
-                        closeIcon.classList.add('hidden');
-                        document.body.style.overflow = '';
+            });
+
+            changeFundingBtn.addEventListener('click', () => {
+                poFundingForm.classList.add('hidden');
+                formContainer.classList.remove('hidden');
+                stepProgress.classList.remove('hidden');
+                fundingOptions.forEach(o => o.classList.remove('selected'));
+                selectedDocGroup = null; selectedFundingLabel = ''; selectedFundingTypeInput.value = '';
+                nextToStep2.disabled = true;
+                otherSubPanel.classList.add('hidden');
+                allSteps.forEach(s => s.classList.add('hidden'));
+                step1.classList.remove('hidden');
+                currentStep = 1;
+                updateStepIndicators(1);
+                formContainer.scrollIntoView({behavior:'smooth',block:'start'});
+            });
+
+            function showStep(n) {
+                allSteps.forEach((s,i) => s.classList.toggle('hidden', i+1 !== n));
+                currentStep = n;
+                updateStepIndicators(n);
+                formContainer.scrollIntoView({behavior:'smooth',block:'start'});
+            }
+            function updateStepIndicators(active) {
+                document.querySelectorAll('.step-indicator').forEach(ind => {
+                    const s = parseInt(ind.dataset.step);
+                    ind.classList.remove('active','done');
+                    if(s===active) ind.classList.add('active');
+                    else if(s<active) ind.classList.add('done');
+                });
+                document.querySelectorAll('.step-connector').forEach(c => {
+                    const cs = parseInt(c.dataset.connector);
+                    c.classList.toggle('done', cs < active);
+                });
+            }
+
+            nextToStep2.addEventListener('click', ()=>{ if(selectedDocGroup){ populateOldDocChecklist(); showStep(2); } });
+            nextToStep3.addEventListener('click', ()=> showStep(3));
+            nextToStep4.addEventListener('click', ()=>{ if(validateOldStep3()) showStep(4); });
+            nextToStep5.addEventListener('click', ()=>{ if(validateOldStep4()) showStep(5); });
+            nextToStep6.addEventListener('click', ()=>{ populateOldSummary(); showStep(6); });
+            backToStep1.addEventListener('click', ()=> showStep(1));
+            backToStep2.addEventListener('click', ()=> showStep(2));
+            backToStep3.addEventListener('click', ()=> showStep(3));
+            backToStep4.addEventListener('click', ()=> showStep(4));
+            backToStep5.addEventListener('click', ()=> showStep(5));
+
+            function populateOldDocChecklist() {
+                const req = docRequirements[selectedDocGroup];
+                if(!req) return;
+                document.getElementById('selectedTypeLabel').textContent = req.label;
+                document.getElementById('docChecklist').innerHTML = req.docs.map((d,i) => `<div class="doc-checklist-item"><div class="custom-checkbox" data-index="${i}"></div><span class="text-sm text-inst-text flex-1">${d}</span></div>`).join('');
+                document.querySelectorAll('#docChecklist .custom-checkbox').forEach(cb => cb.addEventListener('click', function(){ this.classList.toggle('checked'); }));
+                document.getElementById('uploadDocTypeLabel').textContent = req.label;
+                document.getElementById('uploadDocReminder').innerHTML = req.docs.map(d => `<li>📄 ${d}</li>`).join('');
+            }
+            function validateOldStep3() {
+                const n = document.getElementById('fullName').value.trim(), e = document.getElementById('email').value.trim(), p = document.getElementById('phone').value.trim();
+                if(!n||!e||!p){ alert('Please fill all required fields.'); return false; }
+                if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){ alert('Invalid email.'); return false; }
+                return true;
+            }
+            function validateOldStep4() {
+                if(!document.getElementById('fundingAmount').value.trim() || !document.getElementById('projectDescription').value.trim()){ alert('Please fill amount and description.'); return false; }
+                return true;
+            }
+            function populateOldSummary() {
+                const rows = [
+                    { label:'Funding Type', value: selectedFundingLabel },
+                    { label:'Full Name', value: document.getElementById('fullName').value },
+                    { label:'Company', value: document.getElementById('companyName').value || '—' },
+                    { label:'Email', value: document.getElementById('email').value },
+                    { label:'Phone', value: document.getElementById('phone').value },
+                    { label:'Amount', value: document.getElementById('fundingAmount').value },
+                    { label:'Timeline', value: document.getElementById('timeline').value || '—' },
+                    { label:'Description', value: document.getElementById('projectDescription').value },
+                    { label:'Files', value: uploadedFiles.length + ' file(s)' }
+                ];
+                document.getElementById('summaryContent').innerHTML = rows.map(r => `<div class="summary-row"><span class="label">${r.label}</span><span class="value">${r.value}</span></div>`).join('');
+            }
+
+            popiaConsent.addEventListener('change', ()=> submitBtn.disabled = !popiaConsent.checked);
+            poConsent.addEventListener('change', ()=> poSubmitBtn.disabled = !poConsent.checked);
+
+            // File upload helpers
+            function formatSize(b){ return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'; }
+            function updateOldFiles() {
+                fileList.innerHTML = uploadedFiles.length ? uploadedFiles.map((f,i) => `<span class="file-chip">📄 ${f.name} (${formatSize(f.size)}) <span class="remove-file" data-index="${i}">×</span></span>`).join('') : '';
+                fileCountLabel.textContent = uploadedFiles.length ? `${uploadedFiles.length} file(s) · ${formatSize(getOldTotal())}` : 'No files selected';
+                uploadZone.classList.toggle('has-files', uploadedFiles.length>0);
+                document.querySelectorAll('#fileList .remove-file').forEach(b => b.addEventListener('click', function(e){ e.stopPropagation(); uploadedFiles.splice(parseInt(this.dataset.index),1); updateOldFiles(); }));
+            }
+            function getOldTotal(){ return uploadedFiles.reduce((s,f)=>s+f.size,0); }
+            uploadZone.addEventListener('click', ()=> fileInput.click());
+            uploadZone.addEventListener('dragover', e=>{ e.preventDefault(); uploadZone.classList.add('dragover'); });
+            uploadZone.addEventListener('dragleave', ()=> uploadZone.classList.remove('dragover'));
+            uploadZone.addEventListener('drop', e=>{ e.preventDefault(); uploadZone.classList.remove('dragover'); if(e.dataTransfer.files.length) addOldFiles(e.dataTransfer.files); });
+            fileInput.addEventListener('change', ()=>{ if(fileInput.files.length){ addOldFiles(fileInput.files); fileInput.value=''; } });
+            function addOldFiles(files){ Array.from(files).forEach(f=>{ if(f.size>MAX_FILE_SIZE) return alert(`"${f.name}" exceeds 10MB.`); if(getOldTotal()+f.size>MAX_TOTAL_SIZE) return alert('Total exceeds 25MB.'); if(!uploadedFiles.some(x=>x.name===f.name&&x.size===f.size)) uploadedFiles.push(f); }); updateOldFiles(); }
+
+            function updatePoFiles() {
+                poFileList.innerHTML = poUploadedFiles.length ? poUploadedFiles.map((f,i) => `<span class="file-chip">📄 ${f.name} (${formatSize(f.size)}) <span class="remove-file" data-index="${i}">×</span></span>`).join('') : '';
+                poFileCountLabel.textContent = poUploadedFiles.length ? `${poUploadedFiles.length} file(s) · ${formatSize(getPoTotal())}` : 'No files selected';
+                poUploadZone.classList.toggle('has-files', poUploadedFiles.length>0);
+                document.querySelectorAll('#poFileList .remove-file').forEach(b => b.addEventListener('click', function(e){ e.stopPropagation(); poUploadedFiles.splice(parseInt(this.dataset.index),1); updatePoFiles(); }));
+            }
+            function getPoTotal(){ return poUploadedFiles.reduce((s,f)=>s+f.size,0); }
+            poUploadZone.addEventListener('click', ()=> poFileInput.click());
+            poUploadZone.addEventListener('dragover', e=>{ e.preventDefault(); poUploadZone.classList.add('dragover'); });
+            poUploadZone.addEventListener('dragleave', ()=> poUploadZone.classList.remove('dragover'));
+            poUploadZone.addEventListener('drop', e=>{ e.preventDefault(); poUploadZone.classList.remove('dragover'); if(e.dataTransfer.files.length) addPoFiles(e.dataTransfer.files); });
+            poFileInput.addEventListener('change', ()=>{ if(poFileInput.files.length){ addPoFiles(poFileInput.files); poFileInput.value=''; } });
+            function addPoFiles(files){ Array.from(files).forEach(f=>{ if(f.size>MAX_FILE_SIZE) return alert(`"${f.name}" exceeds 10MB.`); if(getPoTotal()+f.size>MAX_TOTAL_SIZE) return alert('Total exceeds 25MB.'); if(!poUploadedFiles.some(x=>x.name===f.name&&x.size===f.size)) poUploadedFiles.push(f); }); updatePoFiles(); }
+
+            // Submit via FormSubmit
+            async function submitOld() {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+                try {
+                    const fd = new FormData();
+                    fd.append('_replyto', document.getElementById('email').value);
+                    fd.append('_subject', `New Funding Submission: ${selectedFundingLabel}`);
+                    fd.append('_captcha', 'false');
+                    if (sendCopyCheckbox.checked) {
+                        fd.append('_cc', document.getElementById('email').value);
+                    }
+                    fd.append('fundingType', selectedFundingLabel);
+                    fd.append('fullName', document.getElementById('fullName').value);
+                    fd.append('companyName', document.getElementById('companyName').value);
+                    fd.append('email', document.getElementById('email').value);
+                    fd.append('phone', document.getElementById('phone').value);
+                    fd.append('fundingAmount', document.getElementById('fundingAmount').value);
+                    fd.append('timeline', document.getElementById('timeline').value);
+                    fd.append('projectDescription', document.getElementById('projectDescription').value);
+                    uploadedFiles.forEach(f => fd.append('documents', f));
+
+                    const response = await fetch(FORM_ENDPOINT, {
+                        method: 'POST',
+                        body: fd,
+                        headers: { 'Accept': 'application/json' }
                     });
-                });
-            }
-
-            // Scroll animations
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('visible');
-                });
-            }, { threshold: 0.12 });
-            animatedElements.forEach(el => observer.observe(el));
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href === "#" || href === "") return;
-                    const target = document.querySelector(href);
-                    if (target) {
-                        e.preventDefault();
-                        const navHeight = document.querySelector('nav').offsetHeight;
-                        window.scrollTo({ top: target.offsetTop - navHeight - 16, behavior: 'smooth' });
+                    if (response.ok) {
+                        showSuccess();
+                    } else {
+                        throw new Error('FormSubmit error');
                     }
-                });
-            });
-
-            // WhatsApp form integration
-            const whatsappForm = document.getElementById('whatsappForm');
-            const formNote = document.getElementById('formNote');
-            const fallbackLink = document.getElementById('fallbackLink');
-
-            if (whatsappForm) {
-                whatsappForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const name = document.getElementById('name').value.trim();
-                    const email = document.getElementById('email').value.trim();
-                    const phone = document.getElementById('phone').value.trim();
-                    const solution = document.getElementById('solution').value;
-                    const message = document.getElementById('message').value.trim();
-
-                    let text = "New funding enquiry from Mariba Funding page:\n";
-                    text += "Name: " + name + "\n";
-                    if (email) text += "Email: " + email + "\n";
-                    if (phone) text += "Phone: " + phone + "\n";
-                    text += "Solution: " + (solution || "Not specified") + "\n";
-                    if (message) text += "Project: " + message;
-
-                    const encoded = encodeURIComponent(text);
-                    const waNumber = "27766473499";
-                    const waLink = "https://wa.me/" + waNumber + "?text=" + encoded;
-
-                    // Show fallback note
-                    formNote.classList.remove('hidden');
-                    fallbackLink.href = waLink;
-
-                    // Try to open WhatsApp directly
-                    window.open(waLink, '_blank');
-                });
+                } catch (err) {
+                    console.error(err);
+                    showError('FormSubmit service error. Please email us directly.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit to Lender Network';
+                }
             }
+
+            async function submitPo() {
+                poSubmitBtn.disabled = true;
+                poSubmitBtn.textContent = 'Submitting...';
+                try {
+                    const fd = new FormData();
+                    const clientEmail = document.getElementById('poEmail').value;
+                    fd.append('_replyto', clientEmail);
+                    fd.append('_subject', `New PO Funding Lead - ${document.getElementById('poSector').value}`);
+                    fd.append('_captcha', 'false');
+                    if (poSendCopy.checked) {
+                        fd.append('_cc', clientEmail);
+                    }
+                    fd.append('fundingType', 'Purchase Order Funding');
+                    fd.append('poSector', document.getElementById('poSector').value);
+                    fd.append('poFirstName', document.getElementById('poFirstName').value);
+                    fd.append('poLastName', document.getElementById('poLastName').value);
+                    fd.append('poPhone', document.getElementById('poPhone').value);
+                    fd.append('poEmail', clientEmail);
+                    fd.append('poCompany', document.getElementById('poCompany').value);
+                    fd.append('poAmount', document.getElementById('poAmount').value);
+                    fd.append('poPurpose', document.getElementById('poPurpose').value);
+                    fd.append('poMessage', document.getElementById('poMessage').value);
+                    poUploadedFiles.forEach(f => fd.append('poDocuments', f));
+
+                    const response = await fetch(FORM_ENDPOINT, {
+                        method: 'POST',
+                        body: fd,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        showSuccess();
+                    } else {
+                        throw new Error('FormSubmit error');
+                    }
+                } catch (err) {
+                    console.error(err);
+                    showError('FormSubmit service error. Please email us directly.');
+                } finally {
+                    poSubmitBtn.disabled = false;
+                    poSubmitBtn.textContent = 'Submit Lead';
+                }
+            }
+
+            function showSuccess() {
+                formContainer.classList.add('hidden');
+                poFundingForm.classList.add('hidden');
+                successScreen.classList.remove('hidden');
+                errorScreen.classList.add('hidden');
+                successScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            function showError(msg) {
+                document.getElementById('errorMessage').innerText = msg;
+                formContainer.classList.add('hidden');
+                poFundingForm.classList.add('hidden');
+                errorScreen.classList.remove('hidden');
+                successScreen.classList.add('hidden');
+                errorScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            mainForm.addEventListener('submit', e => { e.preventDefault(); if (popiaConsent.checked) submitOld(); });
+            poLeadForm.addEventListener('submit', e => { e.preventDefault(); if (poConsent.checked) submitPo(); });
+
+            showStep(1);
+            submitBtn.disabled = true;
+            poSubmitBtn.disabled = true;
         })();
     </script>
 </body>
