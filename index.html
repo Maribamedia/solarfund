@@ -603,6 +603,9 @@
 
     <script>
         (function() {
+            // FormSubmit API secret key – inserted as requested
+            const INSERT_SECRET = 'a8e6715d-1247-4526-a652-165fb5ef2505';
+
             const FORM_ENDPOINT = 'https://formsubmit.co/ajax/victor@maribamedia.co.za';
             const AUTORESPONSE_MESSAGE =
                 `Dear Applicant,\n\nThank you for submitting your funding request through Mariba Media.\n\nYour application has been received and will be forwarded to our network of regulated lenders. One of our partner lenders will contact you directly within 2–4 business days regarding next steps.\n\nPlease note: Mariba Media acts solely as an introducing broker. All credit decisions, due diligence, and funding terms are the responsibility of the lender.\n\nIf you have any urgent questions, feel free to reply to this email.\n\nKind regards,\nMariba Media Team\nvictor@maribamedia.co.za`;
@@ -921,6 +924,7 @@
 
                 try {
                     const fd = new FormData();
+                    fd.append('_secret', INSERT_SECRET); // <-- using the secret
                     fd.append('_replyto', email);
                     fd.append('_subject', `New Funding Submission: ${selectedFundingLabel}`);
                     fd.append('_captcha', 'false');
@@ -968,6 +972,7 @@
 
                 try {
                     const fd = new FormData();
+                    fd.append('_secret', INSERT_SECRET); // <-- using the secret
                     fd.append('_replyto', email);
                     fd.append('_subject', `New PO Funding Lead - ${sector}`);
                     fd.append('_captcha', 'false');
