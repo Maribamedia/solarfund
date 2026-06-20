@@ -9,8 +9,8 @@
     <meta property="og:description" content="One submission reaches a broad network of duly licensed credit providers. No advice – full control remains with you.">
     <meta property="og:url" content="https://maribafunding.co.za">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2.5' result='c'/%3E%3CfeMerge%3E%3CfeMergeNode in='c'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%230ea5e9' stroke-width='10' fill='none' stroke-linejoin='round' filter='url(%23g)'/%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%2338bdf8' stroke-width='4' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2.5' result='c'/%3E%3CfeMerge%3E%3CfeMergeNode in='c'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%231e3a8a' stroke-width='10' fill='none' stroke-linejoin='round' filter='url(%23g)'/%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%233b82f6' stroke-width='4' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com">
     </script>
     <script>
@@ -19,18 +19,18 @@
                 extend: {
                     colors: {
                         'brand': {
-                            'dark': '#02040a',
-                            'navy': '#0a0f1e',
-                            'cobalt': '#0ea5e9',
-                            'electric': '#38bdf8',
-                            'cyan': '#22d3ee',
-                            'slate': '#64748b',
-                            'border': 'rgba(14, 165, 233, 0.15)'
+                            'dark': '#ffffff',
+                            'navy': '#f8f9fa',
+                            'cobalt': '#1e3a8a',
+                            'electric': '#1e3a8a',
+                            'cyan': '#3b82f6',
+                            'slate': '#495057',
+                            'border': 'rgba(30, 58, 138, 0.08)'
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'display': ['DM Sans', 'Inter', 'system-ui', 'sans-serif'],
+                        'display': ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.5s ease-out forwards',
@@ -46,6 +46,17 @@
         }
     </script>
     <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-fixed: #172554;
+            --ink: #111111;
+            --ink-muted: #495057;
+            --surface: #ffffff;
+            --surface-1: #f8f9fa;
+            --surface-2: #f1f3f5;
+            --hairline: #dee2e6;
+            --outline: #adb5bd;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -57,29 +68,29 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #02040a;
-            color: #f1f5f9;
+            background-color: #ffffff;
+            color: #111111;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
         .card-institutional {
-            background: rgba(10, 15, 30, 0.7);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(14, 165, 233, 0.08);
-            border-radius: 12px;
+            border: 1px solid rgba(30, 58, 138, 0.08);
+            border-radius: 14px;
             transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         }
         .card-institutional:hover {
-            border-color: rgba(14, 165, 233, 0.35);
+            border-color: rgba(30, 58, 138, 0.2);
             transform: translateY(-3px);
-            box-shadow: 0 16px 28px -8px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 16px 28px -8px rgba(30, 58, 138, 0.1);
         }
         .btn-accent {
-            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
             color: #fff;
             font-weight: 700;
-            border-radius: 6px;
+            border-radius: 999px;
             padding: 0.85rem 2rem;
             transition: all 0.2s ease;
             display: inline-flex;
@@ -91,11 +102,11 @@
             text-transform: uppercase;
             border: none;
             cursor: pointer;
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
+            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.2);
         }
         .btn-accent:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+            box-shadow: 0 8px 28px rgba(30, 58, 138, 0.35);
         }
         .btn-accent:disabled {
             opacity: 0.4;
@@ -104,11 +115,11 @@
             box-shadow: none;
         }
         .btn-outline {
-            background: transparent;
-            border: 1.5px solid #0ea5e9;
-            color: #0ea5e9;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1.5px solid var(--hairline);
+            color: var(--primary);
             font-weight: 600;
-            border-radius: 6px;
+            border-radius: 999px;
             padding: 0.85rem 2rem;
             transition: all 0.2s ease;
             display: inline-flex;
@@ -121,16 +132,16 @@
             cursor: pointer;
         }
         .btn-outline:hover {
-            background: rgba(14, 165, 233, 0.08);
-            border-color: #38bdf8;
-            color: #38bdf8;
+            background: rgba(30, 58, 138, 0.04);
+            border-color: var(--primary);
+            color: var(--primary);
             transform: translateY(-1px);
         }
         .form-input {
-            background: #0a0f1e;
-            border: 1px solid rgba(14, 165, 233, 0.15);
-            color: #e8ecf1;
-            border-radius: 8px;
+            background: #ffffff;
+            border: 1px solid var(--hairline);
+            color: #111111;
+            border-radius: 10px;
             padding: 0.8rem 1rem;
             width: 100%;
             transition: all 0.2s;
@@ -138,29 +149,29 @@
         }
         .form-input:focus {
             outline: none;
-            border-color: #0ea5e9;
-            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.15);
         }
         .form-input::placeholder {
-            color: #64748b;
+            color: var(--outline);
         }
         textarea.form-input {
             resize: vertical;
             min-height: 100px;
         }
         .upload-zone {
-            border: 2px dashed rgba(14, 165, 233, 0.3);
+            border: 2px dashed rgba(30, 58, 138, 0.2);
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
             transition: all 0.3s;
             cursor: pointer;
-            background: #0a0f1e;
+            background: var(--surface-1);
         }
         .upload-zone:hover,
         .upload-zone.dragover {
-            border-color: #0ea5e9;
-            background: rgba(14, 165, 233, 0.04);
+            border-color: var(--primary);
+            background: rgba(30, 58, 138, 0.04);
         }
         .upload-zone.has-files {
             border-color: #2ecc71;
@@ -171,12 +182,12 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: #1a2032;
-            border: 1px solid rgba(14, 165, 233, 0.2);
+            background: var(--surface-2);
+            border: 1px solid rgba(30, 58, 138, 0.1);
             border-radius: 6px;
             padding: 6px 12px;
             font-size: 0.8rem;
-            color: #e8ecf1;
+            color: #111111;
             margin: 4px;
         }
         .file-chip .remove-file {
@@ -189,23 +200,23 @@
             color: #ff6b6b;
         }
         .consent-box {
-            background: #0a0f1e;
-            border: 1px solid rgba(14, 165, 233, 0.15);
+            background: var(--surface-1);
+            border: 1px solid rgba(30, 58, 138, 0.08);
             border-radius: 10px;
             padding: 1.25rem;
             font-size: 0.85rem;
             line-height: 1.6;
-            color: #94a3b8;
+            color: var(--ink-muted);
             max-height: 200px;
             overflow-y: auto;
         }
         .consent-box strong {
-            color: #f1f5f9;
+            color: #111111;
         }
         .funding-option.selected {
-            border-color: #0ea5e9 !important;
-            background: rgba(14, 165, 233, 0.08) !important;
-            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+            border-color: var(--primary) !important;
+            background: rgba(30, 58, 138, 0.06) !important;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
         }
         .fade-step {
             animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -226,8 +237,8 @@
             gap: 10px;
             padding: 10px 14px;
             border-radius: 8px;
-            background: #0a0f1e;
-            border: 1px solid rgba(14, 165, 233, 0.1);
+            background: var(--surface-1);
+            border: 1px solid rgba(30, 58, 138, 0.08);
         }
         .doc-checklist-item.checked {
             border-color: #2ecc71;
@@ -236,7 +247,7 @@
         .custom-checkbox {
             width: 20px;
             height: 20px;
-            border: 2px solid #3d485c;
+            border: 2px solid var(--outline);
             border-radius: 4px;
             flex-shrink: 0;
             cursor: pointer;
@@ -251,7 +262,7 @@
         }
         .custom-checkbox.checked::after {
             content: '✓';
-            color: #02040a;
+            color: #ffffff;
             font-weight: 700;
             font-size: 13px;
         }
@@ -263,7 +274,7 @@
         .doc-reminder-list li {
             padding: 4px 0;
             font-size: 0.8rem;
-            color: #94a3b8;
+            color: var(--ink-muted);
         }
         .doc-reminder-list li::before {
             content: "📄 ";
@@ -278,128 +289,129 @@
             }
         }
     </style>
+<base target="_blank">
 </head>
-<body class="bg-brand-dark font-sans antialiased">
+<body class="bg-white font-sans antialiased">
 
-    <nav class="fixed w-full z-50" style="background: rgba(2,4,10,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(14,165,233,0.1);">
+    <nav class="fixed w-full z-50" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(22px); border-bottom: 1px solid #dee2e6;">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="flex items-center justify-between h-20">
                 <a href="#" class="flex items-center gap-4">
                     <svg width="32" height="32" viewBox="0 0 100 100" fill="none" class="logo-glow">
                         <defs>
                             <linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#0284c7;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#0ea5e9;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:1" />
+                                <stop offset="0%" style="stop-color:#172554;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
                             </linearGradient>
                         </defs>
                         <path d="M28 74 L50 26 L72 74" stroke="url(#logoGrad)" stroke-width="6" fill="none" stroke-linejoin="round" />
                     </svg>
                     <div>
-                        <span class="text-lg font-display font-extrabold tracking-tight text-white uppercase">MARIBA<span class="text-brand-electric">MEDIA</span></span>
-                        <span class="block text-[10px] font-medium tracking-[0.25em] text-brand-slate uppercase">Introducing Broker</span>
+                        <span class="text-lg font-display font-extrabold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e3a8a]">MEDIA</span></span>
+                        <span class="block text-[10px] font-medium tracking-[0.25em] text-[#495057] uppercase">Introducing Broker</span>
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-6">
-                    <span class="text-xs font-medium text-brand-slate tracking-widest uppercase">Regulated Lenders · Zero Cost</span>
-                    <a href="mailto:victor@maribamedia.co.za" class="text-xs text-brand-slate hover:text-brand-electric transition-colors">victor@maribamedia.co.za</a>
+                    <span class="text-xs font-medium text-[#495057] tracking-widest uppercase">Regulated Lenders · Zero Cost</span>
+                    <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#495057] hover:text-[#1e3a8a] transition-colors">victor@maribamedia.co.za</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="pt-24 pb-16 sm:pt-28 sm:pb-20">
+    <main class="pt-24 pb-16 sm:pt-28 sm:pb-20" style="background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #fff8f0 100%);">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="text-center mb-8 sm:mb-12 animate-fade-up">
-                <div class="inline-flex items-center gap-2 px-4 py-2 border border-brand-border bg-brand-navy/80 rounded-full mb-5">
-                    <span class="w-2 h-2 rounded-full bg-brand-electric animate-pulse"></span>
-                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-brand-slate uppercase">Submit Your Project · POPIA Compliant</span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,58,138,0.08)] bg-[#f8f9fa]/80 rounded-full mb-5">
+                    <span class="w-2 h-2 rounded-full bg-[#1e3a8a] animate-pulse"></span>
+                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-[#495057] uppercase">Submit Your Project · POPIA Compliant</span>
                 </div>
-                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-white leading-tight">One Submission. Network‑Wide Reach.</h1>
-                <p class="text-brand-slate mt-3 max-w-xl mx-auto text-sm">Select a funding type below. Each option opens a dedicated form tailored to that facility. No personal FICA documents required.</p>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-[#111111] leading-tight">One Submission. Network‑Wide Reach.</h1>
+                <p class="text-[#495057] mt-3 max-w-xl mx-auto text-sm">Select a funding type below. Each option opens a dedicated form tailored to that facility. No personal FICA documents required.</p>
             </div>
 
             <!-- FUNDING SELECTION (Step 1) -->
             <div class="card-institutional p-6 sm:p-8 md:p-10" id="selectionContainer">
                 <div id="step1">
-                    <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">Select Your Funding Type</h2>
-                    <p class="text-brand-slate text-sm mb-6">Choose the facility that best matches your needs. All funders are duly licensed credit providers and/or authorised financial services providers.</p>
+                    <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-2">Select Your Funding Type</h2>
+                    <p class="text-[#495057] text-sm mb-6">Choose the facility that best matches your needs. All funders are duly licensed credit providers and/or authorised financial services providers.</p>
 
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-electric mb-3 mt-4">Core Solutions</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Asset‑Backed</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Asset‑Backed Finance</h3>
-                            <p class="text-brand-slate text-xs mt-1">LTV set by lender</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Asset‑Backed</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Asset‑Backed Finance</h3>
+                            <p class="text-[#495057] text-xs mt-1">LTV set by lender</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Purchase Order Funding" data-doc-group="po-funding">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">PO Funding</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Purchase Order Funding</h3>
-                            <p class="text-brand-slate text-xs mt-1">Gov & Private</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">PO Funding</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Purchase Order Funding</h3>
+                            <p class="text-[#495057] text-xs mt-1">Gov & Private</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Government Invoice Discounting" data-doc-group="gov-invoice">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Invoice</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Government Invoice Discounting</h3>
-                            <p class="text-brand-slate text-xs mt-1">Against verified gov invoices</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Invoice</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Government Invoice Discounting</h3>
+                            <p class="text-[#495057] text-xs mt-1">Against verified gov invoices</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Private Invoice Discounting" data-doc-group="private-invoice">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Invoice</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Private Invoice Discounting</h3>
-                            <p class="text-brand-slate text-xs mt-1">Corporate invoices</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Invoice</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Private Invoice Discounting</h3>
+                            <p class="text-[#495057] text-xs mt-1">Corporate invoices</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Property Bridging Finance" data-doc-group="bridging">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Bridging</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Property Bridging Finance</h3>
-                            <p class="text-brand-slate text-xs mt-1">Terms set by lender</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Bridging</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Property Bridging Finance</h3>
+                            <p class="text-[#495057] text-xs mt-1">Terms set by lender</p>
                         </button>
                     </div>
 
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-electric mb-3 mt-8">Energy & Solar</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="IPP Funding" data-doc-group="ipp">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">IPP</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">IPP Funding</h3>
-                            <p class="text-brand-slate text-xs mt-1">Debt, equity & blended</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">IPP</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">IPP Funding</h3>
+                            <p class="text-[#495057] text-xs mt-1">Debt, equity & blended</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Sectional Title Solar" data-doc-group="sectional-solar">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Residential</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Sectional Title Solar</h3>
-                            <p class="text-brand-slate text-xs mt-1">Estates & HOAs</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Residential</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Sectional Title Solar</h3>
+                            <p class="text-[#495057] text-xs mt-1">Estates & HOAs</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Commercial & Industrial Solar" data-doc-group="ci-solar">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">C&I Solar</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-white mt-1">Commercial & Industrial Solar</h3>
-                            <p class="text-brand-slate text-xs mt-1">Factories, offices, warehouses</p>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">C&I Solar</span>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Commercial & Industrial Solar</h3>
+                            <p class="text-[#495057] text-xs mt-1">Factories, offices, warehouses</p>
                         </button>
                     </div>
 
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-electric mb-3 mt-8">More Specialist Facilities</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-3 sm:p-4 text-left funding-option" data-value="Start‑up Funding" data-doc-group="startup">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Early‑Stage</span>
-                            <h4 class="text-sm font-display font-bold text-white mt-1">Start‑up Funding</h4>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Early‑Stage</span>
+                            <h4 class="text-sm font-display font-bold text-[#111111] mt-1">Start‑up Funding</h4>
                         </button>
                         <button type="button" class="card-institutional p-3 sm:p-4 text-left funding-option" data-value="Term Loan" data-doc-group="termloan">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Growth</span>
-                            <h4 class="text-sm font-display font-bold text-white mt-1">Term Loan</h4>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Growth</span>
+                            <h4 class="text-sm font-display font-bold text-[#111111] mt-1">Term Loan</h4>
                         </button>
                         <button type="button" class="card-institutional p-3 sm:p-4 text-left funding-option" data-value="Revolving Credit Facility" data-doc-group="revolving">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Flexible</span>
-                            <h4 class="text-sm font-display font-bold text-white mt-1">Revolving Credit</h4>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Flexible</span>
+                            <h4 class="text-sm font-display font-bold text-[#111111] mt-1">Revolving Credit</h4>
                         </button>
                         <button type="button" class="card-institutional p-3 sm:p-4 text-left funding-option" data-value="Trade Finance" data-doc-group="tradefinance">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Supply Chain</span>
-                            <h4 class="text-sm font-display font-bold text-white mt-1">Trade Finance</h4>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Supply Chain</span>
+                            <h4 class="text-sm font-display font-bold text-[#111111] mt-1">Trade Finance</h4>
                         </button>
                         <button type="button" class="card-institutional p-3 sm:p-4 text-left funding-option" data-value="Merchant Cash Advance" data-doc-group="merchantcash">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Card Sales</span>
-                            <h4 class="text-sm font-display font-bold text-white mt-1">Merchant Cash Advance</h4>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Card Sales</span>
+                            <h4 class="text-sm font-display font-bold text-[#111111] mt-1">Merchant Cash Advance</h4>
                         </button>
                         <!-- Removed: Property Sale Bridging, Asset Finance -->
                         <button type="button" class="card-institutional p-3 sm:p-4 text-left funding-option" data-value="General / Multiple" data-doc-group="general">
-                            <span class="text-xs font-bold tracking-widest text-brand-electric uppercase">Flexible</span>
-                            <h4 class="text-sm font-display font-bold text-white mt-1">General Funding</h4>
+                            <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Flexible</span>
+                            <h4 class="text-sm font-display font-bold text-[#111111] mt-1">General Funding</h4>
                         </button>
                     </div>
                     <input type="hidden" id="selectedFundingType" name="fundingType" value="">
@@ -411,14 +423,14 @@
                 <form id="dynamicFormSubmit" enctype="multipart/form-data" novalidate>
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <div>
-                            <h2 class="text-xl sm:text-2xl font-display font-bold text-white" id="dynamicFormTitle">Funding Application</h2>
-                            <p class="text-brand-slate text-sm" id="dynamicFormSubtitle">Complete the form below. No personal FICA documents required.</p>
+                            <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]" id="dynamicFormTitle">Funding Application</h2>
+                            <p class="text-[#495057] text-sm" id="dynamicFormSubtitle">Complete the form below. No personal FICA documents required.</p>
                         </div>
                         <button type="button" class="btn-outline px-4 py-2 text-xs flex-shrink-0" id="backToSelection">← Change</button>
                     </div>
 
                     <!-- Document Requirements -->
-                    <div class="p-4 card-institutional mb-6" style="border-left: 3px solid #0ea5e9; background: #0a0f1e;">
+                    <div class="p-4 card-institutional mb-6" style="border-left: 3px solid #1e3a8a; background: #f8f9fa;">
                         <p class="text-xs font-semibold text-brand-electric uppercase mb-2">Required Documents for <span id="dynamicDocLabel">your selection</span></p>
                         <ul class="doc-reminder-list" id="dynamicDocList"></ul>
                         <p class="text-xs text-brand-slate mt-2">No personal FICA documents (ID, proof of address) are required.</p>
@@ -426,31 +438,31 @@
 
                     <!-- Personal Details -->
                     <div class="grid sm:grid-cols-2 gap-5 mb-5">
-                        <div class="sm:col-span-2"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Full Name *</label><input type="text" id="dynFullName" name="fullName" required class="form-input" placeholder="Your full name"></div>
-                        <div class="sm:col-span-2"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Company / Trust Name</label><input type="text" id="dynCompany" name="companyName" class="form-input" placeholder="Your company or trust"></div>
+                        <div class="sm:col-span-2"><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Full Name *</label><input type="text" id="dynFullName" name="fullName" required class="form-input" placeholder="Your full name"></div>
+                        <div class="sm:col-span-2"><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Company / Trust Name</label><input type="text" id="dynCompany" name="companyName" class="form-input" placeholder="Your company or trust"></div>
                         <div class="sm:col-span-2 flex items-start gap-3 mt-2">
                             <input type="checkbox" id="dynAuthorized" required class="mt-1 w-5 h-5 accent-brand-electric flex-shrink-0">
-                            <label for="dynAuthorized" class="text-sm text-white">I confirm that I am an authorized representative of the applicant entity/trust/individual and have full authority to submit these documents and information on its behalf. *</label>
+                            <label for="dynAuthorized" class="text-sm text-[#111111]">I confirm that I am an authorized representative of the applicant entity/trust/individual and have full authority to submit these documents and information on its behalf. *</label>
                         </div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Email Address *</label><input type="email" id="dynEmail" name="email" required class="form-input" placeholder="you@company.com"></div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Phone (WhatsApp preferred) *</label><input type="tel" id="dynPhone" name="phone" required class="form-input" placeholder="+27 76 647 3499"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Email Address *</label><input type="email" id="dynEmail" name="email" required class="form-input" placeholder="you@company.com"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Phone (WhatsApp preferred) *</label><input type="tel" id="dynPhone" name="phone" required class="form-input" placeholder="+27 76 647 3499"></div>
                     </div>
 
                     <!-- Project Details -->
                     <div class="space-y-5 mb-5">
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Funding Amount Needed (ZAR) *</label><input type="text" id="dynAmount" name="fundingAmount" required class="form-input" placeholder="e.g. R2,500,000.00"></div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Timeline / Urgency</label><select id="dynTimeline" name="timeline" class="form-input"><option value="">Select timeline...</option><option>Immediate – Within 1 week</option><option>Within 2–4 weeks</option><option>Within 1–3 months</option><option>Flexible – Planning stage</option></select></div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Brief Project Description *</label><textarea id="dynDescription" name="projectDescription" rows="4" required class="form-input" placeholder="Describe your project, stage, and funding needs..."></textarea></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Funding Amount Needed (ZAR) *</label><input type="text" id="dynAmount" name="fundingAmount" required class="form-input" placeholder="e.g. R2,500,000.00"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Timeline / Urgency</label><select id="dynTimeline" name="timeline" class="form-input" style="background: #ffffff; color: #111111;"><option value="">Select timeline...</option><option>Immediate – Within 1 week</option><option>Within 2–4 weeks</option><option>Within 1–3 months</option><option>Flexible – Planning stage</option></select></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Brief Project Description *</label><textarea id="dynDescription" name="projectDescription" rows="4" required class="form-input" placeholder="Describe your project, stage, and funding needs..."></textarea></div>
                     </div>
 
                     <!-- Upload -->
                     <div class="mb-5">
-                        <label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Upload Documents</label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Upload Documents</label>
                         <p class="text-brand-slate text-xs mb-2">Attach the documents listed above. Max 10MB per file, total 25MB. <strong class="text-brand-electric">At least one document is required.</strong></p>
                         <div class="upload-zone" id="dynUploadZone">
                             <div class="text-4xl mb-3">📁</div>
                             <p class="text-white font-semibold text-sm">Drag & drop files here, or click to browse</p>
-                            <p class="text-brand-slate text-xs mt-1">PDF, Word, Excel, images · 10MB max each · No FICA docs</p>
+                            <p class="text-[#495057] text-xs mt-1">PDF, Word, Excel, images · 10MB max each · No FICA docs</p>
                             <input type="file" id="dynFileInput" name="documents" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" class="hidden">
                         </div>
                         <div class="mt-3 flex flex-wrap gap-2" id="dynFileList"></div>
@@ -459,23 +471,23 @@
 
                     <!-- Consent -->
                     <div class="mb-6">
-                        <h3 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-2">🔒 Legal Consent & Indemnification</h3>
+                        <h3 class="font-display font-bold text-[#111111] text-sm uppercase tracking-wider mb-2">🔒 Legal Consent & Indemnification</h3>
                         <div class="consent-box mb-3 text-xs">
                             <p><strong>Consent to Process and Forward Information:</strong> I hereby give my express, informed, and voluntary consent for Mariba Media (Pty) Ltd (Reg: 2024/132788/07) to collect, process, store, and forward all information, documents, and attachments submitted in this application to its network of regulated lenders and/or authorised financial services providers (the “Lenders”). I understand that Mariba Media acts solely as an introducing broker and does not perform any curation, filtering, feasibility review, recommendation, or credit analysis. The Lenders are solely responsible for all credit decisions, due diligence, and FICA compliance.</p>
                             <p class="mt-2"><strong>Authority to Submit:</strong> I confirm that I am the duly authorized representative of the applicant, with full legal capacity and authority to provide these documents and information and to bind the applicant to these terms. I confirm that all information provided is true, accurate, and complete, and that I have not included any personal FICA documents (identity documents, proof of address, etc.) unless expressly requested by a Lender after direct contact.</p>
                             <p class="mt-2"><strong>No Liability & Indemnity:</strong> To the fullest extent permitted by law, Mariba Media (Pty) Ltd, its directors, employees, agents, and affiliates shall not be liable for any direct, indirect, consequential, special, or punitive damages, losses, claims, or expenses (including legal fees) arising out of or in connection with (i) the forwarding of this submission, (ii) any act or omission of any Lender, (iii) any reliance on the information by any party, (iv) any failure to obtain funding, or (v) any inaccuracy, omission, or false information contained in this submission. I hereby irrevocably indemnify and hold harmless Mariba Media (Pty) Ltd from and against any and all claims, demands, actions, proceedings, damages, losses, costs, and expenses (including attorneys’ fees) whatsoever brought by any person or entity arising directly or indirectly from my submission, the provision of false or misleading information, or any breach of this consent.</p>
-                            <p class="mt-2"><strong>POPIA & Privacy:</strong> I acknowledge that Mariba Media is registered with the Information Regulator in terms of the Protection of Personal Information Act. My personal information will be processed solely for the purpose of forwarding this submission and will be shared only with Lenders. I have the right to lodge a complaint with the Information Regulator at <a href="https://www.justice.gov.za/inforeg/" class="text-brand-electric underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>.</p>
+                            <p class="mt-2"><strong>POPIA & Privacy:</strong> I acknowledge that Mariba Media is registered with the Information Regulator in terms of the Protection of Personal Information Act. My personal information will be processed solely for the purpose of forwarding this submission and will be shared only with Lenders. I have the right to lodge a complaint with the Information Regulator at <a href="https://www.justice.gov.za/inforeg/" class="text-[#1e3a8a] underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>.</p>
                             <p class="mt-2"><strong>No Guarantee:</strong> I understand that Mariba Media does not guarantee any funding outcome, and all terms, rates, and criteria are set by the Lender that contacts me directly.</p>
                         </div>
-                        <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-brand-navy/60 transition-colors">
+                        <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-[#f1f3f5] transition-colors">
                             <input type="checkbox" id="dynConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
-                            <span class="text-sm text-white">I have read, understood, and unconditionally agree to all the above terms, including the indemnity, consent to forward information, and limitation of liability. *</span>
+                            <span class="text-sm text-[#111111]">I have read, understood, and unconditionally agree to all the above terms, including the indemnity, consent to forward information, and limitation of liability. *</span>
                         </label>
                     </div>
 
-                    <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-brand-navy/60 transition-colors mb-6">
+                    <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-[#f1f3f5] transition-colors mb-6">
                         <input type="checkbox" id="dynSendCopy" checked class="mt-0.5 w-5 h-5 accent-brand-electric">
-                        <span class="text-sm text-white">Send me a copy of this submission.</span>
+                        <span class="text-sm text-[#111111]">Send me a copy of this submission.</span>
                     </label>
 
                     <div class="flex flex-col sm:flex-row items-center gap-4">
@@ -489,34 +501,34 @@
                 <form id="poLeadForm" enctype="multipart/form-data" novalidate>
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <div>
-                            <h2 class="text-xl sm:text-2xl font-display font-bold text-white mb-1">Purchase Order Funding (Government & Private)</h2>
+                            <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-1">Purchase Order Funding (Government & Private)</h2>
                             <p class="text-brand-slate text-sm">Submit a lead for purchase order finance from either government or private buyers. No personal or FICA documents needed.</p>
                         </div>
                         <button type="button" class="btn-outline px-4 py-2 text-xs flex-shrink-0" id="poBackToSelection">← Change</button>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Sector *</label>
-                        <select id="poSector" name="poSector" class="form-input" required>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Sector *</label>
+                        <select id="poSector" name="poSector" class="form-input" required style="background: #ffffff; color: #111111;">
                             <option value="">Select Government or Private</option>
                             <option value="Government">Government</option>
                             <option value="Private">Private</option>
                         </select>
                     </div>
                     <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-4">
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Client's first name *</label><input type="text" id="poFirstName" name="poFirstName" required class="form-input" placeholder="Client's first name"></div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Client's last name <span class="text-brand-slate font-normal">(optional)</span></label><input type="text" id="poLastName" name="poLastName" class="form-input" placeholder="Client's last name"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Client's first name *</label><input type="text" id="poFirstName" name="poFirstName" required class="form-input" placeholder="Client's first name"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Client's last name <span class="text-brand-slate font-normal">(optional)</span></label><input type="text" id="poLastName" name="poLastName" class="form-input" placeholder="Client's last name"></div>
                     </div>
                     <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-4">
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Client's phone number *</label><input type="tel" id="poPhone" name="poPhone" required class="form-input" placeholder="Phone number"></div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Client's email *</label><input type="email" id="poEmail" name="poEmail" required class="form-input" placeholder="Email address"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Client's phone number *</label><input type="tel" id="poPhone" name="poPhone" required class="form-input" placeholder="Phone number"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Client's email *</label><input type="email" id="poEmail" name="poEmail" required class="form-input" placeholder="Email address"></div>
                     </div>
-                    <div class="mb-4"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Company name <span class="text-brand-slate font-normal">(optional)</span></label><input type="text" id="poCompany" name="poCompany" class="form-input" placeholder="Client's company name"></div>
+                    <div class="mb-4"><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Company name <span class="text-brand-slate font-normal">(optional)</span></label><input type="text" id="poCompany" name="poCompany" class="form-input" placeholder="Client's company name"></div>
                     <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-4">
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">How much do they need? *</label><input type="text" id="poAmount" name="poAmount" required class="form-input" placeholder="e.g. R500,000"></div>
-                        <div><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">What do they need it for? *</label><input type="text" id="poPurpose" name="poPurpose" required class="form-input" placeholder="e.g. Fulfilling purchase order"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">How much do they need? *</label><input type="text" id="poAmount" name="poAmount" required class="form-input" placeholder="e.g. R500,000"></div>
+                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">What do they need it for? *</label><input type="text" id="poPurpose" name="poPurpose" required class="form-input" placeholder="e.g. Fulfilling purchase order"></div>
                     </div>
 
-                    <div class="mb-5 p-4 card-institutional" style="border-left: 3px solid #0ea5e9; background: #0a0f1e;">
+                    <div class="mb-5 p-4 card-institutional" style="border-left: 3px solid #1e3a8a; background: #f8f9fa;">
                         <p class="text-xs font-semibold text-brand-electric uppercase mb-2">Required Documents</p>
                         <ul class="text-xs text-brand-slate space-y-1 mb-3">
                             <li>📄 Purchase Order (from the selected sector)</li>
@@ -526,20 +538,20 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Upload Documents</label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Upload Documents</label>
                         <div class="upload-zone" id="poUploadZone">
                             <div class="text-3xl mb-2">📁</div>
                             <p class="text-white font-semibold text-sm">Drag & drop files here, or click to browse</p>
-                            <p class="text-brand-slate text-xs mt-1">PDF, Word, Excel, images, ZIP · 10MB each</p>
+                            <p class="text-[#495057] text-xs mt-1">PDF, Word, Excel, images, ZIP · 10MB each</p>
                             <input type="file" id="poFileInput" name="poDocuments" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.zip" class="hidden">
                         </div>
                         <div class="mt-3 flex flex-wrap gap-2" id="poFileList"></div>
                         <p class="text-brand-slate text-xs mt-1" id="poFileCountLabel">No files selected</p>
                     </div>
 
-                    <div class="mb-5"><label class="block text-xs font-semibold text-white mb-1.5 uppercase tracking-wider">Message <span class="text-brand-slate font-normal">(optional)</span></label><textarea id="poMessage" name="poMessage" rows="3" class="form-input" placeholder="Any additional context..."></textarea></div>
+                    <div class="mb-5"><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Message <span class="text-brand-slate font-normal">(optional)</span></label><textarea id="poMessage" name="poMessage" rows="3" class="form-input" placeholder="Any additional context..."></textarea></div>
 
-                    <div class="mb-6 p-4 rounded-lg" style="background: #0a0f1e; border: 1px solid rgba(14,165,233,0.15);">
+                    <div class="mb-6 p-4 rounded-lg" style="background: #f8f9fa; border: 1px solid rgba(30,58,138,0.08);">
                         <label class="flex items-start gap-3 cursor-pointer">
                             <input type="checkbox" id="poConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
                             <span class="text-sm text-white">
@@ -550,7 +562,7 @@
 
                     <div class="flex flex-col sm:flex-row items-center gap-4">
                         <button type="submit" class="btn-accent px-8 py-3 text-sm w-full sm:w-auto" id="poSubmitBtn" disabled>Submit Lead</button>
-                        <label class="flex items-center gap-2 text-sm text-brand-slate cursor-pointer">
+                        <label class="flex items-center gap-2 text-sm text-[#495057] cursor-pointer">
                             <input type="checkbox" id="poSendCopy" checked class="w-4 h-4 accent-brand-electric"> Send me a copy
                         </label>
                     </div>
@@ -560,43 +572,43 @@
             <!-- Success / Error -->
             <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="successScreen">
                 <div class="text-5xl mb-4">✅</div>
-                <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mb-3">Submission Received!</h2>
+                <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Submission Received!</h2>
                 <p class="text-brand-slate mb-2">Your submission has been forwarded to our network.</p>
-                <p class="text-brand-slate text-sm mb-6">For follow‑up: <strong>victor@maribamedia.co.za</strong></p>
+                <p class="text-[#495057] text-sm mb-6">For follow‑up: <strong>victor@maribamedia.co.za</strong></p>
                 <button class="btn-outline px-6 py-3 text-sm" onclick="location.reload()">Submit Another Project</button>
             </div>
             <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="errorScreen">
                 <div class="text-5xl mb-4">⚠️</div>
-                <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mb-3">Submission Issue</h2>
+                <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Submission Issue</h2>
                 <p class="text-brand-slate mb-4" id="errorMessage">We couldn't send your submission. Please try again or email us directly.</p>
                 <a href="mailto:victor@maribamedia.co.za" class="btn-accent px-6 py-3 text-sm">Email victor@maribamedia.co.za</a>
             </div>
         </div>
     </main>
 
-    <footer class="bg-brand-navy/70 border-t border-brand-border/20 py-16">
+    <footer class="border-t border-[#dee2e6] py-16" style="background: #f8f9fa;">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 pb-8 mb-8 border-b border-brand-border/30">
-                <a href="https://docs.google.com/document/d/e/2PACX-1vSKThzvKajjN-efGt5NTGDiQouH8I0nHkGlIncQ1JQg9nEYhFVn_vxGD4iwAUbOVoZo4vsv5eD1Y4tp/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-brand-slate hover:text-brand-electric transition-colors">Privacy Policy</a>
-                <span class="text-brand-slate/30 text-xs">•</span>
-                <a href="https://docs.google.com/document/d/e/2PACX-1vS7PuOW7aEjVgPTcC6kowJds7K29rO9MRtCS_BSDP-mxT4gyObQLJ5reFxNMpw3wTOQ5DCpRwdeTxOH/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-brand-slate hover:text-brand-electric transition-colors">Complaints Framework</a>
-                <span class="text-brand-slate/30 text-xs">•</span>
-                <a href="https://docs.google.com/document/d/e/2PACX-1vR2XEfLanhT5Lpww8Q1rWFqgzk-u-gPbLCt_ASbB1Ku5mz4Ku2z6VS7oPQlJ7C1HFYNxqtR8MjdMSPZ/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-brand-slate hover:text-brand-electric transition-colors">Website Terms</a>
-                <span class="text-brand-slate/30 text-xs">•</span>
-                <a href="https://docs.google.com/document/d/e/2PACX-1vQai_SnFB7es1Rklf5ydQHZn7d61ui9c3vIe1ASG_oIdHFIwXvTg0EwKhCpbOc4iOdjTp7cbJguXBm9/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-brand-slate hover:text-brand-electric transition-colors">PAIA Manual</a>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 pb-8 mb-8 border-b border-[#dee2e6]">
+                <a href="https://docs.google.com/document/d/e/2PACX-1vSKThzvKajjN-efGt5NTGDiQouH8I0nHkGlIncQ1JQg9nEYhFVn_vxGD4iwAUbOVoZo4vsv5eD1Y4tp/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-[#495057] hover:text-[#1e3a8a] transition-colors">Privacy Policy</a>
+                <span class="text-[#adb5bd] text-xs">•</span>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vS7PuOW7aEjVgPTcC6kowJds7K29rO9MRtCS_BSDP-mxT4gyObQLJ5reFxNMpw3wTOQ5DCpRwdeTxOH/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-[#495057] hover:text-[#1e3a8a] transition-colors">Complaints Framework</a>
+                <span class="text-[#adb5bd] text-xs">•</span>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vR2XEfLanhT5Lpww8Q1rWFqgzk-u-gPbLCt_ASbB1Ku5mz4Ku2z6VS7oPQlJ7C1HFYNxqtR8MjdMSPZ/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-[#495057] hover:text-[#1e3a8a] transition-colors">Website Terms</a>
+                <span class="text-[#adb5bd] text-xs">•</span>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vQai_SnFB7es1Rklf5ydQHZn7d61ui9c3vIe1ASG_oIdHFIwXvTg0EwKhCpbOc4iOdjTp7cbJguXBm9/pub" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold uppercase tracking-wider text-[#495057] hover:text-[#1e3a8a] transition-colors">PAIA Manual</a>
             </div>
-            <div class="text-[10px] text-brand-slate leading-relaxed space-y-3 max-w-4xl mx-auto">
-                <p class="font-bold text-brand-electric uppercase tracking-wider flex items-center gap-2">
+            <div class="text-[10px] text-[#495057] leading-relaxed space-y-3 max-w-4xl mx-auto">
+                <p class="font-bold text-[#1e3a8a] uppercase tracking-wider flex items-center gap-2">
                     <svg width="12" height="12" viewBox="0 0 100 100" fill="none" class="opacity-50">
-                        <path d="M28 74 L50 26 L72 74" stroke="#38bdf8" stroke-width="8" fill="none" stroke-linejoin="round"/>
+                        <path d="M28 74 L50 26 L72 74" stroke="#1e3a8a" stroke-width="8" fill="none" stroke-linejoin="round"/>
                     </svg>
                     Disclaimer & Compliance
                 </p>
                 <p><strong>Mariba Media (Pty) Ltd</strong> (Reg: 2024/132788/07) is an introducing broker with referral arrangements to a network of regulated finance specialists and private lenders. Mariba Media does not hold, process, or transact any funds. It does not provide financial advice, intermediary services, or any other regulated financial service as defined in the Financial Advisory and Intermediary Services Act (FAIS Act, 37 of 2002).</p>
                 <p>Mariba Media's only function is to accept client project information and forward that information unchanged to the network of lenders. <strong>No curation, matching, feasibility review, recommendation, or filtering of any kind is performed by Mariba Media.</strong> All funders are duly licensed credit providers and/or authorised financial services providers. All lending is provided by registered credit providers where required by the National Credit Act (34 of 2005). Mariba Media does not participate in any credit decision.</p>
                 <p>Funding terms, credit decisions, due diligence, and FICA compliance are the exclusive responsibility of the lender. <strong>No funding outcome is guaranteed.</strong></p>
-                <p>We are registered with the <strong>Information Regulator</strong> in terms of POPIA. Personal information is processed solely for the purpose of forwarding submissions to the lender network. Any data subject may lodge a complaint with the Information Regulator via <a href="https://www.justice.gov.za/inforeg/" class="text-brand-electric hover:underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>. All FICA client due diligence obligations are met by the relevant lender, not by Mariba Media.</p>
-                <p class="text-brand-slate/60"><em>Last updated: 2026. All rights reserved.</em></p>
+                <p>We are registered with the <strong>Information Regulator</strong> in terms of POPIA. Personal information is processed solely for the purpose of forwarding submissions to the lender network. Any data subject may lodge a complaint with the Information Regulator via <a href="https://www.justice.gov.za/inforeg/" class="text-[#1e3a8a] hover:underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>. All FICA client due diligence obligations are met by the relevant lender, not by Mariba Media.</p>
+                <p class="text-[#adb5bd]"><em>Last updated: 2026. All rights reserved.</em></p>
             </div>
         </div>
     </footer>
