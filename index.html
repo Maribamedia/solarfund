@@ -436,7 +436,11 @@
 
                     <!-- Project Details -->
                     <div class="space-y-5 mb-5">
-                        <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Funding Amount Needed (ZAR) *</label><input type="text" id="dynAmount" name="fundingAmount" required class="form-input" placeholder="e.g. R2,500,000.00"></div>
+                        <!-- Funding Amount Container (hidden for Sectional Title Solar and C&I Solar) -->
+                        <div id="dynAmountContainer">
+                            <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Funding Amount Needed (ZAR) *</label>
+                            <input type="text" id="dynAmount" name="fundingAmount" required class="form-input" placeholder="e.g. R2,500,000.00">
+                        </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Timeline / Urgency</label>
                             <select id="dynTimeline" name="timeline" class="form-input" style="background: #ffffff; color: #111111;">
@@ -661,7 +665,7 @@
                 },
                 'ci-solar': {
                     label: 'Commercial & Industrial Solar',
-                    docs: ['Electricity Bills / Load Profile', 'Property Lease or Ownership Proof', 'Installation Quote / Proposal', 'Company Registration Documents']
+                    docs: ['Electricity Bills / Load Profile', 'Property Lease or Ownership Proof', 'Quotes from Installer (if any)', 'Company Registration Documents']
                 },
                 'termloan': {
                     label: 'Term Loan',
@@ -688,6 +692,7 @@
             const dynFileInput = document.getElementById('dynFileInput');
             const dynFileList = document.getElementById('dynFileList');
             const dynFileCountLabel = document.getElementById('dynFileCountLabel');
+            const dynAmountContainer = document.getElementById('dynAmountContainer');
 
             const poForm = document.getElementById('poLeadForm');
             const poSubmitBtn = document.getElementById('poSubmitBtn');
@@ -789,6 +794,15 @@
                     durationContainer.classList.remove('hidden');
                 } else {
                     durationContainer.classList.add('hidden');
+                }
+
+                // Show/hide funding amount for Sectional Title Solar and C&I Solar
+                const hideAmount = (docGroup === 'sectional-solar' || docGroup === 'ci-solar');
+                if (hideAmount) {
+                    dynAmountContainer.classList.add('hidden');
+                    document.getElementById('dynAmount').value = ''; // clear it
+                } else {
+                    dynAmountContainer.classList.remove('hidden');
                 }
 
                 // Reset fields
@@ -923,7 +937,11 @@
                 const phone = document.getElementById('dynPhone').value.trim();
                 const amount = document.getElementById('dynAmount').value.trim();
                 const desc = document.getElementById('dynDescription').value.trim();
-                if (!name || !email || !phone || !amount || !desc) { alert('Please fill all required fields.'); return; }
+
+                // Amount is not required for sectional-solar and ci-solar
+                const amountRequired = !(selectedDocGroup === 'sectional-solar' || selectedDocGroup === 'ci-solar');
+                if (!name || !email || !phone || !desc) { alert('Please fill all required fields.'); return; }
+                if (amountRequired && !amount) { alert('Please enter the funding amount needed.'); return; }
                 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Invalid email.'); return; }
 
                 dynSubmitBtn.disabled = true;
@@ -942,7 +960,11 @@
                     fd.append('companyName', document.getElementById('dynCompany').value.trim());
                     fd.append('email', email);
                     fd.append('phone', phone);
-                    fd.append('fundingAmount', amount);
+                    if (amountRequired && amount) {
+                        fd.append('fundingAmount', amount);
+                    } else {
+                        fd.append('fundingAmount', '');  // still send but empty
+                    }
                     fd.append('timeline', document.getElementById('dynTimeline').value);
                     if (selectedDocGroup === 'termloan') {
                         fd.append('loanDuration', document.getElementById('dynLoanDuration').value);
