@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Mariba Media · Partner Network for Business Funding</title>
-    <meta name="description" content="One simple submission to our trusted network of finance specialists and private lenders. No paperwork, no FICA documents, zero cost.">
-    <meta property="og:title" content="Mariba Media · Business Funding Partner Network">
-    <meta property="og:description" content="Connect with specialist lenders who understand your business. No fees, no personal documents, just a simple path to funding.">
+    <title>Mariba Media · Connector Partner for Business Funding</title>
+    <meta name="description" content="One simple submission to the funder with the exclusive mandate. No paperwork, no FICA documents, zero cost to you.">
+    <meta property="og:title" content="Mariba Media · Direct Access to Growth Capital">
+    <meta property="og:description" content="Connect directly with the capital partner who holds the mandate for your sector. No fees, no personal documents, just a straight path to funding.">
     <meta property="og:url" content="https://maribafunding.co.za">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2.5' result='c'/%3E%3CfeMerge%3E%3CfeMergeNode in='c'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%231e3a8a' stroke-width='10' fill='none' stroke-linejoin='round' filter='url(%23g)'/%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%233b82f6' stroke-width='4' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -38,8 +37,7 @@
                     },
                     keyframes: {
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1',
-                                transform: 'translateY(0)' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
                     }
                 }
             }
@@ -57,15 +55,8 @@
             --hairline: #dee2e6;
             --outline: #adb5bd;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
@@ -152,13 +143,8 @@
             border-color: var(--primary);
             box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.15);
         }
-        .form-input::placeholder {
-            color: var(--outline);
-        }
-        textarea.form-input {
-            resize: vertical;
-            min-height: 100px;
-        }
+        .form-input::placeholder { color: var(--outline); }
+        textarea.form-input { resize: vertical; min-height: 100px; }
         .upload-zone {
             border: 2px dashed rgba(30, 58, 138, 0.2);
             border-radius: 12px;
@@ -168,8 +154,7 @@
             cursor: pointer;
             background: var(--surface-1);
         }
-        .upload-zone:hover,
-        .upload-zone.dragover {
+        .upload-zone:hover, .upload-zone.dragover {
             border-color: var(--primary);
             background: rgba(30, 58, 138, 0.04);
         }
@@ -196,9 +181,7 @@
             font-weight: bold;
             margin-left: 4px;
         }
-        .file-chip .remove-file:hover {
-            color: #ff6b6b;
-        }
+        .file-chip .remove-file:hover { color: #ff6b6b; }
         .consent-box {
             background: var(--surface-1);
             border: 1px solid rgba(30, 58, 138, 0.08);
@@ -210,26 +193,16 @@
             max-height: 200px;
             overflow-y: auto;
         }
-        .consent-box strong {
-            color: #111111;
-        }
+        .consent-box strong { color: #111111; }
         .funding-option.selected {
             border-color: var(--primary) !important;
             background: rgba(30, 58, 138, 0.06) !important;
             box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
         }
-        .fade-step {
-            animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+        .fade-step { animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(24px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(24px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
         .doc-checklist-item {
             display: flex;
@@ -245,8 +218,7 @@
             background: rgba(46, 204, 113, 0.05);
         }
         .custom-checkbox {
-            width: 20px;
-            height: 20px;
+            width: 20px; height: 20px;
             border: 2px solid var(--outline);
             border-radius: 4px;
             flex-shrink: 0;
@@ -256,41 +228,27 @@
             justify-content: center;
             margin-top: 1px;
         }
-        .custom-checkbox.checked {
-            background: #2ecc71;
-            border-color: #2ecc71;
-        }
+        .custom-checkbox.checked { background: #2ecc71; border-color: #2ecc71; }
         .custom-checkbox.checked::after {
             content: '✓';
             color: #ffffff;
             font-weight: 700;
             font-size: 13px;
         }
-        .doc-reminder-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .doc-reminder-list { list-style: none; padding: 0; margin: 0; }
         .doc-reminder-list li {
             padding: 4px 0;
             font-size: 0.8rem;
             color: var(--ink-muted);
         }
-        .doc-reminder-list li::before {
-            content: "📄 ";
-        }
+        .doc-reminder-list li::before { content: "📄 "; }
         .term-loan-card {
             border-left: 4px solid #1e3a8a;
             background: linear-gradient(105deg, #f8f9fa 0%, #ffffff 100%);
         }
         @media (max-width: 640px) {
-            .funding-option {
-                padding: 0.9rem 1rem !important;
-            }
-            .funding-option h3,
-            .funding-option h4 {
-                font-size: 0.95rem !important;
-            }
+            .funding-option { padding: 0.9rem 1rem !important; }
+            .funding-option h3, .funding-option h4 { font-size: 0.95rem !important; }
         }
     </style>
 </head>
@@ -312,11 +270,11 @@
                     </svg>
                     <div>
                         <span class="text-lg font-display font-extrabold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e3a8a]">MEDIA</span></span>
-                        <span class="block text-[10px] font-medium tracking-[0.25em] text-[#495057] uppercase">Partner Network</span>
+                        <span class="block text-[10px] font-medium tracking-[0.25em] text-[#495057] uppercase">Connector Partner</span>
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-6">
-                    <span class="text-xs font-medium text-[#495057] tracking-widest uppercase">Finance Specialists · Zero Cost</span>
+                    <span class="text-xs font-medium text-[#495057] tracking-widest uppercase">Direct Access · Exclusive Mandates · Zero Cost</span>
                     <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#495057] hover:text-[#1e3a8a] transition-colors">victor@maribamedia.co.za</a>
                 </div>
             </div>
@@ -329,24 +287,24 @@
             <div class="text-center mb-8 sm:mb-12 animate-fade-up">
                 <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,58,138,0.08)] bg-[#f8f9fa]/80 rounded-full mb-5">
                     <span class="w-2 h-2 rounded-full bg-[#1e3a8a] animate-pulse"></span>
-                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-[#495057] uppercase">Get Funded · POPIA Compliant</span>
+                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-[#495057] uppercase">Direct to Mandate Holder · POPIA Compliant</span>
                 </div>
-                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-[#111111] leading-tight">Your dedicated partner network for business funding.</h1>
-                <p class="text-[#495057] mt-3 max-w-xl mx-auto text-sm">Select your funding need below. No personal documents, no hidden fees — just a direct path to specialist finance.</p>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-[#111111] leading-tight">Your direct path to the funder with the right mandate.</h1>
+                <p class="text-[#495057] mt-3 max-w-xl mx-auto text-sm">Select your funding need below. We forward your submission directly to the capital partner with the exclusive mandate. No personal documents, no hidden fees.</p>
             </div>
 
             <!-- FUNDING SELECTION (Step 1) -->
             <div class="card-institutional p-6 sm:p-8 md:p-10" id="selectionContainer">
                 <div id="step1">
                     <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-2">What type of funding do you need?</h2>
-                    <p class="text-[#495057] text-sm mb-6">We connect you with vetted finance specialists and private lenders. Choose one option to get started.</p>
+                    <p class="text-[#495057] text-sm mb-6">We connect you directly to the funder who holds the exclusive mandate for your sector. Choose one option to get started.</p>
 
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-electric mb-3 mt-4">Invoice & Asset Finance</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
                             <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">Asset‑Backed</span>
                             <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Asset‑Backed Finance</h3>
-                            <p class="text-[#495057] text-xs mt-1">LTV set by lender</p>
+                            <p class="text-[#495057] text-xs mt-1">LTV set by mandate holder</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Purchase Order Funding" data-doc-group="po-funding">
                             <span class="text-xs font-bold tracking-widest text-[#1e3a8a] uppercase">PO Funding</span>
@@ -410,7 +368,7 @@
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <div>
                             <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]" id="dynamicFormTitle">Funding Application</h2>
-                            <p class="text-[#495057] text-sm" id="dynamicFormSubtitle">Complete the form below. No personal FICA documents required.</p>
+                            <p class="text-[#495057] text-sm" id="dynamicFormSubtitle">Complete the form below. Your submission goes directly to the mandate holder. No personal FICA documents required.</p>
                         </div>
                         <button type="button" class="btn-outline px-4 py-2 text-xs flex-shrink-0" id="backToSelection">← Change</button>
                     </div>
@@ -436,7 +394,6 @@
 
                     <!-- Project Details -->
                     <div class="space-y-5 mb-5">
-                        <!-- Funding Amount Container (hidden for Sectional Title Solar and C&I Solar) -->
                         <div id="dynAmountContainer">
                             <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Funding Amount Needed (ZAR) *</label>
                             <input type="text" id="dynAmount" name="fundingAmount" required class="form-input" placeholder="e.g. R2,500,000.00">
@@ -451,7 +408,6 @@
                                 <option>Flexible – Planning stage</option>
                             </select>
                         </div>
-                        <!-- Term Loan Duration (only shown for term loan) -->
                         <div id="dynLoanDurationContainer" class="hidden">
                             <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Loan Duration (months) *</label>
                             <select id="dynLoanDuration" name="loanDuration" class="form-input" style="background: #ffffff; color: #111111;">
@@ -486,11 +442,11 @@
                     <div class="mb-6">
                         <h3 class="font-display font-bold text-[#111111] text-sm uppercase tracking-wider mb-2">🔒 Legal Consent & Indemnification</h3>
                         <div class="consent-box mb-3 text-xs">
-                            <p><strong>Consent to Process and Forward Information:</strong> I give express consent for Mariba Media (Pty) Ltd to collect, process, and forward all submitted information to its network of finance specialists and private lenders. Mariba Media acts only as an introducing partner and does not provide financial advice or perform any credit assessment.</p>
+                            <p><strong>Consent to Process and Forward Information:</strong> I give express consent for Mariba Media (Pty) Ltd to collect, process, and forward all submitted information directly to the funder who holds the exclusive mandate for this project type. Mariba Media acts only as a connector partner and does not provide financial advice or perform any credit assessment.</p>
                             <p class="mt-2"><strong>Authority to Submit:</strong> I confirm that I am authorised to provide this information and bind the applicant to these terms. All information is true and complete, and I have not included any personal FICA documents.</p>
-                            <p class="mt-2"><strong>No Liability & Indemnity:</strong> Mariba Media shall not be liable for any direct, indirect, or consequential damages arising from the forwarding of this submission, any lender’s actions, or any failure to secure funding. I indemnify Mariba Media against any claims resulting from false information or breach of this consent.</p>
-                            <p class="mt-2"><strong>POPIA & Privacy:</strong> We are registered with the Information Regulator. Personal information is processed solely for the purpose of forwarding this submission. Any complaint may be lodged at <a href="https://www.justice.gov.za/inforeg/" class="text-[#1e3a8a] underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>.</p>
-                            <p class="mt-2"><strong>No Guarantee:</strong> No funding outcome is guaranteed. All terms and criteria are set by the lender that contacts you directly.</p>
+                            <p class="mt-2"><strong>No Liability & Indemnity:</strong> Mariba Media shall not be liable for any direct, indirect, or consequential damages arising from the forwarding of this submission, any mandate holder's actions, or any failure to secure funding. I indemnify Mariba Media against any claims resulting from false information or breach of this consent.</p>
+                            <p class="mt-2"><strong>POPIA & Privacy:</strong> We are registered with the Information Regulator. Personal information is processed solely for the purpose of forwarding this submission to the relevant mandate holder. Any complaint may be lodged at <a href="https://www.justice.gov.za/inforeg/" class="text-[#1e3a8a] underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>.</p>
+                            <p class="mt-2"><strong>No Guarantee:</strong> No funding outcome is guaranteed. All terms and criteria are set by the mandate holder that contacts you directly.</p>
                         </div>
                         <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-[#f1f3f5] transition-colors">
                             <input type="checkbox" id="dynConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
@@ -504,7 +460,7 @@
                     </label>
 
                     <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <button type="submit" class="btn-accent px-8 py-3 text-sm w-full sm:w-auto" id="dynSubmitBtn" disabled>Submit to Partner Network</button>
+                        <button type="submit" class="btn-accent px-8 py-3 text-sm w-full sm:w-auto" id="dynSubmitBtn" disabled>Submit to Mandate Holder</button>
                     </div>
                 </form>
             </div>
@@ -515,7 +471,7 @@
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <div>
                             <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-1">Purchase Order Funding (Government & Private)</h2>
-                            <p class="text-brand-slate text-sm">Submit a lead for purchase order finance. No personal or FICA documents needed.</p>
+                            <p class="text-brand-slate text-sm">Submit a lead for purchase order finance. Forwarded directly to the PO mandate holder. No personal or FICA documents needed.</p>
                         </div>
                         <button type="button" class="btn-outline px-4 py-2 text-xs flex-shrink-0" id="poBackToSelection">← Change</button>
                     </div>
@@ -573,16 +529,15 @@
                         <label class="flex items-start gap-3 cursor-pointer">
                             <input type="checkbox" id="poConsent" required class="mt-0.5 w-5 h-5 accent-brand-electric flex-shrink-0">
                             <span class="text-sm text-[#111111]">
-                                <strong>Authority, Consent & Indemnity:</strong> I confirm that I am an authorized representative of the lead, have obtained their explicit consent for Mariba Media to process and forward their information, and agree to the terms. I indemnify Mariba Media against any claims. No FICA documents are required.
+                                <strong>Authority, Consent & Indemnity:</strong> I confirm that I am an authorized representative of the lead, have obtained their explicit consent for Mariba Media to process and forward their information directly to the PO mandate holder, and agree to the terms. I indemnify Mariba Media against any claims. No FICA documents are required.
                             </span>
                         </label>
                     </div>
 
-                    <!-- Funding Fee Disclaimer -->
-                    <p class="text-xs text-[#111111] mb-6"><strong>Note:</strong> Lenders charge a funding fee of 15% over 30 days.</p>
+                    <p class="text-xs text-[#111111] mb-6"><strong>Note:</strong> The mandate holder charges a funding fee of 15% over 30 days.</p>
 
                     <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <button type="submit" class="btn-accent px-8 py-3 text-sm w-full sm:w-auto" id="poSubmitBtn" disabled>Submit Lead</button>
+                        <button type="submit" class="btn-accent px-8 py-3 text-sm w-full sm:w-auto" id="poSubmitBtn" disabled>Submit Lead to Mandate Holder</button>
                         <label class="flex items-center gap-2 text-sm text-[#495057] cursor-pointer">
                             <input type="checkbox" id="poSendCopy" checked class="w-4 h-4 accent-brand-electric"> Send me a copy
                         </label>
@@ -594,7 +549,7 @@
             <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="successScreen">
                 <div class="text-5xl mb-4">✅</div>
                 <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Submission Received!</h2>
-                <p class="text-brand-slate mb-2">Your request has been forwarded to our specialist network.</p>
+                <p class="text-brand-slate mb-2">Your request has been forwarded directly to the mandate holder.</p>
                 <p class="text-[#495057] text-sm mb-6">For follow‑up: <strong>victor@maribamedia.co.za</strong></p>
                 <button class="btn-outline px-6 py-3 text-sm" onclick="location.reload()">Submit Another Project</button>
             </div>
@@ -625,10 +580,11 @@
                     </svg>
                     Disclaimer & Compliance
                 </p>
-                <p><strong>Mariba Media (Pty) Ltd</strong> (Reg: 2024/132788/07) is an introducing broker with referral arrangements to a network of regulated finance specialists and private lenders. Mariba Media does not hold, process, or transact any funds. It does not provide financial advice, intermediary services, or any other regulated financial service as defined in the Financial Advisory and Intermediary Services Act (FAIS Act, 37 of 2002).</p>
-                <p>Mariba Media's only function is to accept client project information and forward that information unchanged to the network of lenders. <strong>No curation, matching, feasibility review, recommendation, or filtering of any kind is performed by Mariba Media.</strong> All funders are duly licensed credit providers and/or authorised financial services providers. All lending is provided by registered credit providers where required by the National Credit Act (34 of 2005). Mariba Media does not participate in any credit decision.</p>
-                <p>Funding terms, credit decisions, due diligence, and FICA compliance are the exclusive responsibility of the lender. <strong>No funding outcome is guaranteed.</strong></p>
-                <p>We are registered with the <strong>Information Regulator</strong> in terms of POPIA. Personal information is processed solely for the purpose of forwarding submissions to the lender network. Any data subject may lodge a complaint with the Information Regulator via <a href="https://www.justice.gov.za/inforeg/" class="text-[#1e3a8a] hover:underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>. All FICA client due diligence obligations are met by the relevant lender, not by Mariba Media.</p>
+                <p><strong>Mariba Media (Pty) Ltd</strong> (Reg: 2024/132788/07) is a connector partner with referral arrangements to a network of regulated finance specialists and private lenders. Mariba Media does not hold, process, or transact any funds. It does not provide financial advice, intermediary services, or any other regulated financial service as defined in the Financial Advisory and Intermediary Services Act (FAIS Act, 37 of 2002).</p>
+                <p>Mariba Media's only function is to accept client project information and forward that information unchanged to the funder in its network who holds the exclusive mandate for the relevant project type. <strong>No curation, matching, feasibility review, recommendation, or filtering of any kind is performed by Mariba Media.</strong> All funders are duly licensed credit providers and/or authorised financial services providers. All lending is provided by registered credit providers where required by the National Credit Act (34 of 2005). Mariba Media does not participate in any credit decision.</p>
+                <p>Funding terms, credit decisions, due diligence, and FICA compliance are the exclusive responsibility of the mandate holder. <strong>No funding outcome is guaranteed.</strong></p>
+                <p>Any engagement with Mariba Media is subject to the client's acknowledgment that Mariba Media acts purely as a communication conduit. Clients agree that Mariba Media, its directors, employees, and associates shall not be liable for any loss, claim, or damage arising from the use of the introduction service, the conduct of any mandate holder, or any funding transaction or lack thereof. Where mandatory consumer protections apply under the Consumer Protection Act (68 of 2008), this limitation will apply only to the extent permitted by law.</p>
+                <p>We are registered with the <strong>Information Regulator</strong> in terms of POPIA. Personal information is processed solely for the purpose of forwarding submissions to the relevant mandate holder and is handled in accordance with our POPIA policy. Data subjects may lodge a complaint with the Information Regulator via <a href="https://www.justice.gov.za/inforeg/" class="text-[#1e3a8a] hover:underline" target="_blank" rel="noopener">www.justice.gov.za/inforeg/</a>. All FICA client due diligence obligations are met by the relevant mandate holder, not by Mariba Media.</p>
                 <p class="text-[#adb5bd]"><em>Last updated: 2026. All rights reserved.</em></p>
             </div>
         </div>
@@ -637,10 +593,9 @@
     <script>
         (function() {
             const INSERT_SECRET = 'a8e6715d-1247-4526-a652-165fb5ef2505';
-
             const FORM_ENDPOINT = 'https://formsubmit.co/ajax/victor@maribamedia.co.za';
             const AUTORESPONSE_MESSAGE =
-                `Dear Applicant,\n\nThank you for submitting your funding request through Mariba Media.\n\nYour application has been received and will be forwarded to our network of specialist lenders. A partner will contact you within 2–4 business days.\n\nMariba Media acts solely as an introducing partner. All credit decisions and terms are the lender's responsibility.\n\nIf you have urgent questions, reply to this email.\n\nKind regards,\nMariba Media Team\nvictor@maribamedia.co.za`;
+                `Dear Applicant,\n\nThank you for submitting your funding request through Mariba Media.\n\nYour application has been received and will be forwarded directly to the mandate holder for your project type. The mandate holder will contact you within 2–4 business days.\n\nMariba Media acts solely as a connector partner. All credit decisions and terms are the mandate holder's responsibility.\n\nIf you have urgent questions, reply to this email.\n\nKind regards,\nMariba Media Team\nvictor@maribamedia.co.za`;
 
             const docRequirements = {
                 'asset-backed': {
@@ -711,7 +666,6 @@
             const MAX_TOTAL_SIZE = 25 * 1024 * 1024;
 
             function formatSize(b) { return b < 1024 ? b + ' B' : b < 1048576 ? (b / 1024).toFixed(1) + ' KB' : (b / 1048576).toFixed(2) + ' MB'; }
-
             function getDynTotal() { return dynUploadedFiles.reduce((s, f) => s + f.size, 0); }
             function getPoTotal() { return poUploadedFiles.reduce((s, f) => s + f.size, 0); }
 
@@ -784,11 +738,10 @@
                 errorScreen.classList.add('hidden');
 
                 document.getElementById('dynamicFormTitle').textContent = label;
-                document.getElementById('dynamicFormSubtitle').textContent = `Complete the form below for ${label}. No personal FICA documents required.`;
+                document.getElementById('dynamicFormSubtitle').textContent = `Complete the form below for ${label}. Your submission goes directly to the mandate holder. No personal FICA documents required.`;
                 document.getElementById('dynamicDocLabel').textContent = label;
                 document.getElementById('dynamicDocList').innerHTML = req.docs.map(d => `<li>${d}</li>`).join('');
 
-                // Show/hide term loan duration field
                 const durationContainer = document.getElementById('dynLoanDurationContainer');
                 if (docGroup === 'termloan') {
                     durationContainer.classList.remove('hidden');
@@ -796,16 +749,14 @@
                     durationContainer.classList.add('hidden');
                 }
 
-                // Show/hide funding amount for Sectional Title Solar and C&I Solar
                 const hideAmount = (docGroup === 'sectional-solar' || docGroup === 'ci-solar');
                 if (hideAmount) {
                     dynAmountContainer.classList.add('hidden');
-                    document.getElementById('dynAmount').value = ''; // clear it
+                    document.getElementById('dynAmount').value = '';
                 } else {
                     dynAmountContainer.classList.remove('hidden');
                 }
 
-                // Reset fields
                 document.getElementById('dynFullName').value = '';
                 document.getElementById('dynCompany').value = '';
                 document.getElementById('dynEmail').value = '';
@@ -926,7 +877,6 @@
                 if (!dynConsent.checked) { alert('Please agree to the consent terms.'); return; }
                 if (!dynAuthorized.checked) { alert('Please confirm you are an authorized representative.'); return; }
                 if (dynUploadedFiles.length === 0) { alert('Please upload at least one document.'); return; }
-                // If term loan, duration is required
                 if (selectedDocGroup === 'termloan') {
                     const duration = document.getElementById('dynLoanDuration').value;
                     if (!duration) { alert('Please select the loan duration.'); return; }
@@ -938,7 +888,6 @@
                 const amount = document.getElementById('dynAmount').value.trim();
                 const desc = document.getElementById('dynDescription').value.trim();
 
-                // Amount is not required for sectional-solar and ci-solar
                 const amountRequired = !(selectedDocGroup === 'sectional-solar' || selectedDocGroup === 'ci-solar');
                 if (!name || !email || !phone || !desc) { alert('Please fill all required fields.'); return; }
                 if (amountRequired && !amount) { alert('Please enter the funding amount needed.'); return; }
@@ -963,7 +912,7 @@
                     if (amountRequired && amount) {
                         fd.append('fundingAmount', amount);
                     } else {
-                        fd.append('fundingAmount', '');  // still send but empty
+                        fd.append('fundingAmount', '');
                     }
                     fd.append('timeline', document.getElementById('dynTimeline').value);
                     if (selectedDocGroup === 'termloan') {
@@ -980,7 +929,7 @@
                     showError('FormSubmit service error. Please email us directly.');
                 } finally {
                     dynSubmitBtn.disabled = false;
-                    dynSubmitBtn.textContent = 'Submit to Partner Network';
+                    dynSubmitBtn.textContent = 'Submit to Mandate Holder';
                 }
             });
 
@@ -1027,7 +976,7 @@
                     showError('FormSubmit service error. Please email us directly.');
                 } finally {
                     poSubmitBtn.disabled = false;
-                    poSubmitBtn.textContent = 'Submit Lead';
+                    poSubmitBtn.textContent = 'Submit Lead to Mandate Holder';
                 }
             });
 
@@ -1037,7 +986,6 @@
         })();
     </script>
 
-    <!-- Cal floating-popup embed code -->
     <script type="text/javascript">
         (function(C, A, L) { let p = function(a, ar) { a.q.push(ar); }; let d = C.document;
             C.Cal = C.Cal || function() { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {};
@@ -1053,7 +1001,6 @@
         Cal("init", "discovery-session", { origin: "https://app.cal.com" });
         Cal.config = Cal.config || {};
         Cal.config.forwardQueryParams = true;
-
         Cal.ns["discovery-session"]("floatingButton", { "calLink": "partner-discovery/discovery-session",
             "config": { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" } });
         Cal.ns["discovery-session"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
