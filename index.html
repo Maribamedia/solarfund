@@ -11,38 +11,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2.5' result='c'/%3E%3CfeMerge%3E%3CfeMergeNode in='c'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%231e3a8a' stroke-width='10' fill='none' stroke-linejoin='round' filter='url(%23g)'/%3E%3Cpath d='M30 72 L50 28 L70 72' stroke='%233b82f6' stroke-width='4' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand': {
-                            'dark': '#ffffff',
-                            'navy': '#f8f9fa',
-                            'cobalt': '#1e3a8a',
-                            'electric': '#1e3a8a',
-                            'cyan': '#3b82f6',
-                            'slate': '#495057',
-                            'border': 'rgba(30, 58, 138, 0.08)'
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'display': ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-out forwards',
-                        'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
-                    },
-                    keyframes: {
-                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- PRODUCTION Tailwind CSS (replace CDN script) -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Keep the custom styles unchanged -->
     <style>
         :root {
             --primary: #1e3a8a;
@@ -254,6 +225,7 @@
 </head>
 <body class="bg-white font-sans antialiased">
 
+    <!-- Navigation unchanged -->
     <nav class="fixed w-full z-50" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(22px); border-bottom: 1px solid #dee2e6;">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="flex items-center justify-between h-20">
@@ -295,6 +267,7 @@
 
             <!-- FUNDING SELECTION (Step 1) -->
             <div class="card-institutional p-6 sm:p-8 md:p-10" id="selectionContainer">
+                <!-- unchanged -->
                 <div id="step1">
                     <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-2">What type of funding do you need?</h2>
                     <p class="text-[#495057] text-sm mb-6">We connect you directly to the funder who holds the exclusive mandate for your sector. Choose one option to get started.</p>
@@ -424,10 +397,10 @@
                         <div><label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Brief Project Description *</label><textarea id="dynDescription" name="projectDescription" rows="4" required class="form-input" placeholder="Describe your business, what the funding is for, and any relevant background..."></textarea></div>
                     </div>
 
-                    <!-- Upload -->
+                    <!-- Upload – updated text to 5 MB total -->
                     <div class="mb-5">
                         <label class="block text-xs font-semibold text-[#111111] mb-1.5 uppercase tracking-wider">Upload Documents</label>
-                        <p class="text-brand-slate text-xs mb-2">Attach the documents listed above. Max 10MB per file, total 25MB. <strong class="text-brand-electric">At least one document is required.</strong></p>
+                        <p class="text-brand-slate text-xs mb-2">Attach the documents listed above. Max 10MB per file, total 5MB. <strong class="text-brand-electric">At least one document is required.</strong></p>
                         <div class="upload-zone" id="dynUploadZone">
                             <div class="text-4xl mb-3">📁</div>
                             <p class="text-[#111111] font-semibold text-sm">Drag & drop files here, or click to browse</p>
@@ -438,7 +411,7 @@
                         <p class="text-brand-slate text-xs mt-1" id="dynFileCountLabel">No files selected</p>
                     </div>
 
-                    <!-- Consent -->
+                    <!-- Consent unchanged -->
                     <div class="mb-6">
                         <h3 class="font-display font-bold text-[#111111] text-sm uppercase tracking-wider mb-2">🔒 Legal Consent & Indemnification</h3>
                         <div class="consent-box mb-3 text-xs">
@@ -508,7 +481,7 @@
                             <li>📄 CSD Overview (if applicable)</li>
                         </ul>
                         <p class="text-xs text-brand-slate mb-2"><strong>For Private Sector applications, we also require:</strong> 6 months' bank statements (in addition to the standard supporting documents listed above).</p>
-                        <p class="text-xs text-brand-slate">No personal or FICA documents. Max 10MB per file, total 25MB. <strong>Files are strongly recommended but not mandatory.</strong></p>
+                        <p class="text-xs text-brand-slate">No personal or FICA documents. Max 10MB per file, total 5MB. <strong>Files are strongly recommended but not mandatory.</strong></p>
                     </div>
 
                     <div class="mb-4">
@@ -545,7 +518,7 @@
                 </form>
             </div>
 
-            <!-- Success / Error -->
+            <!-- Success / Error screens unchanged -->
             <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="successScreen">
                 <div class="text-5xl mb-4">✅</div>
                 <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Submission Received!</h2>
@@ -562,6 +535,7 @@
         </div>
     </main>
 
+    <!-- Footer unchanged -->
     <footer class="border-t border-[#dee2e6] py-16" style="background: #f8f9fa;">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 pb-8 mb-8 border-b border-[#dee2e6]">
@@ -592,7 +566,7 @@
 
     <script>
         (function() {
-            // Formspree endpoint – no secret needed
+            // Formspree endpoint
             const FORM_ENDPOINT = 'https://formspree.io/f/mdavbgkz';
 
             const docRequirements = {
@@ -660,8 +634,8 @@
             let selectedFundingLabel = '';
             let dynUploadedFiles = [];
             let poUploadedFiles = [];
-            const MAX_FILE_SIZE = 10 * 1024 * 1024;
-            const MAX_TOTAL_SIZE = 25 * 1024 * 1024;
+            const MAX_FILE_SIZE = 10 * 1024 * 1024;       // 10 MB per file
+            const MAX_TOTAL_SIZE = 5 * 1024 * 1024;        // 5 MB total (Formspree free plan limit)
 
             function formatSize(b) { return b < 1024 ? b + ' B' : b < 1048576 ? (b / 1024).toFixed(1) + ' KB' : (b / 1048576).toFixed(2) + ' MB'; }
             function getDynTotal() { return dynUploadedFiles.reduce((s, f) => s + f.size, 0); }
@@ -696,7 +670,7 @@
             function addDynFiles(files) {
                 Array.from(files).forEach(f => {
                     if (f.size > MAX_FILE_SIZE) return alert(`"${f.name}" exceeds 10MB.`);
-                    if (getDynTotal() + f.size > MAX_TOTAL_SIZE) return alert('Total exceeds 25MB.');
+                    if (getDynTotal() + f.size > MAX_TOTAL_SIZE) return alert('Total file size exceeds 5MB (Formspree limit).');
                     if (!dynUploadedFiles.some(x => x.name === f.name && x.size === f.size)) dynUploadedFiles.push(f);
                 });
                 updateDynFiles();
@@ -705,7 +679,7 @@
             function addPoFiles(files) {
                 Array.from(files).forEach(f => {
                     if (f.size > MAX_FILE_SIZE) return alert(`"${f.name}" exceeds 10MB.`);
-                    if (getPoTotal() + f.size > MAX_TOTAL_SIZE) return alert('Total exceeds 25MB.');
+                    if (getPoTotal() + f.size > MAX_TOTAL_SIZE) return alert('Total file size exceeds 5MB (Formspree limit).');
                     if (!poUploadedFiles.some(x => x.name === f.name && x.size === f.size)) poUploadedFiles.push(f);
                 });
                 updatePoFiles();
@@ -870,6 +844,20 @@
                 poSubmitBtn.disabled = !poConsent.checked;
             });
 
+            // Helper to extract error detail from Formspree response
+            async function handleFormError(response) {
+                let errorText = `Submission failed (status ${response.status}).`;
+                try {
+                    const data = await response.json();
+                    if (data.errors) {
+                        errorText = Object.values(data.errors).flat().join('; ');
+                    } else if (data.error) {
+                        errorText = data.error;
+                    }
+                } catch (e) { /* ignore */ }
+                return errorText;
+            }
+
             dynForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 if (!dynConsent.checked) { alert('Please agree to the consent terms.'); return; }
@@ -896,10 +884,8 @@
 
                 try {
                     const fd = new FormData();
-                    // Formspree standard fields
                     fd.append('_replyto', email);
                     fd.append('_subject', `New Funding Submission: ${selectedFundingLabel}`);
-                    // Custom fields
                     fd.append('fundingType', selectedFundingLabel);
                     fd.append('fullName', name);
                     fd.append('companyName', document.getElementById('dynCompany').value.trim());
@@ -911,15 +897,18 @@
                         fd.append('loanDuration', document.getElementById('dynLoanDuration').value);
                     }
                     fd.append('projectDescription', desc);
-                    // Attach files
                     dynUploadedFiles.forEach(f => fd.append('documents', f));
 
                     const resp = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
-                    if (resp.ok) showSuccess();
-                    else throw new Error('Formspree error');
+                    if (resp.ok) {
+                        showSuccess();
+                    } else {
+                        const errorMsg = await handleFormError(resp);
+                        showError(errorMsg);
+                    }
                 } catch (err) {
                     console.error(err);
-                    showError('Submission failed. Please try again or email us directly.');
+                    showError('Network error. Please check your connection and try again.');
                 } finally {
                     dynSubmitBtn.disabled = false;
                     dynSubmitBtn.textContent = 'Submit to Mandate Holder';
@@ -958,11 +947,15 @@
                     poUploadedFiles.forEach(f => fd.append('poDocuments', f));
 
                     const resp = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
-                    if (resp.ok) showSuccess();
-                    else throw new Error('Formspree error');
+                    if (resp.ok) {
+                        showSuccess();
+                    } else {
+                        const errorMsg = await handleFormError(resp);
+                        showError(errorMsg);
+                    }
                 } catch (err) {
                     console.error(err);
-                    showError('Submission failed. Please try again or email us directly.');
+                    showError('Network error. Please check your connection and try again.');
                 } finally {
                     poSubmitBtn.disabled = false;
                     poSubmitBtn.textContent = 'Submit Lead to Mandate Holder';
@@ -975,6 +968,7 @@
         })();
     </script>
 
+    <!-- Cal.com integration (unchanged) -->
     <script type="text/javascript">
         (function(C, A, L) { let p = function(a, ar) { a.q.push(ar); }; let d = C.document;
             C.Cal = C.Cal || function() { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {};
