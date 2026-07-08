@@ -592,10 +592,8 @@
 
     <script>
         (function() {
-            const INSERT_SECRET = 'a8e6715d-1247-4526-a652-165fb5ef2505';
-            const FORM_ENDPOINT = 'https://formsubmit.co/ajax/victor@maribamedia.co.za';
-            const AUTORESPONSE_MESSAGE =
-                `Dear Applicant,\n\nThank you for submitting your funding request through Mariba Media.\n\nYour application has been received and will be forwarded directly to the mandate holder for your project type. The mandate holder will contact you within 2–4 business days.\n\nMariba Media acts solely as a connector partner. All credit decisions and terms are the mandate holder's responsibility.\n\nIf you have urgent questions, reply to this email.\n\nKind regards,\nMariba Media Team\nvictor@maribamedia.co.za`;
+            // Formspree endpoint – no secret needed
+            const FORM_ENDPOINT = 'https://formspree.io/f/mdavbgkz';
 
             const docRequirements = {
                 'asset-backed': {
@@ -898,35 +896,30 @@
 
                 try {
                     const fd = new FormData();
-                    fd.append('_secret', INSERT_SECRET);
+                    // Formspree standard fields
                     fd.append('_replyto', email);
                     fd.append('_subject', `New Funding Submission: ${selectedFundingLabel}`);
-                    fd.append('_captcha', 'false');
-                    fd.append('_autoresponse', AUTORESPONSE_MESSAGE);
-                    if (dynSendCopy.checked) fd.append('_cc', email);
+                    // Custom fields
                     fd.append('fundingType', selectedFundingLabel);
                     fd.append('fullName', name);
                     fd.append('companyName', document.getElementById('dynCompany').value.trim());
                     fd.append('email', email);
                     fd.append('phone', phone);
-                    if (amountRequired && amount) {
-                        fd.append('fundingAmount', amount);
-                    } else {
-                        fd.append('fundingAmount', '');
-                    }
+                    fd.append('fundingAmount', amountRequired ? amount : '');
                     fd.append('timeline', document.getElementById('dynTimeline').value);
                     if (selectedDocGroup === 'termloan') {
                         fd.append('loanDuration', document.getElementById('dynLoanDuration').value);
                     }
                     fd.append('projectDescription', desc);
+                    // Attach files
                     dynUploadedFiles.forEach(f => fd.append('documents', f));
 
                     const resp = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
                     if (resp.ok) showSuccess();
-                    else throw new Error('FormSubmit error');
+                    else throw new Error('Formspree error');
                 } catch (err) {
                     console.error(err);
-                    showError('FormSubmit service error. Please email us directly.');
+                    showError('Submission failed. Please try again or email us directly.');
                 } finally {
                     dynSubmitBtn.disabled = false;
                     dynSubmitBtn.textContent = 'Submit to Mandate Holder';
@@ -950,12 +943,8 @@
 
                 try {
                     const fd = new FormData();
-                    fd.append('_secret', INSERT_SECRET);
                     fd.append('_replyto', email);
                     fd.append('_subject', `New PO Funding Lead - ${sector}`);
-                    fd.append('_captcha', 'false');
-                    fd.append('_autoresponse', AUTORESPONSE_MESSAGE);
-                    if (poSendCopy.checked) fd.append('_cc', email);
                     fd.append('fundingType', 'Purchase Order Funding');
                     fd.append('poSector', sector);
                     fd.append('poFirstName', fname);
@@ -970,10 +959,10 @@
 
                     const resp = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
                     if (resp.ok) showSuccess();
-                    else throw new Error('FormSubmit error');
+                    else throw new Error('Formspree error');
                 } catch (err) {
                     console.error(err);
-                    showError('FormSubmit service error. Please email us directly.');
+                    showError('Submission failed. Please try again or email us directly.');
                 } finally {
                     poSubmitBtn.disabled = false;
                     poSubmitBtn.textContent = 'Submit Lead to Mandate Holder';
