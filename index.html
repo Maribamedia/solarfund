@@ -219,7 +219,50 @@
             .funding-option { padding: 0.9rem 1rem !important; }
             .funding-option h3, .funding-option h4 { font-size: 0.95rem !important; }
         }
+        .form-section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+        .form-section-title:first-child { margin-top: 0; }
+        .field-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.4rem;
+        }
+        .field-label .req { color: #e74c3c; margin-left: 2px; }
+        .field-hint {
+            font-size: 0.75rem;
+            color: var(--ink-muted);
+            margin-top: 0.25rem;
+        }
+        .error-msg {
+            color: #e74c3c;
+            font-size: 0.8rem;
+            margin-top: 0.4rem;
+            display: none;
+        }
+        .error-msg.visible { display: block; }
+        .input-error { border-color: #e74c3c !important; }
+        .input-error:focus { box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15) !important; }
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
+<base target="_blank">
 </head>
 <body class="bg-white font-sans antialiased">
 
@@ -265,7 +308,6 @@
 
             <!-- FUNDING SELECTION -->
             <div class="card-institutional p-6 sm:p-8 md:p-10" id="selectionContainer">
-                <!-- ... identical to previous version ... -->
                 <div id="step1">
                     <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-2">What type of funding do you need?</h2>
                     <p class="text-[#495057] text-sm mb-6">We connect you directly to the funder who holds the exclusive mandate for your sector. Choose one option to get started.</p>
@@ -330,14 +372,212 @@
                 </div>
             </div>
 
-            <!-- DYNAMIC FORM (identical to previous) -->
+            <!-- DYNAMIC FORM -->
             <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="dynamicForm">
-                <!-- ... form content unchanged ... -->
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]">Submit Your Application</h2>
+                        <p class="text-[#495057] text-sm mt-1" id="dynFormSubtitle">Complete the details below. We forward directly to the mandate holder.</p>
+                    </div>
+                    <button type="button" id="dynBackBtn" class="btn-outline !px-4 !py-2 text-xs">← Back</button>
+                </div>
+
+                <div id="docReminderBox" class="mb-6 p-4 rounded-xl bg-[#f8f9fa] border border-[rgba(30,58,138,0.08)]">
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-2">Documents typically required for this funding type:</p>
+                    <ul class="doc-reminder-list" id="docReminderList"></ul>
+                </div>
+
+                <form id="dynFormInner" novalidate>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="field-label">Company Name <span class="req">*</span></label>
+                            <input type="text" name="companyName" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
+                            <div class="error-msg" data-for="companyName">Please enter your company name.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Contact Person <span class="req">*</span></label>
+                            <input type="text" name="contactName" class="form-input" placeholder="Full name" required>
+                            <div class="error-msg" data-for="contactName">Please enter the contact person's name.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Email Address <span class="req">*</span></label>
+                            <input type="email" name="email" class="form-input" placeholder="you@company.co.za" required>
+                            <div class="error-msg" data-for="email">Please enter a valid email address.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Phone Number <span class="req">*</span></label>
+                            <input type="tel" name="phone" class="form-input" placeholder="+27 82 000 0000" required>
+                            <div class="error-msg" data-for="phone">Please enter a phone number.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Funding Amount Required <span class="req">*</span></label>
+                            <input type="text" name="fundingAmount" class="form-input" placeholder="e.g. R 2 500 000" required>
+                            <div class="error-msg" data-for="fundingAmount">Please specify the funding amount.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Company Reg Number</label>
+                            <input type="text" name="regNumber" class="form-input" placeholder="YYYY/######/07">
+                            <div class="field-hint">CIPC registration number (if applicable)</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Years in Operation</label>
+                            <select name="yearsTrading" class="form-input">
+                                <option value="">Select…</option>
+                                <option value="0-1">Less than 1 year</option>
+                                <option value="1-2">1 – 2 years</option>
+                                <option value="2-5">2 – 5 years</option>
+                                <option value="5+">5+ years</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="field-label">Annual Turnover</label>
+                            <select name="annualTurnover" class="form-input">
+                                <option value="">Select…</option>
+                                <option value="<1M">Under R 1 million</option>
+                                <option value="1M-5M">R 1 – 5 million</option>
+                                <option value="5M-20M">R 5 – 20 million</option>
+                                <option value="20M-50M">R 20 – 50 million</option>
+                                <option value="50M+">R 50 million+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="field-label">Project / Funding Description <span class="req">*</span></label>
+                        <textarea name="description" class="form-input" placeholder="Describe your project, the purpose of the funding, and any relevant details…" required></textarea>
+                        <div class="error-msg" data-for="description">Please provide a project description.</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="field-label">Supporting Documents</label>
+                        <div class="upload-zone" id="dynUploadZone">
+                            <input type="file" id="dynFileInput" multiple style="display:none">
+                            <div class="text-3xl mb-2">📎</div>
+                            <p class="text-sm font-medium text-[#111111]">Drag & drop files here, or click to browse</p>
+                            <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 20 MB each</p>
+                        </div>
+                        <div id="dynFileList" class="mt-3 flex flex-wrap"></div>
+                    </div>
+
+                    <div class="mt-6">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" name="consent" id="dynConsent" class="mt-1 w-4 h-4 accent-[#1e3a8a]" required>
+                            <div>
+                                <span class="text-sm text-[#111111] font-medium">I consent to POPIA-compliant data processing</span>
+                                <div class="consent-box mt-2">
+                                    <p>By submitting this form, you consent to Mariba Media processing your business information in accordance with the <strong>Protection of Personal Information Act (POPIA)</strong>. Your data is shared only with the mandate holder(s) relevant to your funding request. We do not sell or share your data with third parties for marketing purposes. You may request deletion of your data at any time by emailing <strong>victor@maribamedia.co.za</strong>.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="error-msg" data-for="consent">You must consent to proceed.</div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                        <button type="submit" id="dynSubmitBtn" class="btn-accent w-full sm:w-auto">
+                            <span>Submit to Mandate Holder</span>
+                        </button>
+                        <p class="text-xs text-[#495057]">Encrypted via Formspree · No documents stored on our servers</p>
+                    </div>
+                </form>
             </div>
 
-            <!-- PO FUNDING QUICK FORM (unchanged) -->
+            <!-- PO FUNDING QUICK FORM -->
             <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="poFundingForm">
-                <!-- ... form content unchanged ... -->
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]">Purchase Order Funding — Quick Lead</h2>
+                        <p class="text-[#495057] text-sm mt-1">Fast-track your PO funding request. We forward directly to the mandate holder.</p>
+                    </div>
+                    <button type="button" id="poBackBtn" class="btn-outline !px-4 !py-2 text-xs">← Back</button>
+                </div>
+
+                <div class="mb-6 p-4 rounded-xl bg-[#f8f9fa] border border-[rgba(30,58,138,0.08)]">
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-2">Documents typically required:</p>
+                    <ul class="doc-reminder-list">
+                        <li>Valid Purchase Order(s) from government or private entity</li>
+                        <li>Supplier invoice(s) or quote(s)</li>
+                        <li>Company CIPC registration documents</li>
+                        <li>Latest financial statements or management accounts</li>
+                        <li>Bank statements (last 3 months)</li>
+                    </ul>
+                </div>
+
+                <form id="poFormInner" novalidate>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="field-label">Company Name <span class="req">*</span></label>
+                            <input type="text" name="companyName" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
+                            <div class="error-msg" data-for="companyName">Please enter your company name.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Contact Person <span class="req">*</span></label>
+                            <input type="text" name="contactName" class="form-input" placeholder="Full name" required>
+                            <div class="error-msg" data-for="contactName">Please enter the contact person's name.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Email Address <span class="req">*</span></label>
+                            <input type="email" name="email" class="form-input" placeholder="you@company.co.za" required>
+                            <div class="error-msg" data-for="email">Please enter a valid email address.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">Phone Number <span class="req">*</span></label>
+                            <input type="tel" name="phone" class="form-input" placeholder="+27 82 000 0000" required>
+                            <div class="error-msg" data-for="phone">Please enter a phone number.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">PO Value <span class="req">*</span></label>
+                            <input type="text" name="poValue" class="form-input" placeholder="e.g. R 500 000" required>
+                            <div class="error-msg" data-for="poValue">Please enter the PO value.</div>
+                        </div>
+                        <div>
+                            <label class="field-label">End Client Type <span class="req">*</span></label>
+                            <select name="endClient" class="form-input" required>
+                                <option value="">Select…</option>
+                                <option value="government">Government / State-Owned Entity</option>
+                                <option value="private">Private Corporate</option>
+                                <option value="municipality">Municipality</option>
+                            </select>
+                            <div class="error-msg" data-for="endClient">Please select the end client type.</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="field-label">Project Description <span class="req">*</span></label>
+                        <textarea name="description" class="form-input" placeholder="Describe the PO, deliverables, timeline, and any funding history…" required></textarea>
+                        <div class="error-msg" data-for="description">Please provide a description.</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="field-label">Supporting Documents</label>
+                        <div class="upload-zone" id="poUploadZone">
+                            <input type="file" id="poFileInput" multiple style="display:none">
+                            <div class="text-3xl mb-2">📎</div>
+                            <p class="text-sm font-medium text-[#111111]">Drag & drop files here, or click to browse</p>
+                            <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 20 MB each</p>
+                        </div>
+                        <div id="poFileList" class="mt-3 flex flex-wrap"></div>
+                    </div>
+
+                    <div class="mt-6">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" name="consent" id="poConsent" class="mt-1 w-4 h-4 accent-[#1e3a8a]" required>
+                            <div>
+                                <span class="text-sm text-[#111111] font-medium">I consent to POPIA-compliant data processing</span>
+                                <div class="consent-box mt-2">
+                                    <p>By submitting this form, you consent to Mariba Media processing your business information in accordance with the <strong>Protection of Personal Information Act (POPIA)</strong>. Your data is shared only with the mandate holder(s) relevant to your funding request. We do not sell or share your data with third parties for marketing purposes. You may request deletion of your data at any time by emailing <strong>victor@maribamedia.co.za</strong>.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="error-msg" data-for="consent">You must consent to proceed.</div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                        <button type="submit" id="poSubmitBtn" class="btn-accent w-full sm:w-auto">
+                            <span>Submit Lead to Mandate Holder</span>
+                        </button>
+                        <p class="text-xs text-[#495057]">Encrypted via Formspree · No documents stored on our servers</p>
+                    </div>
+                </form>
             </div>
 
             <!-- Success / Error screens -->
@@ -358,84 +598,509 @@
     </main>
 
     <footer class="border-t border-[#dee2e6] py-16" style="background: #f8f9fa;">
-        <!-- footer unchanged -->
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
+                    <defs>
+                        <linearGradient id="logoGradF" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#172554;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M28 74 L50 26 L72 74" stroke="url(#logoGradF)" stroke-width="6" fill="none" stroke-linejoin="round" />
+                </svg>
+                <span class="text-sm font-display font-bold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e3a8a]">MEDIA</span></span>
+            </div>
+            <p class="text-xs text-[#495057] max-w-md mx-auto leading-relaxed">
+                Connector Partner for business funding in South Africa. We do not lend directly — we connect you to the mandate holder with the right capital solution.
+            </p>
+            <div class="mt-6 flex items-center justify-center gap-4 text-xs text-[#495057]">
+                <a href="mailto:victor@maribamedia.co.za" class="hover:text-[#1e3a8a] transition-colors">victor@maribamedia.co.za</a>
+                <span>·</span>
+                <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="hover:text-[#1e3a8a] transition-colors">Book a Discovery Call</a>
+            </div>
+            <p class="mt-8 text-[10px] text-[#adb5bd]">© 2026 Mariba Media. All rights reserved. POPIA Compliant.</p>
+        </div>
     </footer>
 
     <script>
-        (function() {
-            const FORM_ENDPOINT = 'https://formspree.io/f/mdavbgkz';
+    (function() {
+        'use strict';
 
-            // ... (all docRequirements, element references, helper functions are identical) ...
+        const FORM_ENDPOINT = 'https://formspree.io/f/mdavbgkz';
 
-            // ✅ UPDATED ERROR HANDLER – now includes field name for clarity
-            async function handleFormError(response) {
-                let errorText = `Submission failed (status ${response.status}).`;
-                try {
-                    const data = await response.json();
-                    if (data.errors) {
-                        if (Array.isArray(data.errors)) {
-                            errorText = data.errors.map(e => {
-                                if (typeof e === 'string') return e;
-                                // Combine field and message, e.g. "email is missing"
-                                return e.field ? `${e.field} ${e.message}` : e.message || e;
-                            }).join('; ');
-                        } else if (typeof data.errors === 'object') {
-                            // Older format: object of arrays
-                            errorText = Object.entries(data.errors).map(([field, msgs]) => {
-                                return msgs.map(msg => `${field} ${msg}`).join('; ');
-                            }).join('; ');
-                        }
-                    } else if (data.error) {
-                        errorText = data.error;
-                    }
-                } catch (e) { /* response wasn't JSON – keep default text */ }
-                return errorText;
+        // ── Document requirements by funding type ──
+        const docRequirements = {
+            'asset-backed': [
+                'Financial statements (last 2 years)',
+                'Asset register / valuation report',
+                'Bank statements (last 6 months)',
+                'Company CIPC registration documents'
+            ],
+            'po-funding': [
+                'Valid Purchase Order(s) from government or private entity',
+                'Supplier invoice(s) or quote(s)',
+                'Company CIPC registration documents',
+                'Latest financial statements or management accounts',
+                'Bank statements (last 3 months)'
+            ],
+            'gov-invoice': [
+                'Government invoice(s) — verified and outstanding',
+                'Delivery notes / proof of delivery',
+                'Company CIPC registration documents',
+                'Bank statements (last 3 months)',
+                'Latest financial statements'
+            ],
+            'private-invoice': [
+                'Private corporate invoice(s) — verified and outstanding',
+                'Contract or purchase agreement',
+                'Company CIPC registration documents',
+                'Bank statements (last 3 months)',
+                'Latest financial statements'
+            ],
+            'ipp': [
+                'Detailed business plan',
+                'Financial model with 10-year projections',
+                'EIA / environmental permits (if applicable)',
+                'PPA or offtake agreement (draft acceptable)',
+                'Company CIPC registration and shareholder structure'
+            ],
+            'sectional-solar': [
+                'Body corporate resolution approving solar installation',
+                'Electricity bills (last 12 months)',
+                'Building plans / roof structural assessment',
+                'Company CIPC registration (if installer) or body corporate docs'
+            ],
+            'ci-solar': [
+                'Business plan or project overview',
+                'Electricity bills (last 12 months)',
+                'Building plans / lease agreement',
+                'Company CIPC registration documents',
+                'Financial statements (last 2 years)'
+            ],
+            'termloan': [
+                'Audited / reviewed financial statements (last 2 years)',
+                'Bank statements (last 6 months)',
+                'Management accounts (YTD)',
+                'Company CIPC registration documents',
+                'Debtors and creditors ageing (if applicable)'
+            ]
+        };
+
+        // ── DOM refs ──
+        const selectionContainer = document.getElementById('selectionContainer');
+        const dynamicForm        = document.getElementById('dynamicForm');
+        const poFundingForm      = document.getElementById('poFundingForm');
+        const successScreen      = document.getElementById('successScreen');
+        const errorScreen        = document.getElementById('errorScreen');
+        const errorMessage       = document.getElementById('errorMessage');
+        const selectedFundingType= document.getElementById('selectedFundingType');
+        const fundingOptions     = document.querySelectorAll('.funding-option');
+        const docReminderList    = document.getElementById('docReminderList');
+        const dynFormSubtitle    = document.getElementById('dynFormSubtitle');
+
+        // Dynamic form refs
+        const dynFormInner   = document.getElementById('dynFormInner');
+        const dynSubmitBtn   = document.getElementById('dynSubmitBtn');
+        const dynBackBtn     = document.getElementById('dynBackBtn');
+        const dynUploadZone  = document.getElementById('dynUploadZone');
+        const dynFileInput   = document.getElementById('dynFileInput');
+        const dynFileList    = document.getElementById('dynFileList');
+        const dynConsent     = document.getElementById('dynConsent');
+
+        // PO form refs
+        const poFormInner    = document.getElementById('poFormInner');
+        const poSubmitBtn    = document.getElementById('poSubmitBtn');
+        const poBackBtn      = document.getElementById('poBackBtn');
+        const poUploadZone   = document.getElementById('poUploadZone');
+        const poFileInput    = document.getElementById('poFileInput');
+        const poFileList     = document.getElementById('poFileList');
+        const poConsent      = document.getElementById('poConsent');
+
+        // State
+        let dynUploadedFiles = [];
+        let poUploadedFiles  = [];
+        let currentDocGroup  = '';
+
+        // ── Helpers ──
+        function hideAll() {
+            selectionContainer.classList.add('hidden');
+            dynamicForm.classList.add('hidden');
+            poFundingForm.classList.add('hidden');
+            successScreen.classList.add('hidden');
+            errorScreen.classList.add('hidden');
+        }
+
+        function showSelection() {
+            hideAll();
+            selectionContainer.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showDynamicForm() {
+            hideAll();
+            dynamicForm.classList.remove('hidden');
+            dynamicForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showPOForm() {
+            hideAll();
+            poFundingForm.classList.remove('hidden');
+            poFundingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showSuccess() {
+            hideAll();
+            successScreen.classList.remove('hidden');
+            successScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function showError(msg) {
+            hideAll();
+            errorMessage.textContent = msg || "We couldn't send your submission. Please try again or email us directly.";
+            errorScreen.classList.remove('hidden');
+            errorScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function setLoading(btn, loading) {
+            if (loading) {
+                btn.disabled = true;
+                btn.dataset.originalText = btn.innerHTML;
+                btn.innerHTML = '<span class="spinner"></span> Sending…';
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = btn.dataset.originalText || btn.innerHTML;
+            }
+        }
+
+        function clearErrors(form) {
+            form.querySelectorAll('.error-msg').forEach(el => el.classList.remove('visible'));
+            form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+        }
+
+        function showFieldError(form, name, msg) {
+            const input = form.querySelector(`[name="${name}"]`);
+            if (input) input.classList.add('input-error');
+            const err = form.querySelector(`.error-msg[data-for="${name}"]`);
+            if (err) {
+                err.classList.add('visible');
+                if (msg) err.textContent = msg;
+            }
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        // ── File upload helpers ──
+        function initFileUpload(zone, input, fileList, fileArray) {
+            zone.addEventListener('click', () => input.click());
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.classList.add('dragover');
+            });
+            zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('dragover');
+                addFiles(e.dataTransfer.files, fileArray, fileList, zone);
+            });
+            input.addEventListener('change', (e) => {
+                addFiles(e.target.files, fileArray, fileList, zone);
+                input.value = '';
+            });
+        }
+
+        function addFiles(fileListObj, fileArray, displayContainer, zone) {
+            Array.from(fileListObj).forEach(file => {
+                if (file.size > 20 * 1024 * 1024) {
+                    alert(`File "${file.name}" exceeds 20 MB limit and was skipped.`);
+                    return;
+                }
+                fileArray.push(file);
+            });
+            renderFileList(fileArray, displayContainer, zone);
+        }
+
+        function renderFileList(fileArray, displayContainer, zone) {
+            displayContainer.innerHTML = '';
+            if (fileArray.length > 0) {
+                zone.classList.add('has-files');
+            } else {
+                zone.classList.remove('has-files');
+            }
+            fileArray.forEach((file, idx) => {
+                const chip = document.createElement('div');
+                chip.className = 'file-chip';
+                chip.innerHTML = `<span>${escapeHtml(file.name)}</span><span class="remove-file" data-idx="${idx}">×</span>`;
+                displayContainer.appendChild(chip);
+            });
+            displayContainer.querySelectorAll('.remove-file').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const idx = parseInt(btn.dataset.idx, 10);
+                    fileArray.splice(idx, 1);
+                    renderFileList(fileArray, displayContainer, zone);
+                });
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // ── Selection logic ──
+        fundingOptions.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Highlight selected
+                fundingOptions.forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+
+                const value = btn.dataset.value;
+                const docGroup = btn.dataset.docGroup;
+                currentDocGroup = docGroup;
+                selectedFundingType.value = value;
+
+                // Update doc reminder
+                if (docRequirements[docGroup]) {
+                    docReminderList.innerHTML = docRequirements[docGroup]
+                        .map(item => `<li>${escapeHtml(item)}</li>`)
+                        .join('');
+                } else {
+                    docReminderList.innerHTML = '<li>General business documentation may be requested by the mandate holder.</li>';
+                }
+
+                // Update subtitle
+                dynFormSubtitle.textContent = `You selected: ${value}. Complete the details below and we forward directly to the mandate holder.`;
+
+                // Route to correct form
+                if (docGroup === 'po-funding') {
+                    showPOForm();
+                } else {
+                    showDynamicForm();
+                }
+            });
+        });
+
+        // ── Back buttons ──
+        dynBackBtn.addEventListener('click', showSelection);
+        poBackBtn.addEventListener('click', showSelection);
+
+        // ── File upload init ──
+        initFileUpload(dynUploadZone, dynFileInput, dynFileList, dynUploadedFiles);
+        initFileUpload(poUploadZone, poFileInput, poFileList, poUploadedFiles);
+
+        // ── Consent toggles submit buttons ──
+        function updateSubmitState() {
+            // Dynamic form
+            if (dynConsent.checked) {
+                dynSubmitBtn.disabled = false;
+                dynSubmitBtn.style.opacity = '1';
+            } else {
+                dynSubmitBtn.disabled = true;
+                dynSubmitBtn.style.opacity = '0.4';
+            }
+            // PO form
+            if (poConsent.checked) {
+                poSubmitBtn.disabled = false;
+                poSubmitBtn.style.opacity = '1';
+            } else {
+                poSubmitBtn.disabled = true;
+                poSubmitBtn.style.opacity = '0.4';
+            }
+        }
+        dynConsent.addEventListener('change', updateSubmitState);
+        poConsent.addEventListener('change', updateSubmitState);
+
+        // ── DYNAMIC FORM SUBMISSION ──
+        dynFormInner.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            clearErrors(dynFormInner);
+
+            const fd = new FormData();
+            const fields = {
+                companyName:  { required: true, label: 'Company Name' },
+                contactName:  { required: true, label: 'Contact Person' },
+                email:        { required: true, label: 'Email', validate: validateEmail },
+                phone:        { required: true, label: 'Phone Number' },
+                fundingAmount:{ required: true, label: 'Funding Amount' },
+                description:  { required: true, label: 'Project Description' }
+            };
+
+            let valid = true;
+            for (const [name, cfg] of Object.entries(fields)) {
+                const input = dynFormInner.querySelector(`[name="${name}"]`);
+                const val = input ? input.value.trim() : '';
+                if (cfg.required && !val) {
+                    showFieldError(dynFormInner, name);
+                    valid = false;
+                } else if (cfg.validate && val && !cfg.validate(val)) {
+                    showFieldError(dynFormInner, name, `Please enter a valid ${cfg.label.toLowerCase()}.`);
+                    valid = false;
+                }
+                if (input) fd.append(name, val);
             }
 
-            // ... (rest of the script: submission handlers are unchanged) ...
-
-            // DYNAMIC FORM SUBMISSION
-            dynForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                // ... validation unchanged ...
-                try {
-                    // ... form data construction unchanged ...
-                    dynUploadedFiles.forEach(f => fd.append('documents', f));
-                    const resp = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
-                    if (resp.ok) showSuccess();
-                    else showError(await handleFormError(resp));
-                } catch (err) {
-                    console.error(err);
-                    showError('Network error. Please check your connection.');
-                } finally {
-                    dynSubmitBtn.disabled = false;
-                    dynSubmitBtn.textContent = 'Submit to Mandate Holder';
-                }
+            // Optional fields
+            ['regNumber', 'yearsTrading', 'annualTurnover'].forEach(name => {
+                const input = dynFormInner.querySelector(`[name="${name}"]`);
+                if (input) fd.append(name, input.value.trim());
             });
 
-            // PO FORM SUBMISSION
-            poForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                // ... validation unchanged ...
-                try {
-                    // ... form data construction unchanged ...
-                    poUploadedFiles.forEach(f => fd.append('documents', f));
-                    const resp = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
-                    if (resp.ok) showSuccess();
-                    else showError(await handleFormError(resp));
-                } catch (err) {
-                    console.error(err);
-                    showError('Network error. Please check your connection.');
-                } finally {
-                    poSubmitBtn.disabled = false;
-                    poSubmitBtn.textContent = 'Submit Lead to Mandate Holder';
-                }
-            });
+            // Funding type
+            fd.append('fundingType', selectedFundingType.value || 'General');
+            fd.append('_subject', `New Funding Lead: ${selectedFundingType.value || 'General'}`);
 
-            showSelection();
-            dynSubmitBtn.disabled = true;
-            poSubmitBtn.disabled = true;
-        })();
+            // Consent
+            if (!dynConsent.checked) {
+                showFieldError(dynFormInner, 'consent');
+                valid = false;
+            } else {
+                fd.append('consent', 'POPIA consent given');
+            }
+
+            if (!valid) {
+                // Scroll to first error
+                const firstErr = dynFormInner.querySelector('.input-error');
+                if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            // Attach files
+            dynUploadedFiles.forEach(f => fd.append('documents', f));
+
+            setLoading(dynSubmitBtn, true);
+            try {
+                const resp = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    body: fd,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (resp.ok) {
+                    showSuccess();
+                } else {
+                    showError(await handleFormError(resp));
+                }
+            } catch (err) {
+                console.error(err);
+                showError('Network error. Please check your connection and try again.');
+            } finally {
+                setLoading(dynSubmitBtn, false);
+            }
+        });
+
+        // ── PO FORM SUBMISSION ──
+        poFormInner.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            clearErrors(poFormInner);
+
+            const fd = new FormData();
+            const fields = {
+                companyName: { required: true, label: 'Company Name' },
+                contactName: { required: true, label: 'Contact Person' },
+                email:       { required: true, label: 'Email', validate: validateEmail },
+                phone:       { required: true, label: 'Phone Number' },
+                poValue:     { required: true, label: 'PO Value' },
+                endClient:   { required: true, label: 'End Client Type' },
+                description: { required: true, label: 'Project Description' }
+            };
+
+            let valid = true;
+            for (const [name, cfg] of Object.entries(fields)) {
+                const input = poFormInner.querySelector(`[name="${name}"]`);
+                const val = input ? input.value.trim() : '';
+                if (cfg.required && !val) {
+                    showFieldError(poFormInner, name);
+                    valid = false;
+                } else if (cfg.validate && val && !cfg.validate(val)) {
+                    showFieldError(poFormInner, name, `Please enter a valid ${cfg.label.toLowerCase()}.`);
+                    valid = false;
+                }
+                if (input) fd.append(name, val);
+            }
+
+            fd.append('fundingType', 'Purchase Order Funding');
+            fd.append('_subject', 'New PO Funding Lead');
+
+            if (!poConsent.checked) {
+                showFieldError(poFormInner, 'consent');
+                valid = false;
+            } else {
+                fd.append('consent', 'POPIA consent given');
+            }
+
+            if (!valid) {
+                const firstErr = poFormInner.querySelector('.input-error');
+                if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            poUploadedFiles.forEach(f => fd.append('documents', f));
+
+            setLoading(poSubmitBtn, true);
+            try {
+                const resp = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    body: fd,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (resp.ok) {
+                    showSuccess();
+                } else {
+                    showError(await handleFormError(resp));
+                }
+            } catch (err) {
+                console.error(err);
+                showError('Network error. Please check your connection and try again.');
+            } finally {
+                setLoading(poSubmitBtn, false);
+            }
+        });
+
+        // ── Error handler ──
+        async function handleFormError(response) {
+            let errorText = `Submission failed (status ${response.status}).`;
+            try {
+                const data = await response.json();
+                if (data.errors) {
+                    if (Array.isArray(data.errors)) {
+                        errorText = data.errors.map(e => {
+                            if (typeof e === 'string') return e;
+                            return e.field ? `${e.field} ${e.message}` : e.message || e;
+                        }).join('; ');
+                    } else if (typeof data.errors === 'object') {
+                        errorText = Object.entries(data.errors).map(([field, msgs]) => {
+                            return msgs.map(msg => `${field} ${msg}`).join('; ');
+                        }).join('; ');
+                    }
+                } else if (data.error) {
+                    errorText = data.error;
+                }
+            } catch (e) { /* not JSON */ }
+            return errorText;
+        }
+
+        // ── Init state ──
+        showSelection();
+        updateSubmitState();
+
+        // Expose QC helpers for console testing
+        window._maribaQC = {
+            docRequirements,
+            getState: () => ({
+                currentDocGroup,
+                selectedType: selectedFundingType.value,
+                dynFiles: dynUploadedFiles.length,
+                poFiles: poUploadedFiles.length
+            }),
+            simulateSelect: (idx) => fundingOptions[idx]?.click(),
+            simulateDynSubmit: () => dynFormInner.dispatchEvent(new Event('submit')),
+            simulatePOSubmit: () => poFormInner.dispatchEvent(new Event('submit'))
+        };
+    })();
     </script>
 </body>
 </html>
