@@ -219,48 +219,6 @@
             .funding-option { padding: 0.9rem 1rem !important; }
             .funding-option h3, .funding-option h4 { font-size: 0.95rem !important; }
         }
-        .form-section-title {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            margin-top: 1.5rem;
-        }
-        .form-section-title:first-child { margin-top: 0; }
-        .field-label {
-            display: block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--ink);
-            margin-bottom: 0.4rem;
-        }
-        .field-label .req { color: #e74c3c; margin-left: 2px; }
-        .field-hint {
-            font-size: 0.75rem;
-            color: var(--ink-muted);
-            margin-top: 0.25rem;
-        }
-        .error-msg {
-            color: #e74c3c;
-            font-size: 0.8rem;
-            margin-top: 0.4rem;
-            display: none;
-        }
-        .error-msg.visible { display: block; }
-        .input-error { border-color: #e74c3c !important; }
-        .input-error:focus { box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15) !important; }
-        .spinner {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 0.8s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 <base target="_blank">
 </head>
@@ -390,37 +348,31 @@
                 <form id="dynFormInner" novalidate>
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="field-label">Company Name <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Company Name <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="companyName" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
-                            <div class="error-msg" data-for="companyName">Please enter your company name.</div>
                         </div>
                         <div>
-                            <label class="field-label">Contact Person <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Contact Person <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="contactName" class="form-input" placeholder="Full name" required>
-                            <div class="error-msg" data-for="contactName">Please enter the contact person's name.</div>
                         </div>
                         <div>
-                            <label class="field-label">Email Address <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Email Address <span class="text-[#e74c3c]">*</span></label>
                             <input type="email" name="email" class="form-input" placeholder="you@company.co.za" required>
-                            <div class="error-msg" data-for="email">Please enter a valid email address.</div>
                         </div>
                         <div>
-                            <label class="field-label">Phone Number <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Phone Number <span class="text-[#e74c3c]">*</span></label>
                             <input type="tel" name="phone" class="form-input" placeholder="+27 82 000 0000" required>
-                            <div class="error-msg" data-for="phone">Please enter a phone number.</div>
                         </div>
                         <div>
-                            <label class="field-label">Funding Amount Required <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Funding Amount Required <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fundingAmount" class="form-input" placeholder="e.g. R 2 500 000" required>
-                            <div class="error-msg" data-for="fundingAmount">Please specify the funding amount.</div>
                         </div>
                         <div>
-                            <label class="field-label">Company Reg Number</label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Company Reg Number</label>
                             <input type="text" name="regNumber" class="form-input" placeholder="YYYY/######/07">
-                            <div class="field-hint">CIPC registration number (if applicable)</div>
                         </div>
                         <div>
-                            <label class="field-label">Years in Operation</label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Years in Operation</label>
                             <select name="yearsTrading" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="0-1">Less than 1 year</option>
@@ -430,7 +382,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="field-label">Annual Turnover</label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Annual Turnover</label>
                             <select name="annualTurnover" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="<1M">Under R 1 million</option>
@@ -443,13 +395,12 @@
                     </div>
 
                     <div class="mt-4">
-                        <label class="field-label">Project / Funding Description <span class="req">*</span></label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Project / Funding Description <span class="text-[#e74c3c]">*</span></label>
                         <textarea name="description" class="form-input" placeholder="Describe your project, the purpose of the funding, and any relevant details…" required></textarea>
-                        <div class="error-msg" data-for="description">Please provide a project description.</div>
                     </div>
 
                     <div class="mt-4">
-                        <label class="field-label">Supporting Documents</label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
                         <div class="upload-zone" id="dynUploadZone">
                             <input type="file" id="dynFileInput" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
@@ -469,7 +420,6 @@
                                 </div>
                             </div>
                         </label>
-                        <div class="error-msg" data-for="consent">You must consent to proceed.</div>
                     </div>
 
                     <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
@@ -505,50 +455,43 @@
                 <form id="poFormInner" novalidate>
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="field-label">Company Name <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Company Name <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="companyName" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
-                            <div class="error-msg" data-for="companyName">Please enter your company name.</div>
                         </div>
                         <div>
-                            <label class="field-label">Contact Person <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Contact Person <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="contactName" class="form-input" placeholder="Full name" required>
-                            <div class="error-msg" data-for="contactName">Please enter the contact person's name.</div>
                         </div>
                         <div>
-                            <label class="field-label">Email Address <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Email Address <span class="text-[#e74c3c]">*</span></label>
                             <input type="email" name="email" class="form-input" placeholder="you@company.co.za" required>
-                            <div class="error-msg" data-for="email">Please enter a valid email address.</div>
                         </div>
                         <div>
-                            <label class="field-label">Phone Number <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Phone Number <span class="text-[#e74c3c]">*</span></label>
                             <input type="tel" name="phone" class="form-input" placeholder="+27 82 000 0000" required>
-                            <div class="error-msg" data-for="phone">Please enter a phone number.</div>
                         </div>
                         <div>
-                            <label class="field-label">PO Value <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">PO Value <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="poValue" class="form-input" placeholder="e.g. R 500 000" required>
-                            <div class="error-msg" data-for="poValue">Please enter the PO value.</div>
                         </div>
                         <div>
-                            <label class="field-label">End Client Type <span class="req">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">End Client Type <span class="text-[#e74c3c]">*</span></label>
                             <select name="endClient" class="form-input" required>
                                 <option value="">Select…</option>
                                 <option value="government">Government / State-Owned Entity</option>
                                 <option value="private">Private Corporate</option>
                                 <option value="municipality">Municipality</option>
                             </select>
-                            <div class="error-msg" data-for="endClient">Please select the end client type.</div>
                         </div>
                     </div>
 
                     <div class="mt-4">
-                        <label class="field-label">Project Description <span class="req">*</span></label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Project Description <span class="text-[#e74c3c]">*</span></label>
                         <textarea name="description" class="form-input" placeholder="Describe the PO, deliverables, timeline, and any funding history…" required></textarea>
-                        <div class="error-msg" data-for="description">Please provide a description.</div>
                     </div>
 
                     <div class="mt-4">
-                        <label class="field-label">Supporting Documents</label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
                         <div class="upload-zone" id="poUploadZone">
                             <input type="file" id="poFileInput" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
@@ -568,7 +511,6 @@
                                 </div>
                             </div>
                         </label>
-                        <div class="error-msg" data-for="consent">You must consent to proceed.</div>
                     </div>
 
                     <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
@@ -630,7 +572,6 @@
 
         const FORM_ENDPOINT = 'https://formspree.io/f/mdavbgkz';
 
-        // ── Document requirements by funding type ──
         const docRequirements = {
             'asset-backed': [
                 'Financial statements (last 2 years)',
@@ -688,7 +629,6 @@
             ]
         };
 
-        // ── DOM refs ──
         const selectionContainer = document.getElementById('selectionContainer');
         const dynamicForm        = document.getElementById('dynamicForm');
         const poFundingForm      = document.getElementById('poFundingForm');
@@ -700,7 +640,6 @@
         const docReminderList    = document.getElementById('docReminderList');
         const dynFormSubtitle    = document.getElementById('dynFormSubtitle');
 
-        // Dynamic form refs
         const dynFormInner   = document.getElementById('dynFormInner');
         const dynSubmitBtn   = document.getElementById('dynSubmitBtn');
         const dynBackBtn     = document.getElementById('dynBackBtn');
@@ -709,7 +648,6 @@
         const dynFileList    = document.getElementById('dynFileList');
         const dynConsent     = document.getElementById('dynConsent');
 
-        // PO form refs
         const poFormInner    = document.getElementById('poFormInner');
         const poSubmitBtn    = document.getElementById('poSubmitBtn');
         const poBackBtn      = document.getElementById('poBackBtn');
@@ -718,12 +656,10 @@
         const poFileList     = document.getElementById('poFileList');
         const poConsent      = document.getElementById('poConsent');
 
-        // State
         let dynUploadedFiles = [];
         let poUploadedFiles  = [];
         let currentDocGroup  = '';
 
-        // ── Helpers ──
         function hideAll() {
             selectionContainer.classList.add('hidden');
             dynamicForm.classList.add('hidden');
@@ -767,25 +703,10 @@
             if (loading) {
                 btn.disabled = true;
                 btn.dataset.originalText = btn.innerHTML;
-                btn.innerHTML = '<span class="spinner"></span> Sending…';
+                btn.innerHTML = '<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;border-top-color:#fff;animation:spin 0.8s linear infinite;"></span> Sending…';
             } else {
                 btn.disabled = false;
                 btn.innerHTML = btn.dataset.originalText || btn.innerHTML;
-            }
-        }
-
-        function clearErrors(form) {
-            form.querySelectorAll('.error-msg').forEach(el => el.classList.remove('visible'));
-            form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-        }
-
-        function showFieldError(form, name, msg) {
-            const input = form.querySelector(`[name="${name}"]`);
-            if (input) input.classList.add('input-error');
-            const err = form.querySelector(`.error-msg[data-for="${name}"]`);
-            if (err) {
-                err.classList.add('visible');
-                if (msg) err.textContent = msg;
             }
         }
 
@@ -793,8 +714,7 @@
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         }
 
-        // ── File upload helpers ──
-        function initFileUpload(zone, input, fileList, fileArray) {
+        function initFileUpload(zone, input, list, fileArray) {
             zone.addEventListener('click', () => input.click());
             zone.addEventListener('dragover', (e) => {
                 e.preventDefault();
@@ -804,10 +724,10 @@
             zone.addEventListener('drop', (e) => {
                 e.preventDefault();
                 zone.classList.remove('dragover');
-                addFiles(e.dataTransfer.files, fileArray, fileList, zone);
+                addFiles(e.dataTransfer.files, fileArray, list, zone);
             });
             input.addEventListener('change', (e) => {
-                addFiles(e.target.files, fileArray, fileList, zone);
+                addFiles(e.target.files, fileArray, list, zone);
                 input.value = '';
             });
         }
@@ -815,7 +735,7 @@
         function addFiles(fileListObj, fileArray, displayContainer, zone) {
             Array.from(fileListObj).forEach(file => {
                 if (file.size > 20 * 1024 * 1024) {
-                    alert(`File "${file.name}" exceeds 20 MB limit and was skipped.`);
+                    alert('File "' + file.name + '" exceeds 20 MB limit and was skipped.');
                     return;
                 }
                 fileArray.push(file);
@@ -833,7 +753,7 @@
             fileArray.forEach((file, idx) => {
                 const chip = document.createElement('div');
                 chip.className = 'file-chip';
-                chip.innerHTML = `<span>${escapeHtml(file.name)}</span><span class="remove-file" data-idx="${idx}">×</span>`;
+                chip.innerHTML = '<span>' + escapeHtml(file.name) + '</span><span class="remove-file" data-idx="' + idx + '">×</span>';
                 displayContainer.appendChild(chip);
             });
             displayContainer.querySelectorAll('.remove-file').forEach(btn => {
@@ -852,10 +772,38 @@
             return div.innerHTML;
         }
 
-        // ── Selection logic ──
+        async function handleFormError(response) {
+            let errorText = 'Submission failed (status ' + response.status + ').';
+            try {
+                const data = await response.json();
+                if (data.errors) {
+                    if (Array.isArray(data.errors)) {
+                        errorText = data.errors.map(e => {
+                            if (typeof e === 'string') return e;
+                            return e.field ? e.field + ' ' + e.message : e.message || e;
+                        }).join('; ');
+                    } else if (typeof data.errors === 'object') {
+                        errorText = Object.entries(data.errors).map(([field, msgs]) => {
+                            return msgs.map(msg => field + ' ' + msg).join('; ');
+                        }).join('; ');
+                    }
+                } else if (data.error) {
+                    errorText = data.error;
+                }
+            } catch (e) {}
+            return errorText;
+        }
+
+        function updateSubmitState() {
+            dynSubmitBtn.disabled = !dynConsent.checked;
+            dynSubmitBtn.style.opacity = dynConsent.checked ? '1' : '0.4';
+            poSubmitBtn.disabled = !poConsent.checked;
+            poSubmitBtn.style.opacity = poConsent.checked ? '1' : '0.4';
+        }
+
+        // Selection
         fundingOptions.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Highlight selected
                 fundingOptions.forEach(b => b.classList.remove('selected'));
                 btn.classList.add('selected');
 
@@ -864,19 +812,16 @@
                 currentDocGroup = docGroup;
                 selectedFundingType.value = value;
 
-                // Update doc reminder
                 if (docRequirements[docGroup]) {
                     docReminderList.innerHTML = docRequirements[docGroup]
-                        .map(item => `<li>${escapeHtml(item)}</li>`)
+                        .map(item => '<li>' + escapeHtml(item) + '</li>')
                         .join('');
                 } else {
                     docReminderList.innerHTML = '<li>General business documentation may be requested by the mandate holder.</li>';
                 }
 
-                // Update subtitle
-                dynFormSubtitle.textContent = `You selected: ${value}. Complete the details below and we forward directly to the mandate holder.`;
+                dynFormSubtitle.textContent = 'You selected: ' + value + '. Complete the details below and we forward directly to the mandate holder.';
 
-                // Route to correct form
                 if (docGroup === 'po-funding') {
                     showPOForm();
                 } else {
@@ -885,91 +830,56 @@
             });
         });
 
-        // ── Back buttons ──
         dynBackBtn.addEventListener('click', showSelection);
         poBackBtn.addEventListener('click', showSelection);
 
-        // ── File upload init ──
         initFileUpload(dynUploadZone, dynFileInput, dynFileList, dynUploadedFiles);
         initFileUpload(poUploadZone, poFileInput, poFileList, poUploadedFiles);
 
-        // ── Consent toggles submit buttons ──
-        function updateSubmitState() {
-            // Dynamic form
-            if (dynConsent.checked) {
-                dynSubmitBtn.disabled = false;
-                dynSubmitBtn.style.opacity = '1';
-            } else {
-                dynSubmitBtn.disabled = true;
-                dynSubmitBtn.style.opacity = '0.4';
-            }
-            // PO form
-            if (poConsent.checked) {
-                poSubmitBtn.disabled = false;
-                poSubmitBtn.style.opacity = '1';
-            } else {
-                poSubmitBtn.disabled = true;
-                poSubmitBtn.style.opacity = '0.4';
-            }
-        }
         dynConsent.addEventListener('change', updateSubmitState);
         poConsent.addEventListener('change', updateSubmitState);
 
-        // ── DYNAMIC FORM SUBMISSION ──
+        // Dynamic form submit
         dynFormInner.addEventListener('submit', async function(e) {
             e.preventDefault();
-            clearErrors(dynFormInner);
 
             const fd = new FormData();
-            const fields = {
-                companyName:  { required: true, label: 'Company Name' },
-                contactName:  { required: true, label: 'Contact Person' },
-                email:        { required: true, label: 'Email', validate: validateEmail },
-                phone:        { required: true, label: 'Phone Number' },
-                fundingAmount:{ required: true, label: 'Funding Amount' },
-                description:  { required: true, label: 'Project Description' }
-            };
-
+            const fields = ['companyName','contactName','email','phone','fundingAmount','description'];
             let valid = true;
-            for (const [name, cfg] of Object.entries(fields)) {
-                const input = dynFormInner.querySelector(`[name="${name}"]`);
+
+            fields.forEach(name => {
+                const input = dynFormInner.querySelector('[name="' + name + '"]');
                 const val = input ? input.value.trim() : '';
-                if (cfg.required && !val) {
-                    showFieldError(dynFormInner, name);
+                if (!val) {
+                    if (input) input.style.borderColor = '#e74c3c';
                     valid = false;
-                } else if (cfg.validate && val && !cfg.validate(val)) {
-                    showFieldError(dynFormInner, name, `Please enter a valid ${cfg.label.toLowerCase()}.`);
+                } else {
+                    if (input) input.style.borderColor = '';
+                }
+                if (name === 'email' && val && !validateEmail(val)) {
+                    if (input) input.style.borderColor = '#e74c3c';
                     valid = false;
                 }
                 if (input) fd.append(name, val);
-            }
+            });
 
-            // Optional fields
-            ['regNumber', 'yearsTrading', 'annualTurnover'].forEach(name => {
-                const input = dynFormInner.querySelector(`[name="${name}"]`);
+            ['regNumber','yearsTrading','annualTurnover'].forEach(name => {
+                const input = dynFormInner.querySelector('[name="' + name + '"]');
                 if (input) fd.append(name, input.value.trim());
             });
 
-            // Funding type
             fd.append('fundingType', selectedFundingType.value || 'General');
-            fd.append('_subject', `New Funding Lead: ${selectedFundingType.value || 'General'}`);
+            fd.append('_subject', 'New Funding Lead: ' + (selectedFundingType.value || 'General'));
 
-            // Consent
             if (!dynConsent.checked) {
-                showFieldError(dynFormInner, 'consent');
+                alert('Please consent to the POPIA terms before submitting.');
                 valid = false;
             } else {
                 fd.append('consent', 'POPIA consent given');
             }
 
-            if (!valid) {
-                // Scroll to first error
-                const firstErr = dynFormInner.querySelector('.input-error');
-                if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                return;
-            }
+            if (!valid) return;
 
-            // Attach files
             dynUploadedFiles.forEach(f => fd.append('documents', f));
 
             setLoading(dynSubmitBtn, true);
@@ -992,51 +902,41 @@
             }
         });
 
-        // ── PO FORM SUBMISSION ──
+        // PO form submit
         poFormInner.addEventListener('submit', async function(e) {
             e.preventDefault();
-            clearErrors(poFormInner);
 
             const fd = new FormData();
-            const fields = {
-                companyName: { required: true, label: 'Company Name' },
-                contactName: { required: true, label: 'Contact Person' },
-                email:       { required: true, label: 'Email', validate: validateEmail },
-                phone:       { required: true, label: 'Phone Number' },
-                poValue:     { required: true, label: 'PO Value' },
-                endClient:   { required: true, label: 'End Client Type' },
-                description: { required: true, label: 'Project Description' }
-            };
-
+            const fields = ['companyName','contactName','email','phone','poValue','endClient','description'];
             let valid = true;
-            for (const [name, cfg] of Object.entries(fields)) {
-                const input = poFormInner.querySelector(`[name="${name}"]`);
+
+            fields.forEach(name => {
+                const input = poFormInner.querySelector('[name="' + name + '"]');
                 const val = input ? input.value.trim() : '';
-                if (cfg.required && !val) {
-                    showFieldError(poFormInner, name);
+                if (!val) {
+                    if (input) input.style.borderColor = '#e74c3c';
                     valid = false;
-                } else if (cfg.validate && val && !cfg.validate(val)) {
-                    showFieldError(poFormInner, name, `Please enter a valid ${cfg.label.toLowerCase()}.`);
+                } else {
+                    if (input) input.style.borderColor = '';
+                }
+                if (name === 'email' && val && !validateEmail(val)) {
+                    if (input) input.style.borderColor = '#e74c3c';
                     valid = false;
                 }
                 if (input) fd.append(name, val);
-            }
+            });
 
             fd.append('fundingType', 'Purchase Order Funding');
             fd.append('_subject', 'New PO Funding Lead');
 
             if (!poConsent.checked) {
-                showFieldError(poFormInner, 'consent');
+                alert('Please consent to the POPIA terms before submitting.');
                 valid = false;
             } else {
                 fd.append('consent', 'POPIA consent given');
             }
 
-            if (!valid) {
-                const firstErr = poFormInner.querySelector('.input-error');
-                if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                return;
-            }
+            if (!valid) return;
 
             poUploadedFiles.forEach(f => fd.append('documents', f));
 
@@ -1060,58 +960,33 @@
             }
         });
 
-        // ── Error handler ──
-        async function handleFormError(response) {
-            let errorText = `Submission failed (status ${response.status}).`;
-            try {
-                const data = await response.json();
-                if (data.errors) {
-                    if (Array.isArray(data.errors)) {
-                        errorText = data.errors.map(e => {
-                            if (typeof e === 'string') return e;
-                            return e.field ? `${e.field} ${e.message}` : e.message || e;
-                        }).join('; ');
-                    } else if (typeof data.errors === 'object') {
-                        errorText = Object.entries(data.errors).map(([field, msgs]) => {
-                            return msgs.map(msg => `${field} ${msg}`).join('; ');
-                        }).join('; ');
-                    }
-                } else if (data.error) {
-                    errorText = data.error;
-                }
-            } catch (e) { /* not JSON */ }
-            return errorText;
-        }
+        // Reset border color on input
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('input', function() {
+                this.style.borderColor = '';
+            });
+        });
 
-        // ── Init state ──
+        // Add spin keyframes
+        const spinStyle = document.createElement('style');
+        spinStyle.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+        document.head.appendChild(spinStyle);
+
         showSelection();
         updateSubmitState();
-
-        // Expose QC helpers for console testing
-        window._maribaQC = {
-            docRequirements,
-            getState: () => ({
-                currentDocGroup,
-                selectedType: selectedFundingType.value,
-                dynFiles: dynUploadedFiles.length,
-                poFiles: poUploadedFiles.length
-            }),
-            simulateSelect: (idx) => fundingOptions[idx]?.click(),
-            simulateDynSubmit: () => dynFormInner.dispatchEvent(new Event('submit')),
-            simulatePOSubmit: () => poFormInner.dispatchEvent(new Event('submit'))
-        };
     })();
     </script>
-<!-- Cal floating-popup embed code begins -->
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "discovery-session", {origin:"https://app.cal.com"});
-Cal.config = Cal.config || {};
-Cal.config.forwardQueryParams = true;
 
-  Cal.ns["discovery-session"]("floatingButton", {"calLink":"partner-discovery/discovery-session","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}); 
-  Cal.ns["discovery-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
-<!-- Cal floating-popup embed code ends -->
+    <!-- Cal floating-popup embed code begins -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "discovery-session", {origin:"https://app.cal.com"});
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+
+      Cal.ns["discovery-session"]("floatingButton", {"calLink":"partner-discovery/discovery-session","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}); 
+      Cal.ns["discovery-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <!-- Cal floating-popup embed code ends -->
 </body>
 </html>
