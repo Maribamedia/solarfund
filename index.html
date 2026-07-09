@@ -341,7 +341,7 @@
                 </div>
 
                 <div id="docReminderBox" class="mb-6 p-4 rounded-xl bg-[#f8f9fa] border border-[rgba(30,58,138,0.08)]">
-                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-2">Documents typically required for this funding type:</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-2">Documents typically required:</p>
                     <ul class="doc-reminder-list" id="docReminderList"></ul>
                 </div>
 
@@ -405,9 +405,10 @@
                             <input type="file" id="dynFileInput" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
                             <p class="text-sm font-medium text-[#111111]">Drag & drop files here, or click to browse</p>
-                            <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 20 MB each</p>
+                            <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 10 MB each</p>
                         </div>
                         <div id="dynFileList" class="mt-3 flex flex-wrap"></div>
+                        <p class="text-xs text-[#495057] mt-2">No personal or FICA documents. Max 10MB per file, total 4.5MB. Files are strongly recommended but not mandatory.</p>
                     </div>
 
                     <div class="mt-6">
@@ -442,13 +443,15 @@
                 </div>
 
                 <div class="mb-6 p-4 rounded-xl bg-[#f8f9fa] border border-[rgba(30,58,138,0.08)]">
-                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-2">Documents typically required:</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-2">Required Documents for PO Funding:</p>
                     <ul class="doc-reminder-list">
-                        <li>Valid Purchase Order(s) from government or private entity</li>
-                        <li>Supplier invoice(s) or quote(s)</li>
-                        <li>Company CIPC registration documents</li>
-                        <li>Latest financial statements or management accounts</li>
-                        <li>Bank statements (last 3 months)</li>
+                        <li>📄 Purchase Order</li>
+                        <li>📄 Supplier Quote(s)</li>
+                        <li>📄 RFQ (where applicable)</li>
+                        <li>📄 Initial Email of Award</li>
+                        <li>📄 COR14.3 / Company Documents</li>
+                        <li>📄 CSD Overview (if applicable)</li>
+                        <li>For Private Sector applications, we also require: 6 months' bank statements (in addition to the standard supporting documents listed above).</li>
                     </ul>
                 </div>
 
@@ -496,9 +499,10 @@
                             <input type="file" id="poFileInput" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
                             <p class="text-sm font-medium text-[#111111]">Drag & drop files here, or click to browse</p>
-                            <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 20 MB each</p>
+                            <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 10 MB each</p>
                         </div>
                         <div id="poFileList" class="mt-3 flex flex-wrap"></div>
+                        <p class="text-xs text-[#495057] mt-2">No personal or FICA documents. Max 10MB per file, total 4.5MB. Files are strongly recommended but not mandatory.</p>
                     </div>
 
                     <div class="mt-6">
@@ -574,58 +578,62 @@
 
         const docRequirements = {
             'asset-backed': [
-                'Financial statements (last 2 years)',
-                'Asset register / valuation report',
-                'Bank statements (last 6 months)',
-                'Company CIPC registration documents'
+                'Financial Statements',
+                '6-month Bank Statements',
+                'Copy of Title Deed',
+                'Municipal Account',
+                'Tax Clearance Certificate'
             ],
             'po-funding': [
-                'Valid Purchase Order(s) from government or private entity',
-                'Supplier invoice(s) or quote(s)',
-                'Company CIPC registration documents',
-                'Latest financial statements or management accounts',
-                'Bank statements (last 3 months)'
+                '📄 Purchase Order',
+                '📄 Supplier Quote(s)',
+                '📄 RFQ (where applicable)',
+                '📄 Initial Email of Award',
+                '📄 COR14.3 / Company Documents',
+                '📄 CSD Overview (if applicable)',
+                'For Private Sector applications, we also require: 6 months' bank statements (in addition to the standard supporting documents listed above).'
             ],
             'gov-invoice': [
-                'Government invoice(s) — verified and outstanding',
-                'Delivery notes / proof of delivery',
-                'Company CIPC registration documents',
-                'Bank statements (last 3 months)',
-                'Latest financial statements'
+                'Submitted Invoice',
+                'Original Purchase Order or Contract from the Government',
+                'Signed Delivery Note / Payment Certificate for the Contract',
+                'No personal FICA documents (ID, proof of address) are required.'
             ],
             'private-invoice': [
-                'Private corporate invoice(s) — verified and outstanding',
-                'Contract or purchase agreement',
-                'Company CIPC registration documents',
-                'Bank statements (last 3 months)',
-                'Latest financial statements'
+                'Submitted Invoice',
+                'Original Purchase Order or Contract from the Private Sector',
+                'Signed Delivery Note / Payment Certificate for the Contract',
+                'No personal FICA documents (ID, proof of address) are required.'
             ],
             'ipp': [
-                'Detailed business plan',
-                'Financial model with 10-year projections',
-                'EIA / environmental permits (if applicable)',
-                'PPA or offtake agreement (draft acceptable)',
-                'Company CIPC registration and shareholder structure'
+                'Executive Summary & Site Location',
+                'PPA Structure, EIA Status, Technical Design',
+                'Municipal Approval / Grid Connection Feasibility',
+                'Financial Model (CAPEX, OPEX, IRR, DSCR)',
+                'Off-taker Credit Assessment or Sovereign Guarantee',
+                'Consortium Team Organogram & Project Schedule',
+                'No personal FICA documents (ID, proof of address) are required.'
             ],
             'sectional-solar': [
-                'Body corporate resolution approving solar installation',
-                'Electricity bills (last 12 months)',
-                'Building plans / roof structural assessment',
-                'Company CIPC registration (if installer) or body corporate docs'
+                'Body Corporate / HOA Approval',
+                '6-12 Months Electricity Usage Data / Bill',
+                'Site Assessment Report',
+                'Quotes from Installer (if any)',
+                'Proof of Ownership / Lease',
+                'No personal FICA documents (ID, proof of address) are required.'
             ],
             'ci-solar': [
-                'Business plan or project overview',
-                'Electricity bills (last 12 months)',
-                'Building plans / lease agreement',
-                'Company CIPC registration documents',
-                'Financial statements (last 2 years)'
+                'Electricity Bills / Load Profile',
+                'Property Lease or Ownership Proof',
+                'Quotes from Installer (if any)',
+                'Company Registration Documents',
+                'No personal FICA documents (ID, proof of address) are required.'
             ],
             'termloan': [
-                'Audited / reviewed financial statements (last 2 years)',
-                'Bank statements (last 6 months)',
-                'Management accounts (YTD)',
-                'Company CIPC registration documents',
-                'Debtors and creditors ageing (if applicable)'
+                'Financial Statements (Last 12 Months)',
+                'Minimum R1 Million Annual Turnover',
+                'Tax Clearance Certificate',
+                'No personal FICA documents (ID, proof of address) are required.'
             ]
         };
 
@@ -734,8 +742,8 @@
 
         function addFiles(fileListObj, fileArray, displayContainer, zone) {
             Array.from(fileListObj).forEach(file => {
-                if (file.size > 20 * 1024 * 1024) {
-                    alert('File "' + file.name + '" exceeds 20 MB limit and was skipped.');
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('File "' + file.name + '" exceeds 10 MB limit and was skipped.');
                     return;
                 }
                 fileArray.push(file);
