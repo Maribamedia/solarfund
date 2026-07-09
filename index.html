@@ -352,7 +352,7 @@
                             </div>
                         </button>
                     </div>
-                    <input type="hidden" id="selectedFundingType" name="fundingType" value="">
+                    <input type="hidden" id="selectedFundingType" name="fi-text-fundingType" value="">
                 </div>
             </div>
 
@@ -375,31 +375,32 @@
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Company Name <span class="text-[#e74c3c]">*</span></label>
-                            <input type="text" name="companyName" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
+                            <input type="text" name="fi-sender-company" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Contact Person <span class="text-[#e74c3c]">*</span></label>
-                            <input type="text" name="contactName" class="form-input" placeholder="Full name" required>
+                            <input type="text" name="fi-sender-fullName" class="form-input" placeholder="Full name" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Email Address <span class="text-[#e74c3c]">*</span></label>
-                            <input type="email" name="email" class="form-input" placeholder="you@company.co.za" required>
+                            <input type="email" name="fi-sender-email" class="form-input" placeholder="you@company.co.za" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Phone Number <span class="text-[#e74c3c]">*</span></label>
-                            <input type="tel" name="phone" class="form-input" placeholder="+27 82 000 0000" required>
+                            <input type="tel" name="fi-sender-phone" class="form-input" placeholder="+27 82 000 0000" required>
+                            <p class="text-[10px] text-[#adb5bd] mt-1">E.164 format: +27 82 000 0000</p>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Funding Amount Required <span class="text-[#e74c3c]">*</span></label>
-                            <input type="text" name="fundingAmount" class="form-input" placeholder="e.g. R 2 500 000" required>
+                            <input type="text" name="fi-text-fundingAmount" class="form-input" placeholder="e.g. R 2 500 000" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Company Reg Number</label>
-                            <input type="text" name="regNumber" class="form-input" placeholder="YYYY/######/07">
+                            <input type="text" name="fi-text-regNumber" class="form-input" placeholder="YYYY/######/07">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Years in Operation</label>
-                            <select name="yearsTrading" class="form-input">
+                            <select name="fi-select-yearsTrading" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="0-1">Less than 1 year</option>
                                 <option value="1-2">1 – 2 years</option>
@@ -409,7 +410,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Annual Turnover</label>
-                            <select name="annualTurnover" class="form-input">
+                            <select name="fi-select-annualTurnover" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="<1M">Under R 1 million</option>
                                 <option value="1M-5M">R 1 – 5 million</option>
@@ -422,24 +423,24 @@
 
                     <div class="mt-4">
                         <label class="block text-xs font-semibold text-[#111111] mb-1">Project / Funding Description <span class="text-[#e74c3c]">*</span></label>
-                        <textarea name="description" class="form-input" placeholder="Describe your project, the purpose of the funding, and any relevant details…" required></textarea>
+                        <textarea name="fi-text-description" class="form-input" placeholder="Describe your project, the purpose of the funding, and any relevant details…" required></textarea>
                     </div>
 
                     <div class="mt-4">
                         <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
                         <div class="upload-zone" id="dynUploadZone">
-                            <input type="file" id="dynFileInput" multiple style="display:none">
+                            <input type="file" id="dynFileInput" name="fi-file-documents[]" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
                             <p class="text-sm font-medium text-[#111111]">Drag & drop files here, or click to browse</p>
                             <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 10 MB each</p>
                         </div>
                         <div id="dynFileList" class="mt-3 flex flex-wrap"></div>
-                        <p class="text-xs text-[#495057] mt-2">No personal or FICA documents. Max 10MB per file, total 4.5MB. Files are strongly recommended but not mandatory.</p>
+                        <p class="text-xs text-[#495057] mt-2">No personal or FICA documents. Max 10MB per file, total 25MB. Files are strongly recommended but not mandatory.</p>
                     </div>
 
                     <div class="mt-6">
                         <label class="flex items-start gap-3 cursor-pointer">
-                            <input type="checkbox" name="consent" id="dynConsent" class="mt-1 w-4 h-4 accent-[#1e3a8a]" required>
+                            <input type="checkbox" name="fi-checkbox-consent" id="dynConsent" class="mt-1 w-4 h-4 accent-[#1e3a8a]" required>
                             <div>
                                 <span class="text-sm text-[#111111] font-medium">I consent to POPIA-compliant data processing</span>
                                 <div class="consent-box mt-2">
@@ -453,7 +454,7 @@
                         <button type="submit" id="dynSubmitBtn" class="btn-accent w-full sm:w-auto">
                             <span>Submit to Mandate Holder</span>
                         </button>
-                        <p class="text-xs text-[#495057]">Encrypted via Formspree · No documents stored on our servers</p>
+                        <p class="text-xs text-[#495057]">Encrypted via Forminit · No documents stored on our servers</p>
                     </div>
                 </form>
             </div>
@@ -482,30 +483,32 @@
                 </div>
 
                 <form id="poFormInner" novalidate>
+                    <input type="hidden" name="fi-text-fundingType" value="Purchase Order Funding">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Company Name <span class="text-[#e74c3c]">*</span></label>
-                            <input type="text" name="companyName" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
+                            <input type="text" name="fi-sender-company" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Contact Person <span class="text-[#e74c3c]">*</span></label>
-                            <input type="text" name="contactName" class="form-input" placeholder="Full name" required>
+                            <input type="text" name="fi-sender-fullName" class="form-input" placeholder="Full name" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Email Address <span class="text-[#e74c3c]">*</span></label>
-                            <input type="email" name="email" class="form-input" placeholder="you@company.co.za" required>
+                            <input type="email" name="fi-sender-email" class="form-input" placeholder="you@company.co.za" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">Phone Number <span class="text-[#e74c3c]">*</span></label>
-                            <input type="tel" name="phone" class="form-input" placeholder="+27 82 000 0000" required>
+                            <input type="tel" name="fi-sender-phone" class="form-input" placeholder="+27 82 000 0000" required>
+                            <p class="text-[10px] text-[#adb5bd] mt-1">E.164 format: +27 82 000 0000</p>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">PO Value <span class="text-[#e74c3c]">*</span></label>
-                            <input type="text" name="poValue" class="form-input" placeholder="e.g. R 500 000" required>
+                            <input type="text" name="fi-text-poValue" class="form-input" placeholder="e.g. R 500 000" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#111111] mb-1">End Client Type <span class="text-[#e74c3c]">*</span></label>
-                            <select name="endClient" class="form-input" required>
+                            <select name="fi-select-endClient" class="form-input" required>
                                 <option value="">Select…</option>
                                 <option value="government">Government / State-Owned Entity</option>
                                 <option value="private">Private Corporate</option>
@@ -516,24 +519,24 @@
 
                     <div class="mt-4">
                         <label class="block text-xs font-semibold text-[#111111] mb-1">Project Description <span class="text-[#e74c3c]">*</span></label>
-                        <textarea name="description" class="form-input" placeholder="Describe the PO, deliverables, timeline, and any funding history…" required></textarea>
+                        <textarea name="fi-text-description" class="form-input" placeholder="Describe the PO, deliverables, timeline, and any funding history…" required></textarea>
                     </div>
 
                     <div class="mt-4">
                         <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
                         <div class="upload-zone" id="poUploadZone">
-                            <input type="file" id="poFileInput" multiple style="display:none">
+                            <input type="file" id="poFileInput" name="fi-file-documents[]" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
                             <p class="text-sm font-medium text-[#111111]">Drag & drop files here, or click to browse</p>
                             <p class="text-xs text-[#495057] mt-1">PDF, Word, Excel, images up to 10 MB each</p>
                         </div>
                         <div id="poFileList" class="mt-3 flex flex-wrap"></div>
-                        <p class="text-xs text-[#495057] mt-2">No personal or FICA documents. Max 10MB per file, total 4.5MB. Files are strongly recommended but not mandatory.</p>
+                        <p class="text-xs text-[#495057] mt-2">No personal or FICA documents. Max 10MB per file, total 25MB. Files are strongly recommended but not mandatory.</p>
                     </div>
 
                     <div class="mt-6">
                         <label class="flex items-start gap-3 cursor-pointer">
-                            <input type="checkbox" name="consent" id="poConsent" class="mt-1 w-4 h-4 accent-[#1e3a8a]" required>
+                            <input type="checkbox" name="fi-checkbox-consent" id="poConsent" class="mt-1 w-4 h-4 accent-[#1e3a8a]" required>
                             <div>
                                 <span class="text-sm text-[#111111] font-medium">I consent to POPIA-compliant data processing</span>
                                 <div class="consent-box mt-2">
@@ -547,7 +550,7 @@
                         <button type="submit" id="poSubmitBtn" class="btn-accent w-full sm:w-auto">
                             <span>Submit Lead to Mandate Holder</span>
                         </button>
-                        <p class="text-xs text-[#495057]">Encrypted via Formspree · No documents stored on our servers</p>
+                        <p class="text-xs text-[#495057]">Encrypted via Forminit · No documents stored on our servers</p>
                     </div>
                 </form>
             </div>
@@ -557,9 +560,26 @@
                 <div class="text-5xl mb-4">✅</div>
                 <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Submission Received!</h2>
                 <p class="text-brand-slate mb-2">Your request has been forwarded directly to the mandate holder.</p>
+                <p class="text-[#495057] text-sm mb-2">Reference: <span id="successRef" class="font-mono text-[#1e3a8a] font-semibold">—</span></p>
+                
+                <div class="max-w-xl mx-auto text-left bg-gradient-to-br from-[#f0f4ff] to-[#ffffff] border border-[rgba(30,58,138,0.12)] rounded-xl p-6 mb-6 mt-6">
+                    <div class="flex items-start gap-3 mb-4">
+                        <span class="text-2xl">📎</span>
+                        <div>
+                            <p class="text-sm font-semibold text-[#111111]">Email your supporting documents</p>
+                            <p class="text-xs text-[#495057] mt-1">Please send all relevant documents to <a href="mailto:victor@maribamedia.co.za" class="text-[#1e3a8a] font-semibold underline hover:text-[#172554]">victor@maribamedia.co.za</a> with your company name in the subject line.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-[rgba(30,58,138,0.08)] pt-4">
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#1e3a8a] mb-3">Recommended documents for your application:</p>
+                        <ul class="doc-reminder-list text-left space-y-1" id="successDocList"></ul>
+                    </div>
+                </div>
+                
                 <p class="text-[#495057] text-sm mb-6">For follow‑up: <strong>victor@maribamedia.co.za</strong></p>
                 <button class="btn-outline px-6 py-3 text-sm" onclick="location.reload()">Submit Another Project</button>
             </div>
+            
             <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="errorScreen">
                 <div class="text-5xl mb-4">⚠️</div>
                 <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Submission Issue</h2>
@@ -596,11 +616,13 @@
         </div>
     </footer>
 
+    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
     <script>
     (function() {
         'use strict';
 
-        const FORM_ENDPOINT = 'https://formspree.io/f/mdavbgkz';
+        const forminit = new Forminit();
+        const FORM_ID = 'o7swsv5adox';
 
         const docRequirements = {
             'asset-backed': [
@@ -673,6 +695,8 @@
         const fundingOptions     = document.querySelectorAll('.funding-option');
         const docReminderList    = document.getElementById('docReminderList');
         const dynFormSubtitle    = document.getElementById('dynFormSubtitle');
+        const successDocList     = document.getElementById('successDocList');
+        const successRef         = document.getElementById('successRef');
 
         const dynFormInner   = document.getElementById('dynFormInner');
         const dynSubmitBtn   = document.getElementById('dynSubmitBtn');
@@ -720,9 +744,24 @@
             poFundingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function showSuccess() {
+        function showSuccess(data) {
             hideAll();
             successScreen.classList.remove('hidden');
+            
+            if (data && data.hashId) {
+                successRef.textContent = data.hashId;
+            } else {
+                successRef.textContent = '—';
+            }
+            
+            if (currentDocGroup && docRequirements[currentDocGroup]) {
+                successDocList.innerHTML = docRequirements[currentDocGroup]
+                    .map(item => '<li class="flex items-start gap-2"><span class="text-[#1e3a8a] mt-0.5">📄</span><span>' + escapeHtml(item) + '</span></li>')
+                    .join('');
+            } else {
+                successDocList.innerHTML = '<li class="text-[#495057]">General business documentation may be requested by the mandate holder.</li>';
+            }
+            
             successScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
@@ -806,28 +845,6 @@
             return div.innerHTML;
         }
 
-        async function handleFormError(response) {
-            let errorText = 'Submission failed (status ' + response.status + ').';
-            try {
-                const data = await response.json();
-                if (data.errors) {
-                    if (Array.isArray(data.errors)) {
-                        errorText = data.errors.map(e => {
-                            if (typeof e === 'string') return e;
-                            return e.field ? e.field + ' ' + e.message : e.message || e;
-                        }).join('; ');
-                    } else if (typeof data.errors === 'object') {
-                        errorText = Object.entries(data.errors).map(([field, msgs]) => {
-                            return msgs.map(msg => field + ' ' + msg).join('; ');
-                        }).join('; ');
-                    }
-                } else if (data.error) {
-                    errorText = data.error;
-                }
-            } catch (e) {}
-            return errorText;
-        }
-
         function updateSubmitState() {
             dynSubmitBtn.disabled = !dynConsent.checked;
             dynSubmitBtn.style.opacity = dynConsent.checked ? '1' : '0.4';
@@ -873,60 +890,63 @@
         dynConsent.addEventListener('change', updateSubmitState);
         poConsent.addEventListener('change', updateSubmitState);
 
+        // Helper: validate required fields in a form
+        function validateFormFields(form, requiredNames) {
+            let valid = true;
+            requiredNames.forEach(name => {
+                const input = form.querySelector('[name="' + name + '"]');
+                if (!input) return;
+                const val = input.value.trim();
+                if (!val) {
+                    input.style.borderColor = '#e74c3c';
+                    valid = false;
+                } else {
+                    input.style.borderColor = '';
+                }
+                if (name === 'fi-sender-email' && val && !validateEmail(val)) {
+                    input.style.borderColor = '#e74c3c';
+                    valid = false;
+                }
+            });
+            return valid;
+        }
+
         // Dynamic form submit
         dynFormInner.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const fd = new FormData();
-            const fields = ['companyName','contactName','email','phone','fundingAmount','description'];
-            let valid = true;
-
-            fields.forEach(name => {
-                const input = dynFormInner.querySelector('[name="' + name + '"]');
-                const val = input ? input.value.trim() : '';
-                if (!val) {
-                    if (input) input.style.borderColor = '#e74c3c';
-                    valid = false;
-                } else {
-                    if (input) input.style.borderColor = '';
-                }
-                if (name === 'email' && val && !validateEmail(val)) {
-                    if (input) input.style.borderColor = '#e74c3c';
-                    valid = false;
-                }
-                if (input) fd.append(name, val);
-            });
-
-            ['regNumber','yearsTrading','annualTurnover'].forEach(name => {
-                const input = dynFormInner.querySelector('[name="' + name + '"]');
-                if (input) fd.append(name, input.value.trim());
-            });
-
-            fd.append('fundingType', selectedFundingType.value || 'General');
-            fd.append('_subject', 'New Funding Lead: ' + (selectedFundingType.value || 'General'));
+            const requiredFields = [
+                'fi-sender-company',
+                'fi-sender-fullName',
+                'fi-sender-email',
+                'fi-sender-phone',
+                'fi-text-fundingAmount',
+                'fi-text-description'
+            ];
+            
+            let valid = validateFormFields(dynFormInner, requiredFields);
 
             if (!dynConsent.checked) {
                 alert('Please consent to the POPIA terms before submitting.');
                 valid = false;
-            } else {
-                fd.append('consent', 'POPIA consent given');
             }
 
             if (!valid) return;
 
-            dynUploadedFiles.forEach(f => fd.append('documents', f));
+            const fd = new FormData(dynFormInner);
+            dynUploadedFiles.forEach(f => fd.append('fi-file-documents[]', f));
 
             setLoading(dynSubmitBtn, true);
             try {
-                const resp = await fetch(FORM_ENDPOINT, {
-                    method: 'POST',
-                    body: fd,
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (resp.ok) {
-                    showSuccess();
+                const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
+                if (error) {
+                    showError(error.message || 'Submission failed. Please try again.');
                 } else {
-                    showError(await handleFormError(resp));
+                    showSuccess(data);
+                    dynFormInner.reset();
+                    dynUploadedFiles = [];
+                    renderFileList(dynUploadedFiles, dynFileList, dynUploadZone);
+                    updateSubmitState();
                 }
             } catch (err) {
                 console.error(err);
@@ -940,51 +960,39 @@
         poFormInner.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const fd = new FormData();
-            const fields = ['companyName','contactName','email','phone','poValue','endClient','description'];
-            let valid = true;
-
-            fields.forEach(name => {
-                const input = poFormInner.querySelector('[name="' + name + '"]');
-                const val = input ? input.value.trim() : '';
-                if (!val) {
-                    if (input) input.style.borderColor = '#e74c3c';
-                    valid = false;
-                } else {
-                    if (input) input.style.borderColor = '';
-                }
-                if (name === 'email' && val && !validateEmail(val)) {
-                    if (input) input.style.borderColor = '#e74c3c';
-                    valid = false;
-                }
-                if (input) fd.append(name, val);
-            });
-
-            fd.append('fundingType', 'Purchase Order Funding');
-            fd.append('_subject', 'New PO Funding Lead');
+            const requiredFields = [
+                'fi-sender-company',
+                'fi-sender-fullName',
+                'fi-sender-email',
+                'fi-sender-phone',
+                'fi-text-poValue',
+                'fi-select-endClient',
+                'fi-text-description'
+            ];
+            
+            let valid = validateFormFields(poFormInner, requiredFields);
 
             if (!poConsent.checked) {
                 alert('Please consent to the POPIA terms before submitting.');
                 valid = false;
-            } else {
-                fd.append('consent', 'POPIA consent given');
             }
 
             if (!valid) return;
 
-            poUploadedFiles.forEach(f => fd.append('documents', f));
+            const fd = new FormData(poFormInner);
+            poUploadedFiles.forEach(f => fd.append('fi-file-documents[]', f));
 
             setLoading(poSubmitBtn, true);
             try {
-                const resp = await fetch(FORM_ENDPOINT, {
-                    method: 'POST',
-                    body: fd,
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (resp.ok) {
-                    showSuccess();
+                const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
+                if (error) {
+                    showError(error.message || 'Submission failed. Please try again.');
                 } else {
-                    showError(await handleFormError(resp));
+                    showSuccess(data);
+                    poFormInner.reset();
+                    poUploadedFiles = [];
+                    renderFileList(poUploadedFiles, poFileList, poUploadZone);
+                    updateSubmitState();
                 }
             } catch (err) {
                 console.error(err);
