@@ -10,158 +10,87 @@
     <meta property="og:url" content="https://funding.maribamedia.co.za">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230a1e3c'/%3E%3Cstop offset='50%25' stop-color='%231e40af'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='8' y='8' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3Crect x='56' y='8' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='8' y='56' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='56' y='56' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3C/svg%3E" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            'dark': '#ffffff',
+                            'navy': '#0a1e3c',
+                            'blue': '#1e40af',
+                            'bright': '#3b82f6',
+                            'slate': '#475569',
+                            'border': 'rgba(30, 58, 138, 0.08)'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         :root {
             --primary: #0a1e3c;
-            --primary-deep: #081527;
             --primary-mid: #1e40af;
             --primary-bright: #3b82f6;
-            --ink: #0a0f1c;
+            --ink: #111111;
             --ink-muted: #475569;
-            --on-surface-variant: #475569;
-            --on-surface-muted: #64748b;
             --surface: #ffffff;
             --surface-1: #f8fafc;
             --surface-2: #f1f5f9;
             --hairline: #e2e8f0;
-            --outline: #cbd5e1;
-            --outline-variant: #e2e8f0;
-            --shadow-xs: 0 1px 2px rgba(10, 15, 28, 0.04);
-            --shadow-sm: 0 1px 3px rgba(10, 15, 28, 0.06), 0 1px 2px rgba(10, 15, 28, 0.04);
+            --outline: #adb5bd;
             --shadow-md: 0 4px 16px rgba(10, 15, 28, 0.07), 0 1px 4px rgba(10, 15, 28, 0.04);
             --shadow-lg: 0 12px 40px rgba(10, 15, 28, 0.09), 0 2px 8px rgba(10, 15, 28, 0.04);
-            --shadow-xl: 0 24px 64px rgba(10, 15, 28, 0.11), 0 4px 16px rgba(10, 15, 28, 0.05);
-            --shadow-2xl: 0 40px 100px rgba(10, 15, 28, 0.14), 0 8px 28px rgba(10, 15, 28, 0.07);
-            --shadow-primary: 0 4px 20px rgba(10, 30, 60, 0.25);
-            --shadow-primary-lg: 0 8px 32px rgba(10, 30, 60, 0.32);
-            --radius: 20px;
-            --radius-sm: 14px;
-            --radius-xs: 10px;
-            --transition: 350ms cubic-bezier(0.22, 1, 0.36, 1);
-            --transition-fast: 220ms cubic-bezier(0.22, 1, 0.36, 1);
-            --transition-slow: 600ms cubic-bezier(0.22, 1, 0.36, 1);
-            --max: 1240px;
-            --nav-height: 76px;
+            --radius: 18px;
+            --radius-sm: 12px;
+            --transition: 300ms cubic-bezier(0.22, 1, 0.36, 1);
         }
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-            -webkit-text-size-adjust: 100%;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #ffffff;
-            color: var(--ink);
-            line-height: 1.65;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111111;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-size: 16px;
         }
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: color var(--transition-fast);
+        .card-institutional {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(10, 30, 60, 0.07);
+            border-radius: var(--radius);
+            transition: all var(--transition);
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        .card-institutional:hover {
+            border-color: rgba(30, 64, 175, 0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
         }
-        .wrap {
-            width: min(var(--max), calc(100% - 48px));
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .nav-blur {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(24px) saturate(1.2);
-            -webkit-backdrop-filter: blur(24px) saturate(1.2);
-            border-bottom: 1px solid var(--hairline);
-            transition: box-shadow var(--transition-base), background var(--transition-base);
-        }
-        .nav-blur.scrolled {
-            box-shadow: var(--shadow-sm);
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            z-index: 70;
-            pointer-events: none;
-            background: transparent;
-        }
-        .scroll-progress-bar {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #0a1e3c, #1e40af, #3b82f6);
-            border-radius: 0 4px 4px 0;
-            transition: width 120ms linear;
-        }
-
-        .logo-lockup {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            min-width: 0;
-            flex-shrink: 0;
-            transition: transform var(--transition-fast);
-        }
-        .logo-lockup:hover {
-            transform: scale(1.03);
-        }
-        .mariba-mark {
-            flex: 0 0 auto;
-            width: 36px;
-            height: 36px;
-            animation: logoPulse 3s ease-in-out infinite;
-        }
-        @keyframes logoPulse {
-            0%, 100% { filter: drop-shadow(0 0 0 rgba(30, 64, 175, 0)); }
-            50% { filter: drop-shadow(0 0 8px rgba(30, 64, 175, 0.3)); }
-        }
-        .wordmark {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-            font-size: 1.05rem;
-            letter-spacing: -0.02em;
-            color: var(--primary);
-            white-space: nowrap;
-            line-height: 1;
-        }
-        .wordmark-sub {
-            display: block;
-            font-family: 'Geist', 'Inter', sans-serif;
-            font-size: 0.55rem;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            color: var(--ink-muted);
-            text-transform: uppercase;
-            margin-top: 2px;
-        }
-
         .btn-accent {
-            background: linear-gradient(135deg, #0a1e3c 0%, #1e40af 50%, #3b82f6 100%);
-            background-size: 200% 200%;
+            background: linear-gradient(135deg, #0a1e3c 0%, #1e40af 100%);
             color: #fff;
             font-weight: 600;
             border-radius: 999px;
-            padding: 0.9rem 2.2rem;
-            transition: all var(--transition-fast);
+            padding: 0.85rem 2rem;
+            transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -171,54 +100,34 @@
             text-transform: uppercase;
             border: none;
             cursor: pointer;
-            box-shadow: var(--shadow-primary);
-            font-family: 'Geist', 'Inter', sans-serif;
-            position: relative;
-            overflow: hidden;
-            isolation: isolate;
-        }
-        .btn-accent::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #1e40af 0%, #0a1e3c 50%, #1e40af 100%);
-            background-size: 200% 200%;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity var(--transition-base);
+            box-shadow: 0 4px 16px rgba(10, 30, 60, 0.2);
         }
         .btn-accent:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-primary-lg);
-            background-position: 100% 100%;
-        }
-        .btn-accent:hover::before {
-            opacity: 1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(10, 30, 60, 0.35);
         }
         .btn-accent:active {
-            transform: translateY(-1px) scale(0.98);
-            box-shadow: 0 2px 10px rgba(10, 30, 60, 0.2);
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(10, 30, 60, 0.2);
         }
         .btn-accent:focus-visible {
-            outline: 3px solid var(--primary-bright);
-            outline-offset: 3px;
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
         }
         .btn-accent:disabled {
-            opacity: 0.5;
+            opacity: 0.4;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
-            background-position: 0% 0%;
         }
-
         .btn-outline {
-            background: rgba(255, 255, 255, 0.92);
-            border: 1.5px solid var(--outline-variant);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1.5px solid var(--hairline);
             color: var(--primary-mid);
             font-weight: 600;
             border-radius: 999px;
-            padding: 0.9rem 2.2rem;
-            transition: all var(--transition-fast);
+            padding: 0.85rem 2rem;
+            transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -227,130 +136,50 @@
             font-size: 0.82rem;
             text-transform: uppercase;
             cursor: pointer;
-            font-family: 'Geist', 'Inter', sans-serif;
         }
         .btn-outline:hover {
-            background: rgba(30, 64, 175, 0.05);
+            background: rgba(30, 64, 175, 0.04);
             border-color: var(--primary-mid);
             color: var(--primary-mid);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
         }
         .btn-outline:active {
             transform: translateY(0);
             background: rgba(30, 64, 175, 0.08);
         }
         .btn-outline:focus-visible {
-            outline: 3px solid var(--primary-bright);
-            outline-offset: 3px;
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
         }
-
         .form-input {
             background: #ffffff;
-            border: 1.5px solid var(--hairline);
-            color: var(--ink);
-            border-radius: var(--radius-xs);
-            padding: 0.85rem 1.1rem;
+            border: 1px solid var(--hairline);
+            color: #111111;
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
             width: 100%;
-            transition: all var(--transition-fast);
+            transition: all 0.2s;
             font-size: 0.9rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 450;
         }
         .form-input:focus {
             outline: none;
             border-color: var(--primary-mid);
-            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.12);
+            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.15);
         }
-        .form-input::placeholder {
-            color: #94a3b8;
-            font-weight: 400;
-        }
-        .form-input:invalid {
-            border-color: #e74c3c;
-        }
-        textarea.form-input {
-            resize: vertical;
-            min-height: 110px;
-        }
-
-        .card-institutional {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(10, 30, 60, 0.07);
-            border-radius: var(--radius);
-            transition: all var(--transition-base);
-            box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        .card-institutional::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #0a1e3c, #1e40af, #3b82f6);
-            opacity: 0;
-            transition: opacity var(--transition-base);
-            border-radius: var(--radius) var(--radius) 0 0;
-            z-index: 1;
-        }
-        .card-institutional:hover {
-            border-color: rgba(30, 64, 175, 0.2);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
-        }
-        .card-institutional:hover::before {
-            opacity: 1;
-        }
-        .card-institutional:active {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
-        }
-        .funding-option {
-            cursor: pointer;
-            text-align: left;
-            padding: 1.5rem 1.6rem;
-        }
-        .funding-option .material-symbols-outlined {
-            font-size: 1.6rem;
-            color: var(--primary-mid);
-            transition: transform var(--transition-base);
-        }
-        .funding-option:hover .material-symbols-outlined {
-            transform: scale(1.15) rotate(-3deg);
-        }
-        .funding-option.selected {
-            border-color: var(--primary-mid) !important;
-            background: rgba(30, 64, 175, 0.06) !important;
-            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1), var(--shadow-md) !important;
-        }
-        .funding-option.selected::before {
-            opacity: 1;
-        }
-        .term-loan-card {
-            border-left: 4px solid var(--primary-mid);
-            background: linear-gradient(105deg, #f8fafc 0%, #ffffff 100%);
-        }
-
+        .form-input::placeholder { color: var(--outline); }
+        textarea.form-input { resize: vertical; min-height: 100px; }
         .upload-zone {
             border: 2px dashed rgba(30, 64, 175, 0.2);
             border-radius: var(--radius-sm);
-            padding: 2.2rem;
+            padding: 2rem;
             text-align: center;
-            transition: all var(--transition-base);
+            transition: all 0.3s;
             cursor: pointer;
             background: var(--surface-1);
-            position: relative;
         }
         .upload-zone:hover, .upload-zone.dragover {
             border-color: var(--primary-mid);
             background: rgba(30, 64, 175, 0.04);
-            transform: scale(1.01);
         }
         .upload-zone.has-files {
             border-color: #2ecc71;
@@ -363,209 +192,79 @@
             gap: 6px;
             background: var(--surface-2);
             border: 1px solid rgba(30, 64, 175, 0.1);
-            border-radius: 8px;
-            padding: 6px 14px;
+            border-radius: 6px;
+            padding: 6px 12px;
             font-size: 0.8rem;
-            color: var(--ink);
+            color: #111111;
             margin: 4px;
-            animation: chipFadeIn 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-        }
-        @keyframes chipFadeIn {
-            from { opacity: 0; transform: scale(0.85); }
-            to { opacity: 1; transform: scale(1); }
         }
         .file-chip .remove-file {
             cursor: pointer;
             color: #e74c3c;
             font-weight: bold;
             margin-left: 4px;
-            transition: transform var(--transition-fast);
-        }
-        .file-chip .remove-file:hover {
-            transform: scale(1.3);
         }
         .consent-box {
             background: var(--surface-1);
             border: 1px solid rgba(30, 64, 175, 0.08);
-            border-radius: var(--radius-xs);
+            border-radius: 10px;
             padding: 1.25rem;
             font-size: 0.85rem;
-            line-height: 1.65;
-            color: var(--on-surface-variant);
+            line-height: 1.6;
+            color: var(--ink-muted);
             max-height: 200px;
             overflow-y: auto;
-            scrollbar-width: thin;
         }
-        .consent-box::-webkit-scrollbar {
-            width: 4px;
+        .consent-box strong { color: #111111; }
+        .funding-option.selected {
+            border-color: var(--primary-mid) !important;
+            background: rgba(30, 64, 175, 0.06) !important;
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
         }
-        .consent-box::-webkit-scrollbar-thumb {
-            background: var(--outline);
-            border-radius: 4px;
+        .funding-option:active {
+            transform: translateY(0) !important;
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08) !important;
         }
-        .consent-box strong { color: var(--ink); }
-        .fade-step {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+        .fade-step { animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(28px); }
+            0% { opacity: 0; transform: translateY(24px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-        .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        .fade-up {
-            animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        .fade-up-delay-1 { animation-delay: 100ms; }
-        .fade-up-delay-2 { animation-delay: 200ms; }
-        .fade-up-delay-3 { animation-delay: 300ms; }
-
-        .doc-reminder-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .doc-reminder-list { list-style: none; padding: 0; margin: 0; }
         .doc-reminder-list li {
             padding: 4px 0;
             font-size: 0.8rem;
-            color: var(--on-surface-variant);
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
+            color: var(--ink-muted);
         }
-        .doc-reminder-list li::before {
-            content: "📄";
-            font-size: 0.75rem;
-            flex-shrink: 0;
-            margin-top: 1px;
+        .doc-reminder-list li::before { content: "📄 "; }
+        .term-loan-card {
+            border-left: 4px solid var(--primary-mid);
+            background: linear-gradient(105deg, #f8fafc 0%, #ffffff 100%);
         }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 0.3rem 0.9rem;
-            border-radius: 999px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            background: #fff;
-            border: 1.5px solid rgba(30, 64, 175, 0.15);
+        .material-symbols-outlined {
+            font-size: 1.2rem;
             color: var(--primary-mid);
-            transition: all var(--transition-fast);
+            flex-shrink: 0;
         }
-        .badge:hover {
-            border-color: var(--primary-mid);
-            background: rgba(30, 64, 175, 0.04);
-            transform: translateY(-1px);
-        }
-
-        .success-card {
-            text-align: center;
-            padding: 3rem 2.5rem;
-        }
-        .success-icon {
-            display: inline-grid;
-            place-items: center;
-            width: 72px;
-            height: 72px;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #0a1e3c, #1e40af);
-            box-shadow: var(--shadow-primary-lg);
-            color: #fff;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            animation: successPulse 2s ease-in-out infinite;
-        }
-        @keyframes successPulse {
-            0%, 100% { box-shadow: var(--shadow-primary-lg); }
-            50% { box-shadow: 0 16px 56px rgba(10, 30, 60, 0.4), 0 0 0 12px rgba(30, 64, 175, 0.08); }
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            right: 1.5rem;
-            bottom: 1.5rem;
-            z-index: 60;
-            display: grid;
-            place-items: center;
-            width: 56px;
-            height: 56px;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #0a1e3c 0%, #1e40af 100%);
-            box-shadow: var(--shadow-primary-lg);
-            transition: transform var(--transition-base), box-shadow var(--transition-base);
-            animation: floatIn 800ms cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
-        }
-        @keyframes floatIn {
-            from { opacity: 0; transform: translateY(20px) scale(0.8); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1) rotate(-4deg);
-            box-shadow: 0 16px 48px rgba(10, 30, 60, 0.45);
-        }
-        .whatsapp-float svg { width: 24px; height: 24px; fill: white; }
-
-        .main-bg {
-            background:
-                radial-gradient(circle at 10% 10%, rgba(30, 64, 175, 0.04), transparent 30rem),
-                radial-gradient(circle at 90% 20%, rgba(10, 30, 60, 0.04), transparent 28rem),
-                radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.03), transparent 24rem),
-                linear-gradient(160deg, #f8fafc 0%, #ffffff 40%, #f0f4f8 100%);
-        }
-
-        @media (max-width: 860px) {
-            :root { --nav-height: 66px; --radius: 16px; --radius-sm: 12px; }
-            .wrap { width: min(100% - 32px, var(--max)); }
-            .mariba-mark { width: 30px; height: 30px; }
-            .wordmark { font-size: 0.9rem; }
-            .funding-option { padding: 1.1rem 1.2rem !important; }
-            .funding-option h3, .funding-option h4 { font-size: 0.9rem !important; }
-            .success-card { padding: 2rem 1.5rem; }
-            .success-icon { width: 56px; height: 56px; font-size: 1.5rem; }
-        }
-        @media (max-width: 560px) {
-            .wrap { width: min(100% - 22px, var(--max)); }
-            .wordmark { font-size: 0.78rem; }
-            .wordmark-sub { font-size: 0.48rem; letter-spacing: 0.1em; }
-            .mariba-mark { width: 26px; height: 26px; }
-            .btn-accent, .btn-outline { font-size: 0.72rem; padding: 0.75rem 1.4rem; }
-            .form-input { padding: 0.7rem 0.9rem; font-size: 0.85rem; }
-            .upload-zone { padding: 1.5rem; }
+        @media (max-width: 640px) {
             .funding-option { padding: 0.9rem 1rem !important; }
-            .funding-option h3, .funding-option h4 { font-size: 0.85rem !important; }
-            .whatsapp-float { width: 48px; height: 48px; right: 1rem; bottom: 1rem; }
-            .whatsapp-float svg { width: 20px; height: 20px; }
-            .success-icon { width: 48px; height: 48px; font-size: 1.2rem; }
+            .funding-option h3, .funding-option h4 { font-size: 0.95rem !important; }
         }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.001ms !important;
-                animation-iteration-count: 1 !important;
-                scroll-behavior: auto !important;
-                transition-duration: 0.001ms !important;
-            }
-            .fade-step, .fade-up, .fade-in { animation: none !important; opacity: 1 !important; transform: none !important; }
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e2e8f0;
         }
     </style>
 <base target="_blank">
 </head>
 <body class="bg-white font-sans antialiased">
 
-    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
-
-    <nav class="fixed w-full z-50 nav-blur" id="mainNav">
-        <div class="wrap">
-            <div class="flex items-center justify-between" style="height: var(--nav-height);">
-                <a href="https://funding.maribamedia.co.za" class="logo-lockup" aria-label="Mariba Media home">
-                    <svg class="mariba-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+    <nav class="fixed w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex items-center justify-between h-20">
+                <a href="https://funding.maribamedia.co.za" class="flex items-center gap-3">
+                    <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
                         <defs>
                             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#0a1e3c" />
@@ -579,103 +278,99 @@
                         <rect x="56" y="56" width="36" height="36" rx="6" fill="url(#logoGrad)" />
                     </svg>
                     <div>
-                        <span class="wordmark">MARIBA<span style="color: var(--primary-mid);">MEDIA</span></span>
-                        <span class="wordmark-sub">Bespoke Funding Network</span>
+                        <span class="text-lg font-display font-extrabold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
+                        <span class="block text-[10px] font-medium tracking-[0.25em] text-[#475569] uppercase">Bespoke Funding Network</span>
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-6">
-                    <span class="text-xs font-medium text-[#475569] tracking-widest uppercase" style="letter-spacing: 0.18em;">Direct Access · Zero Cost</span>
-                    <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#475569] hover:text-[#1e40af] transition-colors font-medium">victor@maribamedia.co.za</a>
-                    <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="btn-accent !px-4 !py-2 text-xs" style="padding: 0.5rem 1.2rem !important; min-height: 38px;">📅 Book a Call</a>
+                    <span class="text-xs font-medium text-[#475569] tracking-widest uppercase">Direct Access · Zero Cost</span>
+                    <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#475569] hover:text-[#1e40af] transition-colors">victor@maribamedia.co.za</a>
+                    <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="btn-accent !px-4 !py-2 text-xs">📅 Book a Call</a>
                 </div>
-                <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="lg:hidden btn-accent !px-3 !py-2 text-xs" style="padding: 0.4rem 1rem !important; min-height: 36px; font-size: 0.68rem;">📅 Book</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-24 pb-16 sm:pt-28 sm:pb-20 main-bg" style="min-height: 100vh;">
-        <div class="wrap" style="max-width: 1040px;">
+    <main class="pt-24 pb-16 sm:pt-28 sm:pb-20" style="background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f8fafc 100%);">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="text-center mb-8 sm:mb-12 fade-up">
-                <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,64,175,0.1)] bg-white/70 rounded-full mb-5" style="backdrop-filter: blur(12px);">
+            <div class="text-center mb-8 sm:mb-12 animate-fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,64,175,0.1)] bg-[#f8fafc]/80 rounded-full mb-5">
                     <span class="w-2 h-2 rounded-full bg-[#1e40af] animate-pulse"></span>
                     <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-[#475569] uppercase">POPIA Compliant · No ID Documents</span>
                 </div>
-                <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0a0f1c] leading-tight" style="font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.03em;">Connect with the right specialist for your business.</h1>
-                <p class="text-[#475569] mt-3 max-w-xl mx-auto text-sm sm:text-base font-medium" style="font-weight: 450;">Choose your funding type below. We send your details straight to the partner with the exact mandate. No ID documents. No hidden fees.</p>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-[#111111] leading-tight">Connect with the right specialist for your business.</h1>
+                <p class="text-[#475569] mt-3 max-w-xl mx-auto text-sm">Choose your funding type below. We send your details straight to the partner with the exact mandate. No ID documents. No hidden fees.</p>
             </div>
 
             <!-- FUNDING SELECTION -->
-            <div class="card-institutional p-6 sm:p-8 md:p-10 fade-up" id="selectionContainer" style="cursor: default;">
+            <div class="card-institutional p-6 sm:p-8 md:p-10" id="selectionContainer">
                 <div id="step1">
-                    <h2 class="text-xl sm:text-2xl font-bold text-[#0a0f1c] mb-2" style="font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.02em;">What type of solution do you need?</h2>
+                    <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-2">What type of solution do you need?</h2>
                     <p class="text-[#475569] text-sm mb-6">Choose the category that fits. We match you with the right specialist partner.</p>
-                    
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-4">Invoice &amp; Asset Finance</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-4">Invoice & Asset Finance</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
                             <span class="material-symbols-outlined">account_balance</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Asset‑Backed Finance</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Asset‑Backed Finance</h3>
                             <p class="text-[#475569] text-xs mt-1">Funding based on your assets</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Purchase Order Funding" data-doc-group="po-funding">
                             <span class="material-symbols-outlined">local_shipping</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Purchase Order Funding</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Purchase Order Funding</h3>
                             <p class="text-[#475569] text-xs mt-1">Government and private orders</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Government Invoice Discounting" data-doc-group="gov-invoice">
                             <span class="material-symbols-outlined">receipt_long</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Government Invoice Discounting</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Government Invoice Discounting</h3>
                             <p class="text-[#475569] text-xs mt-1">For verified government invoices</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Private Invoice Discounting" data-doc-group="private-invoice">
                             <span class="material-symbols-outlined">request_quote</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Private Invoice Discounting</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Private Invoice Discounting</h3>
                             <p class="text-[#475569] text-xs mt-1">For private company invoices</p>
                         </button>
                     </div>
-
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-8">Energy, Solar &amp; Water</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-8">Energy, Solar & Water</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="IPP Funding" data-doc-group="ipp">
                             <span class="material-symbols-outlined">solar_power</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">IPP Funding</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">IPP Funding</h3>
                             <p class="text-[#475569] text-xs mt-1">Debt, equity, or mixed funding</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Sectional Title Solar" data-doc-group="sectional-solar">
                             <span class="material-symbols-outlined">home_work</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Sectional Title Solar</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Sectional Title Solar</h3>
                             <p class="text-[#475569] text-xs mt-1">Housing estates and complexes</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Commercial & Industrial Solar" data-doc-group="ci-solar">
                             <span class="material-symbols-outlined">factory</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Commercial &amp; Industrial Solar</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Commercial & Industrial Solar</h3>
                             <p class="text-[#475569] text-xs mt-1">Factories, offices, warehouses</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Bulk Diesel on Credit" data-doc-group="diesel">
                             <span class="material-symbols-outlined">gas_meter</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Wholesale Bulk Diesel</h3>
-                            <p class="text-[#475569] text-xs mt-1">30‑day terms &amp; tank install</p>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Wholesale Bulk Diesel</h3>
+                            <p class="text-[#475569] text-xs mt-1">30‑day terms & tank install</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Borehole Water Purchase Agreement" data-doc-group="borehole">
                             <span class="material-symbols-outlined">water_drop</span>
-                            <h3 class="text-base sm:text-lg font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Borehole Water</h3>
+                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Borehole Water</h3>
                             <p class="text-[#475569] text-xs mt-1">Shared‑savings water solution</p>
                         </button>
                     </div>
-
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-8">Business Growth</h3>
                     <div class="grid sm:grid-cols-1 gap-4">
                         <button type="button" class="card-institutional p-5 sm:p-6 text-left funding-option term-loan-card" data-value="Term Loan" data-doc-group="termloan">
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                                 <div>
                                     <span class="material-symbols-outlined">trending_up</span>
-                                    <h3 class="text-lg sm:text-xl font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Flexible Business Term Loan</h3>
+                                    <h3 class="text-lg sm:text-xl font-display font-bold text-[#111111] mt-1">Flexible Business Term Loan</h3>
                                     <p class="text-[#475569] text-xs mt-1">For businesses ready to grow</p>
                                 </div>
-                                <div class="flex flex-wrap gap-2 text-xs font-medium text-[#1e40af]">
-                                    <span class="badge">📅 12+ months trading</span>
-                                    <span class="badge">💰 R1M+ annual turnover</span>
+                                <div class="flex flex-wrap gap-3 text-xs font-medium text-[#1e40af]">
+                                    <span class="inline-flex items-center gap-1 bg-white border border-[#1e40af]/20 rounded-full px-3 py-1">📅 12+ months trading</span>
+                                    <span class="inline-flex items-center gap-1 bg-white border border-[#1e40af]/20 rounded-full px-3 py-1">💰 R1M+ annual turnover</span>
                                 </div>
                             </div>
                         </button>
@@ -683,7 +378,7 @@
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                                 <div>
                                     <span class="material-symbols-outlined">credit_card</span>
-                                    <h3 class="text-lg sm:text-xl font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Revolving Line of Credit</h3>
+                                    <h3 class="text-lg sm:text-xl font-display font-bold text-[#111111] mt-1">Revolving Line of Credit</h3>
                                     <p class="text-[#475569] text-xs mt-1">Ongoing working capital</p>
                                 </div>
                             </div>
@@ -692,7 +387,7 @@
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                                 <div>
                                     <span class="material-symbols-outlined">sync_alt</span>
-                                    <h3 class="text-lg sm:text-xl font-bold text-[#0a0f1c] mt-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">BridgePay Trade Credit</h3>
+                                    <h3 class="text-lg sm:text-xl font-display font-bold text-[#111111] mt-1">BridgePay Trade Credit</h3>
                                     <p class="text-[#475569] text-xs mt-1">Offer customers 90‑day terms</p>
                                 </div>
                             </div>
@@ -703,13 +398,13 @@
             </div>
 
             <!-- DYNAMIC FORM -->
-            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="dynamicForm" style="cursor: default;">
-                <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="dynamicForm">
+                <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-[#0a0f1c]" style="font-family: 'Plus Jakarta Sans', sans-serif;">Send Your Application</h2>
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]">Send Your Application</h2>
                         <p class="text-[#475569] text-sm mt-1" id="dynFormSubtitle">Fill in your details. We send them straight to the partner.</p>
                     </div>
-                    <button type="button" id="dynBackBtn" class="btn-outline !px-4 !py-2 text-xs" style="padding: 0.4rem 1rem !important; min-height: 36px;">← Back</button>
+                    <button type="button" id="dynBackBtn" class="btn-outline !px-4 !py-2 text-xs">← Back</button>
                 </div>
 
                 <div id="docReminderBox" class="mb-6 p-4 rounded-xl bg-[#f8fafc] border border-[rgba(30,64,175,0.1)]">
@@ -720,28 +415,28 @@
                 <form id="dynFormInner" novalidate>
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Business Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Business Name <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fi-sender-company" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Your Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Your Name <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fi-sender-fullName" class="form-input" placeholder="Full name" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Email <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Email <span class="text-[#e74c3c]">*</span></label>
                             <input type="email" name="fi-sender-email" class="form-input" placeholder="you@company.co.za" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Phone <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Phone <span class="text-[#e74c3c]">*</span></label>
                             <input type="tel" name="fi-sender-phone" class="form-input" placeholder="+27 82 000 0000" required>
-                            <p class="text-[10px] text-[#94a3b8] mt-1">Format: +27 82 000 0000</p>
+                            <p class="text-[10px] text-[#adb5bd] mt-1">Format: +27 82 000 0000</p>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">How much do you need? <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">How much do you need? <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fi-text-fundingAmount" class="form-input" placeholder="e.g. R 2 500 000" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">How long has your business been running?</label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">How long has your business been running?</label>
                             <select name="fi-select-yearsTrading" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="0-1">Less than 1 year</option>
@@ -751,7 +446,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Yearly sales</label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Yearly sales</label>
                             <select name="fi-select-annualTurnover" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="<1M">Under R 1 million</option>
@@ -764,16 +459,16 @@
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">What do you need the money for? <span class="text-[#e74c3c]">*</span></label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">What do you need the money for? <span class="text-[#e74c3c]">*</span></label>
                         <textarea name="fi-text-description" class="form-input" placeholder="Tell us about your project and what the funding is for." required></textarea>
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Supporting Documents</label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
                         <div class="upload-zone" id="dynUploadZone">
                             <input type="file" id="dynFileInput" name="fi-file-documents[]" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
-                            <p class="text-sm font-medium text-[#0a0f1c]">Drag and drop files here, or click to browse</p>
+                            <p class="text-sm font-medium text-[#111111]">Drag and drop files here, or click to browse</p>
                             <p class="text-xs text-[#475569] mt-1">PDF, Word, Excel, or images up to 10 MB each</p>
                         </div>
                         <div id="dynFileList" class="mt-3 flex flex-wrap"></div>
@@ -784,7 +479,7 @@
                         <label class="flex items-start gap-3 cursor-pointer">
                             <input type="checkbox" name="fi-checkbox-consent" id="dynConsent" class="mt-1 w-4 h-4 accent-[#1e40af]" required>
                             <div>
-                                <span class="text-sm text-[#0a0f1c] font-medium">I agree to let Mariba Media process my information (POPIA compliant)</span>
+                                <span class="text-sm text-[#111111] font-medium">I agree to let Mariba Media process my information (POPIA compliant)</span>
                                 <div class="consent-box mt-2">
                                     <p>By sending this form, you agree that Mariba Media may process your business details under POPIA. We only share your info with the partner for your chosen funding type. We never sell your data. To delete your data, email <strong>victor@maribamedia.co.za</strong>.</p>
                                 </div>
@@ -802,13 +497,13 @@
             </div>
 
             <!-- PO FUNDING FORM -->
-            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="poFundingForm" style="cursor: default;">
-                <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="poFundingForm">
+                <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-[#0a0f1c]" style="font-family: 'Plus Jakarta Sans', sans-serif;">Purchase Order Funding</h2>
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]">Purchase Order Funding</h2>
                         <p class="text-[#475569] text-sm mt-1">Get funding for your purchase orders. We send your request straight to the partner.</p>
                     </div>
-                    <button type="button" id="poBackBtn" class="btn-outline !px-4 !py-2 text-xs" style="padding: 0.4rem 1rem !important; min-height: 36px;">← Back</button>
+                    <button type="button" id="poBackBtn" class="btn-outline !px-4 !py-2 text-xs">← Back</button>
                 </div>
 
                 <div class="mb-6 p-4 rounded-xl bg-[#f8fafc] border border-[rgba(30,64,175,0.1)]">
@@ -827,28 +522,28 @@
                     <input type="hidden" name="fi-text-fundingType" value="Purchase Order Funding">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Business Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Business Name <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fi-sender-company" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Your Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Your Name <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fi-sender-fullName" class="form-input" placeholder="Full name" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Email <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Email <span class="text-[#e74c3c]">*</span></label>
                             <input type="email" name="fi-sender-email" class="form-input" placeholder="you@company.co.za" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Phone <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Phone <span class="text-[#e74c3c]">*</span></label>
                             <input type="tel" name="fi-sender-phone" class="form-input" placeholder="+27 82 000 0000" required>
-                            <p class="text-[10px] text-[#94a3b8] mt-1">Format: +27 82 000 0000</p>
+                            <p class="text-[10px] text-[#adb5bd] mt-1">Format: +27 82 000 0000</p>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Order Value <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Order Value <span class="text-[#e74c3c]">*</span></label>
                             <input type="text" name="fi-text-poValue" class="form-input" placeholder="e.g. R 500 000" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Who is your client? <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-xs font-semibold text-[#111111] mb-1">Who is your client? <span class="text-[#e74c3c]">*</span></label>
                             <select name="fi-select-endClient" class="form-input" required>
                                 <option value="">Select…</option>
                                 <option value="government">Government / State-Owned Entity</option>
@@ -859,16 +554,16 @@
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Tell us about the order <span class="text-[#e74c3c]">*</span></label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Tell us about the order <span class="text-[#e74c3c]">*</span></label>
                         <textarea name="fi-text-description" class="form-input" placeholder="What are you delivering? When do you need it done?" required></textarea>
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#0a0f1c] mb-1">Supporting Documents</label>
+                        <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
                         <div class="upload-zone" id="poUploadZone">
                             <input type="file" id="poFileInput" name="fi-file-documents[]" multiple style="display:none">
                             <div class="text-3xl mb-2">📎</div>
-                            <p class="text-sm font-medium text-[#0a0f1c]">Drag and drop files here, or click to browse</p>
+                            <p class="text-sm font-medium text-[#111111]">Drag and drop files here, or click to browse</p>
                             <p class="text-xs text-[#475569] mt-1">PDF, Word, Excel, or images up to 10 MB each</p>
                         </div>
                         <div id="poFileList" class="mt-3 flex flex-wrap"></div>
@@ -879,7 +574,7 @@
                         <label class="flex items-start gap-3 cursor-pointer">
                             <input type="checkbox" name="fi-checkbox-consent" id="poConsent" class="mt-1 w-4 h-4 accent-[#1e40af]" required>
                             <div>
-                                <span class="text-sm text-[#0a0f1c] font-medium">I agree to let Mariba Media process my information (POPIA compliant)</span>
+                                <span class="text-sm text-[#111111] font-medium">I agree to let Mariba Media process my information (POPIA compliant)</span>
                                 <div class="consent-box mt-2">
                                     <p>By sending this form, you agree that Mariba Media may process your business details under POPIA. We only share your info with the partner for your chosen funding type. We never sell your data. To delete your data, email <strong>victor@maribamedia.co.za</strong>.</p>
                                 </div>
@@ -897,9 +592,9 @@
             </div>
 
             <!-- Success / Error screens -->
-            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8 success-card" id="successScreen" style="cursor: default;">
-                <div class="success-icon">✓</div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-[#0a0f1c] mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif;">We got it!</h2>
+            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="successScreen">
+                <div class="text-5xl mb-4">✅</div>
+                <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">We got it!</h2>
                 <p class="text-[#475569] mb-2">We sent your request to the partner.</p>
                 <p class="text-[#475569] text-sm mb-2">Reference: <span id="successRef" class="font-mono text-[#1e40af] font-semibold">—</span></p>
                 
@@ -907,7 +602,7 @@
                     <div class="flex items-start gap-3 mb-4">
                         <span class="text-2xl">📎</span>
                         <div>
-                            <p class="text-sm font-semibold text-[#0a0f1c]">Email your documents</p>
+                            <p class="text-sm font-semibold text-[#111111]">Email your documents</p>
                             <p class="text-xs text-[#475569] mt-1">Send your documents to <a href="mailto:victor@maribamedia.co.za" class="text-[#1e40af] font-semibold underline hover:text-[#0a1e3c]">victor@maribamedia.co.za</a>. Put your business name in the email subject.</p>
                         </div>
                     </div>
@@ -921,9 +616,9 @@
                 <button class="btn-outline px-6 py-3 text-sm" onclick="location.reload()">Send Another Request</button>
             </div>
             
-            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="errorScreen" style="cursor: default;">
-                <div class="success-icon" style="background: linear-gradient(135deg, #7f1d1d, #dc2626);">⚠</div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-[#0a0f1c] mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif;">Something went wrong</h2>
+            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="errorScreen">
+                <div class="text-5xl mb-4">⚠️</div>
+                <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Something went wrong</h2>
                 <p class="text-[#475569] mb-4" id="errorMessage">We could not send your request. Please try again or email us directly.</p>
                 <a href="mailto:victor@maribamedia.co.za" class="btn-accent px-6 py-3 text-sm">Email victor@maribamedia.co.za</a>
             </div>
@@ -931,7 +626,7 @@
     </main>
 
     <footer class="border-t border-[#e2e8f0] py-16" style="background: #f8fafc;">
-        <div class="wrap text-center" style="max-width: 800px;">
+        <div class="max-w-5xl mx-auto px-6 text-center">
             <div class="flex items-center justify-center gap-3 mb-4">
                 <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
                     <defs>
@@ -946,23 +641,19 @@
                     <rect x="8" y="56" width="36" height="36" rx="6" fill="url(#logoGradF)" opacity="0.7" />
                     <rect x="56" y="56" width="36" height="36" rx="6" fill="url(#logoGradF)" />
                 </svg>
-                <span class="text-sm font-bold tracking-tight text-[#0a0f1c] uppercase" style="font-family: 'Plus Jakarta Sans', sans-serif;">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
+                <span class="text-sm font-display font-bold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
             </div>
             <p class="text-xs text-[#475569] max-w-md mx-auto leading-relaxed">
                 Bespoke network for specialist solar, water, energy and business finance solutions in South Africa.
             </p>
-            <div class="mt-6 flex items-center justify-center gap-4 text-xs text-[#475569] flex-wrap">
-                <a href="mailto:victor@maribamedia.co.za" class="hover:text-[#1e40af] transition-colors font-medium">victor@maribamedia.co.za</a>
+            <div class="mt-6 flex items-center justify-center gap-4 text-xs text-[#475569]">
+                <a href="mailto:victor@maribamedia.co.za" class="hover:text-[#1e40af] transition-colors">victor@maribamedia.co.za</a>
                 <span>·</span>
-                <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="hover:text-[#1e40af] transition-colors font-medium">Book a Discovery Call</a>
+                <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="hover:text-[#1e40af] transition-colors">Book a Discovery Call</a>
             </div>
-            <p class="mt-8 text-[10px] text-[#94a3b8]">© 2026 Mariba Media. All rights reserved. POPIA Compliant.</p>
+            <p class="mt-8 text-[10px] text-[#adb5bd]">© 2026 Mariba Media. All rights reserved. POPIA Compliant.</p>
         </div>
     </footer>
-
-    <a class="whatsapp-float" href="https://wa.me/27766473499?text=I'm%20ready%20to%20submit%20my%20funding%20enquiry." target="_blank" rel="noopener" aria-label="Submit now on WhatsApp">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.062c-3.411 0-6.188 2.777-6.188 6.189 0 1.21.377 2.336 1.019 3.273l-.656 2.393 2.45-.64c.905.515 1.95.815 3.064.815 3.411 0 6.188-2.777 6.188-6.189 0-3.412-2.777-6.189-6.188-6.189zM15.523 14.854c-.216.608-1.246 1.107-1.712 1.147-.466.04-1.045.205-3.045-.63-2.001-.837-3.214-2.883-3.314-3.018-.1-.135-.853-1.134-.853-2.162 0-1.028.535-1.534.724-1.737.189-.203.411-.253.548-.253.136 0 .273 0 .393.006.126.006.297-.047.466.36.17.406.58 1.414.631 1.516.051.101.085.22.017.356-.068.135-.102.22-.203.339-.101.118-.213.265-.304.356-.101.101-.203.21-.085.412.119.202.527.871 1.131 1.408.777.691 1.43.906 1.633 1.008.203.101.321.085.44-.051.118-.135.514-.601.65-.806.135-.203.271-.169.456-.101.186.068 1.177.555 1.38.657.203.101.339.152.389.237.05.084.05.49-.166 1.098z"/></svg>
-    </a>
 
     <script src="https://forminit.com/sdk/v1/forminit.js"></script>
     <script>
@@ -973,18 +664,90 @@
         const FORM_ID = 'o7swsv5adox';
 
         const docRequirements = {
-            'asset-backed': ['Financial statements', '6 months of bank statements', 'Title deed copy', 'Municipal bill', 'Tax clearance certificate'],
-            'po-funding': ['Purchase Order', 'Supplier Quote(s)', 'RFQ (where applicable)', 'Initial Email of Award', 'COR14.3 / Company Documents', 'CSD Overview (if applicable)'],
-            'gov-invoice': ['Your invoice', 'Government purchase order or contract', 'Signed delivery note or payment certificate', 'No ID or proof of address needed.'],
-            'private-invoice': ['Your invoice', 'Private company purchase order or contract', 'Signed delivery note or payment certificate', 'No ID or proof of address needed.'],
-            'ipp': ['Project summary and site location', 'Power agreement, environmental approval, and design plans', 'Municipal approval and grid connection plan', 'Financial plan with costs and returns', 'Buyer credit check or government guarantee', 'Team structure and project timeline', 'No ID or proof of address needed.'],
-            'sectional-solar': ['Body corporate or HOA approval', '6–12 months of electricity bills', 'Site assessment report', 'Quotes from your installer', 'Proof you own or lease the property', 'No ID or proof of address needed.'],
-            'ci-solar': ['Electricity bills', 'Proof you own or lease the property', 'Quotes from your installer', 'Company registration documents', 'No ID or proof of address needed.'],
-            'diesel': ['Company registration documents', 'VAT documentation', 'Credit references', 'Site location details for tank installation', 'Estimated monthly diesel volume (min 40,000L)', 'No ID or proof of address needed.'],
-            'borehole': ['Proof of property ownership or lease', 'Current water bill', 'Site access details', 'Any existing borehole or water assessment reports', 'No ID or proof of address needed.'],
-            'termloan': ['Financial statements for the last 12 months', 'Yearly sales of R1 million or more', 'Tax clearance certificate', 'No ID or proof of address needed.'],
-            'lineofcredit': ['Financial statements for the last 12 months', 'Yearly sales of R1 million or more', 'Tax clearance certificate', 'No ID or proof of address needed.'],
-            'bridgepay': ['Business registration documents', 'Details of your supplier or trade customers', 'Current trade terms', 'No ID or proof of address needed.']
+            'asset-backed': [
+                'Financial statements',
+                '6 months of bank statements',
+                'Title deed copy',
+                'Municipal bill',
+                'Tax clearance certificate'
+            ],
+            'po-funding': [
+                'Purchase Order',
+                'Supplier Quote(s)',
+                'RFQ (where applicable)',
+                'Initial Email of Award',
+                'COR14.3 / Company Documents',
+                'CSD Overview (if applicable)'
+            ],
+            'gov-invoice': [
+                'Your invoice',
+                'Government purchase order or contract',
+                'Signed delivery note or payment certificate',
+                'No ID or proof of address needed.'
+            ],
+            'private-invoice': [
+                'Your invoice',
+                'Private company purchase order or contract',
+                'Signed delivery note or payment certificate',
+                'No ID or proof of address needed.'
+            ],
+            'ipp': [
+                'Project summary and site location',
+                'Power agreement, environmental approval, and design plans',
+                'Municipal approval and grid connection plan',
+                'Financial plan with costs and returns',
+                'Buyer credit check or government guarantee',
+                'Team structure and project timeline',
+                'No ID or proof of address needed.'
+            ],
+            'sectional-solar': [
+                'Body corporate or HOA approval',
+                '6–12 months of electricity bills',
+                'Site assessment report',
+                'Quotes from your installer',
+                'Proof you own or lease the property',
+                'No ID or proof of address needed.'
+            ],
+            'ci-solar': [
+                'Electricity bills',
+                'Proof you own or lease the property',
+                'Quotes from your installer',
+                'Company registration documents',
+                'No ID or proof of address needed.'
+            ],
+            'diesel': [
+                'Company registration documents',
+                'VAT documentation',
+                'Credit references',
+                'Site location details for tank installation',
+                'Estimated monthly diesel volume (min 40,000L)',
+                'No ID or proof of address needed.'
+            ],
+            'borehole': [
+                'Proof of property ownership or lease',
+                'Current water bill',
+                'Site access details',
+                'Any existing borehole or water assessment reports',
+                'No ID or proof of address needed.'
+            ],
+            'termloan': [
+                'Financial statements for the last 12 months',
+                'Yearly sales of R1 million or more',
+                'Tax clearance certificate',
+                'No ID or proof of address needed.'
+            ],
+            'lineofcredit': [
+                'Financial statements for the last 12 months',
+                'Yearly sales of R1 million or more',
+                'Tax clearance certificate',
+                'No ID or proof of address needed.'
+            ],
+            'bridgepay': [
+                'Business registration documents',
+                'Details of your supplier or trade customers',
+                'Current trade terms',
+                'No ID or proof of address needed.'
+            ]
         };
 
         const selectionContainer = document.getElementById('selectionContainer');
@@ -1031,28 +794,24 @@
         function showSelection() {
             hideAll();
             selectionContainer.classList.remove('hidden');
-            selectionContainer.classList.add('fade-step');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function showDynamicForm() {
             hideAll();
             dynamicForm.classList.remove('hidden');
-            dynamicForm.classList.add('fade-step');
             dynamicForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function showPOForm() {
             hideAll();
             poFundingForm.classList.remove('hidden');
-            poFundingForm.classList.add('fade-step');
             poFundingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function showSuccess(data) {
             hideAll();
             successScreen.classList.remove('hidden');
-            successScreen.classList.add('fade-step');
             
             if (data && data.hashId) {
                 successRef.textContent = data.hashId;
@@ -1075,7 +834,6 @@
             hideAll();
             errorMessage.textContent = msg || 'We could not send your request. Please try again or email us directly.';
             errorScreen.classList.remove('hidden');
-            errorScreen.classList.add('fade-step');
             errorScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
@@ -1154,9 +912,9 @@
 
         function updateSubmitState() {
             dynSubmitBtn.disabled = !dynConsent.checked;
-            dynSubmitBtn.style.opacity = dynConsent.checked ? '1' : '0.5';
+            dynSubmitBtn.style.opacity = dynConsent.checked ? '1' : '0.4';
             poSubmitBtn.disabled = !poConsent.checked;
-            poSubmitBtn.style.opacity = poConsent.checked ? '1' : '0.5';
+            poSubmitBtn.style.opacity = poConsent.checked ? '1' : '0.4';
         }
 
         fundingOptions.forEach(btn => {
@@ -1219,7 +977,14 @@
         dynFormInner.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const requiredFields = ['fi-sender-company', 'fi-sender-fullName', 'fi-sender-email', 'fi-sender-phone', 'fi-text-fundingAmount', 'fi-text-description'];
+            const requiredFields = [
+                'fi-sender-company',
+                'fi-sender-fullName',
+                'fi-sender-email',
+                'fi-sender-phone',
+                'fi-text-fundingAmount',
+                'fi-text-description'
+            ];
             
             let valid = validateFormFields(dynFormInner, requiredFields);
 
@@ -1235,7 +1000,7 @@
 
             setLoading(dynSubmitBtn, true);
             try {
-                const { data, error } = await forminit.submit(FORM_ID, fd);
+                const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
                 if (error) {
                     showError(error.message || 'Sending failed. Please try again.');
                 } else {
@@ -1256,7 +1021,15 @@
         poFormInner.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const requiredFields = ['fi-sender-company', 'fi-sender-fullName', 'fi-sender-email', 'fi-sender-phone', 'fi-text-poValue', 'fi-select-endClient', 'fi-text-description'];
+            const requiredFields = [
+                'fi-sender-company',
+                'fi-sender-fullName',
+                'fi-sender-email',
+                'fi-sender-phone',
+                'fi-text-poValue',
+                'fi-select-endClient',
+                'fi-text-description'
+            ];
             
             let valid = validateFormFields(poFormInner, requiredFields);
 
@@ -1272,7 +1045,7 @@
 
             setLoading(poSubmitBtn, true);
             try {
-                const { data, error } = await forminit.submit(FORM_ID, fd);
+                const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
                 if (error) {
                     showError(error.message || 'Sending failed. Please try again.');
                 } else {
@@ -1299,20 +1072,6 @@
         const spinStyle = document.createElement('style');
         spinStyle.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
         document.head.appendChild(spinStyle);
-
-        // Scroll progress bar
-        const scrollProgressBar = document.getElementById('scrollProgressBar');
-        const nav = document.getElementById('mainNav');
-        const scrollHandler = function() {
-            if (window.scrollY > 15) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            if (scrollProgressBar) scrollProgressBar.style.width = progress + '%';
-        };
-        window.addEventListener('scroll', scrollHandler, { passive: true });
-        scrollHandler();
 
         showSelection();
         updateSubmitState();
