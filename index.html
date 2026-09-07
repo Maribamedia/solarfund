@@ -9,20 +9,22 @@
     <meta property="og:description" content="Connect directly with the specialist turnkey funding partner for your solar, water, diesel, or business finance need.">
     <meta property="og:url" content="https://funding.maribamedia.co.za">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230a1e3c'/%3E%3Cstop offset='50%25' stop-color='%231e40af'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='8' y='8' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3Crect x='56' y='8' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='8' y='56' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='56' y='56' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3C/svg%3E" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23060d1f'/%3E%3Cstop offset='50%25' stop-color='%231e40af'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='8' y='8' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3Crect x='56' y='8' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='8' y='56' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='56' y='56' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3C/svg%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         'brand': {
-                            'dark': '#ffffff',
+                            'dark': '#060d1f',
                             'navy': '#0a1e3c',
                             'blue': '#1e40af',
                             'bright': '#3b82f6',
+                            'cyan': '#06b6d4',
                             'slate': '#475569',
                             'border': 'rgba(30, 58, 138, 0.08)'
                         }
@@ -34,10 +36,30 @@
                     animation: {
                         'fade-in': 'fadeIn 0.5s ease-out forwards',
                         'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'fade-up-delay-1': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.08s forwards',
+                        'fade-up-delay-2': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.16s forwards',
+                        'fade-up-delay-3': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.24s forwards',
+                        'fade-up-delay-4': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.32s forwards',
+                        'fade-up-delay-5': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.40s forwards',
+                        'fade-up-delay-6': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.48s forwards',
+                        'fade-up-delay-7': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.56s forwards',
+                        'fade-up-delay-8': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.64s forwards',
+                        'fade-up-delay-9': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.72s forwards',
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'aurora': 'aurora 12s ease-in-out infinite',
                     },
                     keyframes: {
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
                         fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        pulseSlow: { '0%,100%': { opacity: '0.6' }, '50%': { opacity: '1' } },
+                        float: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } },
+                        aurora: {
+                            '0%,100%': { transform: 'translate(0,0) scale(1)', opacity: '0.7' },
+                            '25%': { transform: 'translate(4%, -3%) scale(1.1)', opacity: '0.9' },
+                            '50%': { transform: 'translate(-3%, 4%) scale(1.05)', opacity: '0.8' },
+                            '75%': { transform: 'translate(2%, 2%) scale(1.15)', opacity: '0.6' },
+                        },
                     }
                 }
             }
@@ -45,350 +67,834 @@
     </script>
     <style>
         :root {
-            --primary: #0a1e3c;
+            --primary: #060d1f;
+            --primary-navy: #0a1e3c;
             --primary-mid: #1e40af;
             --primary-bright: #3b82f6;
-            --ink: #111111;
-            --ink-muted: #475569;
+            --primary-cyan: #06b6d4;
+            --ink: #0f1117;
+            --ink-muted: #4b5563;
             --surface: #ffffff;
             --surface-1: #f8fafc;
             --surface-2: #f1f5f9;
             --hairline: #e2e8f0;
-            --outline: #adb5bd;
-            --shadow-md: 0 4px 16px rgba(10, 15, 28, 0.07), 0 1px 4px rgba(10, 15, 28, 0.04);
-            --shadow-lg: 0 12px 40px rgba(10, 15, 28, 0.09), 0 2px 8px rgba(10, 15, 28, 0.04);
-            --radius: 18px;
-            --radius-sm: 12px;
-            --transition: 300ms cubic-bezier(0.22, 1, 0.36, 1);
+            --outline: #9ca3af;
+            --shadow-sm: 0 2px 8px rgba(6, 13, 31, 0.04);
+            --shadow-md: 0 4px 16px rgba(6, 13, 31, 0.06), 0 1px 4px rgba(6, 13, 31, 0.04);
+            --shadow-lg: 0 12px 40px rgba(6, 13, 31, 0.1), 0 2px 8px rgba(6, 13, 31, 0.05);
+            --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15), 0 8px 32px rgba(30, 64, 175, 0.2);
+            --radius: 20px;
+            --radius-sm: 14px;
+            --radius-xs: 10px;
+            --transition: 350ms cubic-bezier(0.22, 1, 0.36, 1);
+            --transition-fast: 200ms cubic-bezier(0.22, 1, 0.36, 1);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
-            color: #111111;
+            color: var(--ink);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
         }
+
+        /* ── Animated Background ── */
+        .bg-aurora {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bg-aurora .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: aurora 14s ease-in-out infinite;
+        }
+
+        .bg-aurora .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%);
+            top: -100px;
+            left: -100px;
+        }
+
+        .bg-aurora .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.25), transparent 70%);
+            top: 30%;
+            right: -80px;
+            animation-delay: -4s;
+        }
+
+        .bg-aurora .orb-3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(30, 64, 175, 0.3), transparent 70%);
+            bottom: -60px;
+            left: 30%;
+            animation-delay: -8s;
+        }
+
+        .bg-grid-pattern {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image: radial-gradient(rgba(30, 64, 175, 0.05) 1px, transparent 1px);
+            background-size: 32px 32px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
+
+        /* ── Scroll Progress Bar ── */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-navy), var(--primary-mid), var(--primary-bright), var(--primary-cyan));
+            z-index: 100;
+            transition: width 120ms linear;
+            border-radius: 0 2px 2px 0;
+        }
+
+        /* ── Card Styles ── */
         .card-institutional {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(10, 30, 60, 0.07);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(10, 30, 60, 0.08);
             border-radius: var(--radius);
             transition: all var(--transition);
             box-shadow: var(--shadow-md);
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
+
+        .card-institutional::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.04) 0%, rgba(6, 182, 212, 0.02) 50%, rgba(30, 64, 175, 0.04) 100%);
+            opacity: 0;
+            transition: opacity var(--transition);
+            pointer-events: none;
+        }
+
+        .card-institutional:hover::before {
+            opacity: 1;
+        }
+
         .card-institutional:hover {
             border-color: rgba(30, 64, 175, 0.2);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: var(--shadow-glow);
         }
+
+        .card-institutional:active {
+            transform: translateY(-1px) scale(0.99);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-institutional .card-icon {
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.08), rgba(59, 130, 246, 0.06));
+            margin-bottom: 8px;
+        }
+
+        .card-institutional:hover .card-icon {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(59, 130, 246, 0.1));
+            transform: scale(1.08) rotate(-2deg);
+        }
+
+        /* ── Buttons ── */
         .btn-accent {
-            background: linear-gradient(135deg, #0a1e3c 0%, #1e40af 100%);
+            background: linear-gradient(135deg, #060d1f 0%, #1e40af 50%, #3b82f6 100%);
+            background-size: 200% 200%;
             color: #fff;
             font-weight: 600;
             border-radius: 999px;
-            padding: 0.85rem 2rem;
-            transition: all 0.2s ease;
+            padding: 0.9rem 2.2rem;
+            transition: all var(--transition-fast);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            letter-spacing: 0.02em;
-            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            font-size: 0.8rem;
             text-transform: uppercase;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 16px rgba(10, 30, 60, 0.2);
+            box-shadow: 0 4px 16px rgba(6, 13, 31, 0.25);
+            position: relative;
+            overflow: hidden;
         }
+
+        .btn-accent::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .btn-accent:hover::after {
+            opacity: 1;
+        }
+
         .btn-accent:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(10, 30, 60, 0.35);
+            box-shadow: 0 8px 28px rgba(6, 13, 31, 0.35), 0 0 40px rgba(59, 130, 246, 0.2);
+            background-position: right center;
         }
+
         .btn-accent:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 8px rgba(10, 30, 60, 0.2);
+            transform: translateY(0) scale(0.98);
+            box-shadow: 0 2px 8px rgba(6, 13, 31, 0.2);
         }
+
         .btn-accent:focus-visible {
-            outline: 2px solid #3b82f6;
-            outline-offset: 2px;
+            outline: 3px solid var(--primary-bright);
+            outline-offset: 3px;
         }
+
         .btn-accent:disabled {
-            opacity: 0.4;
+            opacity: 0.45;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
         }
+
         .btn-outline {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
             border: 1.5px solid var(--hairline);
             color: var(--primary-mid);
             font-weight: 600;
             border-radius: 999px;
-            padding: 0.85rem 2rem;
-            transition: all 0.2s ease;
+            padding: 0.9rem 2.2rem;
+            transition: all var(--transition-fast);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            letter-spacing: 0.02em;
-            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            font-size: 0.8rem;
             text-transform: uppercase;
             cursor: pointer;
         }
+
         .btn-outline:hover {
-            background: rgba(30, 64, 175, 0.04);
+            background: rgba(30, 64, 175, 0.05);
             border-color: var(--primary-mid);
             color: var(--primary-mid);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(30, 64, 175, 0.12);
         }
+
         .btn-outline:active {
             transform: translateY(0);
-            background: rgba(30, 64, 175, 0.08);
         }
+
         .btn-outline:focus-visible {
-            outline: 2px solid #3b82f6;
-            outline-offset: 2px;
+            outline: 3px solid var(--primary-bright);
+            outline-offset: 3px;
         }
+
+        /* ── Form Elements ── */
         .form-input {
             background: #ffffff;
-            border: 1px solid var(--hairline);
-            color: #111111;
-            border-radius: 10px;
-            padding: 0.8rem 1rem;
+            border: 1.5px solid var(--hairline);
+            color: var(--ink);
+            border-radius: var(--radius-xs);
+            padding: 0.85rem 1.1rem;
             width: 100%;
-            transition: all 0.2s;
+            transition: all var(--transition-fast);
             font-size: 0.9rem;
+            font-weight: 400;
         }
+
+        .form-input:hover {
+            border-color: #cbd5e1;
+        }
+
         .form-input:focus {
             outline: none;
             border-color: var(--primary-mid);
-            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.15);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.12), 0 2px 8px rgba(30, 64, 175, 0.06);
         }
-        .form-input::placeholder { color: var(--outline); }
-        textarea.form-input { resize: vertical; min-height: 100px; }
+
+        .form-input::placeholder {
+            color: var(--outline);
+            font-weight: 300;
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 110px;
+            line-height: 1.6;
+        }
+
+        select.form-input {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        /* ── Upload Zone ── */
         .upload-zone {
-            border: 2px dashed rgba(30, 64, 175, 0.2);
+            border: 2px dashed rgba(30, 64, 175, 0.25);
             border-radius: var(--radius-sm);
-            padding: 2rem;
+            padding: 2.25rem 1.5rem;
             text-align: center;
-            transition: all 0.3s;
+            transition: all var(--transition);
             cursor: pointer;
             background: var(--surface-1);
+            position: relative;
+            overflow: hidden;
         }
-        .upload-zone:hover, .upload-zone.dragover {
+
+        .upload-zone::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.03), rgba(6, 182, 212, 0.03));
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .upload-zone:hover::before,
+        .upload-zone.dragover::before {
+            opacity: 1;
+        }
+
+        .upload-zone:hover,
+        .upload-zone.dragover {
             border-color: var(--primary-mid);
             background: rgba(30, 64, 175, 0.04);
+            transform: scale(1.005);
         }
+
         .upload-zone.has-files {
-            border-color: #2ecc71;
+            border-color: #22c55e;
             border-style: solid;
-            background: rgba(46, 204, 113, 0.04);
+            background: rgba(34, 197, 94, 0.04);
         }
+
+        .upload-zone .upload-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            transition: all var(--transition);
+            display: inline-block;
+        }
+
+        .upload-zone:hover .upload-icon,
+        .upload-zone.dragover .upload-icon {
+            transform: translateY(-4px) scale(1.1);
+        }
+
         .file-chip {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: var(--surface-2);
-            border: 1px solid rgba(30, 64, 175, 0.1);
-            border-radius: 6px;
-            padding: 6px 12px;
-            font-size: 0.8rem;
-            color: #111111;
-            margin: 4px;
+            gap: 8px;
+            background: var(--surface);
+            border: 1px solid rgba(30, 64, 175, 0.12);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 0.78rem;
+            color: var(--ink);
+            margin: 3px;
+            transition: all var(--transition-fast);
+            animation: fadeUp 0.3s ease-out forwards;
         }
+
+        .file-chip:hover {
+            border-color: rgba(30, 64, 175, 0.3);
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+        }
+
         .file-chip .remove-file {
             cursor: pointer;
-            color: #e74c3c;
-            font-weight: bold;
-            margin-left: 4px;
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1;
+            transition: all var(--transition-fast);
+            padding: 2px 4px;
+            border-radius: 4px;
         }
+
+        .file-chip .remove-file:hover {
+            background: rgba(239, 68, 68, 0.1);
+            transform: scale(1.2);
+        }
+
+        /* ── Consent Box ── */
         .consent-box {
             background: var(--surface-1);
             border: 1px solid rgba(30, 64, 175, 0.08);
-            border-radius: 10px;
-            padding: 1.25rem;
-            font-size: 0.85rem;
-            line-height: 1.6;
+            border-radius: var(--radius-xs);
+            padding: 1.2rem 1.4rem;
+            font-size: 0.82rem;
+            line-height: 1.7;
             color: var(--ink-muted);
-            max-height: 200px;
+            max-height: 160px;
             overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(30, 64, 175, 0.2) transparent;
         }
-        .consent-box strong { color: #111111; }
+
+        .consent-box::-webkit-scrollbar {
+            width: 4px;
+        }
+        .consent-box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .consent-box::-webkit-scrollbar-thumb {
+            background: rgba(30, 64, 175, 0.2);
+            border-radius: 2px;
+        }
+
+        .consent-box strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        /* ── Funding Option Selected State ── */
         .funding-option.selected {
             border-color: var(--primary-mid) !important;
             background: rgba(30, 64, 175, 0.06) !important;
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1), 0 4px 16px rgba(30, 64, 175, 0.12);
+            transform: translateY(-3px);
         }
-        .funding-option:active {
-            transform: translateY(0) !important;
-            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08) !important;
+
+        .funding-option.selected::before {
+            opacity: 1;
         }
-        .fade-step { animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        .funding-option.selected .card-icon {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(59, 130, 246, 0.12));
+            transform: scale(1.08);
+        }
+
+        /* ── Animations ── */
+        .fade-step {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
         @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(24px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(32px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .doc-reminder-list { list-style: none; padding: 0; margin: 0; }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+
+        /* ── Doc Reminder List ── */
+        .doc-reminder-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
         .doc-reminder-list li {
-            padding: 4px 0;
+            padding: 5px 0;
             font-size: 0.8rem;
             color: var(--ink-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
         }
-        .doc-reminder-list li::before { content: "📄 "; }
+        .doc-reminder-list li::before {
+            content: "📄";
+            flex-shrink: 0;
+            font-size: 0.85rem;
+            margin-top: 1px;
+        }
+
+        /* ── Term Loan Card ── */
         .term-loan-card {
             border-left: 4px solid var(--primary-mid);
             background: linear-gradient(105deg, #f8fafc 0%, #ffffff 100%);
         }
+
+        /* ── Nav Blur ── */
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all var(--transition);
+        }
+
+        .nav-blur.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 24px rgba(6, 13, 31, 0.06);
+        }
+
+        /* ── Material Icons ── */
         .material-symbols-outlined {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             color: var(--primary-mid);
             flex-shrink: 0;
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+            transition: all var(--transition);
         }
+
+        .card-institutional:hover .material-symbols-outlined {
+            color: var(--primary-bright);
+        }
+
+        /* ── Responsive ── */
         @media (max-width: 640px) {
-            .funding-option { padding: 0.9rem 1rem !important; }
-            .funding-option h3, .funding-option h4 { font-size: 0.95rem !important; }
+            .funding-option {
+                padding: 0.9rem 1rem !important;
+            }
+            .funding-option h3,
+            .funding-option h4 {
+                font-size: 0.9rem !important;
+            }
+            .card-institutional {
+                border-radius: 14px;
+            }
+            .upload-zone {
+                padding: 1.5rem 1rem;
+            }
+            .btn-accent,
+            .btn-outline {
+                padding: 0.8rem 1.6rem;
+                font-size: 0.72rem;
+            }
+            .bg-aurora .orb {
+                filter: blur(50px);
+                opacity: 0.35;
+            }
         }
-        .nav-blur {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid #e2e8f0;
+
+        /* ── Success Pulse ── */
+        .success-pulse {
+            animation: successPulse 2s ease-in-out infinite;
+        }
+        @keyframes successPulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.85;
+            }
+        }
+
+        /* ── Staggered Card Animation Classes ── */
+        .stagger-1 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+        }
+        .stagger-2 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+        }
+        .stagger-3 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+        }
+        .stagger-4 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+        }
+        .stagger-5 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+        }
+        .stagger-6 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+        }
+        .stagger-7 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+        }
+        .stagger-8 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+        }
+        .stagger-9 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+        }
+        .stagger-10 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+        }
+        .stagger-11 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+        }
+        .stagger-12 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+        }
+        .stagger-13 {
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+        }
+
+        /* ── Checkbox ── */
+        input[type="checkbox"] {
+            accent-color: var(--primary-mid);
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        input[type="checkbox"]:hover {
+            transform: scale(1.1);
+        }
+
+        /* ── Loading Spinner ── */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2.5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 0.7s linear infinite;
         }
     </style>
-<base target="_blank">
+    <base target="_blank">
 </head>
 <body class="bg-white font-sans antialiased">
 
-    <nav class="fixed w-full z-50 nav-blur">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <div class="flex items-center justify-between h-20">
-                <a href="https://funding.maribamedia.co.za" class="flex items-center gap-3">
-                    <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+    <!-- ── Scroll Progress ── -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ── Animated Background ── -->
+    <div class="bg-aurora" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+    <!-- ── Navbar ── -->
+    <nav class="fixed w-full z-50 nav-blur" id="mainNav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <a href="https://funding.maribamedia.co.za" class="flex items-center gap-3 group">
+                    <svg width="32" height="32" viewBox="0 0 100 100" fill="none" class="transition-transform group-hover:scale-110 group-hover:rotate-3">
                         <defs>
                             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#0a1e3c" />
+                                <stop offset="0%" stop-color="#060d1f" />
                                 <stop offset="50%" stop-color="#1e40af" />
                                 <stop offset="100%" stop-color="#3b82f6" />
                             </linearGradient>
                         </defs>
-                        <rect x="8" y="8" width="36" height="36" rx="6" fill="url(#logoGrad)" />
-                        <rect x="56" y="8" width="36" height="36" rx="6" fill="url(#logoGrad)" opacity="0.7" />
-                        <rect x="8" y="56" width="36" height="36" rx="6" fill="url(#logoGrad)" opacity="0.7" />
-                        <rect x="56" y="56" width="36" height="36" rx="6" fill="url(#logoGrad)" />
+                        <rect x="8" y="8" width="36" height="36" rx="8" fill="url(#logoGrad)" />
+                        <rect x="56" y="8" width="36" height="36" rx="8" fill="url(#logoGrad)" opacity="0.7" />
+                        <rect x="8" y="56" width="36" height="36" rx="8" fill="url(#logoGrad)" opacity="0.7" />
+                        <rect x="56" y="56" width="36" height="36" rx="8" fill="url(#logoGrad)" />
                     </svg>
                     <div>
-                        <span class="text-lg font-display font-extrabold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
-                        <span class="block text-[10px] font-medium tracking-[0.25em] text-[#475569] uppercase">Bespoke Funding Network</span>
+                        <span class="text-sm sm:text-lg font-display font-extrabold tracking-tight text-[#0f1117] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
+                        <span class="block text-[9px] sm:text-[10px] font-medium tracking-[0.22em] text-[#4b5563] uppercase">Bespoke Funding Network</span>
                     </div>
                 </a>
-                <div class="hidden lg:flex items-center gap-6">
-                    <span class="text-xs font-medium text-[#475569] tracking-widest uppercase">Direct Access · Zero Cost</span>
-                    <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#475569] hover:text-[#1e40af] transition-colors">victor@maribamedia.co.za</a>
-                    <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="btn-accent !px-4 !py-2 text-xs">📅 Book a Call</a>
+                <div class="hidden lg:flex items-center gap-5">
+                    <span class="text-[11px] font-medium text-[#4b5563] tracking-widest uppercase inline-flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse"></span>
+                        Direct Access · Zero Cost
+                    </span>
+                    <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#4b5563] hover:text-[#1e40af] transition-colors font-medium">victor@maribamedia.co.za</a>
+                    <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="btn-accent !px-4 !py-2 text-[11px]">📅 Book a Call</a>
                 </div>
+                <!-- Mobile CTA -->
+                <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="lg:hidden btn-accent !px-3.5 !py-2 text-[10px] !rounded-full">
+                    📅 Call
+                </a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-24 pb-16 sm:pt-28 sm:pb-20" style="background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f8fafc 100%);">
+    <!-- ── Main Content ── -->
+    <main class="pt-20 pb-16 sm:pt-28 sm:pb-24 relative z-10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="text-center mb-8 sm:mb-12 animate-fade-up">
-                <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,64,175,0.1)] bg-[#f8fafc]/80 rounded-full mb-5">
+            <!-- ── Hero Section ── -->
+            <div class="text-center mb-8 sm:mb-14">
+                <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,64,175,0.1)] bg-white/70 backdrop-blur-md rounded-full mb-5 sm:mb-6 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-[#1e40af] animate-pulse"></span>
-                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-[#475569] uppercase">POPIA Compliant · No ID Documents</span>
+                    <span class="text-[9px] sm:text-[11px] font-semibold tracking-[0.18em] text-[#4b5563] uppercase">POPIA Compliant · No ID Documents</span>
                 </div>
-                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-[#111111] leading-tight">Connect with the right specialist for your business.</h1>
-                <p class="text-[#475569] mt-3 max-w-xl mx-auto text-sm">Choose your funding type below. We send your details straight to the partner with the exact mandate. No ID documents. No hidden fees.</p>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-[#0f1117] leading-[1.1] sm:leading-[1.15] max-w-3xl mx-auto">
+                    Connect with the right
+                    <span class="relative inline-block">
+                        <span class="bg-gradient-to-r from-[#1e40af] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent">specialist</span>
+                        <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none"><path d="M2 10C50 2 150 2 198 10" stroke="url(#underlineGrad)" stroke-width="3" stroke-linecap="round"/><defs><linearGradient id="underlineGrad" x1="0" y1="0" x2="200" y2="0"><stop offset="0%" stop-color="#1e40af"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs></svg>
+                    </span>
+                    for your business.
+                </h1>
+                <p class="text-[#4b5563] mt-4 sm:mt-5 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-light">
+                    Choose your funding type below. We send your details straight to the partner with the exact mandate. No ID documents. No hidden fees.
+                </p>
             </div>
 
-            <!-- FUNDING SELECTION -->
-            <div class="card-institutional p-6 sm:p-8 md:p-10" id="selectionContainer">
+            <!-- ── Funding Selection Card ── -->
+            <div class="card-institutional p-5 sm:p-8 md:p-10 relative z-10" id="selectionContainer">
                 <div id="step1">
-                    <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-2">What type of solution do you need?</h2>
-                    <p class="text-[#475569] text-sm mb-6">Choose the category that fits. We match you with the right specialist partner.</p>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-4">Invoice & Asset Finance</h3>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1e40af] to-[#3b82f6] flex items-center justify-center">
+                            <span class="text-white text-sm font-bold">1</span>
+                        </div>
+                        <div>
+                            <h2 class="text-lg sm:text-2xl font-display font-bold text-[#0f1117]">What type of solution do you need?</h2>
+                            <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5 font-light">Choose the category that fits. We match you with the right specialist partner.</p>
+                        </div>
+                    </div>
+
+                    <!-- Invoice & Asset Finance -->
+                    <h3 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#1e40af] mb-3 mt-6 flex items-center gap-2">
+                        <span class="w-4 h-px bg-[#1e40af]/40"></span>
+                        Invoice & Asset Finance
+                    </h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
-                            <span class="material-symbols-outlined">account_balance</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Asset‑Backed Finance</h3>
-                            <p class="text-[#475569] text-xs mt-1">Funding based on your assets</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-1" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
+                            <span class="card-icon"><span class="material-symbols-outlined">account_balance</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Asset‑Backed Finance</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Funding based on your assets</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Purchase Order Funding" data-doc-group="po-funding">
-                            <span class="material-symbols-outlined">local_shipping</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Purchase Order Funding</h3>
-                            <p class="text-[#475569] text-xs mt-1">Government and private orders</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-2" data-value="Purchase Order Funding" data-doc-group="po-funding">
+                            <span class="card-icon"><span class="material-symbols-outlined">local_shipping</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Purchase Order Funding</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Government and private orders</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Government Invoice Discounting" data-doc-group="gov-invoice">
-                            <span class="material-symbols-outlined">receipt_long</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Government Invoice Discounting</h3>
-                            <p class="text-[#475569] text-xs mt-1">For verified government invoices</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-3" data-value="Government Invoice Discounting" data-doc-group="gov-invoice">
+                            <span class="card-icon"><span class="material-symbols-outlined">receipt_long</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Gov Invoice Discounting</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">For verified government invoices</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Private Invoice Discounting" data-doc-group="private-invoice">
-                            <span class="material-symbols-outlined">request_quote</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Private Invoice Discounting</h3>
-                            <p class="text-[#475569] text-xs mt-1">For private company invoices</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-4" data-value="Private Invoice Discounting" data-doc-group="private-invoice">
+                            <span class="card-icon"><span class="material-symbols-outlined">request_quote</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Private Invoice Discounting</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">For private company invoices</p>
                         </button>
                     </div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-8">Energy, Solar & Water</h3>
+
+                    <!-- Energy, Solar & Water -->
+                    <h3 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#1e40af] mb-3 mt-8 flex items-center gap-2">
+                        <span class="w-4 h-px bg-[#1e40af]/40"></span>
+                        Energy, Solar & Water
+                    </h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="IPP Funding" data-doc-group="ipp">
-                            <span class="material-symbols-outlined">solar_power</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">IPP Funding</h3>
-                            <p class="text-[#475569] text-xs mt-1">Debt, equity, or mixed funding</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-5" data-value="IPP Funding" data-doc-group="ipp">
+                            <span class="card-icon"><span class="material-symbols-outlined">solar_power</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">IPP Funding</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Debt, equity, or mixed funding</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Sectional Title Solar" data-doc-group="sectional-solar">
-                            <span class="material-symbols-outlined">home_work</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Sectional Title Solar</h3>
-                            <p class="text-[#475569] text-xs mt-1">Housing estates and complexes</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-6" data-value="Sectional Title Solar" data-doc-group="sectional-solar">
+                            <span class="card-icon"><span class="material-symbols-outlined">home_work</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Sectional Title Solar</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Housing estates & complexes</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Commercial & Industrial Solar" data-doc-group="ci-solar">
-                            <span class="material-symbols-outlined">factory</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Commercial & Industrial Solar</h3>
-                            <p class="text-[#475569] text-xs mt-1">Factories, offices, warehouses</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-7" data-value="Commercial & Industrial Solar" data-doc-group="ci-solar">
+                            <span class="card-icon"><span class="material-symbols-outlined">factory</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">C&I Solar</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Factories, offices, warehouses</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Bulk Diesel on Credit" data-doc-group="diesel">
-                            <span class="material-symbols-outlined">gas_meter</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Wholesale Bulk Diesel</h3>
-                            <p class="text-[#475569] text-xs mt-1">30‑day terms & tank install</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-8" data-value="Bulk Diesel on Credit" data-doc-group="diesel">
+                            <span class="card-icon"><span class="material-symbols-outlined">gas_meter</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Wholesale Bulk Diesel</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">30‑day terms & tank install</p>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option" data-value="Borehole Water Purchase Agreement" data-doc-group="borehole">
-                            <span class="material-symbols-outlined">water_drop</span>
-                            <h3 class="text-base sm:text-lg font-display font-bold text-[#111111] mt-1">Borehole Water</h3>
-                            <p class="text-[#475569] text-xs mt-1">Shared‑savings water solution</p>
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-9" data-value="Borehole Water Purchase Agreement" data-doc-group="borehole">
+                            <span class="card-icon"><span class="material-symbols-outlined">water_drop</span></span>
+                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Borehole Water</h3>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Shared‑savings water solution</p>
                         </button>
                     </div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3 mt-8">Business Growth</h3>
-                    <div class="grid sm:grid-cols-1 gap-4">
-                        <button type="button" class="card-institutional p-5 sm:p-6 text-left funding-option term-loan-card" data-value="Term Loan" data-doc-group="termloan">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                                <div>
-                                    <span class="material-symbols-outlined">trending_up</span>
-                                    <h3 class="text-lg sm:text-xl font-display font-bold text-[#111111] mt-1">Flexible Business Term Loan</h3>
-                                    <p class="text-[#475569] text-xs mt-1">For businesses ready to grow</p>
+
+                    <!-- Business Growth -->
+                    <h3 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#1e40af] mb-3 mt-8 flex items-center gap-2">
+                        <span class="w-4 h-px bg-[#1e40af]/40"></span>
+                        Business Growth
+                    </h3>
+                    <div class="grid sm:grid-cols-1 gap-3 sm:gap-4">
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option term-loan-card stagger-10" data-value="Term Loan" data-doc-group="termloan">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                                <div class="flex items-start gap-3">
+                                    <span class="card-icon"><span class="material-symbols-outlined">trending_up</span></span>
+                                    <div>
+                                        <h3 class="text-sm sm:text-lg font-display font-bold text-[#0f1117]">Flexible Business Term Loan</h3>
+                                        <p class="text-[#4b5563] text-xs mt-0.5 font-light">For businesses ready to grow</p>
+                                    </div>
                                 </div>
-                                <div class="flex flex-wrap gap-3 text-xs font-medium text-[#1e40af]">
-                                    <span class="inline-flex items-center gap-1 bg-white border border-[#1e40af]/20 rounded-full px-3 py-1">📅 12+ months trading</span>
-                                    <span class="inline-flex items-center gap-1 bg-white border border-[#1e40af]/20 rounded-full px-3 py-1">💰 R1M+ annual turnover</span>
+                                <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs font-medium text-[#1e40af] shrink-0">
+                                    <span class="inline-flex items-center gap-1 bg-white border border-[#1e40af]/20 rounded-full px-3 py-1">📅 12+ months</span>
+                                    <span class="inline-flex items-center gap-1 bg-white border border-[#1e40af]/20 rounded-full px-3 py-1">💰 R1M+ turnover</span>
                                 </div>
                             </div>
                         </button>
-                        <button type="button" class="card-institutional p-5 sm:p-6 text-left funding-option" data-value="Line of Credit" data-doc-group="lineofcredit">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-11" data-value="Line of Credit" data-doc-group="lineofcredit">
+                            <div class="flex items-start gap-3">
+                                <span class="card-icon"><span class="material-symbols-outlined">credit_card</span></span>
                                 <div>
-                                    <span class="material-symbols-outlined">credit_card</span>
-                                    <h3 class="text-lg sm:text-xl font-display font-bold text-[#111111] mt-1">Revolving Line of Credit</h3>
-                                    <p class="text-[#475569] text-xs mt-1">Ongoing working capital</p>
+                                    <h3 class="text-sm sm:text-lg font-display font-bold text-[#0f1117]">Revolving Line of Credit</h3>
+                                    <p class="text-[#4b5563] text-xs mt-0.5 font-light">Ongoing working capital</p>
                                 </div>
                             </div>
                         </button>
-                        <button type="button" class="card-institutional p-5 sm:p-6 text-left funding-option" data-value="BridgePay Trade Credit" data-doc-group="bridgepay">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-12" data-value="BridgePay Trade Credit" data-doc-group="bridgepay">
+                            <div class="flex items-start gap-3">
+                                <span class="card-icon"><span class="material-symbols-outlined">sync_alt</span></span>
                                 <div>
-                                    <span class="material-symbols-outlined">sync_alt</span>
-                                    <h3 class="text-lg sm:text-xl font-display font-bold text-[#111111] mt-1">BridgePay Trade Credit</h3>
-                                    <p class="text-[#475569] text-xs mt-1">Offer customers 90‑day terms</p>
+                                    <h3 class="text-sm sm:text-lg font-display font-bold text-[#0f1117]">BridgePay Trade Credit</h3>
+                                    <p class="text-[#4b5563] text-xs mt-0.5 font-light">Offer customers 90‑day terms</p>
                                 </div>
                             </div>
                         </button>
@@ -397,46 +903,49 @@
                 </div>
             </div>
 
-            <!-- DYNAMIC FORM -->
-            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="dynamicForm">
-                <div class="flex items-center justify-between mb-6">
+            <!-- ── Dynamic Form ── -->
+            <div class="card-institutional p-5 sm:p-8 md:p-10 hidden fade-step mt-6 sm:mt-8" id="dynamicForm">
+                <div class="flex items-center justify-between mb-5 sm:mb-6">
                     <div>
-                        <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]">Send Your Application</h2>
-                        <p class="text-[#475569] text-sm mt-1" id="dynFormSubtitle">Fill in your details. We send them straight to the partner.</p>
+                        <h2 class="text-lg sm:text-2xl font-display font-bold text-[#0f1117]">Send Your Application</h2>
+                        <p class="text-[#4b5563] text-xs sm:text-sm mt-1 font-light" id="dynFormSubtitle">Fill in your details. We send them straight to the partner.</p>
                     </div>
-                    <button type="button" id="dynBackBtn" class="btn-outline !px-4 !py-2 text-xs">← Back</button>
+                    <button type="button" id="dynBackBtn" class="btn-outline !px-3.5 !py-2 text-[11px] shrink-0">← Back</button>
                 </div>
 
-                <div id="docReminderBox" class="mb-6 p-4 rounded-xl bg-[#f8fafc] border border-[rgba(30,64,175,0.1)]">
-                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e40af] mb-2">Documents you will need:</p>
+                <div id="docReminderBox" class="mb-5 sm:mb-6 p-4 rounded-xl bg-[#f8fafc] border border-[rgba(30,64,175,0.1)]">
+                    <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#1e40af] mb-2 flex items-center gap-2">
+                        <span class="material-symbols-outlined !text-[16px]">folder_open</span>
+                        Documents you will need:
+                    </p>
                     <ul class="doc-reminder-list" id="docReminderList"></ul>
                 </div>
 
                 <form id="dynFormInner" novalidate>
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Business Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Business Name <span class="text-[#ef4444]">*</span></label>
                             <input type="text" name="fi-sender-company" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Your Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Your Name <span class="text-[#ef4444]">*</span></label>
                             <input type="text" name="fi-sender-fullName" class="form-input" placeholder="Full name" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Email <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Email <span class="text-[#ef4444]">*</span></label>
                             <input type="email" name="fi-sender-email" class="form-input" placeholder="you@company.co.za" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Phone <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Phone <span class="text-[#ef4444]">*</span></label>
                             <input type="tel" name="fi-sender-phone" class="form-input" placeholder="+27 82 000 0000" required>
-                            <p class="text-[10px] text-[#adb5bd] mt-1">Format: +27 82 000 0000</p>
+                            <p class="text-[9px] text-[#9ca3af] mt-1">Format: +27 82 000 0000</p>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">How much do you need? <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">How much do you need? <span class="text-[#ef4444]">*</span></label>
                             <input type="text" name="fi-text-fundingAmount" class="form-input" placeholder="e.g. R 2 500 000" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">How long has your business been running?</label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Years trading</label>
                             <select name="fi-select-yearsTrading" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="0-1">Less than 1 year</option>
@@ -446,7 +955,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Yearly sales</label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Yearly sales</label>
                             <select name="fi-select-annualTurnover" class="form-input">
                                 <option value="">Select…</option>
                                 <option value="<1M">Under R 1 million</option>
@@ -459,27 +968,27 @@
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#111111] mb-1">What do you need the money for? <span class="text-[#e74c3c]">*</span></label>
+                        <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">What do you need the money for? <span class="text-[#ef4444]">*</span></label>
                         <textarea name="fi-text-description" class="form-input" placeholder="Tell us about your project and what the funding is for." required></textarea>
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
+                        <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Supporting Documents</label>
                         <div class="upload-zone" id="dynUploadZone">
                             <input type="file" id="dynFileInput" name="fi-file-documents[]" multiple style="display:none">
-                            <div class="text-3xl mb-2">📎</div>
-                            <p class="text-sm font-medium text-[#111111]">Drag and drop files here, or click to browse</p>
-                            <p class="text-xs text-[#475569] mt-1">PDF, Word, Excel, or images up to 10 MB each</p>
+                            <div class="upload-icon">📎</div>
+                            <p class="text-sm font-medium text-[#0f1117]">Drag & drop or <span class="text-[#1e40af] font-semibold underline underline-offset-2">browse</span></p>
+                            <p class="text-[11px] text-[#4b5563] mt-1 font-light">PDF, Word, Excel, or images · Max 10 MB each</p>
                         </div>
                         <div id="dynFileList" class="mt-3 flex flex-wrap"></div>
-                        <p class="text-xs text-[#475569] mt-2">No ID or FICA documents. Each file max 10MB. Total max 25MB. You can also email files later.</p>
+                        <p class="text-[10px] text-[#4b5563] mt-2 font-light">No ID or FICA documents. Total max 25MB. You can also email files later.</p>
                     </div>
 
-                    <div class="mt-6">
-                        <label class="flex items-start gap-3 cursor-pointer">
-                            <input type="checkbox" name="fi-checkbox-consent" id="dynConsent" class="mt-1 w-4 h-4 accent-[#1e40af]" required>
+                    <div class="mt-5 sm:mt-6">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" name="fi-checkbox-consent" id="dynConsent" class="mt-0.5 w-4 h-4 accent-[#1e40af]" required>
                             <div>
-                                <span class="text-sm text-[#111111] font-medium">I agree to let Mariba Media process my information (POPIA compliant)</span>
+                                <span class="text-xs sm:text-sm text-[#0f1117] font-medium">I agree to let Mariba Media process my information <span class="text-[#9ca3af] font-normal">(POPIA compliant)</span></span>
                                 <div class="consent-box mt-2">
                                     <p>By sending this form, you agree that Mariba Media may process your business details under POPIA. We only share your info with the partner for your chosen funding type. We never sell your data. To delete your data, email <strong>victor@maribamedia.co.za</strong>.</p>
                                 </div>
@@ -487,27 +996,30 @@
                         </label>
                     </div>
 
-                    <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                    <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                         <button type="submit" id="dynSubmitBtn" class="btn-accent w-full sm:w-auto">
                             <span>Send to Partner</span>
                         </button>
-                        <p class="text-xs text-[#475569]">Encrypted via Forminit</p>
+                        <p class="text-[10px] sm:text-xs text-[#4b5563] font-light">🔒 Encrypted via Forminit</p>
                     </div>
                 </form>
             </div>
 
-            <!-- PO FUNDING FORM -->
-            <div class="card-institutional p-6 sm:p-8 md:p-10 hidden fade-step mt-8" id="poFundingForm">
-                <div class="flex items-center justify-between mb-6">
+            <!-- ── PO Funding Form ── -->
+            <div class="card-institutional p-5 sm:p-8 md:p-10 hidden fade-step mt-6 sm:mt-8" id="poFundingForm">
+                <div class="flex items-center justify-between mb-5 sm:mb-6">
                     <div>
-                        <h2 class="text-xl sm:text-2xl font-display font-bold text-[#111111]">Purchase Order Funding</h2>
-                        <p class="text-[#475569] text-sm mt-1">Get funding for your purchase orders. We send your request straight to the partner.</p>
+                        <h2 class="text-lg sm:text-2xl font-display font-bold text-[#0f1117]">Purchase Order Funding</h2>
+                        <p class="text-[#4b5563] text-xs sm:text-sm mt-1 font-light">Get funding for your purchase orders. We send your request straight to the partner.</p>
                     </div>
-                    <button type="button" id="poBackBtn" class="btn-outline !px-4 !py-2 text-xs">← Back</button>
+                    <button type="button" id="poBackBtn" class="btn-outline !px-3.5 !py-2 text-[11px] shrink-0">← Back</button>
                 </div>
 
-                <div class="mb-6 p-4 rounded-xl bg-[#f8fafc] border border-[rgba(30,64,175,0.1)]">
-                    <p class="text-xs font-bold uppercase tracking-widest text-[#1e40af] mb-2">Documents you will need:</p>
+                <div class="mb-5 sm:mb-6 p-4 rounded-xl bg-[#f8fafc] border border-[rgba(30,64,175,0.1)]">
+                    <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#1e40af] mb-2 flex items-center gap-2">
+                        <span class="material-symbols-outlined !text-[16px]">folder_open</span>
+                        Documents you will need:
+                    </p>
                     <ul class="doc-reminder-list">
                         <li>Purchase Order</li>
                         <li>Supplier Quote(s)</li>
@@ -522,28 +1034,28 @@
                     <input type="hidden" name="fi-text-fundingType" value="Purchase Order Funding">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Business Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Business Name <span class="text-[#ef4444]">*</span></label>
                             <input type="text" name="fi-sender-company" class="form-input" placeholder="e.g. Acme Trading (Pty) Ltd" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Your Name <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Your Name <span class="text-[#ef4444]">*</span></label>
                             <input type="text" name="fi-sender-fullName" class="form-input" placeholder="Full name" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Email <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Email <span class="text-[#ef4444]">*</span></label>
                             <input type="email" name="fi-sender-email" class="form-input" placeholder="you@company.co.za" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Phone <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Phone <span class="text-[#ef4444]">*</span></label>
                             <input type="tel" name="fi-sender-phone" class="form-input" placeholder="+27 82 000 0000" required>
-                            <p class="text-[10px] text-[#adb5bd] mt-1">Format: +27 82 000 0000</p>
+                            <p class="text-[9px] text-[#9ca3af] mt-1">Format: +27 82 000 0000</p>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Order Value <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Order Value <span class="text-[#ef4444]">*</span></label>
                             <input type="text" name="fi-text-poValue" class="form-input" placeholder="e.g. R 500 000" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-[#111111] mb-1">Who is your client? <span class="text-[#e74c3c]">*</span></label>
+                            <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Who is your client? <span class="text-[#ef4444]">*</span></label>
                             <select name="fi-select-endClient" class="form-input" required>
                                 <option value="">Select…</option>
                                 <option value="government">Government / State-Owned Entity</option>
@@ -554,27 +1066,27 @@
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#111111] mb-1">Tell us about the order <span class="text-[#e74c3c]">*</span></label>
+                        <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Tell us about the order <span class="text-[#ef4444]">*</span></label>
                         <textarea name="fi-text-description" class="form-input" placeholder="What are you delivering? When do you need it done?" required></textarea>
                     </div>
 
                     <div class="mt-4">
-                        <label class="block text-xs font-semibold text-[#111111] mb-1">Supporting Documents</label>
+                        <label class="block text-[11px] sm:text-xs font-semibold text-[#0f1117] mb-1.5">Supporting Documents</label>
                         <div class="upload-zone" id="poUploadZone">
                             <input type="file" id="poFileInput" name="fi-file-documents[]" multiple style="display:none">
-                            <div class="text-3xl mb-2">📎</div>
-                            <p class="text-sm font-medium text-[#111111]">Drag and drop files here, or click to browse</p>
-                            <p class="text-xs text-[#475569] mt-1">PDF, Word, Excel, or images up to 10 MB each</p>
+                            <div class="upload-icon">📎</div>
+                            <p class="text-sm font-medium text-[#0f1117]">Drag & drop or <span class="text-[#1e40af] font-semibold underline underline-offset-2">browse</span></p>
+                            <p class="text-[11px] text-[#4b5563] mt-1 font-light">PDF, Word, Excel, or images · Max 10 MB each</p>
                         </div>
                         <div id="poFileList" class="mt-3 flex flex-wrap"></div>
-                        <p class="text-xs text-[#475569] mt-2">No ID or FICA documents. Each file max 10MB. Total max 25MB. You can also email files later.</p>
+                        <p class="text-[10px] text-[#4b5563] mt-2 font-light">No ID or FICA documents. Total max 25MB. You can also email files later.</p>
                     </div>
 
-                    <div class="mt-6">
+                    <div class="mt-5 sm:mt-6">
                         <label class="flex items-start gap-3 cursor-pointer">
-                            <input type="checkbox" name="fi-checkbox-consent" id="poConsent" class="mt-1 w-4 h-4 accent-[#1e40af]" required>
+                            <input type="checkbox" name="fi-checkbox-consent" id="poConsent" class="mt-0.5 w-4 h-4 accent-[#1e40af]" required>
                             <div>
-                                <span class="text-sm text-[#111111] font-medium">I agree to let Mariba Media process my information (POPIA compliant)</span>
+                                <span class="text-xs sm:text-sm text-[#0f1117] font-medium">I agree to let Mariba Media process my information <span class="text-[#9ca3af] font-normal">(POPIA compliant)</span></span>
                                 <div class="consent-box mt-2">
                                     <p>By sending this form, you agree that Mariba Media may process your business details under POPIA. We only share your info with the partner for your chosen funding type. We never sell your data. To delete your data, email <strong>victor@maribamedia.co.za</strong>.</p>
                                 </div>
@@ -582,512 +1094,539 @@
                         </label>
                     </div>
 
-                    <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                    <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                         <button type="submit" id="poSubmitBtn" class="btn-accent w-full sm:w-auto">
                             <span>Send to Partner</span>
                         </button>
-                        <p class="text-xs text-[#475569]">Encrypted via Forminit</p>
+                        <p class="text-[10px] sm:text-xs text-[#4b5563] font-light">🔒 Encrypted via Forminit</p>
                     </div>
                 </form>
             </div>
 
-            <!-- Success / Error screens -->
-            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="successScreen">
-                <div class="text-5xl mb-4">✅</div>
-                <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">We got it!</h2>
-                <p class="text-[#475569] mb-2">We sent your request to the partner.</p>
-                <p class="text-[#475569] text-sm mb-2">Reference: <span id="successRef" class="font-mono text-[#1e40af] font-semibold">—</span></p>
-                
-                <div class="max-w-xl mx-auto text-left bg-gradient-to-br from-[#f0f4ff] to-[#ffffff] border border-[rgba(30,64,175,0.12)] rounded-xl p-6 mb-6 mt-6">
-                    <div class="flex items-start gap-3 mb-4">
-                        <span class="text-2xl">📎</span>
+            <!-- ── Success Screen ── -->
+            <div class="card-institutional p-6 sm:p-10 text-center hidden fade-step mt-6 sm:mt-8" id="successScreen">
+                <div class="text-5xl sm:text-6xl mb-4 success-pulse inline-block">✅</div>
+                <h2 class="text-xl sm:text-3xl font-display font-bold text-[#0f1117] mb-2">We got it!</h2>
+                <p class="text-[#4b5563] mb-1 text-sm">We sent your request to the partner.</p>
+                <p class="text-[#4b5563] text-xs sm:text-sm mb-1 font-light">Reference: <span id="successRef" class="font-mono text-[#1e40af] font-semibold">—</span></p>
+
+                <div class="max-w-xl mx-auto text-left bg-gradient-to-br from-[#f0f4ff] to-white border border-[rgba(30,64,175,0.12)] rounded-xl p-5 sm:p-6 mb-5 sm:mb-6 mt-5 sm:mt-6">
+                    <div class="flex items-start gap-3 mb-3 sm:mb-4">
+                        <span class="text-xl sm:text-2xl">📎</span>
                         <div>
-                            <p class="text-sm font-semibold text-[#111111]">Email your documents</p>
-                            <p class="text-xs text-[#475569] mt-1">Send your documents to <a href="mailto:victor@maribamedia.co.za" class="text-[#1e40af] font-semibold underline hover:text-[#0a1e3c]">victor@maribamedia.co.za</a>. Put your business name in the email subject.</p>
+                            <p class="text-sm font-semibold text-[#0f1117]">Email your documents</p>
+                            <p class="text-xs text-[#4b5563] mt-1 font-light">Send your documents to <a href="mailto:victor@maribamedia.co.za" class="text-[#1e40af] font-semibold underline hover:text-[#0a1e3c] transition-colors">victor@maribamedia.co.za</a>. Put your business name in the email subject.</p>
                         </div>
                     </div>
-                    <div class="border-t border-[rgba(30,64,175,0.08)] pt-4">
-                        <p class="text-xs font-bold uppercase tracking-widest text-[#1e40af] mb-3">Documents you should send:</p>
+                    <div class="border-t border-[rgba(30,64,175,0.08)] pt-3 sm:pt-4">
+                        <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#1e40af] mb-2 sm:mb-3">Documents you should send:</p>
                         <ul class="doc-reminder-list text-left space-y-1" id="successDocList"></ul>
                     </div>
                 </div>
-                
-                <p class="text-[#475569] text-sm mb-6">For follow‑up: <strong>victor@maribamedia.co.za</strong></p>
-                <button class="btn-outline px-6 py-3 text-sm" onclick="location.reload()">Send Another Request</button>
+
+                <p class="text-[#4b5563] text-xs sm:text-sm mb-5 sm:mb-6 font-light">For follow‑up: <strong class="font-semibold text-[#0f1117]">victor@maribamedia.co.za</strong></p>
+                <button class="btn-outline px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm" onclick="location.reload()">Send Another Request</button>
             </div>
-            
-            <div class="card-institutional p-8 sm:p-10 text-center hidden fade-step mt-8" id="errorScreen">
-                <div class="text-5xl mb-4">⚠️</div>
-                <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#111111] mb-3">Something went wrong</h2>
-                <p class="text-[#475569] mb-4" id="errorMessage">We could not send your request. Please try again or email us directly.</p>
-                <a href="mailto:victor@maribamedia.co.za" class="btn-accent px-6 py-3 text-sm">Email victor@maribamedia.co.za</a>
+
+            <!-- ── Error Screen ── -->
+            <div class="card-institutional p-6 sm:p-10 text-center hidden fade-step mt-6 sm:mt-8" id="errorScreen">
+                <div class="text-5xl sm:text-6xl mb-4">⚠️</div>
+                <h2 class="text-xl sm:text-3xl font-display font-bold text-[#0f1117] mb-2">Something went wrong</h2>
+                <p class="text-[#4b5563] mb-4 text-sm" id="errorMessage">We could not send your request. Please try again or email us directly.</p>
+                <a href="mailto:victor@maribamedia.co.za" class="btn-accent px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm">Email victor@maribamedia.co.za</a>
             </div>
         </div>
     </main>
 
-    <footer class="border-t border-[#e2e8f0] py-16" style="background: #f8fafc;">
+    <!-- ── Footer ── -->
+    <footer class="border-t border-[#e2e8f0] py-12 sm:py-16 relative z-10" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <div class="flex items-center justify-center gap-3 mb-4">
                 <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
                     <defs>
                         <linearGradient id="logoGradF" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0a1e3c" />
+                            <stop offset="0%" stop-color="#060d1f" />
                             <stop offset="50%" stop-color="#1e40af" />
                             <stop offset="100%" stop-color="#3b82f6" />
                         </linearGradient>
                     </defs>
-                    <rect x="8" y="8" width="36" height="36" rx="6" fill="url(#logoGradF)" />
-                    <rect x="56" y="8" width="36" height="36" rx="6" fill="url(#logoGradF)" opacity="0.7" />
-                    <rect x="8" y="56" width="36" height="36" rx="6" fill="url(#logoGradF)" opacity="0.7" />
-                    <rect x="56" y="56" width="36" height="36" rx="6" fill="url(#logoGradF)" />
+                    <rect x="8" y="8" width="36" height="36" rx="8" fill="url(#logoGradF)" />
+                    <rect x="56" y="8" width="36" height="36" rx="8" fill="url(#logoGradF)" opacity="0.7" />
+                    <rect x="8" y="56" width="36" height="36" rx="8" fill="url(#logoGradF)" opacity="0.7" />
+                    <rect x="56" y="56" width="36" height="36" rx="8" fill="url(#logoGradF)" />
                 </svg>
-                <span class="text-sm font-display font-bold tracking-tight text-[#111111] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
+                <span class="text-sm font-display font-bold tracking-tight text-[#0f1117] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
             </div>
-            <p class="text-xs text-[#475569] max-w-md mx-auto leading-relaxed">
+            <p class="text-xs text-[#4b5563] max-w-md mx-auto leading-relaxed font-light">
                 Bespoke network for specialist solar, water, energy and business finance solutions in South Africa.
             </p>
-            <div class="mt-6 flex items-center justify-center gap-4 text-xs text-[#475569]">
+            <div class="mt-5 flex items-center justify-center gap-3 sm:gap-4 text-xs text-[#4b5563] font-light">
                 <a href="mailto:victor@maribamedia.co.za" class="hover:text-[#1e40af] transition-colors">victor@maribamedia.co.za</a>
-                <span>·</span>
+                <span class="text-[#cbd5e1]">·</span>
                 <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="hover:text-[#1e40af] transition-colors">Book a Discovery Call</a>
             </div>
-            <p class="mt-8 text-[10px] text-[#adb5bd]">© 2026 Mariba Media. All rights reserved. POPIA Compliant.</p>
+            <p class="mt-6 text-[10px] text-[#9ca3af] font-light">© 2026 Mariba Media. All rights reserved. POPIA Compliant.</p>
         </div>
     </footer>
 
-    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+    <!-- ── Forminit SDK ── -->
+    <script src="https://forminit.com/sdk/v1/forminit.js">
+    </script>
+
+    <!-- ── Main Script ── -->
     <script>
-    (function() {
-        'use strict';
+        (function() {
+            'use strict';
 
-        const forminit = new Forminit();
-        const FORM_ID = 'o7swsv5adox';
+            const forminit = new Forminit();
+            const FORM_ID = 'o7swsv5adox';
 
-        const docRequirements = {
-            'asset-backed': [
-                'Financial statements',
-                '6 months of bank statements',
-                'Title deed copy',
-                'Municipal bill',
-                'Tax clearance certificate'
-            ],
-            'po-funding': [
-                'Purchase Order',
-                'Supplier Quote(s)',
-                'RFQ (where applicable)',
-                'Initial Email of Award',
-                'COR14.3 / Company Documents',
-                'CSD Overview (if applicable)'
-            ],
-            'gov-invoice': [
-                'Your invoice',
-                'Government purchase order or contract',
-                'Signed delivery note or payment certificate',
-                'No ID or proof of address needed.'
-            ],
-            'private-invoice': [
-                'Your invoice',
-                'Private company purchase order or contract',
-                'Signed delivery note or payment certificate',
-                'No ID or proof of address needed.'
-            ],
-            'ipp': [
-                'Project summary and site location',
-                'Power agreement, environmental approval, and design plans',
-                'Municipal approval and grid connection plan',
-                'Financial plan with costs and returns',
-                'Buyer credit check or government guarantee',
-                'Team structure and project timeline',
-                'No ID or proof of address needed.'
-            ],
-            'sectional-solar': [
-                'Body corporate or HOA approval',
-                '6–12 months of electricity bills',
-                'Site assessment report',
-                'Quotes from your installer',
-                'Proof you own or lease the property',
-                'No ID or proof of address needed.'
-            ],
-            'ci-solar': [
-                'Electricity bills',
-                'Proof you own or lease the property',
-                'Quotes from your installer',
-                'Company registration documents',
-                'No ID or proof of address needed.'
-            ],
-            'diesel': [
-                'Company registration documents',
-                'VAT documentation',
-                'Credit references',
-                'Site location details for tank installation',
-                'Estimated monthly diesel volume (min 40,000L)',
-                'No ID or proof of address needed.'
-            ],
-            'borehole': [
-                'Proof of property ownership or lease',
-                'Current water bill',
-                'Site access details',
-                'Any existing borehole or water assessment reports',
-                'No ID or proof of address needed.'
-            ],
-            'termloan': [
-                'Financial statements for the last 12 months',
-                'Yearly sales of R1 million or more',
-                'Tax clearance certificate',
-                'No ID or proof of address needed.'
-            ],
-            'lineofcredit': [
-                'Financial statements for the last 12 months',
-                'Yearly sales of R1 million or more',
-                'Tax clearance certificate',
-                'No ID or proof of address needed.'
-            ],
-            'bridgepay': [
-                'Business registration documents',
-                'Details of your supplier or trade customers',
-                'Current trade terms',
-                'No ID or proof of address needed.'
-            ]
-        };
+            // ── Scroll Progress ──
+            const scrollProgress = document.getElementById('scrollProgress');
+            const nav = document.getElementById('mainNav');
 
-        const selectionContainer = document.getElementById('selectionContainer');
-        const dynamicForm        = document.getElementById('dynamicForm');
-        const poFundingForm      = document.getElementById('poFundingForm');
-        const successScreen      = document.getElementById('successScreen');
-        const errorScreen        = document.getElementById('errorScreen');
-        const errorMessage       = document.getElementById('errorMessage');
-        const selectedFundingType= document.getElementById('selectedFundingType');
-        const fundingOptions     = document.querySelectorAll('.funding-option');
-        const docReminderList    = document.getElementById('docReminderList');
-        const dynFormSubtitle    = document.getElementById('dynFormSubtitle');
-        const successDocList     = document.getElementById('successDocList');
-        const successRef         = document.getElementById('successRef');
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrollTop / docHeight) * 100;
+                scrollProgress.style.width = progress + '%';
 
-        const dynFormInner   = document.getElementById('dynFormInner');
-        const dynSubmitBtn   = document.getElementById('dynSubmitBtn');
-        const dynBackBtn     = document.getElementById('dynBackBtn');
-        const dynUploadZone  = document.getElementById('dynUploadZone');
-        const dynFileInput   = document.getElementById('dynFileInput');
-        const dynFileList    = document.getElementById('dynFileList');
-        const dynConsent     = document.getElementById('dynConsent');
-
-        const poFormInner    = document.getElementById('poFormInner');
-        const poSubmitBtn    = document.getElementById('poSubmitBtn');
-        const poBackBtn      = document.getElementById('poBackBtn');
-        const poUploadZone   = document.getElementById('poUploadZone');
-        const poFileInput    = document.getElementById('poFileInput');
-        const poFileList     = document.getElementById('poFileList');
-        const poConsent      = document.getElementById('poConsent');
-
-        let dynUploadedFiles = [];
-        let poUploadedFiles  = [];
-        let currentDocGroup  = '';
-
-        function hideAll() {
-            selectionContainer.classList.add('hidden');
-            dynamicForm.classList.add('hidden');
-            poFundingForm.classList.add('hidden');
-            successScreen.classList.add('hidden');
-            errorScreen.classList.add('hidden');
-        }
-
-        function showSelection() {
-            hideAll();
-            selectionContainer.classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function showDynamicForm() {
-            hideAll();
-            dynamicForm.classList.remove('hidden');
-            dynamicForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function showPOForm() {
-            hideAll();
-            poFundingForm.classList.remove('hidden');
-            poFundingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function showSuccess(data) {
-            hideAll();
-            successScreen.classList.remove('hidden');
-            
-            if (data && data.hashId) {
-                successRef.textContent = data.hashId;
-            } else {
-                successRef.textContent = '—';
-            }
-            
-            if (currentDocGroup && docRequirements[currentDocGroup]) {
-                successDocList.innerHTML = docRequirements[currentDocGroup]
-                    .map(item => '<li>' + escapeHtml(item) + '</li>')
-                    .join('');
-            } else {
-                successDocList.innerHTML = '<li class="text-[#475569]">The partner may ask for general business documents.</li>';
-            }
-            
-            successScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function showError(msg) {
-            hideAll();
-            errorMessage.textContent = msg || 'We could not send your request. Please try again or email us directly.';
-            errorScreen.classList.remove('hidden');
-            errorScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function setLoading(btn, loading) {
-            if (loading) {
-                btn.disabled = true;
-                btn.dataset.originalText = btn.innerHTML;
-                btn.innerHTML = '<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;border-top-color:#fff;animation:spin 0.8s linear infinite;"></span> Sending…';
-            } else {
-                btn.disabled = false;
-                btn.innerHTML = btn.dataset.originalText || btn.innerHTML;
-            }
-        }
-
-        function validateEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        function initFileUpload(zone, input, list, fileArray) {
-            zone.addEventListener('click', () => input.click());
-            zone.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                zone.classList.add('dragover');
-            });
-            zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
-            zone.addEventListener('drop', (e) => {
-                e.preventDefault();
-                zone.classList.remove('dragover');
-                addFiles(e.dataTransfer.files, fileArray, list, zone);
-            });
-            input.addEventListener('change', (e) => {
-                addFiles(e.target.files, fileArray, list, zone);
-                input.value = '';
-            });
-        }
-
-        function addFiles(fileListObj, fileArray, displayContainer, zone) {
-            Array.from(fileListObj).forEach(file => {
-                if (file.size > 10 * 1024 * 1024) {
-                    alert('File "' + file.name + '" exceeds 10 MB limit and was skipped.');
-                    return;
+                if (scrollTop > 20) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
                 }
-                fileArray.push(file);
-            });
-            renderFileList(fileArray, displayContainer, zone);
-        }
+            }, { passive: true });
 
-        function renderFileList(fileArray, displayContainer, zone) {
-            displayContainer.innerHTML = '';
-            if (fileArray.length > 0) {
-                zone.classList.add('has-files');
-            } else {
-                zone.classList.remove('has-files');
+            // ── Document Requirements ──
+            const docRequirements = {
+                'asset-backed': ['Financial statements', '6 months of bank statements', 'Title deed copy', 'Municipal bill',
+                    'Tax clearance certificate'
+                ],
+                'po-funding': ['Purchase Order', 'Supplier Quote(s)', 'RFQ (where applicable)', 'Initial Email of Award',
+                    'COR14.3 / Company Documents', 'CSD Overview (if applicable)'
+                ],
+                'gov-invoice': ['Your invoice', 'Government purchase order or contract',
+                    'Signed delivery note or payment certificate', 'No ID or proof of address needed.'
+                ],
+                'private-invoice': ['Your invoice', 'Private company purchase order or contract',
+                    'Signed delivery note or payment certificate', 'No ID or proof of address needed.'
+                ],
+                'ipp': ['Project summary and site location',
+                    'Power agreement, environmental approval, and design plans',
+                    'Municipal approval and grid connection plan', 'Financial plan with costs and returns',
+                    'Buyer credit check or government guarantee', 'Team structure and project timeline',
+                    'No ID or proof of address needed.'
+                ],
+                'sectional-solar': ['Body corporate or HOA approval', '6–12 months of electricity bills',
+                    'Site assessment report', 'Quotes from your installer',
+                    'Proof you own or lease the property', 'No ID or proof of address needed.'
+                ],
+                'ci-solar': ['Electricity bills', 'Proof you own or lease the property', 'Quotes from your installer',
+                    'Company registration documents', 'No ID or proof of address needed.'
+                ],
+                'diesel': ['Company registration documents', 'VAT documentation', 'Credit references',
+                    'Site location details for tank installation', 'Estimated monthly diesel volume (min 40,000L)',
+                    'No ID or proof of address needed.'
+                ],
+                'borehole': ['Proof of property ownership or lease', 'Current water bill', 'Site access details',
+                    'Any existing borehole or water assessment reports', 'No ID or proof of address needed.'
+                ],
+                'termloan': ['Financial statements for the last 12 months', 'Yearly sales of R1 million or more',
+                    'Tax clearance certificate', 'No ID or proof of address needed.'
+                ],
+                'lineofcredit': ['Financial statements for the last 12 months', 'Yearly sales of R1 million or more',
+                    'Tax clearance certificate', 'No ID or proof of address needed.'
+                ],
+                'bridgepay': ['Business registration documents', 'Details of your supplier or trade customers',
+                    'Current trade terms', 'No ID or proof of address needed.'
+                ]
+            };
+
+            // ── DOM Elements ──
+            const selectionContainer = document.getElementById('selectionContainer');
+            const dynamicForm = document.getElementById('dynamicForm');
+            const poFundingForm = document.getElementById('poFundingForm');
+            const successScreen = document.getElementById('successScreen');
+            const errorScreen = document.getElementById('errorScreen');
+            const errorMessage = document.getElementById('errorMessage');
+            const selectedFundingType = document.getElementById('selectedFundingType');
+            const fundingOptions = document.querySelectorAll('.funding-option');
+            const docReminderList = document.getElementById('docReminderList');
+            const dynFormSubtitle = document.getElementById('dynFormSubtitle');
+            const successDocList = document.getElementById('successDocList');
+            const successRef = document.getElementById('successRef');
+
+            const dynFormInner = document.getElementById('dynFormInner');
+            const dynSubmitBtn = document.getElementById('dynSubmitBtn');
+            const dynBackBtn = document.getElementById('dynBackBtn');
+            const dynUploadZone = document.getElementById('dynUploadZone');
+            const dynFileInput = document.getElementById('dynFileInput');
+            const dynFileList = document.getElementById('dynFileList');
+            const dynConsent = document.getElementById('dynConsent');
+
+            const poFormInner = document.getElementById('poFormInner');
+            const poSubmitBtn = document.getElementById('poSubmitBtn');
+            const poBackBtn = document.getElementById('poBackBtn');
+            const poUploadZone = document.getElementById('poUploadZone');
+            const poFileInput = document.getElementById('poFileInput');
+            const poFileList = document.getElementById('poFileList');
+            const poConsent = document.getElementById('poConsent');
+
+            let dynUploadedFiles = [];
+            let poUploadedFiles = [];
+            let currentDocGroup = '';
+
+            // ── Navigation ──
+            function hideAll() {
+                selectionContainer.classList.add('hidden');
+                dynamicForm.classList.add('hidden');
+                poFundingForm.classList.add('hidden');
+                successScreen.classList.add('hidden');
+                errorScreen.classList.add('hidden');
             }
-            fileArray.forEach((file, idx) => {
-                const chip = document.createElement('div');
-                chip.className = 'file-chip';
-                chip.innerHTML = '<span>' + escapeHtml(file.name) + '</span><span class="remove-file" data-idx="' + idx + '">×</span>';
-                displayContainer.appendChild(chip);
-            });
-            displayContainer.querySelectorAll('.remove-file').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const idx = parseInt(btn.dataset.idx, 10);
-                    fileArray.splice(idx, 1);
-                    renderFileList(fileArray, displayContainer, zone);
-                });
-            });
-        }
 
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
+            function showSelection() {
+                hideAll();
+                selectionContainer.classList.remove('hidden');
+                // Re-trigger staggered animations
+                document.querySelectorAll('.stagger-1, .stagger-2, .stagger-3, .stagger-4, .stagger-5, .stagger-6, .stagger-7, .stagger-8, .stagger-9, .stagger-10, .stagger-11, .stagger-12, .stagger-13')
+                    .forEach(el => {
+                        el.style.animation = 'none';
+                        el.offsetHeight;
+                        el.style.animation = '';
+                    });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
 
-        function updateSubmitState() {
-            dynSubmitBtn.disabled = !dynConsent.checked;
-            dynSubmitBtn.style.opacity = dynConsent.checked ? '1' : '0.4';
-            poSubmitBtn.disabled = !poConsent.checked;
-            poSubmitBtn.style.opacity = poConsent.checked ? '1' : '0.4';
-        }
+            function showDynamicForm() {
+                hideAll();
+                dynamicForm.classList.remove('hidden');
+                dynamicForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
 
-        fundingOptions.forEach(btn => {
-            btn.addEventListener('click', () => {
-                fundingOptions.forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
+            function showPOForm() {
+                hideAll();
+                poFundingForm.classList.remove('hidden');
+                poFundingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
 
-                const value = btn.dataset.value;
-                const docGroup = btn.dataset.docGroup;
-                currentDocGroup = docGroup;
-                selectedFundingType.value = value;
+            function showSuccess(data) {
+                hideAll();
+                successScreen.classList.remove('hidden');
 
-                if (docRequirements[docGroup]) {
-                    docReminderList.innerHTML = docRequirements[docGroup]
+                if (data && data.hashId) {
+                    successRef.textContent = data.hashId;
+                } else {
+                    successRef.textContent = '—';
+                }
+
+                if (currentDocGroup && docRequirements[currentDocGroup]) {
+                    successDocList.innerHTML = docRequirements[currentDocGroup]
                         .map(item => '<li>' + escapeHtml(item) + '</li>')
                         .join('');
                 } else {
-                    docReminderList.innerHTML = '<li>The partner may ask for general business documents.</li>';
+                    successDocList.innerHTML = '<li class="text-[#4b5563]">The partner may ask for general business documents.</li>';
                 }
 
-                dynFormSubtitle.textContent = 'You chose: ' + value + '. Fill in your details and we send them to the partner.';
+                successScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
 
-                if (docGroup === 'po-funding') {
-                    showPOForm();
+            function showError(msg) {
+                hideAll();
+                errorMessage.textContent = msg || 'We could not send your request. Please try again or email us directly.';
+                errorScreen.classList.remove('hidden');
+                errorScreen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            // ── Loading State ──
+            function setLoading(btn, loading) {
+                if (loading) {
+                    btn.disabled = true;
+                    btn.dataset.originalText = btn.innerHTML;
+                    btn.innerHTML = '<span class="spinner"></span> Sending…';
                 } else {
-                    showDynamicForm();
+                    btn.disabled = false;
+                    btn.innerHTML = btn.dataset.originalText || btn.innerHTML;
                 }
+            }
+
+            // ── Validation ──
+            function validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            function validateFormFields(form, requiredNames) {
+                let valid = true;
+                requiredNames.forEach(name => {
+                    const input = form.querySelector('[name="' + name + '"]');
+                    if (!input) return;
+                    const val = input.value.trim();
+                    if (!val) {
+                        input.style.borderColor = '#ef4444';
+                        input.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.08)';
+                        valid = false;
+                    } else {
+                        input.style.borderColor = '';
+                        input.style.boxShadow = '';
+                    }
+                    if (name === 'fi-sender-email' && val && !validateEmail(val)) {
+                        input.style.borderColor = '#ef4444';
+                        input.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.08)';
+                        valid = false;
+                    }
+                });
+                return valid;
+            }
+
+            // ── File Upload ──
+            function initFileUpload(zone, input, list, fileArray) {
+                zone.addEventListener('click', (e) => {
+                    if (e.target !== input) input.click();
+                });
+                zone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    zone.classList.add('dragover');
+                });
+                zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.classList.remove('dragover');
+                    addFiles(e.dataTransfer.files, fileArray, list, zone);
+                });
+                input.addEventListener('change', (e) => {
+                    addFiles(e.target.files, fileArray, list, zone);
+                    input.value = '';
+                });
+            }
+
+            function addFiles(fileListObj, fileArray, displayContainer, zone) {
+                Array.from(fileListObj).forEach(file => {
+                    if (file.size > 10 * 1024 * 1024) {
+                        alert('File "' + file.name + '" exceeds 10 MB limit and was skipped.');
+                        return;
+                    }
+                    if (!fileArray.some(f => f.name === file.name && f.size === file.size)) {
+                        fileArray.push(file);
+                    }
+                });
+                renderFileList(fileArray, displayContainer, zone);
+            }
+
+            function renderFileList(fileArray, displayContainer, zone) {
+                displayContainer.innerHTML = '';
+                if (fileArray.length > 0) {
+                    zone.classList.add('has-files');
+                } else {
+                    zone.classList.remove('has-files');
+                }
+                fileArray.forEach((file, idx) => {
+                    const chip = document.createElement('div');
+                    chip.className = 'file-chip';
+                    const fileSize = (file.size / 1024).toFixed(1) + ' KB';
+                    chip.innerHTML = '<span>📄 ' + escapeHtml(file.name) + ' <span class="text-[#9ca3af] text-[10px]">(' +
+                        fileSize + ')</span></span><span class="remove-file" data-idx="' + idx +
+                        '">×</span>';
+                    displayContainer.appendChild(chip);
+                });
+                displayContainer.querySelectorAll('.remove-file').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const idx = parseInt(btn.dataset.idx, 10);
+                        fileArray.splice(idx, 1);
+                        renderFileList(fileArray, displayContainer, zone);
+                    });
+                });
+            }
+
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            // ── Consent State ──
+            function updateSubmitState() {
+                dynSubmitBtn.disabled = !dynConsent.checked;
+                dynSubmitBtn.style.opacity = dynConsent.checked ? '1' : '0.4';
+                poSubmitBtn.disabled = !poConsent.checked;
+                poSubmitBtn.style.opacity = poConsent.checked ? '1' : '0.4';
+            }
+
+            // ── Funding Option Clicks ──
+            fundingOptions.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    fundingOptions.forEach(b => b.classList.remove('selected'));
+                    btn.classList.add('selected');
+
+                    const value = btn.dataset.value;
+                    const docGroup = btn.dataset.docGroup;
+                    currentDocGroup = docGroup;
+                    selectedFundingType.value = value;
+
+                    if (docRequirements[docGroup]) {
+                        docReminderList.innerHTML = docRequirements[docGroup]
+                            .map(item => '<li>' + escapeHtml(item) + '</li>')
+                            .join('');
+                    } else {
+                        docReminderList.innerHTML = '<li>The partner may ask for general business documents.</li>';
+                    }
+
+                    dynFormSubtitle.textContent = 'You chose: ' + value +
+                        '. Fill in your details and we send them to the partner.';
+
+                    if (docGroup === 'po-funding') {
+                        showPOForm();
+                    } else {
+                        showDynamicForm();
+                    }
+                });
             });
-        });
 
-        dynBackBtn.addEventListener('click', showSelection);
-        poBackBtn.addEventListener('click', showSelection);
+            // ── Back Buttons ──
+            dynBackBtn.addEventListener('click', showSelection);
+            poBackBtn.addEventListener('click', showSelection);
 
-        initFileUpload(dynUploadZone, dynFileInput, dynFileList, dynUploadedFiles);
-        initFileUpload(poUploadZone, poFileInput, poFileList, poUploadedFiles);
+            // ── Init Uploads ──
+            initFileUpload(dynUploadZone, dynFileInput, dynFileList, dynUploadedFiles);
+            initFileUpload(poUploadZone, poFileInput, poFileList, poUploadedFiles);
 
-        dynConsent.addEventListener('change', updateSubmitState);
-        poConsent.addEventListener('change', updateSubmitState);
+            // ── Consent Listeners ──
+            dynConsent.addEventListener('change', updateSubmitState);
+            poConsent.addEventListener('change', updateSubmitState);
 
-        function validateFormFields(form, requiredNames) {
-            let valid = true;
-            requiredNames.forEach(name => {
-                const input = form.querySelector('[name="' + name + '"]');
-                if (!input) return;
-                const val = input.value.trim();
-                if (!val) {
-                    input.style.borderColor = '#e74c3c';
+            // ── Dynamic Form Submit ──
+            dynFormInner.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const requiredFields = [
+                    'fi-sender-company', 'fi-sender-fullName', 'fi-sender-email',
+                    'fi-sender-phone', 'fi-text-fundingAmount', 'fi-text-description'
+                ];
+
+                let valid = validateFormFields(dynFormInner, requiredFields);
+
+                if (!dynConsent.checked) {
+                    alert('Please agree to the terms before sending.');
                     valid = false;
-                } else {
-                    input.style.borderColor = '';
                 }
-                if (name === 'fi-sender-email' && val && !validateEmail(val)) {
-                    input.style.borderColor = '#e74c3c';
+
+                if (!valid) return;
+
+                const fd = new FormData(dynFormInner);
+                dynUploadedFiles.forEach(f => fd.append('fi-file-documents[]', f));
+
+                setLoading(dynSubmitBtn, true);
+                try {
+                    const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
+                    if (error) {
+                        showError(error.message || 'Sending failed. Please try again.');
+                    } else {
+                        showSuccess(data);
+                        dynFormInner.reset();
+                        dynUploadedFiles = [];
+                        renderFileList(dynUploadedFiles, dynFileList, dynUploadZone);
+                        updateSubmitState();
+                    }
+                } catch (err) {
+                    console.error(err);
+                    showError('Network error. Please check your connection and try again.');
+                } finally {
+                    setLoading(dynSubmitBtn, false);
+                }
+            });
+
+            // ── PO Form Submit ──
+            poFormInner.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const requiredFields = [
+                    'fi-sender-company', 'fi-sender-fullName', 'fi-sender-email',
+                    'fi-sender-phone', 'fi-text-poValue', 'fi-select-endClient', 'fi-text-description'
+                ];
+
+                let valid = validateFormFields(poFormInner, requiredFields);
+
+                if (!poConsent.checked) {
+                    alert('Please agree to the terms before sending.');
                     valid = false;
                 }
-            });
-            return valid;
-        }
 
-        dynFormInner.addEventListener('submit', async function(e) {
-            e.preventDefault();
+                if (!valid) return;
 
-            const requiredFields = [
-                'fi-sender-company',
-                'fi-sender-fullName',
-                'fi-sender-email',
-                'fi-sender-phone',
-                'fi-text-fundingAmount',
-                'fi-text-description'
-            ];
-            
-            let valid = validateFormFields(dynFormInner, requiredFields);
+                const fd = new FormData(poFormInner);
+                poUploadedFiles.forEach(f => fd.append('fi-file-documents[]', f));
 
-            if (!dynConsent.checked) {
-                alert('Please agree to the terms before sending.');
-                valid = false;
-            }
-
-            if (!valid) return;
-
-            const fd = new FormData(dynFormInner);
-            dynUploadedFiles.forEach(f => fd.append('fi-file-documents[]', f));
-
-            setLoading(dynSubmitBtn, true);
-            try {
-                const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
-                if (error) {
-                    showError(error.message || 'Sending failed. Please try again.');
-                } else {
-                    showSuccess(data);
-                    dynFormInner.reset();
-                    dynUploadedFiles = [];
-                    renderFileList(dynUploadedFiles, dynFileList, dynUploadZone);
-                    updateSubmitState();
+                setLoading(poSubmitBtn, true);
+                try {
+                    const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
+                    if (error) {
+                        showError(error.message || 'Sending failed. Please try again.');
+                    } else {
+                        showSuccess(data);
+                        poFormInner.reset();
+                        poUploadedFiles = [];
+                        renderFileList(poUploadedFiles, poFileList, poUploadZone);
+                        updateSubmitState();
+                    }
+                } catch (err) {
+                    console.error(err);
+                    showError('Network error. Please check your connection and try again.');
+                } finally {
+                    setLoading(poSubmitBtn, false);
                 }
-            } catch (err) {
-                console.error(err);
-                showError('Network error. Please check your connection and try again.');
-            } finally {
-                setLoading(dynSubmitBtn, false);
-            }
-        });
-
-        poFormInner.addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const requiredFields = [
-                'fi-sender-company',
-                'fi-sender-fullName',
-                'fi-sender-email',
-                'fi-sender-phone',
-                'fi-text-poValue',
-                'fi-select-endClient',
-                'fi-text-description'
-            ];
-            
-            let valid = validateFormFields(poFormInner, requiredFields);
-
-            if (!poConsent.checked) {
-                alert('Please agree to the terms before sending.');
-                valid = false;
-            }
-
-            if (!valid) return;
-
-            const fd = new FormData(poFormInner);
-            poUploadedFiles.forEach(f => fd.append('fi-file-documents[]', f));
-
-            setLoading(poSubmitBtn, true);
-            try {
-                const { data, redirectUrl, error } = await forminit.submit(FORM_ID, fd);
-                if (error) {
-                    showError(error.message || 'Sending failed. Please try again.');
-                } else {
-                    showSuccess(data);
-                    poFormInner.reset();
-                    poUploadedFiles = [];
-                    renderFileList(poUploadedFiles, poFileList, poUploadZone);
-                    updateSubmitState();
-                }
-            } catch (err) {
-                console.error(err);
-                showError('Network error. Please check your connection and try again.');
-            } finally {
-                setLoading(poSubmitBtn, false);
-            }
-        });
-
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('input', function() {
-                this.style.borderColor = '';
             });
-        });
 
-        const spinStyle = document.createElement('style');
-        spinStyle.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
-        document.head.appendChild(spinStyle);
+            // ── Real-time input clearing ──
+            document.querySelectorAll('.form-input').forEach(input => {
+                input.addEventListener('input', function() {
+                    this.style.borderColor = '';
+                    this.style.boxShadow = '';
+                });
+            });
 
-        showSelection();
-        updateSubmitState();
-    })();
+            // ── Init ──
+            showSelection();
+            updateSubmitState();
+
+            // ── Intersection Observer for staggered cards ──
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('[class*="stagger-"]').forEach(el => {
+                observer.observe(el);
+            });
+        })();
     </script>
 
-    <!-- Cal floating-popup embed code begins -->
+    <!-- ── Cal Floating Button ── -->
     <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "discovery-session", {origin:"https://app.cal.com"});
-    Cal.config = Cal.config || {};
-    Cal.config.forwardQueryParams = true;
-
-      Cal.ns["discovery-session"]("floatingButton", {"calLink":"partner-discovery/discovery-session","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}); 
-      Cal.ns["discovery-session"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        (function(C, A, L) {
+            let p = function(a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function() {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true; }
+                if (ar[0] === L) { const api = function() { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || [];
+                    if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "discovery-session", { origin: "https://app.cal.com" });
+        Cal.config = Cal.config || {};
+        Cal.config.forwardQueryParams = true;
+        Cal.ns["discovery-session"]("floatingButton", { "calLink": "partner-discovery/discovery-session",
+            "config": { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" } });
+        Cal.ns["discovery-session"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
     </script>
-    <!-- Cal floating-popup embed code ends -->
 </body>
 </html>
