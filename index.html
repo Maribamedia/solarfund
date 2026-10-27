@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>Mariba Media · Submit Your Funding Enquiry</title>
-    <meta name="description" content="One simple submission to the specialist partner with the exact mandate. No paperwork, no FICA documents, zero cost to you.">
-    <meta property="og:title" content="Mariba Media · Direct Access to Specialist Funding">
-    <meta property="og:description" content="Connect directly with the specialist turnkey funding partner for your solar, water, diesel, or business finance need.">
+    <meta name="description" content="Curated access to the specialist funding partner whose mandate fits your need. Performance-based success fees, aligned incentives, zero cost to you.">
+    <meta property="og:title" content="Mariba Media · Curated Access to Specialist Funding">
+    <meta property="og:description" content="Connect directly with the specialist partner holding the exact mandate for your solar, energy or business finance need. Performance-based fees. Aligned incentives. Zero cost.">
     <meta property="og:url" content="https://funding.maribamedia.co.za">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23060d1f'/%3E%3Cstop offset='50%25' stop-color='%231e40af'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='8' y='8' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3Crect x='56' y='8' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='8' y='56' width='36' height='36' rx='6' fill='url(%23g)' opacity='0.7' /%3E%3Crect x='56' y='56' width='36' height='36' rx='6' fill='url(%23g)' /%3E%3C/svg%3E" />
@@ -36,15 +36,6 @@
                     animation: {
                         'fade-in': 'fadeIn 0.5s ease-out forwards',
                         'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
-                        'fade-up-delay-1': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.08s forwards',
-                        'fade-up-delay-2': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.16s forwards',
-                        'fade-up-delay-3': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.24s forwards',
-                        'fade-up-delay-4': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.32s forwards',
-                        'fade-up-delay-5': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.40s forwards',
-                        'fade-up-delay-6': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.48s forwards',
-                        'fade-up-delay-7': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.56s forwards',
-                        'fade-up-delay-8': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.64s forwards',
-                        'fade-up-delay-9': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.72s forwards',
                         'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
                         'float': 'float 6s ease-in-out infinite',
                         'aurora': 'aurora 12s ease-in-out infinite',
@@ -90,16 +81,9 @@
             --transition-fast: 200ms cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -119,7 +103,6 @@
             pointer-events: none;
             overflow: hidden;
         }
-
         .bg-aurora .orb {
             position: absolute;
             border-radius: 50%;
@@ -127,33 +110,21 @@
             opacity: 0.5;
             animation: aurora 14s ease-in-out infinite;
         }
-
         .bg-aurora .orb-1 {
-            width: 500px;
-            height: 500px;
+            width: 500px; height: 500px;
             background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%);
-            top: -100px;
-            left: -100px;
+            top: -100px; left: -100px;
         }
-
         .bg-aurora .orb-2 {
-            width: 400px;
-            height: 400px;
+            width: 400px; height: 400px;
             background: radial-gradient(circle, rgba(6, 182, 212, 0.25), transparent 70%);
-            top: 30%;
-            right: -80px;
-            animation-delay: -4s;
+            top: 30%; right: -80px; animation-delay: -4s;
         }
-
         .bg-aurora .orb-3 {
-            width: 350px;
-            height: 350px;
+            width: 350px; height: 350px;
             background: radial-gradient(circle, rgba(30, 64, 175, 0.3), transparent 70%);
-            bottom: -60px;
-            left: 30%;
-            animation-delay: -8s;
+            bottom: -60px; left: 30%; animation-delay: -8s;
         }
-
         .bg-grid-pattern {
             position: fixed;
             inset: 0;
@@ -168,8 +139,7 @@
         /* ── Scroll Progress Bar ── */
         .scroll-progress {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 0%;
             height: 3px;
             background: linear-gradient(90deg, var(--primary-navy), var(--primary-mid), var(--primary-bright), var(--primary-cyan));
@@ -191,7 +161,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .card-institutional::before {
             content: '';
             position: absolute;
@@ -202,37 +171,45 @@
             transition: opacity var(--transition);
             pointer-events: none;
         }
-
-        .card-institutional:hover::before {
-            opacity: 1;
-        }
-
+        .card-institutional:hover::before { opacity: 1; }
         .card-institutional:hover {
             border-color: rgba(30, 64, 175, 0.2);
             transform: translateY(-4px) scale(1.01);
             box-shadow: var(--shadow-glow);
         }
-
         .card-institutional:active {
             transform: translateY(-1px) scale(0.99);
             box-shadow: var(--shadow-md);
         }
-
         .card-institutional .card-icon {
             transition: all var(--transition);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 12px;
             background: linear-gradient(135deg, rgba(30, 64, 175, 0.08), rgba(59, 130, 246, 0.06));
             margin-bottom: 8px;
         }
-
         .card-institutional:hover .card-icon {
             background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(59, 130, 246, 0.1));
             transform: scale(1.08) rotate(-2deg);
+        }
+
+        /* Non-interactive info card */
+        .info-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(10, 30, 60, 0.08);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+        }
+        .info-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(30, 64, 175, 0.18);
+            box-shadow: var(--shadow-md);
         }
 
         /* ── Buttons ── */
@@ -257,7 +234,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .btn-accent::after {
             content: '';
             position: absolute;
@@ -266,33 +242,15 @@
             opacity: 0;
             transition: opacity var(--transition-fast);
         }
-
-        .btn-accent:hover::after {
-            opacity: 1;
-        }
-
+        .btn-accent:hover::after { opacity: 1; }
         .btn-accent:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 28px rgba(6, 13, 31, 0.35), 0 0 40px rgba(59, 130, 246, 0.2);
             background-position: right center;
         }
-
-        .btn-accent:active {
-            transform: translateY(0) scale(0.98);
-            box-shadow: 0 2px 8px rgba(6, 13, 31, 0.2);
-        }
-
-        .btn-accent:focus-visible {
-            outline: 3px solid var(--primary-bright);
-            outline-offset: 3px;
-        }
-
-        .btn-accent:disabled {
-            opacity: 0.45;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
+        .btn-accent:active { transform: translateY(0) scale(0.98); box-shadow: 0 2px 8px rgba(6, 13, 31, 0.2); }
+        .btn-accent:focus-visible { outline: 3px solid var(--primary-bright); outline-offset: 3px; }
+        .btn-accent:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
 
         .btn-outline {
             background: rgba(255, 255, 255, 0.8);
@@ -312,7 +270,6 @@
             text-transform: uppercase;
             cursor: pointer;
         }
-
         .btn-outline:hover {
             background: rgba(30, 64, 175, 0.05);
             border-color: var(--primary-mid);
@@ -320,15 +277,8 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 16px rgba(30, 64, 175, 0.12);
         }
-
-        .btn-outline:active {
-            transform: translateY(0);
-        }
-
-        .btn-outline:focus-visible {
-            outline: 3px solid var(--primary-bright);
-            outline-offset: 3px;
-        }
+        .btn-outline:active { transform: translateY(0); }
+        .btn-outline:focus-visible { outline: 3px solid var(--primary-bright); outline-offset: 3px; }
 
         /* ── Form Elements ── */
         .form-input {
@@ -342,28 +292,14 @@
             font-size: 0.9rem;
             font-weight: 400;
         }
-
-        .form-input:hover {
-            border-color: #cbd5e1;
-        }
-
+        .form-input:hover { border-color: #cbd5e1; }
         .form-input:focus {
             outline: none;
             border-color: var(--primary-mid);
             box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.12), 0 2px 8px rgba(30, 64, 175, 0.06);
         }
-
-        .form-input::placeholder {
-            color: var(--outline);
-            font-weight: 300;
-        }
-
-        textarea.form-input {
-            resize: vertical;
-            min-height: 110px;
-            line-height: 1.6;
-        }
-
+        .form-input::placeholder { color: var(--outline); font-weight: 300; }
+        textarea.form-input { resize: vertical; min-height: 110px; line-height: 1.6; }
         select.form-input {
             appearance: none;
             -webkit-appearance: none;
@@ -385,7 +321,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .upload-zone::before {
             content: '';
             position: absolute;
@@ -394,37 +329,26 @@
             opacity: 0;
             transition: opacity var(--transition);
         }
-
-        .upload-zone:hover::before,
-        .upload-zone.dragover::before {
-            opacity: 1;
-        }
-
-        .upload-zone:hover,
-        .upload-zone.dragover {
+        .upload-zone:hover::before, .upload-zone.dragover::before { opacity: 1; }
+        .upload-zone:hover, .upload-zone.dragover {
             border-color: var(--primary-mid);
             background: rgba(30, 64, 175, 0.04);
             transform: scale(1.005);
         }
-
         .upload-zone.has-files {
             border-color: #22c55e;
             border-style: solid;
             background: rgba(34, 197, 94, 0.04);
         }
-
         .upload-zone .upload-icon {
             font-size: 2.5rem;
             margin-bottom: 0.75rem;
             transition: all var(--transition);
             display: inline-block;
         }
-
-        .upload-zone:hover .upload-icon,
-        .upload-zone.dragover .upload-icon {
+        .upload-zone:hover .upload-icon, .upload-zone.dragover .upload-icon {
             transform: translateY(-4px) scale(1.1);
         }
-
         .file-chip {
             display: inline-flex;
             align-items: center;
@@ -439,12 +363,10 @@
             transition: all var(--transition-fast);
             animation: fadeUp 0.3s ease-out forwards;
         }
-
         .file-chip:hover {
             border-color: rgba(30, 64, 175, 0.3);
             box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
         }
-
         .file-chip .remove-file {
             cursor: pointer;
             color: #ef4444;
@@ -455,7 +377,6 @@
             padding: 2px 4px;
             border-radius: 4px;
         }
-
         .file-chip .remove-file:hover {
             background: rgba(239, 68, 68, 0.1);
             transform: scale(1.2);
@@ -475,22 +396,10 @@
             scrollbar-width: thin;
             scrollbar-color: rgba(30, 64, 175, 0.2) transparent;
         }
-
-        .consent-box::-webkit-scrollbar {
-            width: 4px;
-        }
-        .consent-box::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .consent-box::-webkit-scrollbar-thumb {
-            background: rgba(30, 64, 175, 0.2);
-            border-radius: 2px;
-        }
-
-        .consent-box strong {
-            color: var(--ink);
-            font-weight: 600;
-        }
+        .consent-box::-webkit-scrollbar { width: 4px; }
+        .consent-box::-webkit-scrollbar-track { background: transparent; }
+        .consent-box::-webkit-scrollbar-thumb { background: rgba(30, 64, 175, 0.2); border-radius: 2px; }
+        .consent-box strong { color: var(--ink); font-weight: 600; }
 
         /* ── Funding Option Selected State ── */
         .funding-option.selected {
@@ -499,41 +408,23 @@
             box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1), 0 4px 16px rgba(30, 64, 175, 0.12);
             transform: translateY(-3px);
         }
-
-        .funding-option.selected::before {
-            opacity: 1;
-        }
-
+        .funding-option.selected::before { opacity: 1; }
         .funding-option.selected .card-icon {
             background: linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(59, 130, 246, 0.12));
             transform: scale(1.08);
         }
 
         /* ── Animations ── */
-        .fade-step {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+        .fade-step { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
         @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(32px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(32px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes shimmer {
-            0% {
-                background-position: -200% 0;
-            }
-            100% {
-                background-position: 200% 0;
-            }
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
-
         .shimmer {
             background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
             background-size: 200% 100%;
@@ -541,11 +432,7 @@
         }
 
         /* ── Doc Reminder List ── */
-        .doc-reminder-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .doc-reminder-list { list-style: none; padding: 0; margin: 0; }
         .doc-reminder-list li {
             padding: 5px 0;
             font-size: 0.8rem;
@@ -576,7 +463,6 @@
             border-bottom: 1px solid rgba(226, 232, 240, 0.8);
             transition: all var(--transition);
         }
-
         .nav-blur.scrolled {
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 4px 24px rgba(6, 13, 31, 0.06);
@@ -590,93 +476,38 @@
             font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
             transition: all var(--transition);
         }
-
-        .card-institutional:hover .material-symbols-outlined {
-            color: var(--primary-bright);
-        }
+        .card-institutional:hover .material-symbols-outlined { color: var(--primary-bright); }
 
         /* ── Responsive ── */
         @media (max-width: 640px) {
-            .funding-option {
-                padding: 0.9rem 1rem !important;
-            }
-            .funding-option h3,
-            .funding-option h4 {
-                font-size: 0.9rem !important;
-            }
-            .card-institutional {
-                border-radius: 14px;
-            }
-            .upload-zone {
-                padding: 1.5rem 1rem;
-            }
-            .btn-accent,
-            .btn-outline {
-                padding: 0.8rem 1.6rem;
-                font-size: 0.72rem;
-            }
-            .bg-aurora .orb {
-                filter: blur(50px);
-                opacity: 0.35;
-            }
+            .funding-option { padding: 0.9rem 1rem !important; }
+            .funding-option h3, .funding-option h4 { font-size: 0.9rem !important; }
+            .card-institutional { border-radius: 14px; }
+            .upload-zone { padding: 1.5rem 1rem; }
+            .btn-accent, .btn-outline { padding: 0.8rem 1.6rem; font-size: 0.72rem; }
+            .bg-aurora .orb { filter: blur(50px); opacity: 0.35; }
         }
 
         /* ── Success Pulse ── */
-        .success-pulse {
-            animation: successPulse 2s ease-in-out infinite;
-        }
+        .success-pulse { animation: successPulse 2s ease-in-out infinite; }
         @keyframes successPulse {
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.1);
-                opacity: 0.85;
-            }
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.85; }
         }
 
         /* ── Staggered Card Animation Classes ── */
-        .stagger-1 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
-        }
-        .stagger-2 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
-        }
-        .stagger-3 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
-        }
-        .stagger-4 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
-        }
-        .stagger-5 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
-        }
-        .stagger-6 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
-        }
-        .stagger-7 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
-        }
-        .stagger-8 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
-        }
-        .stagger-9 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
-        }
-        .stagger-10 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
-        }
-        .stagger-11 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
-        }
-        .stagger-12 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
-        }
-        .stagger-13 {
-            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
-        }
+        .stagger-1 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+        .stagger-2 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+        .stagger-3 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+        .stagger-4 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+        .stagger-5 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+        .stagger-6 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+        .stagger-7 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both; }
+        .stagger-8 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+        .stagger-9 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+        .stagger-10 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+        .stagger-11 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both; }
+        .stagger-12 { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
 
         /* ── Checkbox ── */
         input[type="checkbox"] {
@@ -687,21 +518,13 @@
             cursor: pointer;
             transition: all var(--transition-fast);
         }
-
-        input[type="checkbox"]:hover {
-            transform: scale(1.1);
-        }
+        input[type="checkbox"]:hover { transform: scale(1.1); }
 
         /* ── Loading Spinner ── */
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
         .spinner {
             display: inline-block;
-            width: 16px;
-            height: 16px;
+            width: 16px; height: 16px;
             border: 2.5px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: #fff;
@@ -743,13 +566,13 @@
                     </svg>
                     <div>
                         <span class="text-sm sm:text-lg font-display font-extrabold tracking-tight text-[#0f1117] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
-                        <span class="block text-[9px] sm:text-[10px] font-medium tracking-[0.22em] text-[#4b5563] uppercase">Bespoke Funding Network</span>
+                        <span class="block text-[9px] sm:text-[10px] font-medium tracking-[0.22em] text-[#4b5563] uppercase">Curated Capital Connections</span>
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-5">
                     <span class="text-[11px] font-medium text-[#4b5563] tracking-widest uppercase inline-flex items-center gap-1.5">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse"></span>
-                        Direct Access · Zero Cost
+                        Performance-Based · Zero Cost
                     </span>
                     <a href="mailto:victor@maribamedia.co.za" class="text-xs text-[#4b5563] hover:text-[#1e40af] transition-colors font-medium">victor@maribamedia.co.za</a>
                     <a href="https://cal.com/partner-discovery/discovery-session" target="_blank" rel="noopener" class="btn-accent !px-4 !py-2 text-[11px]">📅 Book a Call</a>
@@ -767,7 +590,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- ── Hero Section ── -->
-            <div class="text-center mb-8 sm:mb-14">
+            <div class="text-center mb-6 sm:mb-10">
                 <div class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(30,64,175,0.1)] bg-white/70 backdrop-blur-md rounded-full mb-5 sm:mb-6 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-[#1e40af] animate-pulse"></span>
                     <span class="text-[9px] sm:text-[11px] font-semibold tracking-[0.18em] text-[#4b5563] uppercase">POPIA Compliant · No ID Documents</span>
@@ -781,8 +604,32 @@
                     for your business.
                 </h1>
                 <p class="text-[#4b5563] mt-4 sm:mt-5 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-light">
-                    Choose your funding type below. We send your details straight to the partner with the exact mandate. No ID documents. No hidden fees.
+                    Choose your funding type below. We route your requirement to the partner holding the exclusive mandate. Performance-based fees. Aligned incentives. No ID documents. No hidden costs.
                 </p>
+            </div>
+
+            <!-- ── The Mariba Advantage (compact strip) ── -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 mb-8 sm:mb-10">
+                <div class="info-card p-3.5 sm:p-4 text-center">
+                    <span class="material-symbols-outlined !text-[22px] mx-auto block mb-1.5">payments</span>
+                    <h3 class="text-[11px] sm:text-xs font-display font-bold text-[#0f1117]">Performance Fees</h3>
+                    <p class="text-[10px] sm:text-[11px] text-[#4b5563] mt-1 font-light leading-snug">Tied to completed transactions. No result, no success fee.</p>
+                </div>
+                <div class="info-card p-3.5 sm:p-4 text-center">
+                    <span class="material-symbols-outlined !text-[22px] mx-auto block mb-1.5">handshake</span>
+                    <h3 class="text-[11px] sm:text-xs font-display font-bold text-[#0f1117]">Aligned Incentives</h3>
+                    <p class="text-[10px] sm:text-[11px] text-[#4b5563] mt-1 font-light leading-snug">You, the partner and Mariba sit on the same side of the table.</p>
+                </div>
+                <div class="info-card p-3.5 sm:p-4 text-center">
+                    <span class="material-symbols-outlined !text-[22px] mx-auto block mb-1.5">shield</span>
+                    <h3 class="text-[11px] sm:text-xs font-display font-bold text-[#0f1117]">Risk, Managed</h3>
+                    <p class="text-[10px] sm:text-[11px] text-[#4b5563] mt-1 font-light leading-snug">Screened for mandate fit and capacity before any introduction.</p>
+                </div>
+                <div class="info-card p-3.5 sm:p-4 text-center">
+                    <span class="material-symbols-outlined !text-[22px] mx-auto block mb-1.5">hub</span>
+                    <h3 class="text-[11px] sm:text-xs font-display font-bold text-[#0f1117]">Curated, Not Crowded</h3>
+                    <p class="text-[10px] sm:text-[11px] text-[#4b5563] mt-1 font-light leading-snug">One qualified introduction to the right specialist — not a list.</p>
+                </div>
             </div>
 
             <!-- ── Funding Selection Card ── -->
@@ -794,7 +641,7 @@
                         </div>
                         <div>
                             <h2 class="text-lg sm:text-2xl font-display font-bold text-[#0f1117]">What type of solution do you need?</h2>
-                            <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5 font-light">Choose the category that fits. We match you with the right specialist partner.</p>
+                            <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5 font-light">Choose the category that fits. We match you with the specialist partner holding the exact mandate.</p>
                         </div>
                     </div>
 
@@ -807,55 +654,45 @@
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-1" data-value="Asset-Backed Financing" data-doc-group="asset-backed">
                             <span class="card-icon"><span class="material-symbols-outlined">account_balance</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Asset‑Backed Finance</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">Funding based on your assets</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Release capital tied up in your assets — without disrupting operations or cash flow.</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-2" data-value="Purchase Order Funding" data-doc-group="po-funding">
                             <span class="card-icon"><span class="material-symbols-outlined">local_shipping</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Purchase Order Funding</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">Government and private orders</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Take on confirmed orders without straining working capital. Repayment from the buyer's invoice.</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-3" data-value="Government Invoice Discounting" data-doc-group="gov-invoice">
                             <span class="card-icon"><span class="material-symbols-outlined">receipt_long</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Gov Invoice Discounting</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">For verified government invoices</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Turn verified government invoices into immediate cash. Liquidity from work already delivered.</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-4" data-value="Private Invoice Discounting" data-doc-group="private-invoice">
                             <span class="card-icon"><span class="material-symbols-outlined">request_quote</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Private Invoice Discounting</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">For private company invoices</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Unlock cash from invoices already delivered. No new debt, no disruption to customer relationships.</p>
                         </button>
                     </div>
 
-                    <!-- Energy, Solar & Water -->
+                    <!-- Energy & Solar -->
                     <h3 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#1e40af] mb-3 mt-8 flex items-center gap-2">
                         <span class="w-4 h-px bg-[#1e40af]/40"></span>
-                        Energy, Solar & Water
+                        Energy & Solar
                     </h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-5" data-value="IPP Funding" data-doc-group="ipp">
                             <span class="card-icon"><span class="material-symbols-outlined">solar_power</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">IPP Funding</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">Debt, equity, or mixed funding</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Debt, equity or blended project finance. The structure that moves projects to financial close.</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-6" data-value="Sectional Title Solar" data-doc-group="sectional-solar">
                             <span class="card-icon"><span class="material-symbols-outlined">home_work</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Sectional Title Solar</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">Housing estates & complexes</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Capex-free solar for estates and complexes. Lower levies, predictable energy, zero capital outlay.</p>
                         </button>
                         <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-7" data-value="Commercial & Industrial Solar" data-doc-group="ci-solar">
                             <span class="card-icon"><span class="material-symbols-outlined">factory</span></span>
                             <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">C&I Solar</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">Factories, offices, warehouses</p>
-                        </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-8" data-value="Bulk Diesel on Credit" data-doc-group="diesel">
-                            <span class="card-icon"><span class="material-symbols-outlined">gas_meter</span></span>
-                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Wholesale Bulk Diesel</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">30‑day terms & tank install</p>
-                        </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-9" data-value="Borehole Water Purchase Agreement" data-doc-group="borehole">
-                            <span class="card-icon"><span class="material-symbols-outlined">water_drop</span></span>
-                            <h3 class="text-sm sm:text-base font-display font-bold text-[#0f1117]">Borehole Water</h3>
-                            <p class="text-[#4b5563] text-xs mt-1 font-light">Shared‑savings water solution</p>
+                            <p class="text-[#4b5563] text-xs mt-1 font-light">Cut energy costs without tying up capital. Predictable energy, protected margins.</p>
                         </button>
                     </div>
 
@@ -865,13 +702,13 @@
                         Business Growth
                     </h3>
                     <div class="grid sm:grid-cols-1 gap-3 sm:gap-4">
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option term-loan-card stagger-10" data-value="Term Loan" data-doc-group="termloan">
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option term-loan-card stagger-8" data-value="Term Loan" data-doc-group="termloan">
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                 <div class="flex items-start gap-3">
                                     <span class="card-icon"><span class="material-symbols-outlined">trending_up</span></span>
                                     <div>
                                         <h3 class="text-sm sm:text-lg font-display font-bold text-[#0f1117]">Flexible Business Term Loan</h3>
-                                        <p class="text-[#4b5563] text-xs mt-0.5 font-light">For businesses ready to grow</p>
+                                        <p class="text-[#4b5563] text-xs mt-0.5 font-light">Lump-sum funding for growth, equipment or working capital. Capital when the opportunity is live.</p>
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs font-medium text-[#1e40af] shrink-0">
@@ -880,21 +717,21 @@
                                 </div>
                             </div>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-11" data-value="Line of Credit" data-doc-group="lineofcredit">
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-9" data-value="Line of Credit" data-doc-group="lineofcredit">
                             <div class="flex items-start gap-3">
                                 <span class="card-icon"><span class="material-symbols-outlined">credit_card</span></span>
                                 <div>
                                     <h3 class="text-sm sm:text-lg font-display font-bold text-[#0f1117]">Revolving Line of Credit</h3>
-                                    <p class="text-[#4b5563] text-xs mt-0.5 font-light">Ongoing working capital</p>
+                                    <p class="text-[#4b5563] text-xs mt-0.5 font-light">Revolving working capital up to R5M. Draw, repay, re-use. Flexibility that moves with your cash cycle.</p>
                                 </div>
                             </div>
                         </button>
-                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-12" data-value="BridgePay Trade Credit" data-doc-group="bridgepay">
+                        <button type="button" class="card-institutional p-4 sm:p-5 text-left funding-option stagger-10" data-value="BridgePay Trade Credit" data-doc-group="bridgepay">
                             <div class="flex items-start gap-3">
                                 <span class="card-icon"><span class="material-symbols-outlined">sync_alt</span></span>
                                 <div>
                                     <h3 class="text-sm sm:text-lg font-display font-bold text-[#0f1117]">BridgePay Trade Credit</h3>
-                                    <p class="text-[#4b5563] text-xs mt-0.5 font-light">Offer customers 90‑day terms</p>
+                                    <p class="text-[#4b5563] text-xs mt-0.5 font-light">Offer 90-day terms to customers without carrying the cash-flow cost. Win the deal, protect your cash.</p>
                                 </div>
                             </div>
                         </button>
@@ -908,7 +745,7 @@
                 <div class="flex items-center justify-between mb-5 sm:mb-6">
                     <div>
                         <h2 class="text-lg sm:text-2xl font-display font-bold text-[#0f1117]">Send Your Application</h2>
-                        <p class="text-[#4b5563] text-xs sm:text-sm mt-1 font-light" id="dynFormSubtitle">Fill in your details. We send them straight to the partner.</p>
+                        <p class="text-[#4b5563] text-xs sm:text-sm mt-1 font-light" id="dynFormSubtitle">Fill in your details. We route them to the partner holding the mandate.</p>
                     </div>
                     <button type="button" id="dynBackBtn" class="btn-outline !px-3.5 !py-2 text-[11px] shrink-0">← Back</button>
                 </div>
@@ -1010,7 +847,7 @@
                 <div class="flex items-center justify-between mb-5 sm:mb-6">
                     <div>
                         <h2 class="text-lg sm:text-2xl font-display font-bold text-[#0f1117]">Purchase Order Funding</h2>
-                        <p class="text-[#4b5563] text-xs sm:text-sm mt-1 font-light">Get funding for your purchase orders. We send your request straight to the partner.</p>
+                        <p class="text-[#4b5563] text-xs sm:text-sm mt-1 font-light">Get funding for confirmed purchase orders. We route your request straight to the specialist holding the mandate.</p>
                     </div>
                     <button type="button" id="poBackBtn" class="btn-outline !px-3.5 !py-2 text-[11px] shrink-0">← Back</button>
                 </div>
@@ -1107,7 +944,7 @@
             <div class="card-institutional p-6 sm:p-10 text-center hidden fade-step mt-6 sm:mt-8" id="successScreen">
                 <div class="text-5xl sm:text-6xl mb-4 success-pulse inline-block">✅</div>
                 <h2 class="text-xl sm:text-3xl font-display font-bold text-[#0f1117] mb-2">We got it!</h2>
-                <p class="text-[#4b5563] mb-1 text-sm">We sent your request to the partner.</p>
+                <p class="text-[#4b5563] mb-1 text-sm">We routed your requirement to the specialist partner holding the mandate.</p>
                 <p class="text-[#4b5563] text-xs sm:text-sm mb-1 font-light">Reference: <span id="successRef" class="font-mono text-[#1e40af] font-semibold">—</span></p>
 
                 <div class="max-w-xl mx-auto text-left bg-gradient-to-br from-[#f0f4ff] to-white border border-[rgba(30,64,175,0.12)] rounded-xl p-5 sm:p-6 mb-5 sm:mb-6 mt-5 sm:mt-6">
@@ -1136,6 +973,37 @@
                 <a href="mailto:victor@maribamedia.co.za" class="btn-accent px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm">Email victor@maribamedia.co.za</a>
             </div>
         </div>
+
+        <!-- ── Demand Meets Supply ── -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 sm:mt-20">
+            <div class="text-center mb-6 sm:mb-8">
+                <span class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#1e40af] mb-3">
+                    <span class="w-5 h-px bg-[#1e40af]/40"></span>
+                    How Demand Meets Supply
+                </span>
+                <h2 class="text-xl sm:text-3xl font-display font-bold text-[#0f1117]">One qualified demand signal. One capable supply partner.</h2>
+                <p class="text-[#4b5563] text-xs sm:text-sm mt-3 max-w-xl mx-auto font-light leading-relaxed">
+                    Most businesses don't lack ambition — they lack access to the funder whose mandate fits their deal. Mariba Media is the connective layer that routes demand to the specialist who can answer it, and turns the result into exclusive business, revenue and curated outcomes.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-3 sm:gap-4">
+                <div class="p-5 sm:p-6 rounded-2xl bg-[#0a1e3c] text-white border border-white/5">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#3b82f6]">Demand</span>
+                    <h3 class="font-display font-bold text-sm sm:text-base mt-2">Your requirement, qualified</h3>
+                    <p class="text-[11px] sm:text-xs text-white/70 mt-1.5 font-light leading-relaxed">Tell us what you need. We frame it as a clear demand signal — scope, timing, ticket size and the outcome required.</p>
+                </div>
+                <div class="p-5 sm:p-6 rounded-2xl bg-[#0a1e3c] text-white border border-white/5">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#3b82f6]">Supply</span>
+                    <h3 class="font-display font-bold text-sm sm:text-base mt-2">The partner with the exclusive mandate</h3>
+                    <p class="text-[11px] sm:text-xs text-white/70 mt-1.5 font-light leading-relaxed">Your signal routes to the specialist holding the exclusive mandate in that field — one qualified introduction, not a marketplace or a bidding war.</p>
+                </div>
+                <div class="p-5 sm:p-6 rounded-2xl bg-[#0a1e3c] text-white border border-white/5">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#3b82f6]">Result</span>
+                    <h3 class="font-display font-bold text-sm sm:text-base mt-2">Exclusive business. Curated outcomes.</h3>
+                    <p class="text-[11px] sm:text-xs text-white/70 mt-1.5 font-light leading-relaxed">Partners gain exclusive access to qualified demand. Clients get a matched opportunity with a partner who can execute. The result: revenue generated, operations transformed, outcomes that show up in the business.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- ── Footer ── -->
@@ -1158,7 +1026,7 @@
                 <span class="text-sm font-display font-bold tracking-tight text-[#0f1117] uppercase">MARIBA<span class="text-[#1e40af]">MEDIA</span></span>
             </div>
             <p class="text-xs text-[#4b5563] max-w-md mx-auto leading-relaxed font-light">
-                Bespoke network for specialist solar, water, energy and business finance solutions in South Africa.
+                Curated connections to specialist solar, energy and business finance partners across South Africa. Performance-based success fees. Aligned incentives. Zero cost to you.
             </p>
             <div class="mt-5 flex items-center justify-center gap-3 sm:gap-4 text-xs text-[#4b5563] font-light">
                 <a href="mailto:victor@maribamedia.co.za" class="hover:text-[#1e40af] transition-colors">victor@maribamedia.co.za</a>
@@ -1198,7 +1066,7 @@
                 }
             }, { passive: true });
 
-            // ── Document Requirements ──
+            // ── Document Requirements (diesel & borehole removed) ──
             const docRequirements = {
                 'asset-backed': ['Financial statements', '6 months of bank statements', 'Title deed copy', 'Municipal bill',
                     'Tax clearance certificate'
@@ -1224,13 +1092,6 @@
                 ],
                 'ci-solar': ['Electricity bills', 'Proof you own or lease the property', 'Quotes from your installer',
                     'Company registration documents', 'No ID or proof of address needed.'
-                ],
-                'diesel': ['Company registration documents', 'VAT documentation', 'Credit references',
-                    'Site location details for tank installation', 'Estimated monthly diesel volume (min 40,000L)',
-                    'No ID or proof of address needed.'
-                ],
-                'borehole': ['Proof of property ownership or lease', 'Current water bill', 'Site access details',
-                    'Any existing borehole or water assessment reports', 'No ID or proof of address needed.'
                 ],
                 'termloan': ['Financial statements for the last 12 months', 'Yearly sales of R1 million or more',
                     'Tax clearance certificate', 'No ID or proof of address needed.'
@@ -1289,8 +1150,7 @@
             function showSelection() {
                 hideAll();
                 selectionContainer.classList.remove('hidden');
-                // Re-trigger staggered animations
-                document.querySelectorAll('.stagger-1, .stagger-2, .stagger-3, .stagger-4, .stagger-5, .stagger-6, .stagger-7, .stagger-8, .stagger-9, .stagger-10, .stagger-11, .stagger-12, .stagger-13')
+                document.querySelectorAll('.stagger-1, .stagger-2, .stagger-3, .stagger-4, .stagger-5, .stagger-6, .stagger-7, .stagger-8, .stagger-9, .stagger-10')
                     .forEach(el => {
                         el.style.animation = 'none';
                         el.offsetHeight;
@@ -1473,7 +1333,7 @@
                     }
 
                     dynFormSubtitle.textContent = 'You chose: ' + value +
-                        '. Fill in your details and we send them to the partner.';
+                        '. Fill in your details and we route them to the partner holding the mandate.';
 
                     if (docGroup === 'po-funding') {
                         showPOForm();
